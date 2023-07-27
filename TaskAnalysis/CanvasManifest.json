@@ -101,12 +101,12 @@
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
-    "DocumentLayoutHeight": 768,
+    "DocumentLayoutHeight": 1080,
     "DocumentLayoutLockOrientation": false,
-    "DocumentLayoutMaintainAspectRatio": true,
+    "DocumentLayoutMaintainAspectRatio": false,
     "DocumentLayoutOrientation": "landscape",
-    "DocumentLayoutScaleToFit": true,
-    "DocumentLayoutWidth": 1366,
+    "DocumentLayoutScaleToFit": false,
+    "DocumentLayoutWidth": 1920,
     "DocumentType": "App",
     "EnableInstrumentation": false,
     "FileID": "b871d510-a1ef-4e72-99cc-65526df4eba3",
@@ -131,7 +131,6 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Screen1",
-    "Screen2"
+    "Home Page"
   ]
 }

@@ -1,0 +1,26 @@
+"'Home Page' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    HomeContainer As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =1080
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =1920
+        ZIndex: =1
+
+        Rectangle3 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(161, 159, 157, 1)
+            Fill: =RGBA(0, 120, 212, 1)
+            FocusedBorderThickness: =4
+            Height: =1080
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =1920
+            ZIndex: =1
+
