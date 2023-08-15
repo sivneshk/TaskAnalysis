@@ -88,7 +88,6 @@
                     ZIndex: =1
 
                 TaskFilter As groupContainer.verticalAutoLayoutContainer:
-                    DropShadow: =DropShadow.Light
                     LayoutAlignItems: =LayoutAlignItems.Center
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutGap: =20
