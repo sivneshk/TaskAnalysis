@@ -325,7 +325,7 @@
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter.Height/11
-                        Items: ='Process Taxonomy'
+                        Items: =Sort(Distinct('Process Taxonomy',L2),Value)
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         PaddingStart: =10
@@ -341,7 +341,7 @@
                             FieldName: ="Title"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =1
+                            Order: =2
                             ZIndex: =30
 
                         Global_Process_ID4 As pcfDataField.textualColumn:
@@ -349,7 +349,7 @@
                             FieldName: ="GlobalProcessID"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =2
+                            Order: =3
                             ZIndex: =31
 
                         L14 As pcfDataField.textualColumn:
@@ -357,7 +357,7 @@
                             FieldName: ="OData__x004c_1"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =3
+                            Order: =4
                             ZIndex: =32
 
                         L24 As pcfDataField.textualColumn:
@@ -365,7 +365,7 @@
                             FieldName: ="OData__x004c_2"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =4
+                            Order: =1
                             ZIndex: =33
 
                         L34 As pcfDataField.textualColumn:
