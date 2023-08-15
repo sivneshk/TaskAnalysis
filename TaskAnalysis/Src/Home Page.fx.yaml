@@ -325,7 +325,15 @@
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter.Height/11
-                        Items: =Sort(Distinct('Process Taxonomy',L2),Value)
+                        Items: |-
+                            =Sort(
+                                Distinct(
+                                    Filter(
+                                    'Process Taxonomy', L1= ComboBox1_1.Selected.Value),
+                                    L2
+                                ),
+                                Value
+                            )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         PaddingStart: =10
