@@ -58,7 +58,9 @@
 
             LeftPanel As groupContainer.verticalAutoLayoutContainer:
                 BorderColor: =RGBA(148, 148, 148, 1)
+                BorderStyle: =BorderStyle.None
                 BorderThickness: =1
+                DropShadow: =DropShadow.Regular
                 Height: =BodyContainer.Height
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
@@ -189,7 +191,6 @@
                             ZIndex: =13
 
                 ButtonGroup As groupContainer.horizontalAutoLayoutContainer:
-                    DropShadow: =DropShadow.Light
                     FillPortions: =0
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
