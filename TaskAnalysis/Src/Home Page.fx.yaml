@@ -466,7 +466,7 @@
                             FieldName: ="Title"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =1
+                            Order: =2
                             ZIndex: =41
 
                         Global_Process_ID1 As pcfDataField.textualColumn:
@@ -474,7 +474,7 @@
                             FieldName: ="GlobalProcessID"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =2
+                            Order: =3
                             ZIndex: =42
 
                         L11 As pcfDataField.textualColumn:
@@ -482,7 +482,7 @@
                             FieldName: ="OData__x004c_1"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =3
+                            Order: =4
                             ZIndex: =43
 
                         L21 As pcfDataField.textualColumn:
@@ -490,7 +490,7 @@
                             FieldName: ="OData__x004c_2"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =4
+                            Order: =5
                             ZIndex: =44
 
                         L31 As pcfDataField.textualColumn:
@@ -498,7 +498,7 @@
                             FieldName: ="OData__x004c_3"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =5
+                            Order: =6
                             ZIndex: =45
 
                         L41 As pcfDataField.textualColumn:
@@ -506,7 +506,7 @@
                             FieldName: ="OData__x004c_4"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =6
+                            Order: =7
                             ZIndex: =46
 
                         L51 As pcfDataField.textualColumn:
@@ -514,7 +514,7 @@
                             FieldName: ="OData__x004c_5"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =7
+                            Order: =8
                             ZIndex: =47
 
                         L61 As pcfDataField.textualColumn:
@@ -522,7 +522,7 @@
                             FieldName: ="OData__x004c_6"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =8
+                            Order: =9
                             ZIndex: =48
 
                         Comboname1 As pcfDataField.textualColumn:
@@ -530,7 +530,7 @@
                             FieldName: ="Comboname"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =9
+                            Order: =10
                             ZIndex: =49
 
                         Attachments1 As pcfDataField.textualColumn:
@@ -538,8 +538,16 @@
                             FieldName: ="{Attachments}"
                             FieldType: ="r*"
                             FieldVariantName: ="textualColumn"
-                            Order: =10
+                            Order: =11
                             ZIndex: =50
+
+                        Value4 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Value"
+                            FieldName: ="Value"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =81
 
                     "DropdownL4 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
@@ -574,7 +582,7 @@
                             FieldName: ="Title"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =1
+                            Order: =2
                             ZIndex: =51
 
                         Global_Process_ID5 As pcfDataField.textualColumn:
@@ -582,7 +590,7 @@
                             FieldName: ="GlobalProcessID"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =2
+                            Order: =3
                             ZIndex: =52
 
                         L15 As pcfDataField.textualColumn:
@@ -590,7 +598,7 @@
                             FieldName: ="OData__x004c_1"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =3
+                            Order: =4
                             ZIndex: =53
 
                         L25 As pcfDataField.textualColumn:
@@ -598,7 +606,7 @@
                             FieldName: ="OData__x004c_2"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =4
+                            Order: =5
                             ZIndex: =54
 
                         L35 As pcfDataField.textualColumn:
@@ -606,7 +614,7 @@
                             FieldName: ="OData__x004c_3"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =5
+                            Order: =6
                             ZIndex: =55
 
                         L45 As pcfDataField.textualColumn:
@@ -614,7 +622,7 @@
                             FieldName: ="OData__x004c_4"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =6
+                            Order: =7
                             ZIndex: =56
 
                         L55 As pcfDataField.textualColumn:
@@ -622,7 +630,7 @@
                             FieldName: ="OData__x004c_5"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =7
+                            Order: =8
                             ZIndex: =57
 
                         L65 As pcfDataField.textualColumn:
@@ -630,7 +638,7 @@
                             FieldName: ="OData__x004c_6"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =8
+                            Order: =9
                             ZIndex: =58
 
                         Comboname5 As pcfDataField.textualColumn:
@@ -638,7 +646,7 @@
                             FieldName: ="Comboname"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =9
+                            Order: =10
                             ZIndex: =59
 
                         Attachments5 As pcfDataField.textualColumn:
@@ -646,8 +654,16 @@
                             FieldName: ="{Attachments}"
                             FieldType: ="r*"
                             FieldVariantName: ="textualColumn"
-                            Order: =10
+                            Order: =11
                             ZIndex: =60
+
+                        Value5 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Value"
+                            FieldName: ="Value"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =82
 
                     "DropdownL5 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
@@ -682,7 +698,7 @@
                             FieldName: ="Title"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =1
+                            Order: =2
                             ZIndex: =61
 
                         Global_Process_ID6 As pcfDataField.textualColumn:
@@ -690,7 +706,7 @@
                             FieldName: ="GlobalProcessID"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =2
+                            Order: =3
                             ZIndex: =62
 
                         L16 As pcfDataField.textualColumn:
@@ -698,7 +714,7 @@
                             FieldName: ="OData__x004c_1"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =3
+                            Order: =4
                             ZIndex: =63
 
                         L26 As pcfDataField.textualColumn:
@@ -706,7 +722,7 @@
                             FieldName: ="OData__x004c_2"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =4
+                            Order: =5
                             ZIndex: =64
 
                         L36 As pcfDataField.textualColumn:
@@ -714,7 +730,7 @@
                             FieldName: ="OData__x004c_3"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =5
+                            Order: =6
                             ZIndex: =65
 
                         L46 As pcfDataField.textualColumn:
@@ -722,7 +738,7 @@
                             FieldName: ="OData__x004c_4"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =6
+                            Order: =7
                             ZIndex: =66
 
                         L56 As pcfDataField.textualColumn:
@@ -730,7 +746,7 @@
                             FieldName: ="OData__x004c_5"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =7
+                            Order: =8
                             ZIndex: =67
 
                         L66 As pcfDataField.textualColumn:
@@ -738,7 +754,7 @@
                             FieldName: ="OData__x004c_6"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =8
+                            Order: =9
                             ZIndex: =68
 
                         Comboname6 As pcfDataField.textualColumn:
@@ -746,7 +762,7 @@
                             FieldName: ="Comboname"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =9
+                            Order: =10
                             ZIndex: =69
 
                         Attachments6 As pcfDataField.textualColumn:
@@ -754,8 +770,16 @@
                             FieldName: ="{Attachments}"
                             FieldType: ="r*"
                             FieldVariantName: ="textualColumn"
-                            Order: =10
+                            Order: =11
                             ZIndex: =70
+
+                        Value6 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Value"
+                            FieldName: ="Value"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =83
 
                     "DropdownL6 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
@@ -790,7 +814,7 @@
                             FieldName: ="Title"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =1
+                            Order: =2
                             ZIndex: =71
 
                         Global_Process_ID7 As pcfDataField.textualColumn:
@@ -798,7 +822,7 @@
                             FieldName: ="GlobalProcessID"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =2
+                            Order: =3
                             ZIndex: =72
 
                         L17 As pcfDataField.textualColumn:
@@ -806,7 +830,7 @@
                             FieldName: ="OData__x004c_1"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =3
+                            Order: =4
                             ZIndex: =73
 
                         L27 As pcfDataField.textualColumn:
@@ -814,7 +838,7 @@
                             FieldName: ="OData__x004c_2"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =4
+                            Order: =5
                             ZIndex: =74
 
                         L37 As pcfDataField.textualColumn:
@@ -822,7 +846,7 @@
                             FieldName: ="OData__x004c_3"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =5
+                            Order: =6
                             ZIndex: =75
 
                         L47 As pcfDataField.textualColumn:
@@ -830,7 +854,7 @@
                             FieldName: ="OData__x004c_4"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =6
+                            Order: =7
                             ZIndex: =76
 
                         L57 As pcfDataField.textualColumn:
@@ -838,7 +862,7 @@
                             FieldName: ="OData__x004c_5"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =7
+                            Order: =8
                             ZIndex: =77
 
                         L67 As pcfDataField.textualColumn:
@@ -846,7 +870,7 @@
                             FieldName: ="OData__x004c_6"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =8
+                            Order: =9
                             ZIndex: =78
 
                         Comboname7 As pcfDataField.textualColumn:
@@ -854,7 +878,7 @@
                             FieldName: ="Comboname"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =9
+                            Order: =10
                             ZIndex: =79
 
                         Attachments7 As pcfDataField.textualColumn:
@@ -862,8 +886,16 @@
                             FieldName: ="{Attachments}"
                             FieldType: ="r*"
                             FieldVariantName: ="textualColumn"
-                            Order: =10
+                            Order: =11
                             ZIndex: =80
+
+                        Value7 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Value"
+                            FieldName: ="Value"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =84
 
                 ButtonGroup As groupContainer.horizontalAutoLayoutContainer:
                     FillPortions: =0
