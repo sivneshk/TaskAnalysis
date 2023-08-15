@@ -54,11 +54,12 @@
     "Title4": 37,
     "UserInfo": 10,
     "Value1": 23,
-    "Value2": 35
+    "Value2": 35,
+    "Value3": 55
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/15/2023 08:18:56",
+  "HeaderLastSavedDateTimeUTC": "08/15/2023 08:21:04",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "772eb637-780b-4505-ac82-d4fd749ecd5b": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/e8d8ce65691140fb9343d1fbe5c35db0\""
@@ -135,7 +136,8 @@
     "Title4": {},
     "UserInfo": {},
     "Value1": {},
-    "Value2": {}
+    "Value2": {},
+    "Value3": {}
   },
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {
@@ -291,7 +293,8 @@
     "Title4": 32,
     "UserInfo": 5,
     "Value1": 18,
-    "Value2": 30
+    "Value2": 30,
+    "Value3": 0
   },
   "ResourcesJsonIndices": {},
   "RuleScreenIdWithoutScreen": {},
