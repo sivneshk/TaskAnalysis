@@ -1,1 +1,24 @@
-{}
+{
+  "772eb637-780b-4505-ac82-d4fd749ecd5b": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3312/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://bakerhughes.sharepoint.com/sites/KLGFCControllership": {
+        "dataSources": {
+          "Process Taxonomy": {
+            "tableName": "7c26a536-1597-4877-8628-661c6363a571"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Process Taxonomy"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "772eb637-780b-4505-ac82-d4fd749ecd5b"
+  }
+}
