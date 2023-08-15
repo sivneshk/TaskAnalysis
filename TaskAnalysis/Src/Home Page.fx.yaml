@@ -101,6 +101,8 @@
                     ZIndex: =2
 
                     "ComboBox1 As 'Combo box'.pcfdataset":
+                        AllowMultiSelect: =false
+                        AllowSearching: =true
                         DisplayMode: =DisplayMode.Edit
                         Height: =TaskFilter.TemplateHeight/2.5
                         Items: ='Process Taxonomy'
