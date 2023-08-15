@@ -106,7 +106,7 @@
                     RadiusTopRight: =4
                     ZIndex: =2
 
-                    "ComboBox1 As 'Combo box'.pcfdataset":
+                    "DropdownUniqueID As 'Combo box'.pcfdataset":
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DisplayMode: =DisplayMode.Edit
@@ -212,7 +212,7 @@
                             Order: =1
                             ZIndex: =29
 
-                    "ComboBox1_1 As 'Combo box'.pcfdataset":
+                    "DropdownL1 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DisplayMode: =DisplayMode.Edit
@@ -318,7 +318,7 @@
                             Order: =1
                             ZIndex: =28
 
-                    "ComboBox1_2 As 'Combo box'.pcfdataset":
+                    "DropdownL2 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DisplayMode: =DisplayMode.Edit
@@ -329,7 +329,9 @@
                             =Sort(
                                 Distinct(
                                     Filter(
-                                    'Process Taxonomy', L1= ComboBox1_1.Selected.Value),
+                                        'Process Taxonomy',
+                                        L1 = DropdownL1.Selected.Value
+                                    ),
                                     L2
                                 ),
                                 Value
@@ -432,13 +434,24 @@
                             Order: =1
                             ZIndex: =40
 
-                    "ComboBox1_3 As 'Combo box'.pcfdataset":
+                    "DropdownL3 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter.Height/11
+                        Items: |-
+                            =Sort(
+                                Distinct(
+                                    Filter(
+                                        'Process Taxonomy',
+                                        L2 = DropdownL2.Selected.Value
+                                    ),
+                                    L3
+                                ),
+                                Value
+                            )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         PaddingStart: =10
@@ -449,13 +462,104 @@
                         Y: =16
                         ZIndex: =4
 
-                    "ComboBox1_4 As 'Combo box'.pcfdataset":
+                        Title1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Title"
+                            FieldName: ="Title"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =41
+
+                        Global_Process_ID1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Global_Process_ID"
+                            FieldName: ="GlobalProcessID"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =42
+
+                        L11 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L1"
+                            FieldName: ="OData__x004c_1"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =43
+
+                        L21 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L2"
+                            FieldName: ="OData__x004c_2"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =44
+
+                        L31 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L3"
+                            FieldName: ="OData__x004c_3"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =45
+
+                        L41 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L4"
+                            FieldName: ="OData__x004c_4"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =46
+
+                        L51 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L5"
+                            FieldName: ="OData__x004c_5"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =47
+
+                        L61 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L6"
+                            FieldName: ="OData__x004c_6"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =8
+                            ZIndex: =48
+
+                        Comboname1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Comboname"
+                            FieldName: ="Comboname"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =9
+                            ZIndex: =49
+
+                        Attachments1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Attachments"
+                            FieldName: ="{Attachments}"
+                            FieldType: ="r*"
+                            FieldVariantName: ="textualColumn"
+                            Order: =10
+                            ZIndex: =50
+
+                    "DropdownL4 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter.Height/11
+                        Items: |-
+                            =Sort(
+                                Distinct(
+                                    Filter(
+                                        'Process Taxonomy',
+                                        L3 = DropdownL3.Selected.Value
+                                    ),
+                                    L4
+                                ),
+                                Value
+                            )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         PaddingStart: =10
@@ -466,13 +570,104 @@
                         Y: =16
                         ZIndex: =5
 
-                    "ComboBox1_5 As 'Combo box'.pcfdataset":
+                        Title5 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Title"
+                            FieldName: ="Title"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =51
+
+                        Global_Process_ID5 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Global_Process_ID"
+                            FieldName: ="GlobalProcessID"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =52
+
+                        L15 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L1"
+                            FieldName: ="OData__x004c_1"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =53
+
+                        L25 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L2"
+                            FieldName: ="OData__x004c_2"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =54
+
+                        L35 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L3"
+                            FieldName: ="OData__x004c_3"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =55
+
+                        L45 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L4"
+                            FieldName: ="OData__x004c_4"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =56
+
+                        L55 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L5"
+                            FieldName: ="OData__x004c_5"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =57
+
+                        L65 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L6"
+                            FieldName: ="OData__x004c_6"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =8
+                            ZIndex: =58
+
+                        Comboname5 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Comboname"
+                            FieldName: ="Comboname"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =9
+                            ZIndex: =59
+
+                        Attachments5 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Attachments"
+                            FieldName: ="{Attachments}"
+                            FieldType: ="r*"
+                            FieldVariantName: ="textualColumn"
+                            Order: =10
+                            ZIndex: =60
+
+                    "DropdownL5 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter.Height/11
+                        Items: |-
+                            =Sort(
+                                Distinct(
+                                    Filter(
+                                        'Process Taxonomy',
+                                        L4 = DropdownL4.Selected.Value
+                                    ),
+                                    L5
+                                ),
+                                Value
+                            )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         PaddingStart: =10
@@ -483,13 +678,104 @@
                         Y: =16
                         ZIndex: =6
 
-                    "ComboBox1_6 As 'Combo box'.pcfdataset":
+                        Title6 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Title"
+                            FieldName: ="Title"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =61
+
+                        Global_Process_ID6 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Global_Process_ID"
+                            FieldName: ="GlobalProcessID"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =62
+
+                        L16 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L1"
+                            FieldName: ="OData__x004c_1"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =63
+
+                        L26 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L2"
+                            FieldName: ="OData__x004c_2"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =64
+
+                        L36 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L3"
+                            FieldName: ="OData__x004c_3"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =65
+
+                        L46 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L4"
+                            FieldName: ="OData__x004c_4"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =66
+
+                        L56 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L5"
+                            FieldName: ="OData__x004c_5"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =67
+
+                        L66 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L6"
+                            FieldName: ="OData__x004c_6"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =8
+                            ZIndex: =68
+
+                        Comboname6 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Comboname"
+                            FieldName: ="Comboname"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =9
+                            ZIndex: =69
+
+                        Attachments6 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Attachments"
+                            FieldName: ="{Attachments}"
+                            FieldType: ="r*"
+                            FieldVariantName: ="textualColumn"
+                            Order: =10
+                            ZIndex: =70
+
+                    "DropdownL6 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter.Height/11
+                        Items: |-
+                            =Sort(
+                                Distinct(
+                                    Filter(
+                                        'Process Taxonomy',
+                                        L5 = DropdownL5.Selected.Value
+                                    ),
+                                    L6
+                                ),
+                                Value
+                            )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         PaddingStart: =10
@@ -499,6 +785,86 @@
                         X: =(LeftPanel.Width-Self.Width)/2
                         Y: =16
                         ZIndex: =7
+
+                        Title7 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Title"
+                            FieldName: ="Title"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =71
+
+                        Global_Process_ID7 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Global_Process_ID"
+                            FieldName: ="GlobalProcessID"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =72
+
+                        L17 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L1"
+                            FieldName: ="OData__x004c_1"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =73
+
+                        L27 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L2"
+                            FieldName: ="OData__x004c_2"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =74
+
+                        L37 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L3"
+                            FieldName: ="OData__x004c_3"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =75
+
+                        L47 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L4"
+                            FieldName: ="OData__x004c_4"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =76
+
+                        L57 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L5"
+                            FieldName: ="OData__x004c_5"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =77
+
+                        L67 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L6"
+                            FieldName: ="OData__x004c_6"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =8
+                            ZIndex: =78
+
+                        Comboname7 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Comboname"
+                            FieldName: ="Comboname"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =9
+                            ZIndex: =79
+
+                        Attachments7 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Attachments"
+                            FieldName: ="{Attachments}"
+                            FieldType: ="r*"
+                            FieldVariantName: ="textualColumn"
+                            Order: =10
+                            ZIndex: =80
 
                 ButtonGroup As groupContainer.horizontalAutoLayoutContainer:
                     FillPortions: =0
