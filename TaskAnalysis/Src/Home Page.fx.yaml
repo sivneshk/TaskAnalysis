@@ -909,6 +909,100 @@
                     RadiusTopRight: =4
                     ZIndex: =3
 
+                    ClearBtnContainer As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
+                        DropShadow: =DropShadow.Light
+                        FillPortions: =0
+                        Height: =ButtonGroup.Height
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =(LeftPanel.Width)/3
+                        ZIndex: =3
+
+                        Button1 As button:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            DisabledFill: =RGBA(242, 242, 241, 0)
+                            Fill: =RGBA(208, 208, 208, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =ButtonGroup.Height/2
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =RGBA(16, 110, 190, 1)
+                            PressedBorderColor: =RGBA(0, 69, 120, 1)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(16, 110, 190, 1)
+                            Size: =15
+                            Text: =
+                            Width: =ClearBtnContainer.Width-Button1.X-ClearBtnContainer.PaddingRight
+                            X: =DropdownL1.X
+                            Y: =(ButtonGroup.Height-Self.Height)/2
+                            ZIndex: =1
+
+                        Icon2 As icon.Erase:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            Color: =RGBA(255, 255, 255, 1)
+                            DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                            DisabledColor: =RGBA(225, 223, 221, 1)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =Button1.Height*0.8
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =RGBA(16, 110, 190, 1)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Icon: =Icon.Erase
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedColor: =RGBA(16, 110, 190, 1)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            X: =74
+                            Y: =(ButtonGroup.Height-Self.Height)/2
+                            ZIndex: =2
+
+                    AddTaskBtnContainer As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Center
+                        DropShadow: =DropShadow.Light
+                        Height: =ButtonGroup.Height
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        PaddingLeft: =5
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =LeftPanel.Width*2/3
+                        ZIndex: =4
+
+                        Button1_1 As button:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            DisabledFill: =RGBA(242, 242, 241, 0)
+                            Fill: =RGBA(2, 188, 148, 1)
+                            Font: ="Poppins"
+                            Height: =ButtonGroup.Height/2
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =RGBA(16, 110, 190, 1)
+                            PressedBorderColor: =RGBA(0, 69, 120, 1)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(16, 110, 190, 1)
+                            Size: =Self.Height/3
+                            Text: ="Add Task to List"
+                            Width: =AddTaskBtnContainer.Width-Button1_1.X-Button1.X
+                            X: =AddTaskBtnContainer.PaddingLeft
+                            Y: =(ButtonGroup.Height-Self.Height)/2
+                            ZIndex: =1
+
             RightPanel As groupContainer.verticalAutoLayoutContainer:
                 BorderColor: =RGBA(148, 148, 148, 1)
                 BorderStyle: =BorderStyle.None
