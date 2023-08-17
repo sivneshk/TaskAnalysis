@@ -1074,10 +1074,9 @@
                 FocusedBorderThickness: =4
                 Font: ="Poppins"
                 Height: =FooterContainer.Height
-                PaddingLeft: =20
                 Size: =Self.Height/4
                 Text: ="Designed and Developed by GFO Data and Analytics Team"
-                Width: =MainTitle.Width
-                X: =(Parent.Width-Self.Width)/2
+                Width: =Parent.Width*0.5
+                X: =MainTitle.X
                 ZIndex: =1
 
