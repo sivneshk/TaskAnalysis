@@ -119,7 +119,7 @@
                     RadiusTopRight: =4
                     ZIndex: =2
 
-                    Image1 As image:
+                    UserImage As image:
                         BorderColor: =RGBA(204, 204, 204, 1)
                         BorderThickness: =1
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -140,6 +140,50 @@
                         X: =DropdownL1.X
                         Y: =(UserInfo.Height-Self.Height)/2
                         ZIndex: =1
+
+                    UserDisplayName As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =UserImage.Height*0.75
+                        PaddingBottom: =0
+                        PaddingLeft: =15
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =Self.Height/5
+                        Text: =Office365Users.MyProfile().DisplayName
+                        Width: =DropdownL1.Width-UserImage.Width
+                        X: =UserImage.X+UserImage.Width
+                        Y: =UserImage.Y
+                        ZIndex: =2
+
+                    UserPositionTitle As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Lighter
+                        Height: =UserImage.Height*0.25
+                        PaddingBottom: =0
+                        PaddingLeft: =15
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =Self.Height/2
+                        Text: =Office365Users.MyProfile().JobTitle
+                        Width: =DropdownL1.Width-UserImage.Width
+                        X: =UserImage.X+UserImage.Width
+                        Y: =UserDisplayName.Y+UserDisplayName.Height
+                        ZIndex: =3
 
                 TaskFilter As groupContainer.verticalAutoLayoutContainer:
                     FillPortions: =0
