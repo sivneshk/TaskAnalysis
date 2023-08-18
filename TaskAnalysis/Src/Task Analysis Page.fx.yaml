@@ -1,4 +1,4 @@
-"'Home Page' As screen":
+"'Task Analysis Page' As screen":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
     HomeContainer As groupContainer.manualLayoutContainer:
@@ -13,6 +13,7 @@
 
         HeaderContainer As groupContainer.manualLayoutContainer:
             Height: =Parent.Height/10
+            PaddingLeft: =20
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
@@ -31,10 +32,10 @@
                 Font: ="Poppins"
                 FontWeight: =FontWeight.Semibold
                 Height: =HeaderContainer.Height*0.7
-                Size: =MainTitle.Height/3.2
+                Size: =MainTitle.Height/2.5
                 Text: ="Task Analysis"
                 Width: =Parent.Width*0.2
-                X: =BodyContainer.PaddingLeft+ProcessTaxoLabel.X
+                X: =BodyContainer.PaddingLeft
                 Y: =(Parent.Height-MainTitle.Height)/2
                 ZIndex: =1
 
@@ -72,7 +73,7 @@
 
                 LeftPanelTitle As groupContainer.manualLayoutContainer:
                     BorderStyle: =BorderStyle.None
-                    Fill: =RGBA(230, 230, 230, 1)
+                    Fill: =RGBA(236, 236, 235, 1)
                     FillPortions: =0
                     Height: =LeftPanel.Height/15
                     LayoutMinHeight: =100
@@ -81,10 +82,9 @@
                     PaddingLeft: =5
                     PaddingRight: =5
                     PaddingTop: =5
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Width: =LeftPanel.Width
                     ZIndex: =1
 
                     ProcessTaxoLabel As label:
@@ -118,28 +118,6 @@
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     ZIndex: =2
-
-                    UserImage As image:
-                        BorderColor: =RGBA(204, 204, 204, 1)
-                        BorderThickness: =1
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledFill: =RGBA(0, 0, 0, 0)
-                        FocusedBorderThickness: =4
-                        Height: =UserInfo.Height*0.6
-                        HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverFill: =RGBA(0, 0, 0, 0)
-                        Image: |
-                            =Office365Users.UserPhoto(Office365Users.MyProfile().Id)
-                        PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedFill: =RGBA(0, 0, 0, 0)
-                        RadiusBottomLeft: =Self.Height
-                        RadiusBottomRight: =Self.Height
-                        RadiusTopLeft: =Self.Height
-                        RadiusTopRight: =Self.Height
-                        Width: =Self.Height
-                        X: =DropdownL1.X
-                        Y: =(UserInfo.Height-Self.Height)/2
-                        ZIndex: =1
 
                     UserDisplayName As label:
                         BorderColor: =RGBA(0, 0, 0, 0)
@@ -184,6 +162,28 @@
                         X: =UserImage.X+UserImage.Width
                         Y: =UserDisplayName.Y+UserDisplayName.Height
                         ZIndex: =3
+
+                    UserImage As image:
+                        BorderColor: =RGBA(204, 204, 204, 1)
+                        BorderThickness: =1
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =UserInfo.Height*0.6
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: |
+                            =Office365Users.UserPhoto(Office365Users.MyProfile().Id)
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        RadiusBottomLeft: =Self.Height
+                        RadiusBottomRight: =Self.Height
+                        RadiusTopLeft: =Self.Height
+                        RadiusTopRight: =Self.Height
+                        Width: =Self.Height
+                        X: =DropdownL1.X
+                        Y: =(UserInfo.Height-Self.Height)/2
+                        ZIndex: =4
 
                 TaskFilter As groupContainer.verticalAutoLayoutContainer:
                     FillPortions: =0
@@ -997,7 +997,6 @@
                             ZIndex: =84
 
                 ButtonGroup As groupContainer.manualLayoutContainer:
-                    DropShadow: =DropShadow.Light
                     FillPortions: =0
                     Height: =LeftPanel.Height/9
                     LayoutMinHeight: =100
@@ -1047,6 +1046,7 @@
                         HoverBorderColor: =RGBA(2, 188, 148, 1)
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: =Set(ShowPopUp,true);
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
@@ -1123,4 +1123,127 @@
                 Width: =Parent.Width*0.5
                 X: =MainTitle.X
                 ZIndex: =1
+
+    PopUpOverlay As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(34, 48, 45, 0.8)
+        Height: |
+            =Parent.Height
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =ShowPopUp
+        Width: =Parent.Width
+        ZIndex: =2
+
+        DialogBox As groupContainer.verticalAutoLayoutContainer:
+            BorderColor: =RGBA(148, 148, 148, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Parent.Height*0.6
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =5
+            PaddingLeft: =5
+            PaddingRight: =5
+            PaddingTop: =5
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =Parent.Width*0.5
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+            EmptyHeaderMargin As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox.Height/10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox.Width*0.85
+                ZIndex: =1
+
+            DialogStartsHere As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox.Height/10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox.Width*0.85
+                ZIndex: =2
+
+                CloseIcon As icon.Cancel:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Color: =RGBA(97, 97, 97, 1)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =DialogStartsHere.Height
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Cancel
+                    OnSelect: =Set(ShowPopUp,false);
+                    PaddingBottom: =5
+                    PaddingTop: =5
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Width: =Self.Height
+                    X: =DialogStartsHere.Width-Self.Width
+                    ZIndex: =1
+
+                SelectCompanyCode As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(5, 50, 43, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: ="Poppins"
+                    FontWeight: =FontWeight.Semibold
+                    Height: =DialogStartsHere.Height
+                    Size: =SelectCompanyCode.Height/2.5
+                    Text: ="Select Company Code"
+                    Width: =DialogStartsHere.Width-CloseIcon.Width
+                    ZIndex: =2
+
+            SelectCompanyCode_1 As label:
+                Align: =Align.Justify
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(5, 50, 43, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: ="Poppins"
+                Height: =DialogBox.Height*0.5
+                PaddingTop: =10
+                Size: =SelectCompanyCode_1.Height/15
+                Text: ="Please choose the active company code(s) for selected process."
+                VerticalAlign: =VerticalAlign.Top
+                Width: =DialogStartsHere.Width
+                ZIndex: =3
 
