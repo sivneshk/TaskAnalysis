@@ -34,7 +34,7 @@
                 Size: =MainTitle.Height/3.2
                 Text: ="Task Analysis"
                 Width: =Parent.Width*0.2
-                X: =BodyContainer.PaddingLeft+Label1.X
+                X: =BodyContainer.PaddingLeft+ProcessTaxoLabel.X
                 Y: =(Parent.Height-MainTitle.Height)/2
                 ZIndex: =1
 
@@ -87,7 +87,7 @@
                     RadiusTopRight: =4
                     ZIndex: =1
 
-                    Label1 As label:
+                    ProcessTaxoLabel As label:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
