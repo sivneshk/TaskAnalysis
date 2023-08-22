@@ -227,6 +227,7 @@
                     "DropdownUniqueID As 'Combo box'.pcfdataset":
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: =Blank()
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
@@ -336,7 +337,7 @@
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: |
-                            =First(If(uniqueIDVar <> Blank(),Distinct(Filter('Process Taxonomy',Title=uniqueIDVar),L1)))
+                            =First(If(uniqueIDVar <> Blank(),Distinct(Filter('Process Taxonomy',Title=uniqueIDVar),L1),Blank()))
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
@@ -345,6 +346,7 @@
                             =If(uniqueIDVar = Blank(), Sort(Distinct('Process Taxonomy',L1),Value), Distinct(Filter('Process Taxonomy',Title=uniqueIDVar),L1))
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
+                        OnChange: =Set(varL1,DropdownL1.Selected.Value)
                         PaddingStart: =10
                         PCFTeamsTheme: ="default"
                         Text: ="L1 Taxonomy"
@@ -1064,14 +1066,9 @@
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =RGBA(16, 110, 190, 1)
-                        OnSelect: |
-                            =Reset(DropdownUniqueID);
+                        OnSelect: |-
+                            =Set(uniqueIDVar, Blank());
                             Reset(DropdownL1);
-                            Reset(DropdownL2);
-                            Reset(DropdownL3);
-                            Reset(DropdownL4);
-                            Reset(DropdownL5);
-                            Reset(DropdownL6);
                         PressedBorderColor: =RGBA(0, 69, 120, 1)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(16, 110, 190, 1)
@@ -1079,8 +1076,8 @@
                         RadiusBottomRight: =5
                         RadiusTopLeft: =5
                         RadiusTopRight: =5
-                        Size: =15
-                        Text: =
+                        Size: =Self.Height/3
+                        Text: ="Clear"
                         Width: =DropdownL1.Width*0.25
                         X: =DropdownL1.X
                         Y: =(ButtonGroup.Height-Self.Height)/2
@@ -1113,34 +1110,6 @@
                         X: =ButtonGroup.Width-ClearBtn.X-Self.Width
                         Y: =(ButtonGroup.Height-Self.Height)/2
                         ZIndex: =2
-
-                    ClearBtnIcon As icon.Erase:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        Color: =RGBA(255, 255, 255, 1)
-                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
-                        DisabledColor: =RGBA(225, 223, 221, 1)
-                        DisabledFill: =RGBA(0, 0, 0, 0)
-                        FocusedBorderThickness: =0
-                        Height: =ClearBtn.Height*0.8
-                        HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(253, 183, 20, 1)
-                        HoverFill: =RGBA(0, 0, 0, 0)
-                        Icon: =Icon.Erase
-                        OnSelect: |
-                            =Reset(DropdownUniqueID);
-                            Reset(DropdownL1);
-                            Reset(DropdownL2);
-                            Reset(DropdownL3);
-                            Reset(DropdownL4);
-                            Reset(DropdownL5);
-                            Reset(DropdownL6);
-                        PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedColor: =RGBA(16, 110, 190, 1)
-                        PressedFill: =RGBA(0, 0, 0, 0)
-                        Width: =ClearBtn.Width
-                        X: =ClearBtn.X
-                        Y: =(ButtonGroup.Height-Self.Height)/2
-                        ZIndex: =3
 
             RightPanel As groupContainer.verticalAutoLayoutContainer:
                 BorderColor: =RGBA(148, 148, 148, 1)
@@ -1226,9 +1195,85 @@
             SelectMultiple: =false
             Size: =Self.Height/3.1
             Width: =LeftPanel.Width*0.85
-            X: =1089
-            Y: =273
+            X: =1155
+            Y: =244
             ZIndex: =4
+
+        Label3 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Size: =13
+            Text: =uniqueIDVar
+            X: =798
+            Y: =325
+            ZIndex: =5
+
+        Label4 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Size: =13
+            Text: =DropdownL2.Selected.Value
+            X: =798
+            Y: =378
+            ZIndex: =6
+
+        Label5 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Size: =13
+            Text: =DropdownL4.Selected.Value
+            X: =798
+            Y: =570
+            ZIndex: =7
+
+        Label6 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =56
+            Size: =13
+            Text: =DropdownL3.Selected.Value
+            X: =798
+            Y: =483
+            ZIndex: =8
+
+        Label4_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Size: =13
+            Text: =varL1
+            X: =1086
+            Y: =413
+            ZIndex: =9
 
     PopUpOverlay As groupContainer.manualLayoutContainer:
         Fill: =RGBA(34, 48, 45, 0.8)
