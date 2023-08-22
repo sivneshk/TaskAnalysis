@@ -235,14 +235,7 @@
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         OnChange: =Set(uniqueIDVar,DropdownUniqueID.Selected.Value)
-                        OnSelect: |-
-                            =Reset(DropdownUniqueID);
-                            Reset(DropdownL1);
-                            Reset(DropdownL2);
-                            Reset(DropdownL3);
-                            Reset(DropdownL4);
-                            Reset(DropdownL5);
-                            Reset(DropdownL6);
+                        OnSelect: =
                         PaddingStart: =10
                         PCFTeamsTheme: ="default"
                         Text: ="Unique ID"
@@ -1033,6 +1026,19 @@
                             Order: =1
                             ZIndex: =84
 
+                    Label2 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Size: =13
+                        Text: =DropdownL1.Selected.Value
+                        ZIndex: =8
+
                 ButtonGroup As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     FillPortions: =0
@@ -1092,7 +1098,8 @@
                         HoverBorderColor: =RGBA(2, 188, 148, 1)
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: =Set(ShowPopUp,true);
+                        OnSelect: |
+                            =Set(ShowPopUp,true);
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
@@ -1637,38 +1644,4 @@
                 RadiusTopRight: =10
                 Width: =DialogBox.Width*0.85
                 ZIndex: =7
-
-    ComboBox1 As combobox:
-        BorderColor: =RGBA(224, 224, 224, 1)
-        BorderThickness: =1
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-        ChevronFill: =RGBA(148, 148, 148, 1)
-        ChevronHoverBackground: =RGBA(245, 245, 245, 1)
-        ChevronHoverFill: =RGBA(50, 49, 48, 1)
-        Color: =RGBA(26, 35, 33, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        DisabledFill: =RGBA(242, 242, 241, 0)
-        DisplayFields: =["Title"]
-        Font: ="Noto Sans"
-        Height: =TaskFilter.Height/11
-        HoverBorderColor: =RGBA(189, 189, 189, 1)
-        HoverColor: =RGBA(50, 49, 48, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Items: ='Process Taxonomy'
-        PressedBorderColor: =RGBA(2, 167, 131, 1)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        SearchFields: =["Title"]
-        SearchItems: =Search('Process Taxonomy',ComboBox1.SearchText,"Title")
-        SelectionColor: =RGBA(26, 35, 33, 1)
-        SelectionFill: =RGBA(208, 208, 208, 1)
-        SelectMultiple: =false
-        Size: =13
-        Width: =LeftPanel.Width*0.85
-        X: =765
-        Y: =312
-        ZIndex: =3
 
