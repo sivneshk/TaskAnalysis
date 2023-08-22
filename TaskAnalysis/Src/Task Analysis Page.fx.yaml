@@ -1146,6 +1146,17 @@
                     Text: ="Text"
                     ZIndex: =1
 
+                Gallery1 As gallery.galleryVertical:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    DelayItemLoading: =true
+                    Items: =colTaxonomyDisplay
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                    ZIndex: =2
+
         FooterContainer As groupContainer.manualLayoutContainer:
             Height: =Parent.Height/25
             RadiusBottomLeft: =4
@@ -1664,7 +1675,11 @@
                     HoverBorderColor: =RGBA(2, 188, 148, 1)
                     HoverColor: =RGBA(2, 188, 148, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
-                    OnSelect: =Set(ShowPopUp,false);
+                    OnSelect: |-
+                        =Set(ShowPopUp,false);
+                        Collect(colTaxonomyDisplay,(If(DropdownL6.Selected.Value <> Blank(), DropdownL6.Selected.Value,
+                            DropdownL5.Selected.Value <> Blank(), DropdownL5.Selected.Value,
+                            DropdownL4.Selected.Value )), DropdownCOCO.SelectedItems)
                     PressedBorderColor: =RGBA(230, 230, 230, 1)
                     PressedColor: =RGBA(2, 188, 148, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
@@ -1675,8 +1690,8 @@
                     Size: =Self.Height/3.5
                     Text: ="+ Add Task"
                     Width: =DropdownCOCO.Width*0.2
-                    X: =BackSubmitButtonContainer.Width-Self.Width
-                    Y: =BackSubmitButtonContainer.Height-Self.Height-BackSubmitButtonContainer.PaddingBottom
+                    X: =BackSubmitButtonContainer.Width-Self.Width-BackSubmitButtonContainer.PaddingRight
+                    Y: =60
                     ZIndex: =2
 
             EmptyFooterMargin As groupContainer.manualLayoutContainer:

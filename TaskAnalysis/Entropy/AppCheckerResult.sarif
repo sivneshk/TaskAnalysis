@@ -1866,6 +1866,30 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 7
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 7
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
             }
           ]
         }
@@ -2395,6 +2419,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Task Analysis Page",
+                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Task Analysis Page'.PopUpOverlay.DialogBox.DialogStartsHere.CloseIcon.AccessibleLabel"
                 }
               ],
@@ -2468,6 +2522,36 @@
                 "member": "AccessibleLabel",
                 "module": "Task Analysis Page",
                 "type": "'Task Analysis Page'.PopUpOverlay.DialogBox.DropdownCOCOContainer.DropdownCOCO"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Task Analysis Page",
+                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1"
               }
             }
           ],
