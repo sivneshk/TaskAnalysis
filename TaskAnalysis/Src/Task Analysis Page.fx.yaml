@@ -1058,7 +1058,14 @@
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =RGBA(16, 110, 190, 1)
-                        OnSelect: =Reset(
+                        OnSelect: |
+                            =Reset(DropdownUniqueID);
+                            Reset(DropdownL1);
+                            Reset(DropdownL2);
+                            Reset(DropdownL3);
+                            Reset(DropdownL4);
+                            Reset(DropdownL5);
+                            Reset(DropdownL6);
                         PressedBorderColor: =RGBA(0, 69, 120, 1)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(16, 110, 190, 1)
@@ -1112,6 +1119,14 @@
                         HoverColor: =RGBA(253, 183, 20, 1)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.Erase
+                        OnSelect: |
+                            =Reset(DropdownUniqueID);
+                            Reset(DropdownL1);
+                            Reset(DropdownL2);
+                            Reset(DropdownL3);
+                            Reset(DropdownL4);
+                            Reset(DropdownL5);
+                            Reset(DropdownL6);
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
