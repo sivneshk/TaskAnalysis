@@ -1691,7 +1691,7 @@
                     Text: ="+ Add Task"
                     Width: =DropdownCOCO.Width*0.2
                     X: =BackSubmitButtonContainer.Width-Self.Width-BackSubmitButtonContainer.PaddingRight
-                    Y: =60
+                    Y: =BackSubmitButtonContainer.Height-Self.Height-BackSubmitButtonContainer.PaddingBottom
                     ZIndex: =2
 
             EmptyFooterMargin As groupContainer.manualLayoutContainer:
