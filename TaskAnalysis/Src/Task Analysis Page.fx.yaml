@@ -1098,6 +1098,52 @@
                 Width: =Parent.Width*2/3
                 ZIndex: =2
 
+                Label1 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Size: =13
+                    Text: ="Text"
+                    ZIndex: =1
+
+                DataTable3 As dataTable.datatable:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.Solid
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Normal
+                    HeadingColor: =RGBA(255, 255, 255, 1)
+                    HeadingFill: =RGBA(0, 120, 212, 1)
+                    HeadingFont: =Font.'Segoe UI'
+                    HeadingFontWeight: =FontWeight.Normal
+                    HeadingSize: =13
+                    Height: =500
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =RGBA(0, 120, 212, 1)
+                    InputFill: =RGBA(245, 245, 245, 1)
+                    InvertedColor: =RGBA(255, 255, 255, 1)
+                    LayoutMinHeight: =250
+                    LayoutMinWidth: =400
+                    LinkColor: =RGBA(0, 120, 212, 1)
+                    PrimaryColor1: =RGBA(0, 120, 212, 1)
+                    PrimaryColor2: =RGBA(16, 110, 190, 1)
+                    PrimaryColor3: =RGBA(0, 69, 120, 1)
+                    SelectedColor: =RGBA(50, 49, 48, 1)
+                    SelectedFill: =RGBA(199, 224, 244, 1)
+                    Size: =13
+                    Width: =800
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
         FooterContainer As groupContainer.manualLayoutContainer:
             Height: =Parent.Height/25
             RadiusBottomLeft: =4
@@ -1146,10 +1192,6 @@
             LayoutAlignItems: =LayoutAlignItems.Center
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMode: =LayoutMode.Auto
-            PaddingBottom: =5
-            PaddingLeft: =5
-            PaddingRight: =5
-            PaddingTop: =5
             RadiusBottomLeft: =10
             RadiusBottomRight: =10
             RadiusTopLeft: =10
@@ -1229,7 +1271,7 @@
                     Width: =DialogStartsHere.Width-CloseIcon.Width
                     ZIndex: =2
 
-            SelectCompanyCode_1 As label:
+            PleaseChooseCompanyCode As label:
                 Align: =Align.Justify
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -1239,11 +1281,340 @@
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 FocusedBorderThickness: =4
                 Font: ="Poppins"
-                Height: =DialogBox.Height*0.5
+                Height: =DialogBox.Height*0.15
                 PaddingTop: =10
-                Size: =SelectCompanyCode_1.Height/15
+                Size: =PleaseChooseCompanyCode.Height/4
                 Text: ="Please choose the active company code(s) for selected process."
                 VerticalAlign: =VerticalAlign.Top
                 Width: =DialogStartsHere.Width
                 ZIndex: =3
+
+            DropdownCOCOLabel As label:
+                Align: =Align.Justify
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(5, 50, 43, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: ="Poppins"
+                Height: =DialogBox.Height*0.1
+                PaddingTop: =10
+                Size: =DropdownCOCOLabel.Height/3
+                Text: ="Company Code"
+                VerticalAlign: =VerticalAlign.Bottom
+                Width: =DialogStartsHere.Width
+                ZIndex: =4
+
+            DropdownCOCOContainer As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox.Height-EmptyHeaderMargin.Height-DialogStartsHere.Height-PleaseChooseCompanyCode.Height-DropdownCOCOLabel.Height-BackSubmitButtonContainer.Height-EmptyFooterMargin.Height
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox.Width*0.85
+                ZIndex: =5
+
+                "DropdownCOCO As 'Combo box'.pcfdataset":
+                    AllowMultiSelect: =true
+                    AllowSearching: =true
+                    Color: =RGBA(26, 35, 33, 1)
+                    DisplayMode: =DisplayMode.Edit
+                    Font: ="Noto Sans"
+                    FontSize: =Self.Height/3.1
+                    Height: =TaskFilter.Height/11
+                    Items: ='Coco Mapping'
+                    PaddingStart: =10
+                    PCFTeamsTheme: ="default"
+                    Text: ="---------------------------------------------Select Company Code-----------------------------------------------"
+                    Width: =PleaseChooseCompanyCode.Width
+                    X: =0
+                    Y: =13
+                    ZIndex: =2
+
+                    COMPANY_CODE1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="COMPANY_CODE"
+                        FieldName: ="Title"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =1
+                        ZIndex: =85
+
+                    CATEGORY1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="CATEGORY"
+                        FieldName: ="field_1"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =2
+                        ZIndex: =86
+
+                    "'LE Name1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="LE Name"
+                        FieldName: ="field_2"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =3
+                        ZIndex: =87
+
+                    ASSOCIATED_LE1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="ASSOCIATED_LE"
+                        FieldName: ="field_3"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =4
+                        ZIndex: =88
+
+                    ERP1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="ERP"
+                        FieldName: ="field_4"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =5
+                        ZIndex: =89
+
+                    PC1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="PC"
+                        FieldName: ="field_5"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =6
+                        ZIndex: =90
+
+                    "'Business Segment1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="Business Segment"
+                        FieldName: ="field_6"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =7
+                        ZIndex: =91
+
+                    Country1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="Country"
+                        FieldName: ="field_7"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =8
+                        ZIndex: =92
+
+                    Region1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="Region"
+                        FieldName: ="field_8"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =9
+                        ZIndex: =93
+
+                    "'DRM Region1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="DRM Region"
+                        FieldName: ="field_9"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =10
+                        ZIndex: =94
+
+                    "'SAP CoCo1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="SAP CoCo"
+                        FieldName: ="field_10"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =11
+                        ZIndex: =95
+
+                    OA1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="OA"
+                        FieldName: ="field_11"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =12
+                        ZIndex: =96
+
+                    OL1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="OL"
+                        FieldName: ="field_12"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =13
+                        ZIndex: =97
+
+                    "'OL-GRNI1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="OL-GRNI"
+                        FieldName: ="field_13"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =14
+                        ZIndex: =98
+
+                    CSR1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="CSR"
+                        FieldName: ="field_14"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =15
+                        ZIndex: =99
+
+                    "'Cost Accrual PO1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="Cost Accrual PO"
+                        FieldName: ="CostAccrualPO"
+                        FieldType: ="b"
+                        FieldVariantName: ="textualColumn"
+                        Order: =16
+                        ZIndex: =100
+
+                    "'Cost Accrual Non-PO1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="Cost Accrual Non-PO"
+                        FieldName: ="CostAccrualNon_x002d_PO"
+                        FieldType: ="b"
+                        FieldVariantName: ="textualColumn"
+                        Order: =17
+                        ZIndex: =101
+
+                    "'CSR-Channel Partner1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="CSR-Channel Partner"
+                        FieldName: ="CSR_x002d_ChannelPartner"
+                        FieldType: ="b"
+                        FieldVariantName: ="textualColumn"
+                        Order: =18
+                        ZIndex: =102
+
+                    "'Deposit, Pre-Payment and Sundry-Receivables1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="Deposit, Pre-Payment and Sundry-Receivables"
+                        FieldName: ="Deposit_x002c_Pre_x002d_Paymenta"
+                        FieldType: ="b"
+                        FieldVariantName: ="textualColumn"
+                        Order: =19
+                        ZIndex: =103
+
+                    "'Unclaimed property1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="Unclaimed property"
+                        FieldName: ="Unclaimedproperty"
+                        FieldType: ="b"
+                        FieldVariantName: ="textualColumn"
+                        Order: =20
+                        ZIndex: =104
+
+                    GRNI1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="GRNI"
+                        FieldName: ="GRNI"
+                        FieldType: ="b"
+                        FieldVariantName: ="textualColumn"
+                        Order: =21
+                        ZIndex: =105
+
+                    "'Reconciliation Preparation1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="Reconciliation Preparation"
+                        FieldName: ="ReconciliationPreparation"
+                        FieldType: ="b"
+                        FieldVariantName: ="textualColumn"
+                        Order: =22
+                        ZIndex: =106
+
+                    "'Reconciliation Approval1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="Reconciliation Approval"
+                        FieldName: ="ReconciliationApproval"
+                        FieldType: ="b"
+                        FieldVariantName: ="textualColumn"
+                        Order: =23
+                        ZIndex: =107
+
+                    Attachments8 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="Attachments"
+                        FieldName: ="{Attachments}"
+                        FieldType: ="r*"
+                        FieldVariantName: ="textualColumn"
+                        Order: =24
+                        ZIndex: =108
+
+            BackSubmitButtonContainer As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox.Height/5
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox.Width*0.85
+                ZIndex: =6
+
+                CancelButton As button:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderThickness: =1
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    Fill: =RGBA(0, 0, 0, 1)
+                    Font: ="Poppins"
+                    Height: =ButtonGroup.Height/2
+                    HoverBorderColor: =RGBA(2, 188, 148, 1)
+                    HoverColor: =RGBA(2, 188, 148, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: =Set(ShowPopUp,false);
+                    PressedBorderColor: =RGBA(230, 230, 230, 1)
+                    PressedColor: =RGBA(2, 188, 148, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Size: =Self.Height/3
+                    Text: ="Cancel"
+                    Width: =DropdownCOCO.Width*0.2
+                    X: =AddTaskButton2.X-Self.Width*1.1
+                    Y: =BackSubmitButtonContainer.Height-Self.Height
+                    ZIndex: =1
+
+                AddTaskButton2 As button:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderThickness: =1
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    Fill: =RGBA(2, 188, 148, 1)
+                    Font: ="Poppins"
+                    Height: =ButtonGroup.Height/2
+                    HoverBorderColor: =RGBA(2, 188, 148, 1)
+                    HoverColor: =RGBA(2, 188, 148, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: =Set(ShowPopUp,false);
+                    PressedBorderColor: =RGBA(230, 230, 230, 1)
+                    PressedColor: =RGBA(2, 188, 148, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Size: =Self.Height/3
+                    Text: ="+ Add Task"
+                    Width: =DropdownCOCO.Width*0.2
+                    X: =BackSubmitButtonContainer.Width-Self.Width
+                    Y: =BackSubmitButtonContainer.Height-Self.Height
+                    ZIndex: =2
+
+            EmptyFooterMargin As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox.Height/10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox.Width*0.85
+                ZIndex: =7
 

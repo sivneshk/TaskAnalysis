@@ -8,6 +8,9 @@
     "datasets": {
       "https://bakerhughes.sharepoint.com/sites/KLGFCControllership": {
         "dataSources": {
+          "Coco Mapping": {
+            "tableName": "d0c040da-7ba3-4a7e-9193-26c99e95ec3b"
+          },
           "Process Taxonomy": {
             "tableName": "7c26a536-1597-4877-8628-661c6363a571"
           }
@@ -15,7 +18,8 @@
       }
     },
     "dataSources": [
-      "Process Taxonomy"
+      "Process Taxonomy",
+      "Coco Mapping"
     ],
     "dependencies": {},
     "dependents": [],
