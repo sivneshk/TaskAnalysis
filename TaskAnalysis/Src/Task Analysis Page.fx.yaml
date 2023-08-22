@@ -1198,6 +1198,35 @@
                 X: =MainTitle.X
                 ZIndex: =1
 
+        ComboBox2 As combobox:
+            BorderColor: =RGBA(245, 245, 245, 1)
+            ChevronBackground: =RGBA(245, 245, 245, 1)
+            ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+            ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+            ChevronFill: =RGBA(50, 49, 48, 1)
+            ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+            ChevronHoverFill: =RGBA(50, 49, 48, 1)
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(161, 159, 157, 1)
+            DisabledFill: =RGBA(242, 242, 241, 0)
+            DisplayFields: =["Title"]
+            Font: ="Noto Sans"
+            HoverBorderColor: =RGBA(189, 189, 189, 1)
+            HoverColor: =RGBA(50, 49, 48, 1)
+            HoverFill: =RGBA(245, 245, 245, 1)
+            Items: ='Process Taxonomy'
+            PressedBorderColor: =RGBA(16, 110, 190, 1)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            SearchFields: =["Title"]
+            SearchItems: =Search('Process Taxonomy',ComboBox2.SearchText,"Title")
+            SelectionFill: =RGBA(255, 255, 255, 1)
+            Size: =13
+            X: =1089
+            Y: =273
+            ZIndex: =4
+
     PopUpOverlay As groupContainer.manualLayoutContainer:
         Fill: =RGBA(34, 48, 45, 0.8)
         Height: |
