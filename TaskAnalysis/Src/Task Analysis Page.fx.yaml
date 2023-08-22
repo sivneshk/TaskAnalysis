@@ -336,14 +336,13 @@
                     "DropdownL1 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
-                        DefaultSelectedItems: |
-                            =First(If(uniqueIDVar <> Blank(),Distinct(Filter('Process Taxonomy',Title=uniqueIDVar),L1),Blank()))
+                        DefaultSelectedItems: =If(DropdownUniqueID.Selected.Value = Blank(), Blank(), First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID.Selected.Value),L1)))
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter.Height/11
                         Items: |
-                            =If(uniqueIDVar = Blank(), Sort(Distinct('Process Taxonomy',L1),Value), Distinct(Filter('Process Taxonomy',Title=uniqueIDVar),L1))
+                            =If(DropdownUniqueID.Selected.Value = Blank(), Sort(Distinct('Process Taxonomy',L1),Value), Distinct(Filter('Process Taxonomy',Title=DropdownUniqueID.Selected.Value),L1))
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         OnChange: =Set(varL1,DropdownL1.Selected.Value)
@@ -447,20 +446,23 @@
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: |-
-                            =First(If(uniqueIDVar <> Blank()
+                            =If(DropdownUniqueID.Selected.Value = Blank()
                                 ,
-                                Distinct(Filter('Process Taxonomy',Title = uniqueIDVar),L2)
-                            ))
+                                Blank()
+                                ,
+                                First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID.Selected.Value),L2))
+                                
+                            )
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter.Height/11
                         Items: |-
-                            =If(uniqueIDVar = Blank()
+                            =If(DropdownUniqueID.Selected.Value = Blank()
                                 , 
                                 Sort(Distinct(Filter('Process Taxonomy',L1 = DropdownL1.Selected.Value),L2),Value)
                                 ,
-                                Distinct(Filter('Process Taxonomy',Title = uniqueIDVar),L2)
+                                Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID.Selected.Value),L2)
                             )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
@@ -564,20 +566,23 @@
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: |-
-                            =First(If(uniqueIDVar <> Blank()
+                            =If(DropdownUniqueID.Selected.Value = Blank()
                                 ,
-                                Distinct(Filter('Process Taxonomy',Title = uniqueIDVar),L3)
-                            ))
+                                Blank()
+                                ,
+                                First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID.Selected.Value),L3))
+                                
+                            )
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter.Height/11
                         Items: |-
-                            =If(uniqueIDVar = Blank()
+                            =If(DropdownUniqueID.Selected.Value = Blank()
                                 , 
                                 Sort(Distinct(Filter('Process Taxonomy',L2 = DropdownL2.Selected.Value),L3),Value)
                                 ,
-                                Distinct(Filter('Process Taxonomy',Title = uniqueIDVar),L3)
+                                Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID.Selected.Value),L3)
                             )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
@@ -681,10 +686,13 @@
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: |-
-                            =First(If(uniqueIDVar <> Blank()
+                            =If(DropdownUniqueID.Selected.Value = Blank()
                                 ,
-                                Distinct(Filter('Process Taxonomy',Title = uniqueIDVar),L4)
-                            ))
+                                Blank()
+                                ,
+                                First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID.Selected.Value),L4))
+                                
+                            )
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
@@ -798,10 +806,13 @@
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: |-
-                            =First(If(uniqueIDVar <> Blank()
+                            =If(DropdownUniqueID.Selected.Value = Blank()
                                 ,
-                                Distinct(Filter('Process Taxonomy',Title = uniqueIDVar),L5)
-                            ))
+                                Blank()
+                                ,
+                                First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID.Selected.Value),L5))
+                                
+                            )
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
@@ -915,10 +926,13 @@
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: |-
-                            =First(If(uniqueIDVar <> Blank()
+                            =If(DropdownUniqueID.Selected.Value = Blank()
                                 ,
-                                Distinct(Filter('Process Taxonomy',Title = uniqueIDVar),L6)
-                            ))
+                                Blank()
+                                ,
+                                First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID.Selected.Value),L6))
+                                
+                            )
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
@@ -1028,19 +1042,6 @@
                             Order: =1
                             ZIndex: =84
 
-                    Label2 As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        Size: =13
-                        Text: =DropdownL1.Selected.Value
-                        ZIndex: =8
-
                 ButtonGroup As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     FillPortions: =0
@@ -1069,6 +1070,11 @@
                         OnSelect: |-
                             =Reset(DropdownUniqueID);
                             Reset(DropdownL1);
+                            Reset(DropdownL2);
+                            Reset(DropdownL3);
+                            Reset(DropdownL4);
+                            Reset(DropdownL5);
+                            Reset(DropdownL6);
                         PressedBorderColor: =RGBA(0, 69, 120, 1)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(16, 110, 190, 1)
@@ -1095,8 +1101,7 @@
                         HoverBorderColor: =RGBA(2, 188, 148, 1)
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: |
-                            =Set(ShowPopUp,true);
+                        OnSelect: =Set(ShowPopUp,true);
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
@@ -1167,38 +1172,6 @@
                 X: =MainTitle.X
                 ZIndex: =1
 
-        ComboBox2 As combobox:
-            BorderColor: =RGBA(245, 245, 245, 1)
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-            ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-            ChevronFill: =RGBA(148, 148, 148, 1)
-            ChevronHoverBackground: =RGBA(245, 245, 245, 1)
-            ChevronHoverFill: =RGBA(148, 148, 148, 1)
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            DisabledFill: =RGBA(242, 242, 241, 0)
-            DisplayFields: =["Title"]
-            Font: ="Noto Sans"
-            Height: =TaskFilter.Height/11
-            HoverBorderColor: =RGBA(189, 189, 189, 1)
-            HoverColor: =RGBA(26, 35, 33, 1)
-            HoverFill: =RGBA(245, 245, 245, 1)
-            Items: ='Process Taxonomy'
-            PressedBorderColor: =RGBA(2, 167, 131, 1)
-            PressedColor: =RGBA(26, 35, 33, 1)
-            PressedFill: =RGBA(255, 255, 255, 1)
-            SearchFields: =["Title"]
-            SearchItems: =Search('Process Taxonomy',ComboBox2.SearchText,"Title")
-            SelectionFill: =RGBA(255, 255, 255, 1)
-            SelectMultiple: =false
-            Size: =Self.Height/3.1
-            Width: =LeftPanel.Width*0.85
-            X: =1155
-            Y: =244
-            ZIndex: =4
-
         Label3 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -1209,9 +1182,9 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Size: =13
-            Text: =uniqueIDVar
-            X: =798
-            Y: =325
+            Text: =DropdownUniqueID.Selected.Value
+            X: =59
+            Y: =803
             ZIndex: =5
 
         Label4 As label:
@@ -1225,8 +1198,8 @@
             Font: =Font.'Segoe UI'
             Size: =13
             Text: =DropdownL2.Selected.Value
-            X: =798
-            Y: =378
+            X: =59
+            Y: =883
             ZIndex: =6
 
         Label5 As label:
@@ -1240,8 +1213,8 @@
             Font: =Font.'Segoe UI'
             Size: =13
             Text: =DropdownL4.Selected.Value
-            X: =798
-            Y: =570
+            X: =234
+            Y: =883
             ZIndex: =7
 
         Label6 As label:
@@ -1256,11 +1229,11 @@
             Height: =56
             Size: =13
             Text: =DropdownL3.Selected.Value
-            X: =798
-            Y: =483
+            X: =209
+            Y: =814
             ZIndex: =8
 
-        Label4_1 As label:
+        Label4_2 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1270,10 +1243,10 @@
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Size: =13
-            Text: =varL1
-            X: =1086
-            Y: =413
-            ZIndex: =9
+            Text: =DropdownL1.Selected.Value
+            X: =59
+            Y: =843
+            ZIndex: =10
 
     PopUpOverlay As groupContainer.manualLayoutContainer:
         Fill: =RGBA(34, 48, 45, 0.8)
