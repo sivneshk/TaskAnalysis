@@ -1556,7 +1556,7 @@
                     DisabledFill: =RGBA(242, 242, 241, 0)
                     Fill: =RGBA(0, 0, 0, 1)
                     Font: ="Poppins"
-                    Height: =ButtonGroup.Height/2
+                    Height: =BackSubmitButtonContainer.Height/2
                     HoverBorderColor: =RGBA(2, 188, 148, 1)
                     HoverColor: =RGBA(2, 188, 148, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
@@ -1568,7 +1568,7 @@
                     RadiusBottomRight: =5
                     RadiusTopLeft: =5
                     RadiusTopRight: =5
-                    Size: =Self.Height/3
+                    Size: =Self.Height/3.5
                     Text: ="Cancel"
                     Width: =DropdownCOCO.Width*0.2
                     X: =AddTaskButton2.X-Self.Width*1.1
@@ -1583,7 +1583,7 @@
                     DisabledFill: =RGBA(242, 242, 241, 0)
                     Fill: =RGBA(2, 188, 148, 1)
                     Font: ="Poppins"
-                    Height: =ButtonGroup.Height/2
+                    Height: =BackSubmitButtonContainer.Height/2
                     HoverBorderColor: =RGBA(2, 188, 148, 1)
                     HoverColor: =RGBA(2, 188, 148, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
@@ -1595,7 +1595,7 @@
                     RadiusBottomRight: =5
                     RadiusTopLeft: =5
                     RadiusTopRight: =5
-                    Size: =Self.Height/3
+                    Size: =Self.Height/3.5
                     Text: ="+ Add Task"
                     Width: =DropdownCOCO.Width*0.2
                     X: =BackSubmitButtonContainer.Width-Self.Width
