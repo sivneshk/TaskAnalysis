@@ -95,7 +95,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 12,
+    "BindingErrorCount": 1,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -114,7 +114,7 @@
     "ManualOfflineProfileId": "",
     "Name": "GFO Task Analysis",
     "OriginatingVersion": "1.334",
-    "ParserErrorCount": 1,
+    "ParserErrorCount": 0,
     "ShowStatusBar": false
   },
   "PublishInfo": {

@@ -169,20 +169,6 @@
     "OverridableProperties": {},
     "Version": "1.4.0"
   },
-  "rectangle": {
-    "CustomGroupControlTemplateName": "",
-    "FirstParty": true,
-    "Id": "http://microsoft.com/appmagic/shapes/rectangle",
-    "IsComponentTemplate": false,
-    "IsCustomGroupControlTemplate": false,
-    "IsPcfControl": false,
-    "IsPremiumPcfControl": false,
-    "IsWidgetTemplate": true,
-    "LastModifiedTimestamp": "0",
-    "Name": "rectangle",
-    "OverridableProperties": {},
-    "Version": "2.3.0"
-  },
   "screen": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
@@ -196,5 +182,19 @@
     "Name": "screen",
     "OverridableProperties": {},
     "Version": "1.0"
+  },
+  "text": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/text",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": false,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": true,
+    "LastModifiedTimestamp": "0",
+    "Name": "text",
+    "OverridableProperties": {},
+    "Version": "2.3.2"
   }
 }
