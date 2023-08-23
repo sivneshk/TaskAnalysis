@@ -1789,6 +1789,7 @@
                     HoverFill: =RGBA(255, 255, 255, 1)
                     OnSelect: |-
                         =ClearCollect(colCOCO, {COCO: Concat(DropdownCOCO.SelectedItems,Title, ", ")});
+                        ForAll(colCOCO.COCO, Collect(colTaxonomyDisplay, {Task: DropdownL4.Selected.Value, COCO: Split(ThisRecord.COCO, ", ")}));
                         Set(ShowPopUp,false)
                     PressedBorderColor: =RGBA(230, 230, 230, 1)
                     PressedColor: =RGBA(2, 188, 148, 1)

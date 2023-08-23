@@ -169,7 +169,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "08/23/2023 07:43:06",
+  "HeaderLastSavedDateTimeUTC": "08/23/2023 07:47:50",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "772eb637-780b-4505-ac82-d4fd749ecd5b": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/e8d8ce65691140fb9343d1fbe5c35db0\"",
@@ -186,7 +186,8 @@
   "OrderComponentTemplate": {},
   "OrderDataSource": {
     "Coco Mapping": 1,
-    "colCOCO": 5,
+    "colCOCO": 6,
+    "colTaxonomyDisplay": 5,
     "ComboBoxSample": 2,
     "CustomGallerySample": 3,
     "Office365Users": 0,
