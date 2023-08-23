@@ -2419,6 +2419,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Task Analysis Page",
+                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1.TabIndex"
                 }
               ],
@@ -2539,47 +2569,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1.AccessibleLabel"
+                  "fullyQualifiedName": "App.varL1"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1.AccessibleLabel",
+                  "fullyQualifiedName": "App.varL1",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.cocoVar"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.cocoVar",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "cocoVar",
+                "member": "varL1",
                 "module": "App",
                 "type": "App"
               }
@@ -2599,17 +2599,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.varL1"
+                  "fullyQualifiedName": "App.cocoVar"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.varL1",
+                  "fullyQualifiedName": "App.cocoVar",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "varL1",
+                "member": "cocoVar",
                 "module": "App",
                 "type": "App"
               }

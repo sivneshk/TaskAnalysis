@@ -1677,9 +1677,9 @@
                     HoverFill: =RGBA(255, 255, 255, 1)
                     OnSelect: |-
                         =Set(ShowPopUp,false);
-                        Collect(colTaxonomyDisplay,(If(DropdownL6.Selected.Value <> Blank(), DropdownL6.Selected.Value,
-                            DropdownL5.Selected.Value <> Blank(), DropdownL5.Selected.Value,
-                            DropdownL4.Selected.Value )), DropdownCOCO.SelectedItems)
+                        Collect(colTaxonomyDisplay,(If(DropdownL6.Selected.Value <> Blank(), Text(DropdownL6.Selected.Value),
+                            DropdownL5.Selected.Value <> Blank(), Text(DropdownL5.Selected.Value),
+                            Text(DropdownL4.Selected.Value) )), DropdownCOCO.SelectedItems)
                     PressedBorderColor: =RGBA(230, 230, 230, 1)
                     PressedColor: =RGBA(2, 188, 148, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
