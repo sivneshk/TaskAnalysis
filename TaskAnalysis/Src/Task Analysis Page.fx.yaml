@@ -1193,7 +1193,7 @@
                         OnSelect: =Select(Parent)
                         Size: =13
                         Text: =ThisItem.Task
-                        Width: =338
+                        Width: =427
                         X: =30
                         Y: =16
                         ZIndex: =2
@@ -1766,7 +1766,7 @@
                     HoverColor: =RGBA(2, 188, 148, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     OnSelect: |-
-                        =Collect(colTaxonomyDisplay, {Task: DropdownL4.Selected.Value, 'Company Code': Concat(DropdownCOCO.SelectedItems, Title, ", ")});
+                        =ForAll(DropdownCOCO.SelectedItems, Collect(colTaxonomyDisplay, {Task: DropdownL4.Selected.Value, 'Company Code': DropdownCOCO.SelectedItems}));
                         Set(ShowPopUp,false)
                     PressedBorderColor: =RGBA(230, 230, 230, 1)
                     PressedColor: =RGBA(2, 188, 148, 1)
