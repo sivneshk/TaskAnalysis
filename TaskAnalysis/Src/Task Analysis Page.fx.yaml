@@ -1149,11 +1149,14 @@
                     ZIndex: =1
 
                 Gallery1 As gallery.galleryVertical:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     BorderColor: =RGBA(245, 245, 245, 1)
                     DelayItemLoading: =true
                     Height: =RightPanel.Height-Label1.Height
                     Items: =colTaxonomyDisplay
                     Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/10)
                     Width: =RightPanel.Width
@@ -1763,8 +1766,7 @@
                     HoverColor: =RGBA(2, 188, 148, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     OnSelect: |-
-                        =ClearCollect(colCOCO, {COCO: Concat(DropdownCOCO.SelectedItems,Title, ", ")});
-                        ForAll(colCOCO.COCO, Collect(colTaxonomyDisplay, {Task: DropdownL4.Selected.Value, COCO: Split(ThisRecord.COCO, ", ")}));
+                        =ForAll(DropdownCOCO.SelectedItems, Collect(colTaxonomyDisplay, {Task: DropdownL4.Selected.Value, 'Company Code': DropdownCOCO.SelectedItems}));
                         Set(ShowPopUp,false)
                     PressedBorderColor: =RGBA(230, 230, 230, 1)
                     PressedColor: =RGBA(2, 188, 148, 1)

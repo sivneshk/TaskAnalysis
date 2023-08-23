@@ -2133,15 +2133,14 @@
           ],
           "message": {
             "arguments": [
-              "Text",
-              "Table"
+              "COCO"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
+          "ruleId": "app-ErrInvalidName",
           "ruleIndex": 1
         },
         {
@@ -2568,6 +2567,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1.TextInput1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1.TextInput1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Task Analysis Page",
+                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1.TextInput1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Task Analysis Page'.PopUpOverlay.DialogBox.DialogStartsHere.CloseIcon.AccessibleLabel"
                 }
               ],
@@ -2641,36 +2670,6 @@
                 "member": "AccessibleLabel",
                 "module": "Task Analysis Page",
                 "type": "'Task Analysis Page'.PopUpOverlay.DialogBox.DropdownCOCOContainer.DropdownCOCO"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1.TextInput1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1.TextInput1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.Gallery1.TextInput1"
               }
             }
           ],
@@ -2888,16 +2887,16 @@
               }
             },
             {
-              "id": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
+              "id": "app-ErrInvalidName",
               "messageStrings": {
                 "issue": {
-                  "text": "Expected {0} value."
+                  "text": "Name isn't valid. '{0}' isn't recognized."
                 }
               },
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Change the rule to produce a {0} value."
+                  "Remove or correct the reference to the name that isn't valid."
                 ],
                 "level": "High",
                 "primaryCategory": "formula",
