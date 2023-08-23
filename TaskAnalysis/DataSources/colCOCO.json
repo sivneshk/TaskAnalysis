@@ -3,7 +3,7 @@
     "IsComponentScoped": false,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "colTaxonomyDisplay",
+    "Name": "colCOCO",
     "Type": "CollectionDataSourceInfo"
   }
 ]

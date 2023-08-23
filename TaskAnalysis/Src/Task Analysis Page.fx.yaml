@@ -1344,6 +1344,33 @@
             Y: =843
             ZIndex: =10
 
+        Gallery4 As gallery.galleryVertical:
+            BorderColor: =RGBA(245, 245, 245, 1)
+            DelayItemLoading: =true
+            Items: =colCOCO
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+            X: =594
+            Y: =45
+            ZIndex: =11
+
+            Label11 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                OnSelect: =Select(Parent)
+                Size: =13
+                Text: =ThisItem.COCO
+                X: =207
+                Y: =57
+                ZIndex: =1
+
     PopUpOverlay As groupContainer.manualLayoutContainer:
         Fill: =RGBA(34, 48, 45, 0.8)
         Height: |
@@ -1761,7 +1788,7 @@
                     HoverColor: =RGBA(2, 188, 148, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     OnSelect: |-
-                        =Collect(colTaxonomyDisplay, {Task: DropdownL4.Selected.Value, COCO:DropdownCOCO.SelectedItems});
+                        =ClearCollect(colCOCO, {COCO: Concat(DropdownCOCO.SelectedItems,Title, ", ")});
                         Set(ShowPopUp,false)
                     PressedBorderColor: =RGBA(230, 230, 230, 1)
                     PressedColor: =RGBA(2, 188, 148, 1)
