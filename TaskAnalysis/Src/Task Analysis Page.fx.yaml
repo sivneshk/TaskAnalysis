@@ -1676,10 +1676,11 @@
                     HoverColor: =RGBA(2, 188, 148, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     OnSelect: |-
-                        =Set(ShowPopUp,false);
-                        Collect(colTaxonomyDisplay,{Task: (If(DropdownL6.Selected.Value <> Blank(), DropdownL6.Selected.Value,
+                        =Collect(colTaxonomyDisplay,{Task: (If(DropdownL6.Selected.Value <> Blank(), DropdownL6.Selected.Value,
                             DropdownL5.Selected.Value <> Blank(), DropdownL5.Selected.Value,
-                            DropdownL4.Selected.Value)), CompanyCode: DropdownCOCO.SelectedItems})
+                            DropdownL4.Selected.Value)), CompanyCode: DropdownCOCO.SelectedItems});
+                        
+                        Set(ShowPopUp,false);
                     PressedBorderColor: =RGBA(230, 230, 230, 1)
                     PressedColor: =RGBA(2, 188, 148, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
