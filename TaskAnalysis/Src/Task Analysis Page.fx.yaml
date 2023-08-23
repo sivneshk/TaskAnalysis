@@ -1174,7 +1174,7 @@
                         Height: =56
                         OnSelect: =Select(Parent)
                         Size: =13
-                        Text: =ThisItem.COCO
+                        Text: =ThisItem.'Company Code'
                         Width: =204
                         X: =623
                         Y: =16
