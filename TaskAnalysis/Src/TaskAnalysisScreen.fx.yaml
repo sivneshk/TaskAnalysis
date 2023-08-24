@@ -1067,7 +1067,6 @@ TaskAnalysisScreen As screen:
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         Fill: =RGBA(208, 208, 208, 1)
                         Font: ="Poppins"
-                        FontWeight: =FontWeight.Semibold
                         Height: =ButtonGroup.Height/2
                         HoverBorderColor: =RGBA(208, 208, 208, 1)
                         HoverColor: =RGBA(208, 208, 208, 1)
@@ -1247,7 +1246,7 @@ TaskAnalysisScreen As screen:
                         Font: ="Poppins"
                         Height: =TaxonomyCollect.TemplateHeight*0.5
                         OnSelect: =Select(Parent)
-                        Size: =13
+                        Size: =ChosenTask.Height/8
                         Text: =ThisItem.'Company Code'
                         Width: =CocoLabel.Width
                         X: =ChosenTask.Width
@@ -1294,7 +1293,7 @@ TaskAnalysisScreen As screen:
                         RadiusBottomRight: =2
                         RadiusTopLeft: =2
                         RadiusTopRight: =2
-                        Size: =13
+                        Size: =ChosenTask.Height/8
                         Tooltip: ="How many total working hours per month do you spend on this process?"
                         Width: =HrsSpentLabel.Width*0.6
                         X: =HrsSpentLabel.X + ((HrsSpentLabel.Width-Self.Width)/2)

@@ -3305,7 +3305,14 @@
         "LineHeight",
         "BorderThickness",
         "FocusedBorderThickness",
-        "Size",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "13",
+          "InvariantPropertyName": "Size",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Italic",
         "Underline",
         "Strikethrough",
@@ -3945,7 +3952,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "FontWeight",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "FontWeight",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Align",
         {
           "AFDDataSourceName": "",
@@ -12724,7 +12738,14 @@
         },
         "BorderThickness",
         "FocusedBorderThickness",
-        "Size",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "13",
+          "InvariantPropertyName": "Size",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Italic",
         "Underline",
         "Strikethrough",
