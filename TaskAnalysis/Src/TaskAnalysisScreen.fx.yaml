@@ -1223,7 +1223,7 @@ TaskAnalysisScreen As screen:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     BorderColor: =RGBA(245, 245, 245, 1)
                     DelayItemLoading: =true
-                    Height: =RightPanel.Height-ProcessNameLabel.Height
+                    Height: =RightPanel.Height-ProcessNameLabel.Height-ReviewBtnContainer.Height
                     Items: =colTaxonomy
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
@@ -1321,6 +1321,49 @@ TaskAnalysisScreen As screen:
                         X: =Filler.X
                         Y: =(InputHours.Height-Self.Height)/2
                         ZIndex: =4
+
+                ReviewBtnContainer As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Start
+                    FillPortions: =0
+                    Height: =RightPanel.Height/14
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Visible: =ShowResult
+                    Width: =RightPanel.Width
+                    ZIndex: =3
+
+                    ReviewBtn As button:
+                        BorderColor: =RGBA(2, 188, 148, 1)
+                        BorderThickness: =1
+                        Color: =RGBA(2, 188, 148, 1)
+                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
+                        DisabledColor: =RGBA(208, 208, 208, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayMode: =If(Or(DropdownUniqueID.Selected.Value <> Blank(), And(DropdownL1.Selected.Value <> Blank(),DropdownL2.Selected.Value <> Blank(),DropdownL3.Selected.Value <> Blank(),DropdownL4.Selected.Value <> Blank())), DisplayMode.Edit, DisplayMode.Disabled)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Font: ="Poppins"
+                        Height: =ReviewBtnContainer.Height*0.8
+                        HoverBorderColor: =RGBA(2, 188, 148, 1)
+                        HoverColor: =RGBA(2, 188, 148, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: =Set(ShowPopUp,true);
+                        PressedBorderColor: =RGBA(230, 230, 230, 1)
+                        PressedColor: =RGBA(2, 188, 148, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =Self.Height/3
+                        Text: ="Review"
+                        Width: =DeleteRowIcon.X+DeleteRowIcon.Width-InputHours.X
+                        X: =InputHours.X
+                        Y: =(ReviewBtnContainer.Height-Self.Height)/2
+                        ZIndex: =1
 
         FooterContainer As groupContainer.manualLayoutContainer:
             Height: =Parent.Height/25
