@@ -138,6 +138,7 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
+                    Width: =LeftPanel.Width
                     ZIndex: =2
 
                     UserDisplayName As label:
@@ -224,6 +225,7 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
+                    Width: =LeftPanel.Width
                     ZIndex: =3
 
                     "DropdownUniqueID As 'Combo box'.pcfdataset":
@@ -1054,6 +1056,7 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
+                    Width: =LeftPanel.Width
                     ZIndex: =8
 
                     ClearBtn As button:
@@ -1135,18 +1138,32 @@
                 Width: =Parent.Width*2/3
                 ZIndex: =2
 
-                Label1 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(50, 49, 48, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(161, 159, 157, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    Size: =13
-                    Text: ="Text"
+                HeaderTaxonomy As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    FillPortions: =0
+                    Height: =RightPanel.Height/15
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =RightPanel.Width
                     ZIndex: =1
+
+                    Label1 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =HeaderTaxonomy.Height
+                        Size: =13
+                        Text: ="Process Name"
+                        ZIndex: =1
 
                 Gallery1 As gallery.galleryVertical:
                     AlignInContainer: =AlignInContainer.SetByContainer
@@ -1160,7 +1177,7 @@
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/10)
                     Width: =RightPanel.Width
-                    ZIndex: =1
+                    ZIndex: =2
 
                     Label8 As label:
                         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1238,7 +1255,9 @@
                         HoverColor: =RGBA(16, 110, 190, 1)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.Cancel
-                        OnSelect: =Select(Parent)
+                        OnSelect: |-
+                            =Select(Parent);
+                            Remove(colTaxonomyDisplay,ThisItem)
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
