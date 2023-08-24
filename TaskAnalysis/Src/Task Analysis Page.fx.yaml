@@ -1147,6 +1147,7 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
+                    Visible: =ShowResult
                     Width: =RightPanel.Width
                     ZIndex: =1
 
@@ -1228,10 +1229,11 @@
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/6)
+                    Visible: =ShowResult
                     Width: =RightPanel.Width
                     ZIndex: =2
 
-                    Label8 As label:
+                    ChosenCOCO As label:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -1246,11 +1248,10 @@
                         Size: =13
                         Text: =ThisItem.'Company Code'
                         Width: =CocoLabel.Width
-                        X: =Label9.Width
-                        Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
+                        X: =ChosenTask.Width
                         ZIndex: =1
 
-                    Label9 As label:
+                    ChosenTask As label:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -1262,14 +1263,13 @@
                         Height: =TaxonomyCollect.TemplateHeight
                         OnSelect: =Select(Parent)
                         Overflow: =Overflow.Scroll
-                        Size: =Label9.Height/8
+                        Size: =ChosenTask.Height/8
                         Text: =ThisItem.Task
                         VerticalAlign: =VerticalAlign.Bottom
                         Width: =ProcessNameLabel.Width
-                        Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
                         ZIndex: =2
 
-                    TextInput1 As text:
+                    InputHours As text:
                         Align: =Align.Center
                         BorderColor: =RGBA(208, 208, 208, 1)
                         BorderThickness: =2
@@ -1296,10 +1296,9 @@
                         Tooltip: ="How many total working hours per month do you spend on this process?"
                         Width: =HrsSpentLabel.Width*0.6
                         X: =HrsSpentLabel.X + ((HrsSpentLabel.Width-Self.Width)/2)
-                        Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
                         ZIndex: =3
 
-                    Icon1 As icon.Cancel:
+                    DeleteRowIcon As icon.Cancel:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         Color: =RGBA(50, 49, 48, 1)
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -1317,9 +1316,9 @@
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
-                        Width: =(RightPanel.Width-TextInput1.X-TextInput1.Width)/3
-                        X: =Filler.X+(Filler.Width-Self.Width)/2
-                        Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
+                        Width: =(RightPanel.Width-InputHours.X-InputHours.Width)/3
+                        X: =Filler.X
+                        Y: =(InputHours.Height-Self.Height)/2
                         ZIndex: =4
 
         FooterContainer As groupContainer.manualLayoutContainer:
@@ -1347,21 +1346,6 @@
                 Width: =Parent.Width*0.5
                 X: =MainTitle.X
                 ZIndex: =1
-
-        Label3 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(161, 159, 157, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Size: =13
-            Text: =DropdownUniqueID.Selected.Value
-            X: =59
-            Y: =803
-            ZIndex: =5
 
     PopUpOverlay As groupContainer.manualLayoutContainer:
         Fill: =RGBA(34, 48, 45, 0.8)
@@ -1787,7 +1771,8 @@
                                                     DropdownL4.Selected.Value)), 
                                         'Company Code': ThisRecord.COMPANY_CODE}));
                         
-                        Set(ShowPopUp,false)
+                        Set(ShowPopUp,false);
+                        Set(ShowResult, true);
                     PressedBorderColor: =RGBA(230, 230, 230, 1)
                     PressedColor: =RGBA(2, 188, 148, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
