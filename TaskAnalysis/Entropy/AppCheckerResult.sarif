@@ -1866,6 +1866,18 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 5
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
             }
           ]
         }
@@ -1876,19 +1888,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownUniqueID.AccessibleLabel"
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownUniqueID.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownUniqueID.AccessibleLabel",
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownUniqueID.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownUniqueID"
+                "module": "TaskAnalysisScreen",
+                "type": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownUniqueID"
               }
             }
           ],
@@ -1906,19 +1918,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL1.AccessibleLabel"
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL1.AccessibleLabel",
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL1"
+                "module": "TaskAnalysisScreen",
+                "type": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL1"
               }
             }
           ],
@@ -1936,19 +1948,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL2.AccessibleLabel"
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL2.AccessibleLabel",
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL2"
+                "module": "TaskAnalysisScreen",
+                "type": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL2"
               }
             }
           ],
@@ -1966,19 +1978,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL3.AccessibleLabel"
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL3.AccessibleLabel",
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL3"
+                "module": "TaskAnalysisScreen",
+                "type": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL3"
               }
             }
           ],
@@ -1996,19 +2008,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL4.AccessibleLabel"
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL4.AccessibleLabel",
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL4"
+                "module": "TaskAnalysisScreen",
+                "type": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL4"
               }
             }
           ],
@@ -2026,19 +2038,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL5.AccessibleLabel"
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL5.AccessibleLabel",
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL5"
+                "module": "TaskAnalysisScreen",
+                "type": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL5"
               }
             }
           ],
@@ -2056,19 +2068,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL6.AccessibleLabel"
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL6.AccessibleLabel",
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL6"
+                "module": "TaskAnalysisScreen",
+                "type": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownL6"
               }
             }
           ],
@@ -2086,19 +2098,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.AccessibleLabel"
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.AccessibleLabel",
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect"
+                "module": "TaskAnalysisScreen",
+                "type": "TaskAnalysisScreen.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect"
               }
             }
           ],
@@ -2116,19 +2128,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.TabIndex"
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.TabIndex",
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect"
+                "module": "TaskAnalysisScreen",
+                "type": "TaskAnalysisScreen.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect"
               }
             }
           ],
@@ -2146,19 +2158,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.InputHours.AccessibleLabel"
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.InputHours.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.InputHours.AccessibleLabel",
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.InputHours.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.InputHours"
+                "module": "TaskAnalysisScreen",
+                "type": "TaskAnalysisScreen.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.InputHours"
               }
             }
           ],
@@ -2176,19 +2188,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon.AccessibleLabel"
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon.AccessibleLabel",
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon"
+                "module": "TaskAnalysisScreen",
+                "type": "TaskAnalysisScreen.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon"
               }
             }
           ],
@@ -2206,19 +2218,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon.TabIndex"
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon.TabIndex",
+                  "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon"
+                "module": "TaskAnalysisScreen",
+                "type": "TaskAnalysisScreen.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon"
               }
             }
           ],
@@ -2236,19 +2248,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Task Analysis Page'.PopUpOverlay.DialogBox.DialogStartsHere.CloseIcon.AccessibleLabel"
+                  "fullyQualifiedName": "TaskAnalysisScreen.PopUpOverlay.DialogBox.DialogStartsHere.CloseIcon.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.PopUpOverlay.DialogBox.DialogStartsHere.CloseIcon.AccessibleLabel",
+                  "fullyQualifiedName": "TaskAnalysisScreen.PopUpOverlay.DialogBox.DialogStartsHere.CloseIcon.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.PopUpOverlay.DialogBox.DialogStartsHere.CloseIcon"
+                "module": "TaskAnalysisScreen",
+                "type": "TaskAnalysisScreen.PopUpOverlay.DialogBox.DialogStartsHere.CloseIcon"
               }
             }
           ],
@@ -2266,19 +2278,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Task Analysis Page'.PopUpOverlay.DialogBox.DialogStartsHere.CloseIcon.TabIndex"
+                  "fullyQualifiedName": "TaskAnalysisScreen.PopUpOverlay.DialogBox.DialogStartsHere.CloseIcon.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.PopUpOverlay.DialogBox.DialogStartsHere.CloseIcon.TabIndex",
+                  "fullyQualifiedName": "TaskAnalysisScreen.PopUpOverlay.DialogBox.DialogStartsHere.CloseIcon.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.PopUpOverlay.DialogBox.DialogStartsHere.CloseIcon"
+                "module": "TaskAnalysisScreen",
+                "type": "TaskAnalysisScreen.PopUpOverlay.DialogBox.DialogStartsHere.CloseIcon"
               }
             }
           ],
@@ -2296,19 +2308,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Task Analysis Page'.PopUpOverlay.DialogBox.DropdownCOCOContainer.DropdownCOCO.AccessibleLabel"
+                  "fullyQualifiedName": "TaskAnalysisScreen.PopUpOverlay.DialogBox.DropdownCOCOContainer.DropdownCOCO.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.PopUpOverlay.DialogBox.DropdownCOCOContainer.DropdownCOCO.AccessibleLabel",
+                  "fullyQualifiedName": "TaskAnalysisScreen.PopUpOverlay.DialogBox.DropdownCOCOContainer.DropdownCOCO.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.PopUpOverlay.DialogBox.DropdownCOCOContainer.DropdownCOCO"
+                "module": "TaskAnalysisScreen",
+                "type": "TaskAnalysisScreen.PopUpOverlay.DialogBox.DropdownCOCOContainer.DropdownCOCO"
               }
             }
           ],

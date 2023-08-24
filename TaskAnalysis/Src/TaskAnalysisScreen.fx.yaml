@@ -1,4 +1,4 @@
-"'Task Analysis Page' As screen":
+TaskAnalysisScreen As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
     HomeContainer As groupContainer.manualLayoutContainer:

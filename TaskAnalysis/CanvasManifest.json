@@ -129,6 +129,7 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Task Analysis Page"
+    "TaskAnalysisScreen",
+    "LoadingScreen"
   ]
 }
