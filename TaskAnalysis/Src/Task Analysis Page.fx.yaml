@@ -1060,18 +1060,18 @@
                     ZIndex: =8
 
                     ClearBtn As button:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
+                        BorderColor: =RGBA(208, 208, 208, 1)
+                        BorderThickness: =1
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         Fill: =RGBA(208, 208, 208, 1)
-                        Font: =Font.'Segoe UI'
+                        Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =ButtonGroup.Height/2
-                        HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(255, 255, 255, 1)
-                        HoverFill: =RGBA(16, 110, 190, 1)
+                        HoverBorderColor: =RGBA(208, 208, 208, 1)
+                        HoverColor: =RGBA(208, 208, 208, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |-
                             =Reset(DropdownUniqueID);
                             Reset(DropdownL1);
@@ -1080,9 +1080,9 @@
                             Reset(DropdownL4);
                             Reset(DropdownL5);
                             Reset(DropdownL6);
-                        PressedBorderColor: =RGBA(0, 69, 120, 1)
-                        PressedColor: =RGBA(255, 255, 255, 1)
-                        PressedFill: =RGBA(16, 110, 190, 1)
+                        PressedBorderColor: =RGBA(208, 208, 208, 1)
+                        PressedColor: =RGBA(208, 208, 208, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
                         RadiusBottomLeft: =5
                         RadiusBottomRight: =5
                         RadiusTopLeft: =5
@@ -1097,9 +1097,10 @@
                     AddTaskBtn As button:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderThickness: =1
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
+                        DisabledColor: =RGBA(208, 208, 208, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayMode: =If(Or(DropdownUniqueID.Selected.Value <> Blank(), And(DropdownL1.Selected.Value <> Blank(),DropdownL2.Selected.Value <> Blank(),DropdownL3.Selected.Value <> Blank(),DropdownL4.Selected.Value <> Blank())), DisplayMode.Edit, DisplayMode.Disabled)
                         Fill: =RGBA(2, 188, 148, 1)
                         Font: ="Poppins"
                         Height: =ButtonGroup.Height/2

@@ -2176,36 +2176,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Task Analysis Page",
-                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon.AccessibleLabel"
                 }
               ],
@@ -2230,6 +2200,36 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Task Analysis Page",
+                "type": "'Task Analysis Page'.HomeContainer.BodyContainer.RightPanel.TaxonomyCollect.DeleteRowIcon"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
         },
         {
           "locations": [
