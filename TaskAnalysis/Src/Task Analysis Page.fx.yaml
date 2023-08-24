@@ -1139,7 +1139,6 @@
                 ZIndex: =2
 
                 HeaderTaxonomy As groupContainer.manualLayoutContainer:
-                    DropShadow: =DropShadow.Light
                     FillPortions: =0
                     Height: =RightPanel.Height/15
                     LayoutMinHeight: =100
@@ -1151,7 +1150,8 @@
                     Width: =RightPanel.Width
                     ZIndex: =1
 
-                    Label1 As label:
+                    ProcessNameLabel As label:
+                        Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -1159,18 +1159,53 @@
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
+                        Font: ="Poppins"
                         Height: =HeaderTaxonomy.Height
-                        Size: =13
+                        Size: =Self.Height/3
                         Text: ="Process Name"
+                        Width: =RightPanel.Width/2
                         ZIndex: =1
 
-                Gallery1 As gallery.galleryVertical:
+                    CocoLabel As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =HeaderTaxonomy.Height
+                        Size: =Self.Height/3
+                        Text: ="Company Code"
+                        Width: =RightPanel.Width/5
+                        X: =ProcessNameLabel.Width
+                        ZIndex: =2
+
+                    HrsSpentLabel As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =HeaderTaxonomy.Height
+                        Size: =Self.Height/3
+                        Text: ="Hours Spent Monthly"
+                        Width: =RightPanel.Width/5
+                        X: =CocoLabel.X+CocoLabel.Width
+                        ZIndex: =3
+
+                TaxonomyCollect As gallery.galleryVertical:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     BorderColor: =RGBA(245, 245, 245, 1)
                     DelayItemLoading: =true
-                    Height: =RightPanel.Height-Label1.Height
-                    Items: =colTaxonomyDisplay
+                    Height: =RightPanel.Height-ProcessNameLabel.Height
+                    Items: =colTaxonomy
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -1187,7 +1222,7 @@
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
+                        Font: ="Poppins"
                         Height: =56
                         OnSelect: =Select(Parent)
                         Size: =13
@@ -1205,7 +1240,7 @@
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
+                        Font: ="Poppins"
                         Height: =56
                         OnSelect: =Select(Parent)
                         Size: =13
@@ -1224,7 +1259,7 @@
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
+                        Font: ="Poppins"
                         Height: =56
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
                         HoverColor: =RGBA(50, 49, 48, 1)
@@ -1239,25 +1274,25 @@
                         RadiusTopRight: =2
                         Size: =13
                         Width: =125
-                        X: =881
+                        X: =977
                         Y: =16
                         ZIndex: =3
 
                     Icon1 As icon.Cancel:
                         BorderColor: =RGBA(0, 0, 0, 0)
-                        Color: =RGBA(0, 120, 212, 1)
+                        Color: =RGBA(50, 49, 48, 1)
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
                         DisabledColor: =RGBA(225, 223, 221, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
                         FocusedBorderThickness: =4
                         Height: =40
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.Cancel
                         OnSelect: |-
                             =Select(Parent);
-                            Remove(colTaxonomyDisplay,ThisItem)
+                            Remove(colTaxonomy,ThisItem)
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
@@ -1785,7 +1820,7 @@
                     HoverColor: =RGBA(2, 188, 148, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     OnSelect: |-
-                        =ForAll(DropdownCOCO.SelectedItems, Collect(colTaxonomyDisplay, {Task: DropdownL4.Selected.Value, 'Company Code': DropdownCOCO.SelectedItems}));
+                        =ForAll(DropdownCOCO.SelectedItems, Collect(colTaxonomy, {Task: DropdownL4.Selected.Value, 'Company Code': DropdownCOCO.SelectedItems}));
                         Set(ShowPopUp,false)
                     PressedBorderColor: =RGBA(230, 230, 230, 1)
                     PressedColor: =RGBA(2, 188, 148, 1)
