@@ -1125,6 +1125,7 @@
                 BorderColor: =RGBA(148, 148, 148, 1)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
+                DropShadow: =DropShadow.Regular
                 FillPortions: =0
                 Height: =BodyContainer.Height
                 LayoutDirection: =LayoutDirection.Vertical
