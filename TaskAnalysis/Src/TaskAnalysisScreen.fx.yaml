@@ -1503,6 +1503,7 @@ TaskAnalysisScreen As screen:
                     AllowMultiSelect: =true
                     AllowSearching: =true
                     Color: =RGBA(26, 35, 33, 1)
+                    DefaultSelectedItems: =Blank()
                     DisplayMode: =DisplayMode.Edit
                     Font: ="Noto Sans"
                     FontSize: =Self.Height/3.1
@@ -1758,6 +1759,7 @@ TaskAnalysisScreen As screen:
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
+                    DisplayMode: =If(IsEmpty(DropdownCOCO.SelectedItems), DisplayMode.Disabled, DisplayMode.Edit)
                     Fill: =RGBA(2, 188, 148, 1)
                     Font: ="Poppins"
                     Height: =BackSubmitButtonContainer.Height/2
