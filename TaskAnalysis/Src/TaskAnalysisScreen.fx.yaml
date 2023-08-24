@@ -1756,7 +1756,7 @@ TaskAnalysisScreen As screen:
                 AddTaskButton2 As button:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderThickness: =1
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledBorderColor: =RGBA(161, 159, 157, 1)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
                     DisplayMode: =If(IsEmpty(DropdownCOCO.SelectedItems), DisplayMode.Disabled, DisplayMode.Edit)
