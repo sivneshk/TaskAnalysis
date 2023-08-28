@@ -703,7 +703,7 @@ TaskAnalysisScreen As screen:
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter.Height/11
                         Items: |-
-                            =If(uniqueIDVar = Blank()
+                            =If(DropdownUniqueID.Selected.Value = Blank()
                                 , 
                                 Sort(Distinct(Filter('Process Taxonomy',L3 = DropdownL3.Selected.Value),L4),Value)
                                 ,
@@ -943,7 +943,7 @@ TaskAnalysisScreen As screen:
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter.Height/11
                         Items: |-
-                            =If(uniqueIDVar = Blank()
+                            =If(DropdownUniqueID.Selected.Value = Blank()
                                 , 
                                 Sort(Distinct(Filter('Process Taxonomy',L5 = DropdownL5.Selected.Value),L6),Value)
                                 ,
