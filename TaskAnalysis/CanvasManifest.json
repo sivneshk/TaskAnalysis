@@ -129,8 +129,7 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "SplashScreen",
     "TaskAnalysisScreen",
-    "ScreenForManager"
+    "ForManager"
   ]
 }
