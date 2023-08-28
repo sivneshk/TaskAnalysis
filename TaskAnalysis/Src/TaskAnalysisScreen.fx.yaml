@@ -707,7 +707,7 @@ TaskAnalysisScreen As screen:
                                 , 
                                 Sort(Distinct(Filter('Process Taxonomy',L3 = DropdownL3.Selected.Value),L4),Value)
                                 ,
-                                Distinct(Filter('Process Taxonomy',Title = uniqueIDVar),L4)
+                                Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID.Selected.Value),L4)
                             )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
@@ -947,7 +947,7 @@ TaskAnalysisScreen As screen:
                                 , 
                                 Sort(Distinct(Filter('Process Taxonomy',L5 = DropdownL5.Selected.Value),L6),Value)
                                 ,
-                                Distinct(Filter('Process Taxonomy',Title = uniqueIDVar),L6)
+                                Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID.Selected.Value),L6)
                             )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
