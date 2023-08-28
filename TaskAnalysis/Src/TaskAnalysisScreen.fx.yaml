@@ -1,5 +1,6 @@
 TaskAnalysisScreen As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: =
 
     HomeContainer As groupContainer.manualLayoutContainer:
         Height: |
@@ -1273,7 +1274,7 @@ TaskAnalysisScreen As screen:
 
                     InputHours As text:
                         Align: =Align.Center
-                        BorderColor: =RGBA(208, 208, 208, 1)
+                        BorderColor: =If(Value(SumHoursCheck.Text)>100, Color.Red, RGBA(208,208,208,1))
                         Color: =RGBA(50, 49, 48, 1)
                         Default: =""
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1391,6 +1392,20 @@ TaskAnalysisScreen As screen:
                 Width: =Parent.Width*0.5
                 X: =MainTitle.X
                 ZIndex: =1
+
+            SumHoursCheck As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                Font: =Font.'Segoe UI'
+                Size: =13
+                Text: =Sum(TaxonomyCollect.AllItems,InputHours)
+                Wrap: =false
+                X: =CopyrightLabel.Width+CopyrightLabel.X
+                Y: =3.200000000000003
+                ZIndex: =2
 
     PopUpOverlay As groupContainer.manualLayoutContainer:
         Fill: =RGBA(34, 48, 45, 0.8)
