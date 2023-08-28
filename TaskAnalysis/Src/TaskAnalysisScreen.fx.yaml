@@ -1264,6 +1264,7 @@ TaskAnalysisScreen As screen:
                         Height: =TaxonomyCollect.TemplateHeight
                         OnSelect: =Select(Parent)
                         Overflow: =Overflow.Scroll
+                        PaddingLeft: =10
                         Size: =ChosenTask.Height/8
                         Text: =ThisItem.Task
                         VerticalAlign: =VerticalAlign.Bottom
@@ -1273,20 +1274,20 @@ TaskAnalysisScreen As screen:
                     InputHours As text:
                         Align: =Align.Center
                         BorderColor: =RGBA(208, 208, 208, 1)
-                        BorderThickness: =2
                         Color: =RGBA(50, 49, 48, 1)
-                        Default: ="Text input"
+                        Default: =""
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
                         Height: =TaxonomyCollect.TemplateHeight*0.5
-                        HoverBorderColor: =RGBA(16, 110, 190, 1)
+                        HintText: ="Hours"
+                        HoverBorderColor: =RGBA(148, 148, 148, 1)
                         HoverColor: =RGBA(50, 49, 48, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: =Select(Parent)
-                        PressedBorderColor: =RGBA(0, 120, 212, 1)
+                        PressedBorderColor: =RGBA(208, 208, 208, 1)
                         PressedColor: =RGBA(50, 49, 48, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
                         RadiusBottomLeft: =2
@@ -1295,7 +1296,7 @@ TaskAnalysisScreen As screen:
                         RadiusTopRight: =2
                         Size: =ChosenTask.Height/8
                         Tooltip: ="How many total working hours per month do you spend on this process?"
-                        Width: =HrsSpentLabel.Width*0.6
+                        Width: =HrsSpentLabel.Width*0.5
                         X: =HrsSpentLabel.X + ((HrsSpentLabel.Width-Self.Width)/2)
                         ZIndex: =3
 
