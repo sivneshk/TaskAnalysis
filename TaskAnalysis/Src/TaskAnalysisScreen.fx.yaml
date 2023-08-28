@@ -1402,6 +1402,7 @@ TaskAnalysisScreen As screen:
                 Font: =Font.'Segoe UI'
                 Size: =13
                 Text: =Sum(TaxonomyCollect.AllItems,InputHours)
+                Visible: =false
                 Wrap: =false
                 X: =CopyrightLabel.Width+CopyrightLabel.X
                 Y: =3.200000000000003
