@@ -817,7 +817,8 @@ TaskAnalysisScreen As screen:
                                 ,
                                 First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID.Selected.Value),L5))
                                 
-                            )
+                            );
+                            Switch(DropdownL4.Selected.Value <> Blank() , First(Distinct(Filter('Process Taxonomy',Title = DropdownL4.Selected.Value),L5)))
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
@@ -1073,8 +1074,8 @@ TaskAnalysisScreen As screen:
                         HoverColor: =RGBA(208, 208, 208, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |-
-                            =Reset(DropdownUniqueID);
-                            Reset(DropdownL1);
+                            =Reset(DropdownL1);
+                            Reset(DropdownUniqueID);
                             Reset(DropdownL2);
                             Reset(DropdownL3);
                             Reset(DropdownL4);
@@ -1140,6 +1141,39 @@ TaskAnalysisScreen As screen:
                 Width: =Parent.Width*2/3
                 ZIndex: =2
 
+                ErrorMsgContainer As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Start
+                    FillPortions: =0
+                    Height: =RightPanel.Height/30
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Visible: =ShowResult
+                    Width: =RightPanel.Width
+                    ZIndex: =1
+
+                    ExceedHoursErrorMsg As label:
+                        Align: =Align.Right
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =Color.Red
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Noto Sans"
+                        Height: =ErrorMsgContainer.Height
+                        Size: =Self.Height/3
+                        Text: ="*Sum of input hours must not exceed 160 hours"
+                        VerticalAlign: =VerticalAlign.Bottom
+                        Visible: =If(Value(SumHoursCheck.Text)>100, true, false)
+                        Width: =HrsSpentLabel.Width
+                        X: =HrsSpentLabel.X
+                        ZIndex: =1
+
                 HeaderTaxonomy As groupContainer.manualLayoutContainer:
                     FillPortions: =0
                     Height: =RightPanel.Height/15
@@ -1151,7 +1185,7 @@ TaskAnalysisScreen As screen:
                     RadiusTopRight: =4
                     Visible: =ShowResult
                     Width: =RightPanel.Width
-                    ZIndex: =1
+                    ZIndex: =2
 
                     ProcessNameLabel As label:
                         Align: =Align.Center
@@ -1233,7 +1267,7 @@ TaskAnalysisScreen As screen:
                     TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/6)
                     Visible: =ShowResult
                     Width: =RightPanel.Width
-                    ZIndex: =2
+                    ZIndex: =3
 
                     ChosenCOCO As label:
                         Align: =Align.Center
@@ -1275,7 +1309,7 @@ TaskAnalysisScreen As screen:
                     InputHours As text:
                         Align: =Align.Center
                         BorderColor: =If(Value(SumHoursCheck.Text)>100, Color.Red, RGBA(208,208,208,1))
-                        Color: =RGBA(50, 49, 48, 1)
+                        Color: =If(Value(SumHoursCheck.Text)>100, Color.Red, RGBA(50, 49, 48, 1))
                         Default: =""
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
@@ -1336,7 +1370,7 @@ TaskAnalysisScreen As screen:
                     RadiusTopRight: =4
                     Visible: =ShowResult
                     Width: =RightPanel.Width
-                    ZIndex: =3
+                    ZIndex: =4
 
                     ReviewBtn As button:
                         BorderColor: =RGBA(2, 188, 148, 1)
