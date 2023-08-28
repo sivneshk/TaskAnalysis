@@ -813,12 +813,11 @@ TaskAnalysisScreen As screen:
                         DefaultSelectedItems: |-
                             =If(DropdownUniqueID.Selected.Value = Blank()
                                 ,
-                                Blank()
+                                First(Distinct(Filter('Process Taxonomy',L4 = DropdownL4.Selected.Value),L5))
                                 ,
                                 First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID.Selected.Value),L5))
                                 
-                            );
-                            Switch(DropdownL4.Selected.Value <> Blank() , First(Distinct(Filter('Process Taxonomy',Title = DropdownL4.Selected.Value),L5)))
+                            )
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
