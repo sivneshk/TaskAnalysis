@@ -1417,11 +1417,11 @@ TaskAnalysisScreen As screen:
                         Height: =ReviewBtn.Height
                         Size: =Self.Height/4
                         Text: |-
-                            ="Total Hours: " & Sum(TaxonomyCollect.AllItems,InputHours) & "               Max: 160 hours"
+                            ="Total Hours: " & Sum(TaxonomyCollect.AllItems,InputHours) & "           Max Required: 160"
                         Width: =RightPanel.Width - InputHours.X
                         Wrap: =false
                         X: =InputHours.X
-                        Y: =25
+                        Y: =(ReviewBtnContainer.Height-Self.Height)/2
                         ZIndex: =3
 
         FooterContainer As groupContainer.manualLayoutContainer:
