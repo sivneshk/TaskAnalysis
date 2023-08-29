@@ -1414,8 +1414,8 @@ TaskAnalysisScreen As screen:
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         Font: ="Poppins"
-                        Height: =ReviewBtn.Height
-                        Size: =Self.Height/4
+                        Height: =ReviewBtnContainer.Height
+                        Size: =Self.Height/8
                         Text: |-
                             ="Total Hours: " & Sum(TaxonomyCollect.AllItems,InputHours) & "           Max Required: 160"
                         Width: =RightPanel.Width - InputHours.X
