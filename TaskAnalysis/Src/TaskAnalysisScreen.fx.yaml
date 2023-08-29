@@ -1062,16 +1062,16 @@ TaskAnalysisScreen As screen:
                     ZIndex: =8
 
                     ClearBtn As button:
-                        BorderColor: =RGBA(208, 208, 208, 1)
+                        BorderColor: =RGBA(148, 148, 148, 1)
                         BorderThickness: =1
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        Fill: =RGBA(208, 208, 208, 1)
+                        Fill: =RGBA(148, 148, 148, 1)
                         Font: ="Poppins"
                         Height: =ButtonGroup.Height/2
-                        HoverBorderColor: =RGBA(208, 208, 208, 1)
-                        HoverColor: =RGBA(208, 208, 208, 1)
+                        HoverBorderColor: =RGBA(148, 148, 148, 1)
+                        HoverColor: =RGBA(148, 148, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |-
                             =Reset(DropdownL1);
@@ -1101,7 +1101,7 @@ TaskAnalysisScreen As screen:
                         DisabledBorderColor: =RGBA(208, 208, 208, 1)
                         DisabledColor: =RGBA(208, 208, 208, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =If(Or(DropdownUniqueID.Selected.Value <> Blank(), And(DropdownL1.Selected.Value <> Blank(),DropdownL2.Selected.Value <> Blank(),DropdownL3.Selected.Value <> Blank(),DropdownL4.Selected.Value <> Blank())), DisplayMode.Edit, DisplayMode.Disabled)
+                        DisplayMode: =If(And(DropdownUniqueID.Selected.Value <> Blank(), DropdownL1.Selected.Value <> Blank(),DropdownL2.Selected.Value <> Blank(),DropdownL3.Selected.Value <> Blank(),DropdownL4.Selected.Value <> Blank()), DisplayMode.Edit, DisplayMode.Disabled)
                         Fill: =RGBA(2, 188, 148, 1)
                         Font: ="Poppins"
                         Height: =ButtonGroup.Height/2
@@ -1169,8 +1169,8 @@ TaskAnalysisScreen As screen:
                         Size: =Self.Height/3
                         Text: ="*Sum of input hours must not exceed 160 hours"
                         VerticalAlign: =VerticalAlign.Bottom
-                        Visible: =If(Value(SumHoursCheck.Text)>100, true, false)
-                        Width: =HrsSpentLabel.Width
+                        Visible: =If(Value(SumHoursCheck.Text)>160, true, false)
+                        Width: =RightPanel.Width-HrsSpentLabel.X
                         X: =HrsSpentLabel.X
                         ZIndex: =1
 
@@ -1179,6 +1179,8 @@ TaskAnalysisScreen As screen:
                     Height: =RightPanel.Height/15
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
+                    PaddingLeft: =5
+                    PaddingRight: =5
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -1188,7 +1190,6 @@ TaskAnalysisScreen As screen:
                     ZIndex: =2
 
                     ProcessNameLabel As label:
-                        Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -1198,9 +1199,11 @@ TaskAnalysisScreen As screen:
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
                         Height: =HeaderTaxonomy.Height
+                        PaddingLeft: =10
                         Size: =Self.Height/3.5
                         Text: ="Process Name"
                         Width: =RightPanel.Width/1.7
+                        X: =HeaderTaxonomy.PaddingLeft
                         ZIndex: =1
 
                     CocoLabel As label:
@@ -1217,7 +1220,7 @@ TaskAnalysisScreen As screen:
                         Size: =Self.Height/3.5
                         Text: ="Company Code"
                         Width: =RightPanel.Width/7
-                        X: =ProcessNameLabel.Width
+                        X: =ProcessNameLabel.Width+ProcessNameLabel.X
                         ZIndex: =2
 
                     HrsSpentLabel As label:
@@ -1250,7 +1253,7 @@ TaskAnalysisScreen As screen:
                         Height: =HeaderTaxonomy.Height
                         Size: =0
                         Text: =""
-                        Width: =RightPanel.Width-ProcessNameLabel.Width-CocoLabel.Width-HrsSpentLabel.Width
+                        Width: =RightPanel.Width-HrsSpentLabel.Width-HrsSpentLabel.X
                         X: =HrsSpentLabel.X+HrsSpentLabel.Width
                         ZIndex: =4
 
@@ -1302,14 +1305,14 @@ TaskAnalysisScreen As screen:
                         PaddingLeft: =10
                         Size: =ChosenTask.Height/8
                         Text: =ThisItem.Task
-                        VerticalAlign: =VerticalAlign.Bottom
+                        VerticalAlign: =VerticalAlign.Top
                         Width: =ProcessNameLabel.Width
                         ZIndex: =2
 
                     InputHours As text:
                         Align: =Align.Center
-                        BorderColor: =If(Value(SumHoursCheck.Text)>100, Color.Red, RGBA(208,208,208,1))
-                        Color: =If(Value(SumHoursCheck.Text)>100, Color.Red, RGBA(50, 49, 48, 1))
+                        BorderColor: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(208,208,208,1))
+                        Color: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
                         Default: =""
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
@@ -1353,6 +1356,7 @@ TaskAnalysisScreen As screen:
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="Delete"
                         Width: =(RightPanel.Width-InputHours.X-InputHours.Width)/3
                         X: =Filler.X
                         Y: =(InputHours.Height-Self.Height)/2
@@ -1361,9 +1365,11 @@ TaskAnalysisScreen As screen:
                 ReviewBtnContainer As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.Start
                     FillPortions: =0
-                    Height: =RightPanel.Height/14
+                    Height: =ButtonGroup.Height
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
+                    PaddingBottom: =2
+                    PaddingTop: =2
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -1379,14 +1385,14 @@ TaskAnalysisScreen As screen:
                         DisabledBorderColor: =RGBA(208, 208, 208, 1)
                         DisabledColor: =RGBA(208, 208, 208, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =If(Or(DropdownUniqueID.Selected.Value <> Blank(), And(DropdownL1.Selected.Value <> Blank(),DropdownL2.Selected.Value <> Blank(),DropdownL3.Selected.Value <> Blank(),DropdownL4.Selected.Value <> Blank())), DisplayMode.Edit, DisplayMode.Disabled)
+                        DisplayMode: =If(Value(SumHoursCheck.Text)=160, DisplayMode.Edit, DisplayMode.Disabled)
                         Fill: =RGBA(255, 255, 255, 1)
                         Font: ="Poppins"
-                        Height: =ReviewBtnContainer.Height*0.8
+                        Height: =AddTaskBtn.Height
                         HoverBorderColor: =RGBA(2, 188, 148, 1)
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: =Set(ShowPopUp,true);
+                        OnSelect: =
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
@@ -1395,11 +1401,28 @@ TaskAnalysisScreen As screen:
                         RadiusTopLeft: =5
                         RadiusTopRight: =5
                         Size: =Self.Height/3
-                        Text: ="Review"
-                        Width: =DeleteRowIcon.X+DeleteRowIcon.Width-InputHours.X
-                        X: =InputHours.X
+                        Text: ="Next"
+                        Width: =RightPanel.Width*0.2
+                        X: =(ReviewBtnContainer.Width-Self.Width)/2
                         Y: =(ReviewBtnContainer.Height-Self.Height)/2
                         ZIndex: =1
+
+                    LabelHours As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        Font: ="Poppins"
+                        Height: =ReviewBtn.Height
+                        Size: =Self.Height/4
+                        Text: |-
+                            ="Total Hours: " & Sum(TaxonomyCollect.AllItems,InputHours) & "               Max: 160 hours"
+                        Width: =RightPanel.Width - InputHours.X
+                        Wrap: =false
+                        X: =InputHours.X
+                        Y: =25
+                        ZIndex: =3
 
         FooterContainer As groupContainer.manualLayoutContainer:
             Height: =Parent.Height/25
@@ -1433,13 +1456,14 @@ TaskAnalysisScreen As screen:
                 Color: =RGBA(50, 49, 48, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
-                Font: =Font.'Segoe UI'
-                Size: =13
+                Font: ="Poppins"
+                Height: =43.2
+                Size: =Self.Height/4
                 Text: =Sum(TaxonomyCollect.AllItems,InputHours)
                 Visible: =false
+                Width: =InputHours.Width/2
                 Wrap: =false
-                X: =CopyrightLabel.Width+CopyrightLabel.X
-                Y: =3.200000000000003
+                X: =CopyrightLabel.Width
                 ZIndex: =2
 
     PopUpOverlay As groupContainer.manualLayoutContainer:
@@ -1832,7 +1856,7 @@ TaskAnalysisScreen As screen:
                     HoverBorderColor: =RGBA(0, 0, 0, 1)
                     HoverColor: =RGBA(0, 0, 0, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
-                    OnSelect: =Set(ShowPopUp,false);
+                    OnSelect: =Reset(DropdownCOCO)
                     PressedBorderColor: =RGBA(0, 0, 0, 1)
                     PressedColor: =RGBA(0, 0, 0, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
@@ -1841,7 +1865,7 @@ TaskAnalysisScreen As screen:
                     RadiusTopLeft: =5
                     RadiusTopRight: =5
                     Size: =Self.Height/3.5
-                    Text: ="Cancel"
+                    Text: ="Clear"
                     Width: =DropdownCOCO.Width*0.2
                     X: =AddTaskButton2.X-Self.Width*1.1
                     Y: =BackSubmitButtonContainer.Height-Self.Height-BackSubmitButtonContainer.PaddingBottom
@@ -1867,6 +1891,15 @@ TaskAnalysisScreen As screen:
                                                     And(DropdownL5.Selected.Value <> "-",DropdownL5.Selected.Value <> Blank()), DropdownL5.Selected.Value,
                                                     DropdownL4.Selected.Value)), 
                                         'Company Code': ThisRecord.COMPANY_CODE}));
+                        
+                        Reset(DropdownL1);
+                        Reset(DropdownUniqueID);
+                        Reset(DropdownL2);
+                        Reset(DropdownL3);
+                        Reset(DropdownL4);
+                        Reset(DropdownL5);
+                        Reset(DropdownL6);
+                        Reset(DropdownCOCO);
                         
                         Set(ShowPopUp,false);
                         Set(ShowResult, true);
