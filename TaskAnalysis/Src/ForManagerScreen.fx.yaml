@@ -1,4 +1,4 @@
-ForManager As screen:
+ForManagerScreen As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
     ParentCntnr As groupContainer.manualLayoutContainer:

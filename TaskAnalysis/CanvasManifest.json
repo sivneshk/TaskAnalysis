@@ -130,6 +130,6 @@
   },
   "ScreenOrder": [
     "TaskAnalysisScreen",
-    "ForManager"
+    "ForManagerScreen"
   ]
 }

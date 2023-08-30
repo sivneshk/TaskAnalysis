@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    StartScreen: =TaskAnalysisScreen
+    StartScreen: =Switch(Param("ScreenName"), "MainPage", TaskAnalysisScreen, "asManager", ForManagerScreen)
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
