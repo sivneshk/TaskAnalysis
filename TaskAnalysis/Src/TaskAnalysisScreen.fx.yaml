@@ -1270,8 +1270,9 @@ TaskAnalysisScreen As screen:
                     TemplateFill: |-
                         =If(
                             Mod(ThisItem.UniqueID,2) = 0,
-                           RGBA(240, 240, 240, 1),RGBA(255, 255, 255, 1)
+                           RGBA(255, 255, 255, 1), RGBA(0, 111, 121, 0.2)
                         )
+                    TemplatePadding: =0
                     TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/6)
                     Visible: =ShowResult
                     Width: =RightPanel.Width
@@ -1293,6 +1294,7 @@ TaskAnalysisScreen As screen:
                         Text: =ThisItem.'Company Code'
                         Width: =CocoLabel.Width
                         X: =ChosenTask.Width
+                        Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
                         ZIndex: =1
 
                     ChosenTask As label:
@@ -1306,11 +1308,9 @@ TaskAnalysisScreen As screen:
                         Font: ="Poppins"
                         Height: =TaxonomyCollect.TemplateHeight
                         OnSelect: =Select(Parent)
-                        Overflow: =Overflow.Scroll
                         PaddingLeft: =10
                         Size: =ChosenTask.Height/8
                         Text: =ThisItem.Task
-                        VerticalAlign: =VerticalAlign.Top
                         Width: =ProcessNameLabel.Width
                         ZIndex: =2
 
@@ -1341,6 +1341,7 @@ TaskAnalysisScreen As screen:
                         Tooltip: ="How many total working hours per month do you spend on this process?"
                         Width: =HrsSpentLabel.Width*0.5
                         X: =HrsSpentLabel.X + ((HrsSpentLabel.Width-Self.Width)/2)
+                        Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
                         ZIndex: =3
 
                     DeleteRowIcon As icon.Cancel:
@@ -1364,7 +1365,7 @@ TaskAnalysisScreen As screen:
                         Tooltip: ="Delete"
                         Width: =(RightPanel.Width-InputHours.X-InputHours.Width)/3
                         X: =Filler.X
-                        Y: =(InputHours.Height-Self.Height)/2
+                        Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
                         ZIndex: =4
 
                 ReviewBtnContainer As groupContainer.manualLayoutContainer:
@@ -1425,7 +1426,7 @@ TaskAnalysisScreen As screen:
                             ="Total Hours: " & Sum(TaxonomyCollect.AllItems,InputHours) & "           Max Required: 160"
                         Width: =RightPanel.Width - InputHours.X
                         Wrap: =false
-                        X: =InputHours.X
+                        X: =ReviewBtnContainer.Width-Self.Width
                         Y: =(ReviewBtnContainer.Height-Self.Height)/2
                         ZIndex: =3
 
