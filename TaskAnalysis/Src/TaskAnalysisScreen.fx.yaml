@@ -1167,11 +1167,11 @@ TaskAnalysisScreen As screen:
                         Font: ="Noto Sans"
                         Height: =ErrorMsgContainer.Height
                         Size: =Self.Height/3
-                        Text: ="*Sum of input hours must not exceed 160 hours"
+                        Text: ="*Sum of input hours must be equal and not exceed 160 hours"
                         VerticalAlign: =VerticalAlign.Bottom
                         Visible: =If(Value(SumHoursCheck.Text)>160, true, false)
-                        Width: =RightPanel.Width-HrsSpentLabel.X
-                        X: =HrsSpentLabel.X
+                        Width: =RightPanel.Width/2
+                        X: =ErrorMsgContainer.Width-Self.Width
                         ZIndex: =1
 
                 HeaderTaxonomy As groupContainer.manualLayoutContainer:
