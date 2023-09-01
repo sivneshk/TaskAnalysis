@@ -1899,7 +1899,7 @@ TaskAnalysisScreen As screen:
                                         'Company Code': ThisRecord.COMPANY_CODE,
                                         UniqueID: iterator}));
                         
-                        Set(iterator,iterator+1);
+                        Set(iterator,(Last(TaxonomyCollect.AllItems).UniqueID)+1);
                         Reset(DropdownL1);
                         Reset(DropdownUniqueID);
                         Reset(DropdownL2);
