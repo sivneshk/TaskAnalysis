@@ -1267,6 +1267,11 @@ TaskAnalysisScreen As screen:
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
+                    TemplateFill: |-
+                        =If(
+                            Mod(ThisItem.UniqueID,2) = 0,
+                           RGBA(240, 240, 240, 1),RGBA(255, 255, 255, 1)
+                        )
                     TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/6)
                     Visible: =ShowResult
                     Width: =RightPanel.Width
@@ -1890,8 +1895,10 @@ TaskAnalysisScreen As screen:
                                         {Task: (If(And(DropdownL6.Selected.Value <> "-",DropdownL6.Selected.Value <> Blank()), DropdownL6.Selected.Value,
                                                     And(DropdownL5.Selected.Value <> "-",DropdownL5.Selected.Value <> Blank()), DropdownL5.Selected.Value,
                                                     DropdownL4.Selected.Value)), 
-                                        'Company Code': ThisRecord.COMPANY_CODE}));
+                                        'Company Code': ThisRecord.COMPANY_CODE,
+                                        UniqueID: iterator}));
                         
+                        Set(iterator,iterator+1);
                         Reset(DropdownL1);
                         Reset(DropdownUniqueID);
                         Reset(DropdownL2);

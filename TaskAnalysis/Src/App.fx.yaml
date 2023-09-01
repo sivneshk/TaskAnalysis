@@ -1,5 +1,6 @@
 App As appinfo:
     BackEnabled: =false
+    OnStart: =Set(iterator, 1)
     StartScreen: =Switch(Param("ScreenName"), "MainPage", TaskAnalysisScreen, "asManager", ForManagerScreen)
     Theme: =PowerAppsTheme
 
