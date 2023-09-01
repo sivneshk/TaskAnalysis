@@ -1891,7 +1891,9 @@ TaskAnalysisScreen As screen:
                     HoverColor: =RGBA(2, 188, 148, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     OnSelect: |-
-                        =ForAll(DropdownCOCO.SelectedItems, 
+                        =Set(iterator,(Last(TaxonomyCollect.AllItems).UniqueID)+1);
+                        
+                        ForAll(DropdownCOCO.SelectedItems, 
                                 Collect(colTaxonomy, 
                                         {Task: (If(And(DropdownL6.Selected.Value <> "-",DropdownL6.Selected.Value <> Blank()), DropdownL6.Selected.Value,
                                                     And(DropdownL5.Selected.Value <> "-",DropdownL5.Selected.Value <> Blank()), DropdownL5.Selected.Value,
@@ -1899,7 +1901,7 @@ TaskAnalysisScreen As screen:
                                         'Company Code': ThisRecord.COMPANY_CODE,
                                         UniqueID: iterator}));
                         
-                        Set(iterator,(Last(TaxonomyCollect.AllItems).UniqueID)+1);
+                        
                         Reset(DropdownL1);
                         Reset(DropdownUniqueID);
                         Reset(DropdownL2);
