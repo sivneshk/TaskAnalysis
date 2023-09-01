@@ -1270,7 +1270,7 @@ TaskAnalysisScreen As screen:
                     TemplateFill: |-
                         =If(
                             Mod(ThisItem.UniqueID,2) = 0,
-                           RGBA(255, 255, 255, 1), RGBA(0, 111, 121, 0.2)
+                           RGBA(208, 208, 208, 0.1), RGBA(0, 111, 121, 0.2)
                         )
                     TemplatePadding: =0
                     TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/6)
