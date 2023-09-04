@@ -1141,39 +1141,6 @@ TaskAnalysisScreen As screen:
                 Width: =Parent.Width*2/3
                 ZIndex: =2
 
-                ErrorMsgContainer As groupContainer.manualLayoutContainer:
-                    AlignInContainer: =AlignInContainer.Start
-                    FillPortions: =0
-                    Height: =RightPanel.Height*0.02
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Visible: =ShowResult
-                    Width: =RightPanel.Width
-                    ZIndex: =1
-
-                    ExceedHoursErrorMsg As label:
-                        Align: =Align.Right
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =Color.Red
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Noto Sans"
-                        Height: =ErrorMsgContainer.Height
-                        Size: =Self.Height/3
-                        Text: ="*Sum of input hours must be equal and not exceed 160 hours"
-                        VerticalAlign: =VerticalAlign.Bottom
-                        Visible: =If(Value(SumHoursCheck.Text)>160, true, false)
-                        Width: =RightPanel.Width/2
-                        X: =ErrorMsgContainer.Width-Self.Width
-                        ZIndex: =1
-
                 HeaderTaxonomy As groupContainer.manualLayoutContainer:
                     FillPortions: =0
                     Height: =RightPanel.Height/14
@@ -1208,7 +1175,8 @@ TaskAnalysisScreen As screen:
 
                     CocoLabel As label:
                         Align: =Align.Center
-                        BorderColor: =RGBA(246, 88, 16, 1)
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         Color: =RGBA(50, 49, 48, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1237,13 +1205,14 @@ TaskAnalysisScreen As screen:
                         Text: |-
                             ="Business
                             Segment"
-                        Width: =RightPanel.Width/11
+                        Width: =RightPanel.Width/15
                         X: =PC_Label.X+PC_Label.Width
                         ZIndex: =3
 
                     HrsSpentLabel As label:
                         Align: =Align.Center
-                        BorderColor: =RGBA(203, 102, 102, 1)
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         Color: =RGBA(50, 49, 48, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1287,7 +1256,7 @@ TaskAnalysisScreen As screen:
                         Height: =HeaderTaxonomy.Height
                         Size: =Self.Height/3.8
                         Text: ="LE"
-                        Width: =RightPanel.Width/7
+                        Width: =RightPanel.Width/6.5
                         X: =CocoLabel.Width+CocoLabel.X
                         Y: =0.3571428571428612
                         ZIndex: =6
@@ -1304,7 +1273,9 @@ TaskAnalysisScreen As screen:
                         Font: ="Poppins"
                         Height: =HeaderTaxonomy.Height
                         Size: =Self.Height/3.8
-                        Text: ="Region"
+                        Text: |-
+                            ="Region
+                            (Country)"
                         Width: =RightPanel.Width/11
                         X: =BusinessSeg.X+BusinessSeg.Width
                         Y: =0.3571428571428612
@@ -1312,7 +1283,8 @@ TaskAnalysisScreen As screen:
 
                     PC_Label As label:
                         Align: =Align.Center
-                        BorderColor: =RGBA(145, 143, 141, 1)
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         Color: =RGBA(50, 49, 48, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1322,7 +1294,7 @@ TaskAnalysisScreen As screen:
                         Height: =HeaderTaxonomy.Height
                         Size: =Self.Height/3.8
                         Text: ="PC"
-                        Width: =RightPanel.Width/15
+                        Width: =RightPanel.Width/16
                         X: =LegalEntityLabel.X+LegalEntityLabel.Width
                         Y: =0.3571428571428612
                         ZIndex: =8
@@ -1392,12 +1364,12 @@ TaskAnalysisScreen As screen:
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        FocusedBorderThickness: =4
+                        FocusedBorderThickness: =2
                         Font: ="Poppins"
                         Height: =TaxonomyCollect.TemplateHeight*0.5
                         HintText: ="Hours"
-                        HoverBorderColor: =RGBA(148, 148, 148, 1)
-                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverBorderColor: =If(Value(SumHoursCheck.Text)>160, ColorFade(Color.Red,-20%), RGBA(148, 148, 148, 1))
+                        HoverColor: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: =Select(Parent)
                         PressedBorderColor: =RGBA(208, 208, 208, 1)
@@ -1409,7 +1381,7 @@ TaskAnalysisScreen As screen:
                         RadiusTopRight: =2
                         Size: =ChosenTask.Height/8
                         Tooltip: ="How many total working hours per month do you spend on this process?"
-                        Width: =HrsSpentLabel.Width*0.8
+                        Width: =HrsSpentLabel.Width*0.7
                         X: =HrsSpentLabel.X + ((HrsSpentLabel.Width-Self.Width)/2)
                         Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
                         ZIndex: =3
@@ -1451,6 +1423,9 @@ TaskAnalysisScreen As screen:
                         Font: ="Poppins"
                         Height: =TaxonomyCollect.TemplateHeight*0.5
                         OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
                         Size: =associatedLE.Size*0.9
                         Text: =ThisItem.'LE Name'
                         VerticalAlign: =VerticalAlign.Top
@@ -1491,8 +1466,11 @@ TaskAnalysisScreen As screen:
                         FontWeight: =FontWeight.Semibold
                         Height: =TaxonomyCollect.TemplateHeight*0.3
                         OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingTop: =0
                         Size: =ChosenTask.Height/8
                         Text: =ThisItem.Associated_LE
+                        VerticalAlign: =VerticalAlign.Bottom
                         Width: =LegalEntityLabel.Width
                         X: =LegalEntityLabel.X
                         Y: =(TaxonomyCollect.TemplateHeight-Self.Height-LE_Name.Height)/2
@@ -1516,6 +1494,56 @@ TaskAnalysisScreen As screen:
                         X: =PC_Label.X
                         Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
                         ZIndex: =8
+
+                    Region As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =TaxonomyCollect.TemplateHeight*0.3
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =ChosenTask.Height/8
+                        Text: =ThisItem.Region
+                        VerticalAlign: =VerticalAlign.Bottom
+                        Width: =RegionLabel.Width
+                        X: =RegionLabel.X
+                        Y: =(TaxonomyCollect.TemplateHeight-Self.Height-Country.Height)/2
+                        ZIndex: =9
+
+                    Country As label:
+                        Align: =Align.Center
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =TaxonomyCollect.TemplateHeight*0.3
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =Region.Size*0.9
+                        Text: ="(" & ThisItem.Country & ")"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =RegionLabel.Width
+                        X: =RegionLabel.X
+                        Y: =Region.Y+Region.Height
+                        ZIndex: =10
 
                 ReviewBtnContainer As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.Start
@@ -1575,11 +1603,29 @@ TaskAnalysisScreen As screen:
                             ="Total Hours: " & Sum(TaxonomyCollect.AllItems,InputHours) &
                             "
                             Max Required: 160"
-                        Width: =RightPanel.Width - InputHours.X
+                        Width: =TaxonomyCollect.Width - InputHours.X
                         Wrap: =false
                         X: =ReviewBtnContainer.Width-Self.Width
                         Y: =(ReviewBtnContainer.Height-Self.Height)/2
                         ZIndex: =3
+
+                    ExceedHoursErrorMsg_1 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =Color.Red
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Noto Sans"
+                        Height: =ReviewBtnContainer.Height/3
+                        Size: =LabelHours.Size
+                        Text: ="*Sum of input hours must be equal and not exceed 160 hours"
+                        VerticalAlign: =VerticalAlign.Bottom
+                        Visible: =If(Value(SumHoursCheck.Text)>160, true, false)
+                        Width: =RightPanel.Width/3
+                        ZIndex: =4
 
         FooterContainer As groupContainer.manualLayoutContainer:
             Height: =Parent.Height/25
