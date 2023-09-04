@@ -1144,7 +1144,7 @@ TaskAnalysisScreen As screen:
                 ErrorMsgContainer As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.Start
                     FillPortions: =0
-                    Height: =RightPanel.Height/30
+                    Height: =RightPanel.Height*0.02
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     RadiusBottomLeft: =4
@@ -1176,7 +1176,7 @@ TaskAnalysisScreen As screen:
 
                 HeaderTaxonomy As groupContainer.manualLayoutContainer:
                     FillPortions: =0
-                    Height: =RightPanel.Height/15
+                    Height: =RightPanel.Height/14
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     PaddingLeft: =5
@@ -1200,9 +1200,9 @@ TaskAnalysisScreen As screen:
                         Font: ="Poppins"
                         Height: =HeaderTaxonomy.Height
                         PaddingLeft: =10
-                        Size: =Self.Height/3.5
+                        Size: =Self.Height/3.8
                         Text: ="Process Name"
-                        Width: =RightPanel.Width/1.8
+                        Width: =RightPanel.Width/2
                         X: =HeaderTaxonomy.PaddingLeft
                         ZIndex: =1
 
@@ -1217,11 +1217,9 @@ TaskAnalysisScreen As screen:
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
                         Height: =HeaderTaxonomy.Height
-                        Size: =Self.Height/3.5
-                        Text: |-
-                            ="Company Code 
-                            (LE Name)"
-                        Width: =RightPanel.Width/7
+                        Size: =Self.Height/3.8
+                        Text: ="Company Code"
+                        Width: =RightPanel.Width/11
                         X: =ProcessNameLabel.Width+ProcessNameLabel.X
                         ZIndex: =2
 
@@ -1236,12 +1234,12 @@ TaskAnalysisScreen As screen:
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
                         Height: =HeaderTaxonomy.Height
-                        Size: =Self.Height/3.5
+                        Size: =Self.Height/3.8
                         Text: |-
                             ="Business
                             Segment"
-                        Width: =RightPanel.Width/10
-                        X: =CocoLabel.X+CocoLabel.Width
+                        Width: =RightPanel.Width/11
+                        X: =LegalEntityLabel.X+LegalEntityLabel.Width
                         ZIndex: =3
 
                     HrsSpentLabel As label:
@@ -1255,7 +1253,7 @@ TaskAnalysisScreen As screen:
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
                         Height: =HeaderTaxonomy.Height
-                        Size: =Self.Height/3.5
+                        Size: =Self.Height/3.8
                         Text: ="Hours Spent Monthly"
                         Width: =RightPanel.Width/7
                         X: =BusinessSeg.X+BusinessSeg.Width
@@ -1277,6 +1275,24 @@ TaskAnalysisScreen As screen:
                         Width: =RightPanel.Width-HrsSpentLabel.Width-HrsSpentLabel.X
                         X: =HrsSpentLabel.X+HrsSpentLabel.Width
                         ZIndex: =5
+
+                    LegalEntityLabel As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =HeaderTaxonomy.Height
+                        Size: =Self.Height/3.8
+                        Text: ="LE"
+                        Width: =RightPanel.Width/7
+                        X: =CocoLabel.Width+CocoLabel.X
+                        Y: =0.3571428571428612
+                        ZIndex: =6
 
                 TaxonomyCollect As gallery.galleryVertical:
                     AlignInContainer: =AlignInContainer.SetByContainer
@@ -1315,7 +1331,7 @@ TaskAnalysisScreen As screen:
                         Text: =ThisItem.'Company Code'
                         Width: =CocoLabel.Width
                         X: =ChosenTask.Width
-                        Y: =(TaxonomyCollect.TemplateHeight-Self.Height-LE_Name.Height)/2
+                        Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
                         ZIndex: =1
 
                     ChosenTask As label:
@@ -1360,7 +1376,7 @@ TaskAnalysisScreen As screen:
                         RadiusTopRight: =2
                         Size: =ChosenTask.Height/8
                         Tooltip: ="How many total working hours per month do you spend on this process?"
-                        Width: =BusinessSeg.Width*0.6
+                        Width: =HrsSpentLabel.Width*0.6
                         X: =HrsSpentLabel.X + ((HrsSpentLabel.Width-Self.Width)/2)
                         Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
                         ZIndex: =3
@@ -1391,6 +1407,7 @@ TaskAnalysisScreen As screen:
 
                     LE_Name As label:
                         Align: =Align.Center
+                        AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -1399,13 +1416,14 @@ TaskAnalysisScreen As screen:
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
-                        Height: =TaxonomyCollect.TemplateHeight*0.3
+                        Height: =TaxonomyCollect.TemplateHeight*0.5
                         OnSelect: =Select(Parent)
-                        Size: =ChosenTask.Height/8
+                        Size: =associatedLE.Size*0.9
                         Text: =ThisItem.'LE Name'
-                        Width: =CocoLabel.Width
-                        X: =ChosenTask.Width
-                        Y: =ChosenCOCO.Y+ChosenCOCO.Height
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =LegalEntityLabel.Width
+                        X: =ChosenCOCO.Width+ChosenCOCO.X
+                        Y: =associatedLE.Y+associatedLE.Height
                         ZIndex: =5
 
                     ChosenCOCO_1 As label:
@@ -1426,6 +1444,26 @@ TaskAnalysisScreen As screen:
                         X: =BusinessSeg.X + ((BusinessSeg.Width-Self.Width)/2)
                         Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
                         ZIndex: =6
+
+                    associatedLE As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =TaxonomyCollect.TemplateHeight*0.3
+                        OnSelect: =Select(Parent)
+                        Size: =ChosenTask.Height/8
+                        Text: =ThisItem.Associated_LE
+                        Width: =LegalEntityLabel.Width
+                        X: =ChosenCOCO.Width+ChosenCOCO.X
+                        Y: =(TaxonomyCollect.TemplateHeight-Self.Height-LE_Name.Height)/2
+                        ZIndex: =7
 
                 ReviewBtnContainer As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.Start
@@ -1959,7 +1997,8 @@ TaskAnalysisScreen As screen:
                                         {Task: (If(And(DropdownL6.Selected.Value <> "-",DropdownL6.Selected.Value <> Blank()), DropdownL6.Selected.Value,
                                                     And(DropdownL5.Selected.Value <> "-",DropdownL5.Selected.Value <> Blank()), DropdownL5.Selected.Value,
                                                     DropdownL4.Selected.Value)), 
-                                        'Company Code': ThisRecord.COMPANY_CODE, 'LE Name': ThisRecord.'LE Name', 'Business Segment': ThisRecord.'Business Segment',
+                                        'Company Code': ThisRecord.COMPANY_CODE, 'LE Name': ThisRecord.'LE Name', 'Business Segment': ThisRecord.'Business Segment', 
+                                        Associated_LE: ThisRecord.ASSOCIATED_LE, PC: ThisRecord.PC, Country: ThisRecord.Country, Region: ThisRecord.Region,
                                         UniqueID: iterator}));
                         
                         
