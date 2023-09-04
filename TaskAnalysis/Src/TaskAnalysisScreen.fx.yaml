@@ -1167,7 +1167,7 @@ TaskAnalysisScreen As screen:
                         Font: ="Poppins"
                         Height: =HeaderTaxonomy.Height
                         PaddingLeft: =10
-                        Size: =Self.Height/3.8
+                        Size: =Self.Height/4
                         Text: ="Process Name"
                         Width: =RightPanel.Width-CocoLabel.Width-BusinessSeg.Width-HrsSpentLabel.Width-Filler.Width-LegalEntityLabel.Width-RegionLabel.Width-PC_Label.Width
                         X: =HeaderTaxonomy.PaddingLeft
@@ -1184,7 +1184,7 @@ TaskAnalysisScreen As screen:
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
                         Height: =HeaderTaxonomy.Height
-                        Size: =Self.Height/3.8
+                        Size: =Self.Height/4
                         Text: ="Company Code"
                         Width: =RightPanel.Width/11
                         X: =ProcessNameLabel.Width+ProcessNameLabel.X
@@ -1201,11 +1201,11 @@ TaskAnalysisScreen As screen:
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
                         Height: =HeaderTaxonomy.Height
-                        Size: =Self.Height/3.8
+                        Size: =Self.Height/4
                         Text: |-
                             ="Business
                             Segment"
-                        Width: =RightPanel.Width/15
+                        Width: =RightPanel.Width/14
                         X: =PC_Label.X+PC_Label.Width
                         ZIndex: =3
 
@@ -1220,7 +1220,7 @@ TaskAnalysisScreen As screen:
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
                         Height: =HeaderTaxonomy.Height
-                        Size: =Self.Height/3.8
+                        Size: =Self.Height/4
                         Text: ="Monthly Hours"
                         Width: =RightPanel.Width/12
                         X: =RegionLabel.X+RegionLabel.Width
@@ -1254,7 +1254,7 @@ TaskAnalysisScreen As screen:
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
                         Height: =HeaderTaxonomy.Height
-                        Size: =Self.Height/3.8
+                        Size: =Self.Height/4
                         Text: ="LE"
                         Width: =RightPanel.Width/6.5
                         X: =CocoLabel.Width+CocoLabel.X
@@ -1272,7 +1272,7 @@ TaskAnalysisScreen As screen:
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
                         Height: =HeaderTaxonomy.Height
-                        Size: =Self.Height/3.8
+                        Size: =Self.Height/4
                         Text: |-
                             ="Region
                             (Country)"
@@ -1292,7 +1292,7 @@ TaskAnalysisScreen As screen:
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
                         Height: =HeaderTaxonomy.Height
-                        Size: =Self.Height/3.8
+                        Size: =Self.Height/4
                         Text: ="PC"
                         Width: =RightPanel.Width/16
                         X: =LegalEntityLabel.X+LegalEntityLabel.Width
