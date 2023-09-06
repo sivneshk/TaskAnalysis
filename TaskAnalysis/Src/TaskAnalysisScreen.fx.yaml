@@ -1187,7 +1187,7 @@ TaskAnalysisScreen As screen:
                         Font: ="Poppins"
                         Height: =HeaderTaxonomy.Height
                         Size: =Self.Height/4
-                        Text: ="Company Code"
+                        Text: ="CoCo"
                         Width: =RightPanel.Width/11
                         X: =ProcessNameLabel.Width+ProcessNameLabel.X
                         ZIndex: =2
