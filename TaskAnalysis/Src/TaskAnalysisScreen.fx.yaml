@@ -1293,7 +1293,7 @@ TaskAnalysisScreen As screen:
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplateFill: |-
                         =If(
-                            Mod(ThisItem.UniqueID,2) = 0,
+                            Mod(ThisItem.ColourID,2) = 0,
                            RGBA(208, 208, 208, 0.1), RGBA(0, 111, 121, 0.2)
                         )
                     TemplatePadding: =0
