@@ -1511,7 +1511,7 @@ TaskAnalysisScreen As screen:
                         HoverBorderColor: =RGBA(2, 188, 148, 1)
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: =AddColumns(colTaxonomy, "Input Hours", InputHours.Text, "User Email", Office365Users.MyProfile().Mail)
+                        OnSelect: =Collect(colTaxonomy,AddColumns(colTaxonomy, "Input Hours", InputHours.Text))
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
