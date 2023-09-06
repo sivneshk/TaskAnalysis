@@ -1207,7 +1207,7 @@ TaskAnalysisScreen As screen:
                         Text: |-
                             ="Business
                             Segment"
-                        Width: =RightPanel.Width/14
+                        Width: =RightPanel.Width/11
                         X: =LegalEntityLabel.X+LegalEntityLabel.Width
                         ZIndex: =3
 
@@ -1275,9 +1275,7 @@ TaskAnalysisScreen As screen:
                         Font: ="Poppins"
                         Height: =HeaderTaxonomy.Height
                         Size: =Self.Height/4
-                        Text: |-
-                            ="Region
-                            (Country)"
+                        Text: ="Region"
                         Width: =RightPanel.Width/11
                         X: =BusinessSeg.X+BusinessSeg.Width
                         Y: =0.3571428571428612
@@ -1454,30 +1452,10 @@ TaskAnalysisScreen As screen:
                         PaddingTop: =0
                         Size: =ChosenTask.Height/8
                         Text: =ThisItem.Associated_LE
-                        VerticalAlign: =VerticalAlign.Bottom
                         Width: =LegalEntityLabel.Width
                         X: =LegalEntityLabel.X
                         Y: =(TaxonomyCollect.TemplateHeight-Self.Height-LE_Name.Height)/2
                         ZIndex: =7
-
-                    PC As label:
-                        Align: =Align.Center
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Poppins"
-                        Height: =TaxonomyCollect.TemplateHeight*0.3
-                        OnSelect: =Select(Parent)
-                        Size: =ChosenTask.Height/8
-                        Text: =ThisItem.PC
-                        Width: =PC_Label.Width
-                        X: =PC_Label.X
-                        Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
-                        ZIndex: =8
 
                     Region As label:
                         Align: =Align.Center
@@ -1489,7 +1467,6 @@ TaskAnalysisScreen As screen:
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
-                        FontWeight: =FontWeight.Lighter
                         Height: =TaxonomyCollect.TemplateHeight*0.3
                         OnSelect: =Select(Parent)
                         PaddingBottom: =0
@@ -1498,36 +1475,10 @@ TaskAnalysisScreen As screen:
                         PaddingTop: =0
                         Size: =ChosenTask.Height/8
                         Text: =ThisItem.Region
-                        VerticalAlign: =VerticalAlign.Bottom
                         Width: =RegionLabel.Width
                         X: =RegionLabel.X
-                        Y: =(TaxonomyCollect.TemplateHeight-Self.Height-Country.Height)/2
+                        Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
                         ZIndex: =9
-
-                    Country As label:
-                        Align: =Align.Center
-                        AutoHeight: =true
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Poppins"
-                        FontWeight: =FontWeight.Semibold
-                        Height: =TaxonomyCollect.TemplateHeight*0.3
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =Region.Size*0.9
-                        Text: ="(" & ThisItem.Country & ")"
-                        Width: =RegionLabel.Width
-                        X: =RegionLabel.X
-                        Y: =Region.Y+Region.Height
-                        ZIndex: =10
 
                 ReviewBtnContainer As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.Start
@@ -1560,7 +1511,7 @@ TaskAnalysisScreen As screen:
                         HoverBorderColor: =RGBA(2, 188, 148, 1)
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: =
+                        OnSelect: =AddColumns(colTaxonomy, "Input Hours", InputHours.Text, "User Email", Office365Users.MyProfile().Mail)
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
