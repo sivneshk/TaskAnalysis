@@ -1068,6 +1068,7 @@ TaskAnalysisScreen As screen:
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         Fill: =RGBA(148, 148, 148, 1)
+                        FocusedBorderThickness: =2
                         Font: ="Poppins"
                         Height: =ButtonGroup.Height/2
                         HoverBorderColor: =RGBA(148, 148, 148, 1)
@@ -1103,6 +1104,7 @@ TaskAnalysisScreen As screen:
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         DisplayMode: =If(And(DropdownUniqueID.Selected.Value <> Blank(), DropdownL1.Selected.Value <> Blank(),DropdownL2.Selected.Value <> Blank(),DropdownL3.Selected.Value <> Blank(),DropdownL4.Selected.Value <> Blank()), DisplayMode.Edit, DisplayMode.Disabled)
                         Fill: =RGBA(2, 188, 148, 1)
+                        FocusedBorderThickness: =2
                         Font: ="Poppins"
                         Height: =ButtonGroup.Height/2
                         HoverBorderColor: =RGBA(2, 188, 148, 1)
@@ -1169,7 +1171,7 @@ TaskAnalysisScreen As screen:
                         PaddingLeft: =10
                         Size: =Self.Height/4
                         Text: ="Process Name"
-                        Width: =RightPanel.Width-CocoLabel.Width-BusinessSeg.Width-HrsSpentLabel.Width-Filler.Width-LegalEntityLabel.Width-RegionLabel.Width-PC_Label.Width
+                        Width: =RightPanel.Width-CocoLabel.Width-BusinessSeg.Width-HrsSpentLabel.Width-Filler.Width-LegalEntityLabel.Width-RegionLabel.Width
                         X: =HeaderTaxonomy.PaddingLeft
                         ZIndex: =1
 
@@ -1206,7 +1208,7 @@ TaskAnalysisScreen As screen:
                             ="Business
                             Segment"
                         Width: =RightPanel.Width/14
-                        X: =PC_Label.X+PC_Label.Width
+                        X: =LegalEntityLabel.X+LegalEntityLabel.Width
                         ZIndex: =3
 
                     HrsSpentLabel As label:
@@ -1280,24 +1282,6 @@ TaskAnalysisScreen As screen:
                         X: =BusinessSeg.X+BusinessSeg.Width
                         Y: =0.3571428571428612
                         ZIndex: =7
-
-                    PC_Label As label:
-                        Align: =Align.Center
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Poppins"
-                        Height: =HeaderTaxonomy.Height
-                        Size: =Self.Height/4
-                        Text: ="PC"
-                        Width: =RightPanel.Width/16
-                        X: =LegalEntityLabel.X+LegalEntityLabel.Width
-                        Y: =0.3571428571428612
-                        ZIndex: =8
 
                 TaxonomyCollect As gallery.galleryVertical:
                     AlignInContainer: =AlignInContainer.SetByContainer
@@ -1421,6 +1405,7 @@ TaskAnalysisScreen As screen:
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
+                        FontWeight: =FontWeight.Lighter
                         Height: =TaxonomyCollect.TemplateHeight*0.5
                         OnSelect: =Select(Parent)
                         PaddingBottom: =0
@@ -1428,7 +1413,6 @@ TaskAnalysisScreen As screen:
                         PaddingTop: =0
                         Size: =associatedLE.Size*0.9
                         Text: =ThisItem.'LE Name'
-                        VerticalAlign: =VerticalAlign.Top
                         Width: =LegalEntityLabel.Width
                         X: =LegalEntityLabel.X
                         Y: =associatedLE.Y+associatedLE.Height
@@ -1505,6 +1489,7 @@ TaskAnalysisScreen As screen:
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
+                        FontWeight: =FontWeight.Lighter
                         Height: =TaxonomyCollect.TemplateHeight*0.3
                         OnSelect: =Select(Parent)
                         PaddingBottom: =0
@@ -1539,7 +1524,6 @@ TaskAnalysisScreen As screen:
                         PaddingTop: =0
                         Size: =Region.Size*0.9
                         Text: ="(" & ThisItem.Country & ")"
-                        VerticalAlign: =VerticalAlign.Top
                         Width: =RegionLabel.Width
                         X: =RegionLabel.X
                         Y: =Region.Y+Region.Height
@@ -1570,6 +1554,7 @@ TaskAnalysisScreen As screen:
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         DisplayMode: =If(Value(SumHoursCheck.Text)=160, DisplayMode.Edit, DisplayMode.Disabled)
                         Fill: =RGBA(255, 255, 255, 1)
+                        FocusedBorderThickness: =2
                         Font: ="Poppins"
                         Height: =AddTaskBtn.Height
                         HoverBorderColor: =RGBA(2, 188, 148, 1)
@@ -1603,7 +1588,7 @@ TaskAnalysisScreen As screen:
                             ="Total Hours: " & Sum(TaxonomyCollect.AllItems,InputHours) &
                             "
                             Max Required: 160"
-                        Width: =TaxonomyCollect.Width - InputHours.X
+                        Width: =TaxonomyCollect.Width - HrsSpentLabel.X
                         Wrap: =false
                         X: =ReviewBtnContainer.Width-Self.Width
                         Y: =(ReviewBtnContainer.Height-Self.Height)/2
@@ -2054,6 +2039,7 @@ TaskAnalysisScreen As screen:
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
                     Fill: =RGBA(0, 0, 0, 1)
+                    FocusedBorderThickness: =2
                     Font: ="Poppins"
                     Height: =BackSubmitButtonContainer.Height/2
                     HoverBorderColor: =RGBA(0, 0, 0, 1)
@@ -2082,24 +2068,46 @@ TaskAnalysisScreen As screen:
                     DisabledFill: =RGBA(242, 242, 241, 0)
                     DisplayMode: =If(IsEmpty(DropdownCOCO.SelectedItems), DisplayMode.Disabled, DisplayMode.Edit)
                     Fill: =RGBA(2, 188, 148, 1)
+                    FocusedBorderThickness: =2
                     Font: ="Poppins"
                     Height: =BackSubmitButtonContainer.Height/2
                     HoverBorderColor: =RGBA(2, 188, 148, 1)
                     HoverColor: =RGBA(2, 188, 148, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
-                    OnSelect: |-
-                        =Set(iterator,(Last(TaxonomyCollect.AllItems).UniqueID)+1);
-                        
-                        ForAll(DropdownCOCO.SelectedItems, 
-                                Collect(colTaxonomy, 
-                                        {Task: (If(And(DropdownL6.Selected.Value <> "-",DropdownL6.Selected.Value <> Blank()), DropdownL6.Selected.Value,
-                                                    And(DropdownL5.Selected.Value <> "-",DropdownL5.Selected.Value <> Blank()), DropdownL5.Selected.Value,
-                                                    DropdownL4.Selected.Value)), 
-                                        'Company Code': ThisRecord.COMPANY_CODE, 'LE Name': ThisRecord.'LE Name', 'Business Segment': ThisRecord.'Business Segment', 
-                                        Associated_LE: ThisRecord.ASSOCIATED_LE, PC: ThisRecord.PC, Country: ThisRecord.Country, Region: ThisRecord.Region,
-                                        UniqueID: iterator}));
-                        
-                        
+                    OnSelect: |
+                        =Set(
+                            iterator,
+                            (Last(TaxonomyCollect.AllItems).UniqueID) + 1
+                        );
+                        ForAll(
+                            DropdownCOCO.SelectedItems,
+                            Collect(
+                                colTaxonomy,
+                                {
+                                    Task: (If(
+                                        And(
+                                            DropdownL6.Selected.Value <> "-",
+                                            DropdownL6.Selected.Value <> Blank()
+                                        ),
+                                        DropdownL6.Selected.Value,
+                                        And(
+                                            DropdownL5.Selected.Value <> "-",
+                                            DropdownL5.Selected.Value <> Blank()
+                                        ),
+                                        DropdownL5.Selected.Value,
+                                        DropdownL4.Selected.Value
+                                    )),
+                                    'Company Code': ThisRecord.COMPANY_CODE,
+                                    'LE Name': ThisRecord.'LE Name',
+                                    'Business Segment': ThisRecord.'Business Segment',
+                                    Associated_LE: ThisRecord.ASSOCIATED_LE,
+                                    PC: ThisRecord.PC,
+                                    Country: ThisRecord.Country,
+                                    Region: ThisRecord.Region,
+                                    UniqueID: iterator
+                                }
+                            )
+                        );
                         Reset(DropdownL1);
                         Reset(DropdownUniqueID);
                         Reset(DropdownL2);
@@ -2108,9 +2116,14 @@ TaskAnalysisScreen As screen:
                         Reset(DropdownL5);
                         Reset(DropdownL6);
                         Reset(DropdownCOCO);
-                        
-                        Set(ShowPopUp,false);
-                        Set(ShowResult, true);
+                        Set(
+                            ShowPopUp,
+                            false
+                        );
+                        Set(
+                            ShowResult,
+                            true
+                        );
                     PressedBorderColor: =RGBA(230, 230, 230, 1)
                     PressedColor: =RGBA(2, 188, 148, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)

@@ -18,8 +18,8 @@
       }
     },
     "dataSources": [
-      "Process Taxonomy",
-      "Coco Mapping"
+      "Coco Mapping",
+      "Process Taxonomy"
     ],
     "dependencies": {},
     "dependents": [],
