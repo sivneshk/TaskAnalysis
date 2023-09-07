@@ -1513,7 +1513,17 @@ TaskAnalysisScreen As screen:
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |-
-                            =ForAll(Sequence(CountRows(colTaxonomy)), Patch(Last(FirstN(colTaxonomy,Value)), {rowNumber: Value}))
+                            =Clear(colHours);
+                            ForAll(TaxonomyCollect.AllItems, Collect(colHours, {Hours: InputHours.Text, rowID: ThisRecord.rowNumber}));
+                            
+                            ClearCollect(
+                                           FinalTaxonomy,
+                                           AddColumns(
+                                                       colTaxonomy,
+                                                       "Input Hours",
+                                                       LookUp(colHours, rowID = colTaxonomy[@rowNumber], Hours)
+                                           )
+                            )
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
@@ -2035,7 +2045,7 @@ TaskAnalysisScreen As screen:
                         ForAll(
                             DropdownCOCO.SelectedItems,
                             Collect(
-                                colTaxonomy,
+                                colTaxonomyTemp,
                                 {
                                     Task: (If(
                                         And(
@@ -2062,6 +2072,9 @@ TaskAnalysisScreen As screen:
                                 }
                             )
                         );
+                        
+                        ClearCollect(colTaxonomy,ForAll(Sequence(CountRows(colTaxonomyTemp)), Patch(Last(FirstN(colTaxonomyTemp,Value)), {rowNumber: Value})));
+                        
                         Reset(DropdownL1);
                         Reset(DropdownUniqueID);
                         Reset(DropdownL2);
