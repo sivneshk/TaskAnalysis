@@ -2070,7 +2070,8 @@ TaskAnalysisScreen As screen:
                                     PC: ThisRecord.PC,
                                     Country: ThisRecord.Country,
                                     Region: ThisRecord.Region,
-                                    ColourID: iterator
+                                    ColourID: iterator,
+                                    'User Email': Office365Users.MyProfile().Mail
                                 }
                             )
                         );

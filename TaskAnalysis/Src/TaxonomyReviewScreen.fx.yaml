@@ -66,8 +66,8 @@ TaxonomyReviewScreen As screen:
                     Height: =ReviewScreenPanel.Height/14
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
-                    PaddingLeft: =10
-                    PaddingRight: =10
+                    PaddingLeft: =20
+                    PaddingRight: =20
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
@@ -195,7 +195,7 @@ TaxonomyReviewScreen As screen:
                             Mod(ThisItem.ColourID,2) = 0,
                            RGBA(208, 208, 208, 0.1), RGBA(0, 111, 121, 0.2)
                         )
-                    TemplatePadding: =10
+                    TemplatePadding: =20
                     TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/6)
                     Visible: =ShowResult
                     Width: =ReviewScreenPanel.Width
