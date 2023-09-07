@@ -1353,7 +1353,8 @@ TaskAnalysisScreen As screen:
                         HoverBorderColor: =If(Value(SumHoursCheck.Text)>160, ColorFade(Color.Red,-20%), RGBA(148, 148, 148, 1))
                         HoverColor: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
                         HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: =Select(Parent)
+                        OnChange: =
+                        OnSelect: =
                         PressedBorderColor: =RGBA(208, 208, 208, 1)
                         PressedColor: =RGBA(50, 49, 48, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
@@ -1496,7 +1497,7 @@ TaskAnalysisScreen As screen:
                     Width: =RightPanel.Width
                     ZIndex: =4
 
-                    ReviewBtn As button:
+                    NextBtn As button:
                         BorderColor: =RGBA(2, 188, 148, 1)
                         BorderThickness: =1
                         Color: =RGBA(2, 188, 148, 1)
@@ -1511,7 +1512,8 @@ TaskAnalysisScreen As screen:
                         HoverBorderColor: =RGBA(2, 188, 148, 1)
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: =Collect(colTaxonomy,AddColumns(colTaxonomy, "Input Hours", InputHours.Text))
+                        OnSelect: |-
+                            =ForAll(Sequence(CountRows(colTaxonomy)), Patch(Last(FirstN(colTaxonomy,Value)), {rowNumber: Value}))
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
@@ -1545,7 +1547,7 @@ TaskAnalysisScreen As screen:
                         Y: =(ReviewBtnContainer.Height-Self.Height)/2
                         ZIndex: =3
 
-                    ExceedHoursErrorMsg_1 As label:
+                    ExceedHoursErrorMsg As label:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -1605,7 +1607,7 @@ TaskAnalysisScreen As screen:
                 X: =CopyrightLabel.Width
                 ZIndex: =2
 
-    PopUpOverlay As groupContainer.manualLayoutContainer:
+    DialogBoxPopUp As groupContainer.manualLayoutContainer:
         Fill: =RGBA(34, 48, 45, 0.8)
         Height: |
             =Parent.Height

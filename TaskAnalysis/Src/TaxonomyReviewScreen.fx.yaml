@@ -1,7 +1,7 @@
-ForManagerScreen As screen:
+TaxonomyReviewScreen As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
-    HomeContainerScreen3 As groupContainer.manualLayoutContainer:
+    HomeContainerScreen2 As groupContainer.manualLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
         RadiusBottomLeft: =4
@@ -11,7 +11,7 @@ ForManagerScreen As screen:
         Width: =Parent.Width
         ZIndex: =1
 
-        HeaderContainerScreen3 As groupContainer.manualLayoutContainer:
+        HeaderContainerScreen2 As groupContainer.manualLayoutContainer:
             Height: =Parent.Height/10
             PaddingLeft: =20
             RadiusBottomLeft: =4
@@ -21,14 +21,14 @@ ForManagerScreen As screen:
             Width: =Parent.Width
             ZIndex: =1
 
-            BH_Logo_Screen3 As image:
+            BH_Logo_Screen2 As image:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 FocusedBorderThickness: =4
-                Height: =HeaderContainerScreen3.Height*0.9
+                Height: =HeaderContainerScreen2.Height*0.9
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverFill: =RGBA(0, 0, 0, 0)
                 Image: =bh_lg_tm_hrz_rgb_pos
@@ -36,30 +36,41 @@ ForManagerScreen As screen:
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =Parent.Width*0.1
                 X: =Parent.Width-Self.Width
-                Y: =(HeaderContainerScreen3.Height-Self.Height)/2
+                Y: =(HeaderContainerScreen2.Height-Self.Height)/2
                 ZIndex: =2
 
-        BodyContainerScreen3 As groupContainer.manualLayoutContainer:
-            Height: =Parent.Height-HeaderContainerScreen3.Height-FooterContainerScreen3.Height
+        BodyContainerScreen2 As groupContainer.manualLayoutContainer:
+            Height: =Parent.Height-HeaderContainerScreen2.Height-FooterContainerScreen2.Height
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
             Width: =Parent.Width
-            Y: =HeaderContainerScreen3.Height
+            Y: =HeaderContainerScreen2.Height
             ZIndex: =2
 
-        FooterContainerScreen3 As groupContainer.manualLayoutContainer:
+            Gallery1 As gallery.galleryVertical:
+                BorderColor: =RGBA(245, 245, 245, 1)
+                DelayItemLoading: =true
+                Items: =colTaxonomy
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+        FooterContainerScreen2 As groupContainer.manualLayoutContainer:
             Height: =Parent.Height/25
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
             Width: =Parent.Width
-            Y: =BodyContainerScreen3.Y+BodyContainerScreen3.Height
+            Y: =BodyContainerScreen2.Y+BodyContainerScreen2.Height
             ZIndex: =3
 
-            CopyrightScreen3 As label:
+            CopyrightScreen2 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -68,7 +79,7 @@ ForManagerScreen As screen:
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 FocusedBorderThickness: =4
                 Font: ="Poppins"
-                Height: =FooterContainerScreen3.Height
+                Height: =FooterContainerScreen2.Height
                 Size: =Self.Height/4
                 Text: ="Designed and Developed by GFO Data and Analytics Team"
                 Width: =Parent.Width*0.5
