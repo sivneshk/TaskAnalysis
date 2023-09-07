@@ -1523,7 +1523,9 @@ TaskAnalysisScreen As screen:
                                                        "Input Hours",
                                                        LookUp(colHours, rowID = colTaxonomy[@rowNumber], Hours)
                                            )
-                            )
+                            );
+                            
+                            Navigate(TaxonomyReviewScreen)
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
