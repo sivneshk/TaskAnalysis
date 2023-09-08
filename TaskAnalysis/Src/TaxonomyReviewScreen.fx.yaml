@@ -360,6 +360,7 @@ TaxonomyReviewScreen As screen:
 
                 ReviewBtnContainer_1 As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
+                    ContentLanguage: =
                     FillPortions: =0
                     Height: =HeaderReview.Height*1.5
                     LayoutMinHeight: =100
