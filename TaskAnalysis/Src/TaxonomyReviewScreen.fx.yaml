@@ -391,19 +391,7 @@ TaxonomyReviewScreen As screen:
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |-
-                            =Clear(colHours);
-                            ForAll(FinalTaxonomyGallery.AllItems, Collect(colHours, {Hours: InputHours.Text, rowID: ThisRecord.rowNumber}));
-                            
-                            ClearCollect(
-                                           FinalTaxonomy,
-                                           AddColumns(
-                                                       colTaxonomy,
-                                                       "Input Hours",
-                                                       LookUp(colHours, rowID = colTaxonomy[@rowNumber], Hours)
-                                           )
-                            );
-                            
-                            Set(sendThisToJSON, JSON(FinalTaxonomy));
+                            =Set(sendThisToJSON, JSON(FinalTaxonomy));
                             
                             Task_A_JSONFlowUsertoSP.Run(sendThisToJSON)
                         PressedBorderColor: =RGBA(230, 230, 230, 1)

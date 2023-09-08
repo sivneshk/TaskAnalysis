@@ -206,7 +206,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/08/2023 08:07:57",
+  "HeaderLastSavedDateTimeUTC": "09/08/2023 08:12:28",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "772eb637-780b-4505-ac82-d4fd749ecd5b": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/e8d8ce65691140fb9343d1fbe5c35db0\"",
@@ -225,14 +225,13 @@
   "OrderComponentTemplate": {},
   "OrderDataSource": {
     "Coco Mapping": 2,
-    "colHours": 8,
-    "colHoursWithNoRowID": 11,
-    "colHoursWithRowID": 10,
+    "colHoursWithNoRowID": 10,
+    "colHoursWithRowID": 9,
     "colTaxonomy": 7,
     "colTaxonomyTemp": 6,
     "ComboBoxSample": 3,
     "CustomGallerySample": 4,
-    "FinalTaxonomy": 9,
+    "FinalTaxonomy": 8,
     "Office365Users": 0,
     "Process Taxonomy": 5,
     "Task_A_JSONFlowUsertoSP": 1
