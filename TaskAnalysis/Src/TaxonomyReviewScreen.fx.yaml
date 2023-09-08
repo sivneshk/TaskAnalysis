@@ -375,7 +375,7 @@ TaxonomyReviewScreen As screen:
                     Width: =ReviewScreenPanel.Width
                     ZIndex: =4
 
-                    NextBtn_1 As button:
+                    SubmitBTN As button:
                         BorderColor: =RGBA(2, 188, 148, 1)
                         BorderThickness: =1
                         Color: =RGBA(2, 188, 148, 1)
