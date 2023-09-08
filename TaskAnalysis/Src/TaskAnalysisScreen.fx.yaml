@@ -1381,9 +1381,7 @@ TaskAnalysisScreen As screen:
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.Cancel
-                        OnSelect: |-
-                            =Remove(colTaxonomyTemp,ThisItem);
-                            Remove(colTaxonomy,ThisItem)
+                        OnSelect: =Remove(colTaxonomyTemp,ThisItem)
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
@@ -1515,15 +1513,18 @@ TaskAnalysisScreen As screen:
                         OnSelect: |-
                             =ClearCollect(colTaxonomy,ForAll(Sequence(CountRows(colTaxonomyTemp)), Patch(Last(FirstN(colTaxonomyTemp,Value)), {rowNumber: Value})));
                             
-                            Clear(colHours);
-                            ForAll(colTaxonomy, Collect(colHours, {Hours: InputHours.Text, rowID: ThisRecord.rowNumber}));
+                            
+                            Clear(colHoursWithNoRowID);
+                            ForAll(TaxonomyCollect.AllItems, Collect(colHoursWithNoRowID, {Hours: InputHours.Text}));
+                            
+                            ClearCollect(colHoursWithRowID,ForAll(Sequence(CountRows(colHoursWithNoRowID)), Patch(Last(FirstN(colHoursWithNoRowID,Value)), {rowID: Value})));
                             
                             ClearCollect(
                                            FinalTaxonomy,
                                            AddColumns(
                                                        colTaxonomy,
                                                        "Input Hours",
-                                                       LookUp(colHours, rowID = colTaxonomy[@rowNumber], Hours)
+                                                       LookUp(colHoursWithRowID, rowID = colTaxonomy[@rowNumber], Hours)
                                            )
                             );
                             
