@@ -1286,7 +1286,7 @@ TaskAnalysisScreen As screen:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     DelayItemLoading: =true
                     Height: =RightPanel.Height-ProcessNameLabel.Height-ReviewBtnContainer.Height
-                    Items: =colTaxonomy
+                    Items: =colTaxonomyTemp
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -1382,7 +1382,7 @@ TaskAnalysisScreen As screen:
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.Cancel
                         OnSelect: |-
-                            =Select(Parent);
+                            =Remove(colTaxonomyTemp,ThisItem);
                             Remove(colTaxonomy,ThisItem)
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(2, 188, 148, 1)
@@ -1513,8 +1513,10 @@ TaskAnalysisScreen As screen:
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |-
-                            =Clear(colHours);
-                            ForAll(TaxonomyCollect.AllItems, Collect(colHours, {Hours: InputHours.Text, rowID: ThisRecord.rowNumber}));
+                            =ClearCollect(colTaxonomy,ForAll(Sequence(CountRows(colTaxonomyTemp)), Patch(Last(FirstN(colTaxonomyTemp,Value)), {rowNumber: Value})));
+                            
+                            Clear(colHours);
+                            ForAll(colTaxonomy, Collect(colHours, {Hours: InputHours.Text, rowID: ThisRecord.rowNumber}));
                             
                             ClearCollect(
                                            FinalTaxonomy,
@@ -2076,7 +2078,6 @@ TaskAnalysisScreen As screen:
                             )
                         );
                         
-                        ClearCollect(colTaxonomy,ForAll(Sequence(CountRows(colTaxonomyTemp)), Patch(Last(FirstN(colTaxonomyTemp,Value)), {rowNumber: Value})));
                         
                         Reset(DropdownL1);
                         Reset(DropdownUniqueID);
