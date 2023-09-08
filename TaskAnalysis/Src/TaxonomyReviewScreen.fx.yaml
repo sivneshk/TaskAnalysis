@@ -265,7 +265,7 @@ TaxonomyReviewScreen As screen:
                         Size: =ChosenTask_1.Height/8
                         Tooltip: ="How many total working hours per month do you spend on this process?"
                         Width: =HrsSpentLabel_1.Width*0.7
-                        X: =HrsSpentLabel_1.X + ((HrsSpentLabel_1.Width-Self.Width)/2)
+                        X: =HrsSpentLabel_1.X
                         Y: =(FinalTaxonomyGallery.TemplateHeight-Self.Height)/2
                         ZIndex: =3
 
