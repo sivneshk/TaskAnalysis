@@ -52,7 +52,7 @@ TaxonomyReviewScreen As screen:
             ReviewScreenPanel As groupContainer.verticalAutoLayoutContainer:
                 BorderColor: =RGBA(208, 208, 208, 1)
                 BorderThickness: =1
-                Height: =BodyContainerScreen2.Height*0.95
+                Height: =BodyContainerScreen2.Height*0.9
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMode: =LayoutMode.Auto
                 Width: =Parent.Width*0.95
@@ -408,24 +408,60 @@ TaxonomyReviewScreen As screen:
                         Y: =(ReviewBtnContainer_1.Height-Self.Height)/2
                         ZIndex: =1
 
-                    LabelHours_1 As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        Font: ="Poppins"
-                        Height: =ReviewBtnContainer_1.Height
-                        Size: =Self.Height/8
-                        Text: |-
-                            ="Total Hours: " & Sum(FinalTaxonomyGallery.AllItems,InputHours) &
-                            "
-                            Max Required: 160"
-                        Width: =FinalTaxonomyGallery.Width - HrsSpentLabel_1.X
-                        Wrap: =false
-                        X: =ReviewBtnContainer_1.Width-Self.Width
-                        Y: =(ReviewBtnContainer_1.Height-Self.Height)/2
-                        ZIndex: =3
+            BackBTN As button:
+                Align: =Align.Right
+                BorderColor: =RGBA(2, 188, 148, 1)
+                BorderThickness: =1
+                Color: =RGBA(2, 188, 148, 1)
+                DisabledBorderColor: =RGBA(208, 208, 208, 1)
+                DisabledColor: =RGBA(208, 208, 208, 1)
+                DisabledFill: =RGBA(242, 242, 241, 0)
+                Fill: =RGBA(255, 255, 255, 1)
+                FocusedBorderThickness: =2
+                Font: ="Poppins"
+                Height: =BodyContainerScreen2.Height*0.05
+                HoverBorderColor: =RGBA(2, 188, 148, 1)
+                HoverColor: =RGBA(2, 188, 148, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                OnSelect: |-
+                    =Set(sendThisToJSON, JSON(FinalTaxonomy));
+                    
+                    Task_A_JSONFlowUsertoSP.Run(sendThisToJSON)
+                PaddingLeft: =50
+                PaddingRight: =50
+                PressedBorderColor: =RGBA(230, 230, 230, 1)
+                PressedColor: =RGBA(2, 188, 148, 1)
+                PressedFill: =RGBA(255, 255, 255, 1)
+                RadiusBottomLeft: =5
+                RadiusBottomRight: =5
+                RadiusTopLeft: =5
+                RadiusTopRight: =5
+                Size: =Self.Height/3
+                Text: ="Back"
+                Width: =ReviewScreenPanel.Width*0.1
+                X: =62
+                ZIndex: =2
+
+            Icon1 As icon.ArrowLeft:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =RGBA(0, 120, 212, 1)
+                DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                DisabledColor: =RGBA(225, 223, 221, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =BackBTN.Height
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(16, 110, 190, 1)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.ArrowLeft
+                PaddingBottom: =10
+                PaddingTop: =10
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =RGBA(16, 110, 190, 1)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =BackBTN.Width*0.2
+                X: =BackBTN.X+BackBTN.PaddingLeft
+                ZIndex: =3
 
         FooterContainerScreen2 As groupContainer.manualLayoutContainer:
             Height: =Parent.Height/25
