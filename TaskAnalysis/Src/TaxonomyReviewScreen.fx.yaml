@@ -399,7 +399,11 @@ TaxonomyReviewScreen As screen:
                                                        "Input Hours",
                                                        LookUp(colHours, rowID = colTaxonomy[@rowNumber], Hours)
                                            )
-                            )
+                            );
+                            
+                            Set(sendThisToJSON, JSON(FinalTaxonomy,JSONFormat.IndentFour));
+                            
+                            Task_A_JSONFlowUsertoSP.Run(sendThisToJSON)
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
