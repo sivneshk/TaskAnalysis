@@ -401,7 +401,7 @@ TaxonomyReviewScreen As screen:
                                            )
                             );
                             
-                            Set(sendThisToJSON, JSON(FinalTaxonomy,JSONFormat.IndentFour));
+                            Set(sendThisToJSON, JSON(FinalTaxonomy));
                             
                             Task_A_JSONFlowUsertoSP.Run(sendThisToJSON)
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
