@@ -22,7 +22,9 @@
       "Process Taxonomy"
     ],
     "dependencies": {},
-    "dependents": [],
+    "dependents": [
+      "22727eac-503c-40dc-ac2a-b5647b57480c"
+    ],
     "id": "772eb637-780b-4505-ac82-d4fd749ecd5b"
   },
   "7c9ca800-1db2-4a02-a55e-52ed86a4a437": {
