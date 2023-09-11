@@ -237,39 +237,6 @@ TaxonomyReviewScreen As screen:
                         Width: =ProcessNameLabel_1.Width
                         ZIndex: =2
 
-                    InputHours_1 As text:
-                        Align: =Align.Center
-                        BorderColor: =RGBA(208,208,208,1)
-                        BorderThickness: =2
-                        Color: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
-                        Default: =ThisItem.'Input Hours'
-                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =DisplayMode.View
-                        FocusedBorderThickness: =2
-                        Font: ="Poppins"
-                        Height: =FinalTaxonomyGallery.TemplateHeight*0.5
-                        HintText: ="Hours"
-                        HoverBorderColor: =If(Value(SumHoursCheck.Text)>160, ColorFade(Color.Red,-20%), RGBA(148, 148, 148, 1))
-                        HoverColor: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        OnChange: =
-                        OnSelect: =
-                        PressedBorderColor: =RGBA(208, 208, 208, 1)
-                        PressedColor: =RGBA(50, 49, 48, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
-                        RadiusBottomLeft: =2
-                        RadiusBottomRight: =2
-                        RadiusTopLeft: =2
-                        RadiusTopRight: =2
-                        Size: =ChosenTask_1.Height/8
-                        Tooltip: ="How many total working hours per month do you spend on this process?"
-                        Width: =HrsSpentLabel_1.Width*0.7
-                        X: =HrsSpentLabel_1.X
-                        Y: =(FinalTaxonomyGallery.TemplateHeight-Self.Height)/2
-                        ZIndex: =3
-
                     LE_Name_1 As label:
                         Align: =Align.Center
                         AutoHeight: =true
@@ -358,6 +325,26 @@ TaxonomyReviewScreen As screen:
                         Y: =(FinalTaxonomyGallery.TemplateHeight-Self.Height)/2
                         ZIndex: =9
 
+                    Label2 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(208, 208, 208, 1)
+                        BorderThickness: =1
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(148, 148, 148, 1)
+                        DisabledColor: =RGBA(50, 49, 48, 1)
+                        DisplayMode: =DisplayMode.View
+                        FocusedBorderThickness: =1
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =FinalTaxonomyGallery.TemplateHeight*0.5
+                        OnSelect: =Select(Parent)
+                        Size: =ChosenTask_1.Height/8
+                        Text: =ThisItem.'Input Hours'
+                        Width: =HrsSpentLabel_1.Width*0.7
+                        X: =HrsSpentLabel_1.X
+                        Y: =(FinalTaxonomyGallery.TemplateHeight-Self.Height)/2
+                        ZIndex: =10
+
                 ReviewBtnContainer_1 As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     ContentLanguage: =
@@ -382,14 +369,13 @@ TaxonomyReviewScreen As screen:
                         DisabledBorderColor: =RGBA(208, 208, 208, 1)
                         DisabledColor: =RGBA(208, 208, 208, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =If(Value(SumHoursCheck.Text)=160, DisplayMode.Edit, DisplayMode.Disabled)
                         Fill: =RGBA(255, 255, 255, 1)
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
                         Height: =ReviewBtnContainer_1.Height*0.5
-                        HoverBorderColor: =RGBA(2, 188, 148, 1)
-                        HoverColor: =RGBA(2, 188, 148, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
+                        HoverBorderColor: =ColorFade(RGBA(2, 188, 148, 1),-20%)
+                        HoverColor: =ColorFade(RGBA(2, 188, 148, 1),-20%)
+                        HoverFill: =ColorFade(RGBA(255, 255, 255, 1),-5%)
                         OnSelect: |-
                             =Set(sendThisToJSON, JSON(FinalTaxonomy));
                             
