@@ -2464,66 +2464,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "TaxonomyReviewScreen",
-                "type": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "TaxonomyReviewScreen",
-                "type": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.DropdownUniqueID.AccessibleLabel"
                 }
               ],
@@ -2968,6 +2908,66 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "TaxonomyReviewScreen",
+                "type": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "TaxonomyReviewScreen",
+                "type": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
         },
         {
           "locations": [

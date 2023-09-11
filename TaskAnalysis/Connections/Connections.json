@@ -1,33 +1,5 @@
 {
-  "772eb637-780b-4505-ac82-d4fd749ecd5b": {
-    "connectionRef": {
-      "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3312/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
-    },
-    "datasets": {
-      "https://bakerhughes.sharepoint.com/sites/KLGFCControllership": {
-        "dataSources": {
-          "Coco Mapping": {
-            "tableName": "d0c040da-7ba3-4a7e-9193-26c99e95ec3b"
-          },
-          "Process Taxonomy": {
-            "tableName": "7c26a536-1597-4877-8628-661c6363a571"
-          }
-        }
-      }
-    },
-    "dataSources": [
-      "Coco Mapping",
-      "Process Taxonomy"
-    ],
-    "dependencies": {},
-    "dependents": [
-      "b3df46f2-afa9-44c4-afb4-2f462b97db6c"
-    ],
-    "id": "772eb637-780b-4505-ac82-d4fd749ecd5b"
-  },
-  "e251d314-13af-49ff-8980-497286be6f44": {
+  "22727eac-503c-40dc-ac2a-b5647b57480c": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
@@ -53,7 +25,35 @@
       "shared_sharepointonline": "772eb637-780b-4505-ac82-d4fd749ecd5b"
     },
     "dependents": [],
-    "id": "e251d314-13af-49ff-8980-497286be6f44"
+    "id": "22727eac-503c-40dc-ac2a-b5647b57480c"
+  },
+  "772eb637-780b-4505-ac82-d4fd749ecd5b": {
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3312/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://bakerhughes.sharepoint.com/sites/KLGFCControllership": {
+        "dataSources": {
+          "Coco Mapping": {
+            "tableName": "d0c040da-7ba3-4a7e-9193-26c99e95ec3b"
+          },
+          "Process Taxonomy": {
+            "tableName": "7c26a536-1597-4877-8628-661c6363a571"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Coco Mapping",
+      "Process Taxonomy"
+    ],
+    "dependencies": {},
+    "dependents": [
+      "22727eac-503c-40dc-ac2a-b5647b57480c"
+    ],
+    "id": "772eb637-780b-4505-ac82-d4fd749ecd5b"
   },
   "efd6ad77-1458-4159-bb3e-452113a9f680": {
     "connectionRef": {
