@@ -1,6 +1,10 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: =Set(iterator, 0)
+    OnStart: |-
+        =Set(iterator, 0);
+        Clear(colTaxonomy);
+        Clear(colTaxonomyTemp);
+        Clear(FinalTaxonomy)
     StartScreen: =Switch(Param("ScreenName"), "MainPage", TaskAnalysisScreen, "asManager", ForManagerScreen)
     Theme: =PowerAppsTheme
 
