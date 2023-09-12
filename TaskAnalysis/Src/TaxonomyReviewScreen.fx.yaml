@@ -417,7 +417,7 @@ TaxonomyReviewScreen As screen:
                     HoverColor: =RGBA(2, 188, 148, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     OnSelect: =
-                    PaddingLeft: =20
+                    PaddingLeft: =25
                     PaddingRight: =25
                     PressedBorderColor: =RGBA(230, 230, 230, 1)
                     PressedColor: =RGBA(2, 188, 148, 1)
@@ -447,8 +447,8 @@ TaxonomyReviewScreen As screen:
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
-                    Width: =BackBTN.Width*0.2
-                    X: =BackBTN.X+BackBTN.PaddingLeft
+                    Width: =BackBTN.Width*0.3
+                    X: =BackBTN.X
                     ZIndex: =3
 
                 BackBTNOverlay As button:
