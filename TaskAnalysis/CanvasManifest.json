@@ -131,6 +131,7 @@
     "TaskAnalysisScreen",
     "TaxonomyReviewScreen",
     "ForManagerScreen",
+    "Screen1",
     "Collection"
   ]
 }
