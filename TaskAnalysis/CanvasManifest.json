@@ -130,6 +130,8 @@
   "ScreenOrder": [
     "TaskAnalysisScreen",
     "TaxonomyReviewScreen",
-    "ForManagerScreen"
+    "ForManagerScreen",
+    "Screen1",
+    "Collection"
   ]
 }

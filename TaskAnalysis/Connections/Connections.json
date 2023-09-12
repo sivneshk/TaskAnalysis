@@ -64,9 +64,7 @@
       "Office365Users"
     ],
     "dependencies": {},
-    "dependents": [
-      "eb1b05a6-bc6c-4fff-a13a-f05fc71cede0"
-    ],
+    "dependents": [],
     "id": "efd6ad77-1458-4159-bb3e-452113a9f680"
   }
 }
