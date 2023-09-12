@@ -418,15 +418,15 @@ TaxonomyReviewScreen As screen:
                     HoverFill: =RGBA(255, 255, 255, 1)
                     OnSelect: =
                     PaddingLeft: =25
-                    PaddingRight: =25
+                    PaddingRight: =20
                     PressedBorderColor: =RGBA(230, 230, 230, 1)
                     PressedColor: =RGBA(2, 188, 148, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
-                    RadiusBottomLeft: =5
-                    RadiusBottomRight: =5
-                    RadiusTopLeft: =5
-                    RadiusTopRight: =5
-                    Size: =Self.Height/3
+                    RadiusBottomLeft: =2
+                    RadiusBottomRight: =2
+                    RadiusTopLeft: =2
+                    RadiusTopRight: =2
+                    Size: =SubmitBTN.Size
                     Text: ="Back"
                     Width: =ReviewScreenPanel.Width*0.06
                     X: =ReviewScreenPanel.X
@@ -444,11 +444,13 @@ TaxonomyReviewScreen As screen:
                     HoverColor: =RGBA(16, 110, 190, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.ArrowLeft
+                    PaddingLeft: =5
+                    PaddingRight: =5
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Width: =BackBTN.Width*0.3
-                    X: =BackBTN.X
+                    X: =BackBTN.X+BackBTN.PaddingLeft/3
                     ZIndex: =3
 
                 BackBTNOverlay As button:
@@ -472,10 +474,10 @@ TaxonomyReviewScreen As screen:
                     PressedBorderColor: =Color.Transparent
                     PressedColor: =Color.Transparent
                     PressedFill: =Color.Transparent
-                    RadiusBottomLeft: =5
-                    RadiusBottomRight: =5
-                    RadiusTopLeft: =5
-                    RadiusTopRight: =5
+                    RadiusBottomLeft: =2
+                    RadiusBottomRight: =2
+                    RadiusTopLeft: =2
+                    RadiusTopRight: =2
                     Size: =Self.Height/3
                     Text: =""
                     Width: =ReviewScreenPanel.Width*0.06
