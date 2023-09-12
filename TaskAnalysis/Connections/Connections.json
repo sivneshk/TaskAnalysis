@@ -6,6 +6,13 @@
       "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
     },
     "datasets": {
+      "https://bakerhughes.sharepoint.com/sites/HQGFOTaskAnalysis/": {
+        "dataSources": {
+          "Task Analysis Taxonomy Collection": {
+            "tableName": "00c18f4c-a873-4148-b508-df249744b77e"
+          }
+        }
+      },
       "https://bakerhughes.sharepoint.com/sites/KLGFCControllership": {
         "dataSources": {
           "Coco Mapping": {
@@ -19,7 +26,8 @@
     },
     "dataSources": [
       "Coco Mapping",
-      "Process Taxonomy"
+      "Process Taxonomy",
+      "Task Analysis Taxonomy Collection"
     ],
     "dependencies": {},
     "dependents": [],
