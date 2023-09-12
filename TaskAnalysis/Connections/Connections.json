@@ -25,7 +25,7 @@
     "dependents": [],
     "id": "772eb637-780b-4505-ac82-d4fd749ecd5b"
   },
-  "7c9ca800-1db2-4a02-a55e-52ed86a4a437": {
+  "eb1b05a6-bc6c-4fff-a13a-f05fc71cede0": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
@@ -47,9 +47,11 @@
     "dataSources": [
       "Task_A_JSONFlowUsertoSP"
     ],
-    "dependencies": {},
+    "dependencies": {
+      "shared_office365users_1": "efd6ad77-1458-4159-bb3e-452113a9f680"
+    },
     "dependents": [],
-    "id": "7c9ca800-1db2-4a02-a55e-52ed86a4a437"
+    "id": "eb1b05a6-bc6c-4fff-a13a-f05fc71cede0"
   },
   "efd6ad77-1458-4159-bb3e-452113a9f680": {
     "connectionRef": {
@@ -62,7 +64,9 @@
       "Office365Users"
     ],
     "dependencies": {},
-    "dependents": [],
+    "dependents": [
+      "eb1b05a6-bc6c-4fff-a13a-f05fc71cede0"
+    ],
     "id": "efd6ad77-1458-4159-bb3e-452113a9f680"
   }
 }
