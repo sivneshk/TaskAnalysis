@@ -94,7 +94,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 0,
+    "BindingErrorCount": 14,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 2000,
     "DocumentAppType": "DesktopOrTablet",
@@ -130,7 +130,7 @@
   "ScreenOrder": [
     "TaskAnalysisScreen",
     "TaxonomyReviewScreen",
-    "ForManagerScreen",
+    "ForManagerEditScreen/UserHomeScreen",
     "Collection"
   ]
 }
