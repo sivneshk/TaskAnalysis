@@ -81,7 +81,7 @@ Collection As screen:
                 ForAll(
                     Split(
                         Text(Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com").json),
-                        "\r\n"
+                        "\"
                     ),
                     ForAll(
                         Split(Text(Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com").json),
@@ -102,4 +102,50 @@ Collection As screen:
         X: =171
         Y: =356
         ZIndex: =4
+
+    Button1_3 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(0, 120, 212, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(16, 110, 190, 1)
+        OnSelect: |
+            =ClearCollect(
+                PrepCollection,
+                ForAll(
+                    Split(
+                        Text(Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com").json),
+                        "},{"
+                    ),
+                    JSON(
+                        If(
+                            StartsWith(Result, "[{"),
+                            Concatenate(Result, "}"),
+                            If(
+                                EndsWith(Result, "}]"),
+                                Concatenate("{", Result),
+                                Concatenate("{", Result, "}")
+                            )
+                        )
+                    )
+                )
+            )
+        PressedBorderColor: =RGBA(0, 69, 120, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(16, 110, 190, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Collect"
+        X: =795
+        Y: =622
+        ZIndex: =5
 
