@@ -105,7 +105,7 @@ Collection As screen:
         OnSelect: |
             =ClearCollect(
                 PrepCollection,
-                JSON(Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com").json)
+                Split(Text(JSON(Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com").json).json), "\r\n")
             )
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
