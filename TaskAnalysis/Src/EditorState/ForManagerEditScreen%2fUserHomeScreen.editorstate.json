@@ -14076,24 +14076,10 @@
         },
         "BorderStyle",
         "FocusedBorderColor",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(50, 49, 48, 1)",
-          "InvariantPropertyName": "Color",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Color",
         "DisabledColor",
         "PressedColor",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(50, 49, 48, 1)",
-          "InvariantPropertyName": "HoverColor",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "HoverColor",
         "Fill",
         "DisabledFill",
         "PressedFill",

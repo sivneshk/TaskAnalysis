@@ -5,7 +5,7 @@ App As appinfo:
         Clear(colTaxonomy);
         Clear(colTaxonomyTemp);
         Clear(FinalTaxonomy)
-    StartScreen: =Switch(Param("ScreenName"), "MainPage", TaskAnalysisScreen, "asManager", 'ForManagerScreen/HomeScreen')
+    StartScreen: =Switch(Param("ScreenName"), "MainPage", TaskAnalysisScreen, "asManager", 'ForManagerEditScreen/UserHomeScreen')
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:

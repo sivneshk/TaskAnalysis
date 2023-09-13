@@ -1342,8 +1342,8 @@
 
                     InputHours_1 As text:
                         Align: =Align.Center
-                        BorderColor: =If(Value(SumHoursCheck_1.Text)>160, Color.Red, RGBA(208,208,208,1))
-                        Color: =If(Value(SumHoursCheck_1.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
+                        BorderColor: =RGBA(208,208,208,1)
+                        Color: =RGBA(50, 49, 48, 1)
                         Default: =""
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
@@ -1352,8 +1352,8 @@
                         Font: ="Poppins"
                         Height: =TaxonomyCollect_1.TemplateHeight*0.5
                         HintText: ="Hours"
-                        HoverBorderColor: =If(Value(SumHoursCheck_1.Text)>160, ColorFade(Color.Red,-20%), RGBA(148, 148, 148, 1))
-                        HoverColor: =If(Value(SumHoursCheck_1.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
+                        HoverBorderColor: =RGBA(148, 148, 148, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnChange: =
                         OnSelect: =
