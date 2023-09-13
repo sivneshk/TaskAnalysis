@@ -247,14 +247,14 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/13/2023 16:26:33",
+  "HeaderLastSavedDateTimeUTC": "09/13/2023 16:38:18",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "2443c627-fb33-4399-9285-e7d666adb1fd": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/ac4c48e6d93a4c5a88f5bfc0008b8fb1\"",
-    "32143b69-33a2-4ee1-9e64-f5235c19d334": "\"/providers/microsoft.powerapps/apis/shared_powerbi/connections/ce4f194187b14032a7f3c5e74432cff7\"",
+    "5467b00e-f02d-4b5d-9f64-94d43bfee75e": "\"/providers/microsoft.powerapps/apis/shared_powerbi/connections/ce4f194187b14032a7f3c5e74432cff7\"",
     "772eb637-780b-4505-ac82-d4fd749ecd5b": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/8f8b3771adaa4fc3a2f649164f291026\"",
-    "efd6ad77-1458-4159-bb3e-452113a9f680": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/514fd8fc26bb43618f3321e714029450\"",
-    "fa47bc42-1fa3-4d5d-87e4-2eb11572f98d": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/e1763c40-e20b-4d4a-8462-03b0cf6bded7\""
+    "db3e00c3-62b8-4189-b925-cd10692ad425": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/E1763C40E20B4D4A846203B0CF6BDED7-66CE9AB47DB0C239\"",
+    "efd6ad77-1458-4159-bb3e-452113a9f680": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/514fd8fc26bb43618f3321e714029450\""
   },
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {

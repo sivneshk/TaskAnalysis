@@ -33,7 +33,7 @@
     "dependents": [],
     "id": "2443c627-fb33-4399-9285-e7d666adb1fd"
   },
-  "32143b69-33a2-4ee1-9e64-f5235c19d334": {
+  "5467b00e-f02d-4b5d-9f64-94d43bfee75e": {
     "connectionRef": {
       "displayName": "Power BI",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1651/1.0.1651.3382/powerbi/icon.png",
@@ -43,9 +43,9 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "fa47bc42-1fa3-4d5d-87e4-2eb11572f98d"
+      "db3e00c3-62b8-4189-b925-cd10692ad425"
     ],
-    "id": "32143b69-33a2-4ee1-9e64-f5235c19d334"
+    "id": "5467b00e-f02d-4b5d-9f64-94d43bfee75e"
   },
   "772eb637-780b-4505-ac82-d4fd749ecd5b": {
     "connectionRef": {
@@ -81,6 +81,34 @@
     "dependents": [],
     "id": "772eb637-780b-4505-ac82-d4fd749ecd5b"
   },
+  "db3e00c3-62b8-4189-b925-cd10692ad425": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "e1763c40-e20b-4d4a-8462-03b0cf6bded7"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "e1763c40-e20b-4d4a-8462-03b0cf6bded7"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Task_A_PreparerHours"
+    ],
+    "dependencies": {
+      "shared_powerbi": "5467b00e-f02d-4b5d-9f64-94d43bfee75e"
+    },
+    "dependents": [],
+    "id": "db3e00c3-62b8-4189-b925-cd10692ad425"
+  },
   "efd6ad77-1458-4159-bb3e-452113a9f680": {
     "connectionRef": {
       "displayName": "Office 365 Users",
@@ -96,39 +124,5 @@
       "2443c627-fb33-4399-9285-e7d666adb1fd"
     ],
     "id": "efd6ad77-1458-4159-bb3e-452113a9f680"
-  },
-  "fa47bc42-1fa3-4d5d-87e4-2eb11572f98d": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "32143b69-33a2-4ee1-9e64-f5235c19d334": {
-          "value": "shared_powerbi"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "e1763c40-e20b-4d4a-8462-03b0cf6bded7"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_powerbi": {
-          "value": "32143b69-33a2-4ee1-9e64-f5235c19d334"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "e1763c40-e20b-4d4a-8462-03b0cf6bded7"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "Task_A_PreparerHours"
-    ],
-    "dependencies": {
-      "shared_powerbi": "32143b69-33a2-4ee1-9e64-f5235c19d334"
-    },
-    "dependents": [],
-    "id": "fa47bc42-1fa3-4d5d-87e4-2eb11572f98d"
   }
 }
