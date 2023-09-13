@@ -46,7 +46,7 @@ Collection As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         InputFill: =RGBA(245, 245, 245, 1)
         InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: =MyCollection
+        Items: =PrepCollection
         LinkColor: =RGBA(0, 120, 212, 1)
         PrimaryColor1: =RGBA(0, 120, 212, 1)
         PrimaryColor2: =RGBA(16, 110, 190, 1)
@@ -73,7 +73,7 @@ Collection As screen:
         HoverFill: =RGBA(16, 110, 190, 1)
         OnSelect: |
             =Set(varPrepHours, Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"));
-            ClearCollect(MyCollection, (varPrepHours.json));
+            ClearCollect(PrepCollection, (varPrepHours.json));
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(16, 110, 190, 1)
