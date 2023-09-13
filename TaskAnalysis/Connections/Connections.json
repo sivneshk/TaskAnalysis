@@ -33,19 +33,33 @@
     "dependents": [],
     "id": "2443c627-fb33-4399-9285-e7d666adb1fd"
   },
-  "76e2c2c7-1703-4e12-ab9c-ea0bc1fd45a0": {
+  "6e140b8d-6f6e-482c-a262-ef2eb94d1817": {
     "connectionRef": {
-      "displayName": "Power BI",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1651/1.0.1651.3382/powerbi/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_powerbi"
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "e1763c40-e20b-4d4a-8462-03b0cf6bded7"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "e1763c40-e20b-4d4a-8462-03b0cf6bded7"
+        }
+      }
     },
     "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "b68a2427-cb6a-441d-9cfe-0ee3bb544ff0"
+    "dataSources": [
+      "Task_A_PreparerHours"
     ],
-    "id": "76e2c2c7-1703-4e12-ab9c-ea0bc1fd45a0"
+    "dependencies": {
+      "shared_powerbi": "b1a9265c-ebfd-4592-a1cc-843a356c18e7"
+    },
+    "dependents": [],
+    "id": "6e140b8d-6f6e-482c-a262-ef2eb94d1817"
   },
   "772eb637-780b-4505-ac82-d4fd749ecd5b": {
     "connectionRef": {
@@ -81,39 +95,19 @@
     "dependents": [],
     "id": "772eb637-780b-4505-ac82-d4fd749ecd5b"
   },
-  "b68a2427-cb6a-441d-9cfe-0ee3bb544ff0": {
+  "b1a9265c-ebfd-4592-a1cc-843a356c18e7": {
     "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "76e2c2c7-1703-4e12-ab9c-ea0bc1fd45a0": {
-          "value": "shared_powerbi"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "e1763c40-e20b-4d4a-8462-03b0cf6bded7"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_powerbi": {
-          "value": "76e2c2c7-1703-4e12-ab9c-ea0bc1fd45a0"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "e1763c40-e20b-4d4a-8462-03b0cf6bded7"
-        }
-      }
+      "displayName": "Power BI",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1651/1.0.1651.3382/powerbi/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_powerbi"
     },
     "datasets": {},
-    "dataSources": [
-      "Task_A_PreparerHours"
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "6e140b8d-6f6e-482c-a262-ef2eb94d1817"
     ],
-    "dependencies": {
-      "shared_powerbi": "76e2c2c7-1703-4e12-ab9c-ea0bc1fd45a0"
-    },
-    "dependents": [],
-    "id": "b68a2427-cb6a-441d-9cfe-0ee3bb544ff0"
+    "id": "b1a9265c-ebfd-4592-a1cc-843a356c18e7"
   },
   "efd6ad77-1458-4159-bb3e-452113a9f680": {
     "connectionRef": {
