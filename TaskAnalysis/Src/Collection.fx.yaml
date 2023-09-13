@@ -46,8 +46,8 @@ Collection As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(16, 110, 190, 1)
         OnSelect: |+
-            =//Set(varPrepHours, Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"));
-            //ClearCollect(PrepCollection, (varPrepHours.json));
+            =Set(varPrepHours, Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"));
+            ClearCollect(PrepCollection, (varPrepHours.json));
             
             
         PressedBorderColor: =RGBA(0, 69, 120, 1)
@@ -127,12 +127,12 @@ Collection As screen:
                     JSON(
                         Concatenate(
                             If(
-                                StartsWith(Result, "[{"),
+                                Left(Result, 1) = "[",
                                 Result,
                                 Concatenate("{", Result)
                             ),
                             If(
-                                EndsWith(Result, "}]"),
+                                Right(Result, 1) = "]",
                                 Result,
                                 Concatenate(Result, "}")
                             )
