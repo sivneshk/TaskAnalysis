@@ -122,8 +122,8 @@
                         Height: =LeftPanelTitle_1.Height
                         Size: =Self.Height/3.5
                         Text: ="Process Taxonomy"
-                        Width: =DropdownL1_1.Width
-                        X: =DropdownL1_1.X
+                        Width: =SlicerCOCOScreen3.Width
+                        X: =SlicerCOCOScreen3.X
                         ZIndex: =1
 
                 UserInfo_1 As groupContainer.manualLayoutContainer:
@@ -160,7 +160,7 @@
                         PaddingTop: =0
                         Size: =Self.Height/5
                         Text: =Office365Users.MyProfile().DisplayName
-                        Width: =DropdownL1_1.Width-UserImage_1.Width
+                        Width: =SlicerCOCOScreen3.Width-UserImage_1.Width
                         X: =UserImage_1.X+UserImage_1.Width
                         Y: =UserImage_1.Y
                         ZIndex: =2
@@ -183,7 +183,7 @@
                         Size: =Self.Height/2
                         Text: =Office365Users.MyProfile().JobTitle
                         VerticalAlign: =VerticalAlign.Top
-                        Width: =DropdownL1_1.Width-UserImage_1.Width
+                        Width: =SlicerCOCOScreen3.Width-UserImage_1.Width
                         X: =UserImage_1.X+UserImage_1.Width
                         Y: =UserDisplayName_1.Y+UserDisplayName_1.Height
                         ZIndex: =3
@@ -206,7 +206,7 @@
                         RadiusTopLeft: =Self.Height
                         RadiusTopRight: =Self.Height
                         Width: =Self.Height
-                        X: =DropdownL1_1.X
+                        X: =SlicerCOCOScreen3.X
                         Y: =(UserInfo_1.Height-Self.Height)/2
                         ZIndex: =4
 
@@ -230,7 +230,7 @@
                     Width: =LeftPanel_1.Width
                     ZIndex: =3
 
-                    "DropdownUniqueID_1 As 'Combo box'.pcfdataset":
+                    "SlicerUserMailScreen3 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: =Blank()
@@ -241,7 +241,7 @@
                         Items: =Sort(Distinct('Task Analysis Taxonomy Collection','User Email'),Value)
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        OnChange: =Set(uniqueIDVar,DropdownUniqueID_1.Selected.Value)
+                        OnChange: =Set(uniqueIDVar,SlicerUserMailScreen3.Selected.Value)
                         OnSelect: =
                         PaddingStart: =10
                         PCFTeamsTheme: ="default"
@@ -251,95 +251,7 @@
                         Y: =16
                         ZIndex: =1
 
-                        Title2_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="Title"
-                            FieldName: ="Title"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =2
-                            ZIndex: =8
-
-                        Global_Process_ID2_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="Global_Process_ID"
-                            FieldName: ="GlobalProcessID"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =3
-                            ZIndex: =9
-
-                        L12_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L1"
-                            FieldName: ="OData__x004c_1"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =4
-                            ZIndex: =10
-
-                        L22_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L2"
-                            FieldName: ="OData__x004c_2"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =5
-                            ZIndex: =11
-
-                        L32_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L3"
-                            FieldName: ="OData__x004c_3"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =6
-                            ZIndex: =12
-
-                        L42_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L4"
-                            FieldName: ="OData__x004c_4"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =7
-                            ZIndex: =13
-
-                        L52_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L5"
-                            FieldName: ="OData__x004c_5"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =8
-                            ZIndex: =14
-
-                        L62_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L6"
-                            FieldName: ="OData__x004c_6"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =9
-                            ZIndex: =15
-
-                        Comboname2_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="Comboname"
-                            FieldName: ="Comboname"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =10
-                            ZIndex: =16
-
-                        Attachments2_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="Attachments"
-                            FieldName: ="{Attachments}"
-                            FieldType: ="r*"
-                            FieldVariantName: ="textualColumn"
-                            Order: =11
-                            ZIndex: =17
-
-                        Value1_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="Value"
-                            FieldName: ="Value"
-                            FieldType: ="e"
-                            FieldVariantName: ="textualColumn"
-                            Order: =1
-                            ZIndex: =29
-
-                    "DropdownL1_1 As 'Combo box'.pcfdataset":
+                    "SlicerCOCOScreen3 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: =Blank()
@@ -347,11 +259,10 @@
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter_1.Height/11
-                        Items: |
-                            =If(DropdownUniqueID_1.Selected.Value = Blank(), Sort(Distinct('Task Analysis Taxonomy Collection',CoCo),Value), Distinct(Filter('Task Analysis Taxonomy Collection','User Email'= DropdownUniqueID_1.Selected.Value),CoCo))
+                        Items: =If(SlicerUserMailScreen3.Selected.Value = Blank(),Sort(Distinct('Task Analysis Taxonomy Collection',CoCo),Value),Distinct(Filter('Task Analysis Taxonomy Collection','User Email'= SlicerUserMailScreen3.Selected.Value),CoCo))
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        OnChange: =Set(varL1,DropdownL1_1.Selected.Value)
+                        OnChange: =Set(varL1,SlicerCOCOScreen3.Selected.Value)
                         PaddingStart: =10
                         PCFTeamsTheme: ="default"
                         Text: ="CoCo"
@@ -360,116 +271,15 @@
                         Y: =16
                         ZIndex: =2
 
-                        Title3_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="Title"
-                            FieldName: ="Title"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =3
-                            ZIndex: =18
-
-                        Global_Process_ID3_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="Global_Process_ID"
-                            FieldName: ="GlobalProcessID"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =4
-                            ZIndex: =19
-
-                        L13_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L1"
-                            FieldName: ="OData__x004c_1"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =2
-                            ZIndex: =20
-
-                        L23_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L2"
-                            FieldName: ="OData__x004c_2"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =5
-                            ZIndex: =21
-
-                        L33_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L3"
-                            FieldName: ="OData__x004c_3"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =6
-                            ZIndex: =22
-
-                        L43_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L4"
-                            FieldName: ="OData__x004c_4"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =7
-                            ZIndex: =23
-
-                        L53_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L5"
-                            FieldName: ="OData__x004c_5"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =8
-                            ZIndex: =24
-
-                        L63_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L6"
-                            FieldName: ="OData__x004c_6"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =9
-                            ZIndex: =25
-
-                        Comboname3_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="Comboname"
-                            FieldName: ="Comboname"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =10
-                            ZIndex: =26
-
-                        Attachments3_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="Attachments"
-                            FieldName: ="{Attachments}"
-                            FieldType: ="r*"
-                            FieldVariantName: ="textualColumn"
-                            Order: =11
-                            ZIndex: =27
-
-                        Value2_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="Value"
-                            FieldName: ="Value"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =1
-                            ZIndex: =28
-
-                    "DropdownL2_1 As 'Combo box'.pcfdataset":
+                    "SlicerUniqueIDScreen3 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
-                        DefaultSelectedItems: |-
-                            =If(DropdownUniqueID_1.Selected.Value = Blank()
-                                ,
-                                Blank()
-                                ,
-                                First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L2))
-                                
-                            )
+                        DefaultSelectedItems: =Blank()
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter_1.Height/11
-                        Items: |-
-                            =If(DropdownUniqueID_1.Selected.Value = Blank()
-                                , 
-                                Sort(Distinct(Filter('Process Taxonomy',L1 = DropdownL1_1.Selected.Value),L2),Value)
-                                ,
-                                Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L2)
-                            )
+                        Items: =If(SlicerCOCOScreen3.Selected.Value = Blank(), Sort(Distinct('Task Analysis Taxonomy Collection',Title),Value), Distinct(Filter('Task Analysis Taxonomy Collection',CoCo= SlicerCOCOScreen3.Selected.Value),Title))
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         PaddingStart: =10
@@ -480,103 +290,15 @@
                         Y: =16
                         ZIndex: =3
 
-                        Title4_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="Title"
-                            FieldName: ="Title"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =3
-                            ZIndex: =30
-
-                        Global_Process_ID4_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="Global_Process_ID"
-                            FieldName: ="GlobalProcessID"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =4
-                            ZIndex: =31
-
-                        L14_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L1"
-                            FieldName: ="OData__x004c_1"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =5
-                            ZIndex: =32
-
-                        L24_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L2"
-                            FieldName: ="OData__x004c_2"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =2
-                            ZIndex: =33
-
-                        L34_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L3"
-                            FieldName: ="OData__x004c_3"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =6
-                            ZIndex: =34
-
-                        L44_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L4"
-                            FieldName: ="OData__x004c_4"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =7
-                            ZIndex: =35
-
-                        L54_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L5"
-                            FieldName: ="OData__x004c_5"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =8
-                            ZIndex: =36
-
-                        L64_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="L6"
-                            FieldName: ="OData__x004c_6"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =9
-                            ZIndex: =37
-
-                        Comboname4_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="Comboname"
-                            FieldName: ="Comboname"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =10
-                            ZIndex: =38
-
-                        Attachments4_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="Attachments"
-                            FieldName: ="{Attachments}"
-                            FieldType: ="r*"
-                            FieldVariantName: ="textualColumn"
-                            Order: =11
-                            ZIndex: =39
-
-                        Value3_1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="Value"
-                            FieldName: ="Value"
-                            FieldType: ="s"
-                            FieldVariantName: ="textualColumn"
-                            Order: =1
-                            ZIndex: =40
-
                     "DropdownL3_1 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: |-
-                            =If(DropdownUniqueID_1.Selected.Value = Blank()
+                            =If(SlicerUserMailScreen3.Selected.Value = Blank()
                                 ,
                                 Blank()
                                 ,
-                                First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L3))
+                                First(Distinct(Filter('Process Taxonomy',Title = SlicerUserMailScreen3.Selected.Value),L3))
                                 
                             )
                         DisplayMode: =DisplayMode.Edit
@@ -584,11 +306,11 @@
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter_1.Height/11
                         Items: |-
-                            =If(DropdownUniqueID_1.Selected.Value = Blank()
+                            =If(SlicerUserMailScreen3.Selected.Value = Blank()
                                 , 
-                                Sort(Distinct(Filter('Process Taxonomy',L2 = DropdownL2_1.Selected.Value),L3),Value)
+                                Sort(Distinct(Filter('Process Taxonomy',L2 = SlicerUniqueIDScreen3.Selected.Value),L3),Value)
                                 ,
-                                Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L3)
+                                Distinct(Filter('Process Taxonomy',Title = SlicerUserMailScreen3.Selected.Value),L3)
                             )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
@@ -715,9 +437,9 @@
                         HoverColor: =RGBA(148, 148, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |-
-                            =Reset(DropdownL1_1);
-                            Reset(DropdownUniqueID_1);
-                            Reset(DropdownL2_1);
+                            =Reset(SlicerCOCOScreen3);
+                            Reset(SlicerUserMailScreen3);
+                            Reset(SlicerUniqueIDScreen3);
                             Reset(DropdownL3_1);
                             Reset(DropdownL4_1);
                             Reset(DropdownL5_1);
@@ -731,8 +453,8 @@
                         RadiusTopRight: =5
                         Size: =Self.Height/3
                         Text: ="Clear"
-                        Width: =DropdownL1_1.Width*0.25
-                        X: =DropdownL1_1.X
+                        Width: =SlicerCOCOScreen3.Width*0.25
+                        X: =SlicerCOCOScreen3.X
                         Y: =(ButtonGroup_1.Height-Self.Height)/2
                         ZIndex: =1
 
@@ -742,7 +464,7 @@
                         DisabledBorderColor: =RGBA(208, 208, 208, 1)
                         DisabledColor: =RGBA(208, 208, 208, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =If(And(DropdownUniqueID_1.Selected.Value <> Blank(), DropdownL1_1.Selected.Value <> Blank(),DropdownL2_1.Selected.Value <> Blank(),DropdownL3_1.Selected.Value <> Blank(),DropdownL4_1.Selected.Value <> Blank()), DisplayMode.Edit, DisplayMode.Disabled)
+                        DisplayMode: =If(And(SlicerUserMailScreen3.Selected.Value <> Blank(), SlicerCOCOScreen3.Selected.Value <> Blank(),SlicerUniqueIDScreen3.Selected.Value <> Blank(),DropdownL3_1.Selected.Value <> Blank(),DropdownL4_1.Selected.Value <> Blank()), DisplayMode.Edit, DisplayMode.Disabled)
                         Fill: =RGBA(2, 188, 148, 1)
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
@@ -760,7 +482,7 @@
                         RadiusTopRight: =5
                         Size: =Self.Height/3
                         Text: ="+ Add Task to List"
-                        Width: =DropdownL1_1.Width*0.72
+                        Width: =SlicerCOCOScreen3.Width*0.72
                         X: =ButtonGroup_1.Width-ClearBtn_1.X-Self.Width
                         Y: =(ButtonGroup_1.Height-Self.Height)/2
                         ZIndex: =2
@@ -769,7 +491,6 @@
                 BorderColor: =RGBA(148, 148, 148, 1)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
-                DropShadow: =DropShadow.Regular
                 FillPortions: =0
                 Height: =BodyContainer.Height
                 LayoutDirection: =LayoutDirection.Vertical
@@ -783,416 +504,77 @@
                 Width: =Parent.Width*2/3
                 ZIndex: =2
 
-                HeaderTaxonomy_1 As groupContainer.manualLayoutContainer:
-                    FillPortions: =0
-                    Height: =RightPanel_1.Height/14
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    PaddingLeft: =5
-                    PaddingRight: =5
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Width: =RightPanel_1.Width
-                    ZIndex: =2
-
-                    ProcessNameLabel_2 As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Poppins"
-                        Height: =HeaderTaxonomy_1.Height
-                        PaddingLeft: =10
-                        Size: =Self.Height/4
-                        Text: ="Process Name"
-                        Width: =RightPanel_1.Width-CocoLabel_2.Width-BusinessSeg_2.Width-HrsSpentLabel_2.Width-Filler_1.Width-LegalEntityLabel_2.Width-RegionLabel_2.Width
-                        X: =HeaderTaxonomy_1.PaddingLeft
-                        ZIndex: =1
-
-                    CocoLabel_2 As label:
-                        Align: =Align.Center
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Poppins"
-                        Height: =HeaderTaxonomy_1.Height
-                        Size: =Self.Height/4
-                        Text: ="CoCo"
-                        Width: =RightPanel_1.Width/11
-                        X: =ProcessNameLabel_2.Width+ProcessNameLabel_2.X
-                        ZIndex: =2
-
-                    BusinessSeg_2 As label:
-                        Align: =Align.Center
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Poppins"
-                        Height: =HeaderTaxonomy_1.Height
-                        Size: =Self.Height/4
-                        Text: |-
-                            ="Business
-                            Segment"
-                        Width: =RightPanel_1.Width/11
-                        X: =LegalEntityLabel_2.X+LegalEntityLabel_2.Width
-                        ZIndex: =3
-
-                    HrsSpentLabel_2 As label:
-                        Align: =Align.Center
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Poppins"
-                        Height: =HeaderTaxonomy_1.Height
-                        Size: =Self.Height/4
-                        Text: ="Monthly Hours"
-                        Width: =RightPanel_1.Width/12
-                        X: =RegionLabel_2.X+RegionLabel_2.Width
-                        ZIndex: =4
-
-                    Filler_1 As label:
-                        Align: =Align.Center
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Poppins"
-                        Height: =61
-                        Size: =0
-                        Text: =""
-                        Width: =RightPanel_1.Width*0.05
-                        X: =HrsSpentLabel_2.X+HrsSpentLabel_2.Width
-                        ZIndex: =5
-
-                    LegalEntityLabel_2 As label:
-                        Align: =Align.Center
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Poppins"
-                        Height: =HeaderTaxonomy_1.Height
-                        Size: =Self.Height/4
-                        Text: ="LE"
-                        Width: =RightPanel_1.Width/6.5
-                        X: =CocoLabel_2.Width+CocoLabel_2.X
-                        Y: =0.3571428571428612
-                        ZIndex: =6
-
-                    RegionLabel_2 As label:
-                        Align: =Align.Center
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Poppins"
-                        Height: =HeaderTaxonomy_1.Height
-                        Size: =Self.Height/4
-                        Text: ="Region"
-                        Width: =RightPanel_1.Width/11
-                        X: =BusinessSeg_2.X+BusinessSeg_2.Width
-                        Y: =0.3571428571428612
-                        ZIndex: =7
-
-                TaxonomyCollect_1 As gallery.galleryVertical:
-                    AlignInContainer: =AlignInContainer.SetByContainer
+                Gallery1 As gallery.galleryVertical:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     DelayItemLoading: =true
-                    Height: =RightPanel_1.Height-ProcessNameLabel_2.Height-ReviewBtnContainer_2.Height
-                    Items: =If(And(IsBlank(DropdownUniqueID_1.Selected.Value), IsBlank(DropdownL1_1.Selected.Value)), 'Task Analysis Taxonomy Collection', Filter('Task Analysis Taxonomy Collection','User Email'=DropdownUniqueID_1.Selected.Value Or CoCo=DropdownL1_1.Selected.Value))
+                    Height: =66
+                    Items: =GroupBy('Task Analysis Taxonomy Collection',"User_x0020_Email", "GroupByEmail")
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
-                    TemplateFill: =
-                    TemplatePadding: =0
-                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/6)
-                    Width: =RightPanel_1.Width
-                    ZIndex: =3
+                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                    Width: =957
+                    X: =40
+                    ZIndex: =5
 
-                    ChosenCOCO_2 As label:
-                        Align: =Align.Center
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Poppins"
-                        Height: =TaxonomyCollect_1.TemplateHeight*0.3
-                        OnSelect: =Select(Parent)
-                        Size: =ChosenTask_2.Height/8
-                        Text: =ThisItem.CoCo
-                        Width: =CocoLabel_2.Width
-                        X: =ChosenTask_2.Width
-                        Y: =(TaxonomyCollect_1.TemplateHeight-Self.Height)/2
-                        ZIndex: =1
-
-                    ChosenTask_2 As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Poppins"
-                        Height: =TaxonomyCollect_1.TemplateHeight
-                        OnSelect: =Select(Parent)
-                        PaddingLeft: =10
-                        Size: =ChosenTask_2.Height/8
-                        Text: =ThisItem.'Process Name'
-                        Width: =ProcessNameLabel_2.Width
-                        ZIndex: =2
-
-                    InputHours_1 As text:
-                        Align: =Align.Center
-                        BorderColor: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(208,208,208,1))
-                        Color: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
-                        Default: =ThisItem.'Input Hours'
+                    Button2 As button:
+                        Align: =Align.Left
+                        BorderColor: =RGBA(206, 215, 212, 1)
+                        BorderThickness: =1
+                        Color: =RGBA(26, 35, 33, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        FocusedBorderThickness: =2
-                        Font: ="Poppins"
-                        Height: =TaxonomyCollect_1.TemplateHeight*0.5
-                        HintText: ="Hours"
-                        HoverBorderColor: =If(Value(SumHoursCheck.Text)>160, ColorFade(Color.Red,-20%), RGBA(148, 148, 148, 1))
-                        HoverColor: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        OnChange: =
-                        OnSelect: =
-                        PressedBorderColor: =RGBA(208, 208, 208, 1)
-                        PressedColor: =RGBA(50, 49, 48, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
-                        RadiusBottomLeft: =2
-                        RadiusBottomRight: =2
-                        RadiusTopLeft: =2
-                        RadiusTopRight: =2
-                        Size: =ChosenTask_2.Height/8
-                        Tooltip: ="How many total working hours per month do you spend on this process?"
-                        Width: =HrsSpentLabel_2.Width*0.7
-                        X: =HrsSpentLabel_2.X + ((HrsSpentLabel_2.Width-Self.Width)/2)
-                        Y: =(TaxonomyCollect_1.TemplateHeight-Self.Height)/2
-                        ZIndex: =3
-
-                    DeleteRowIcon_1 As icon.Cancel:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
-                        DisabledColor: =RGBA(225, 223, 221, 1)
-                        DisabledFill: =RGBA(0, 0, 0, 0)
-                        FocusedBorderThickness: =4
-                        Height: =TaxonomyCollect_1.TemplateHeight/3
-                        HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(2, 188, 148, 1)
-                        HoverFill: =RGBA(0, 0, 0, 0)
-                        Icon: =Icon.Cancel
-                        OnSelect: =Remove('Task Analysis Taxonomy Collection',ThisItem)
-                        PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedColor: =RGBA(2, 188, 148, 1)
-                        PressedFill: =RGBA(0, 0, 0, 0)
-                        Tooltip: ="Delete"
-                        Width: =(RightPanel_1.Width-InputHours_1.X-InputHours_1.Width)/3
-                        X: =Filler_1.X
-                        Y: =(TaxonomyCollect_1.TemplateHeight-Self.Height)/2
-                        ZIndex: =4
-
-                    LE_Name_2 As label:
-                        Align: =Align.Center
-                        AutoHeight: =true
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Poppins"
-                        FontWeight: =FontWeight.Lighter
-                        Height: =TaxonomyCollect_1.TemplateHeight*0.5
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =associatedLE_2.Size*0.9
-                        Text: =ThisItem.'LE Name'
-                        Width: =LegalEntityLabel_2.Width
-                        X: =LegalEntityLabel_2.X
-                        Y: =associatedLE_2.Y+associatedLE_2.Height
-                        ZIndex: =5
-
-                    BizSegment_2 As label:
-                        Align: =Align.Center
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Poppins"
-                        Height: =TaxonomyCollect_1.TemplateHeight*0.3
-                        OnSelect: =Select(Parent)
-                        Size: =ChosenTask_2.Height/8
-                        Text: =ThisItem.'Business Segment'
-                        Width: =BusinessSeg_2.Width
-                        X: =BusinessSeg_2.X
-                        Y: =(TaxonomyCollect_1.TemplateHeight-Self.Height)/2
-                        ZIndex: =6
-
-                    associatedLE_2 As label:
-                        Align: =Align.Center
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
+                        Fill: =RGBA(255, 255, 255, 1)
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
-                        Height: =TaxonomyCollect_1.TemplateHeight*0.3
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingTop: =0
-                        Size: =ChosenTask_2.Height/8
-                        Text: =ThisItem.'Associated LE'
-                        Width: =LegalEntityLabel_2.Width
-                        X: =LegalEntityLabel_2.X
-                        Y: =(TaxonomyCollect_1.TemplateHeight-Self.Height-LE_Name_2.Height)/2
-                        ZIndex: =7
-
-                    Region_2 As label:
-                        Align: =Align.Center
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Poppins"
-                        Height: =TaxonomyCollect_1.TemplateHeight*0.3
-                        OnSelect: =Select(Parent)
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =ChosenTask_2.Height/8
-                        Text: =ThisItem.Region
-                        Width: =RegionLabel_2.Width
-                        X: =RegionLabel_2.X
-                        Y: =(TaxonomyCollect_1.TemplateHeight-Self.Height)/2
-                        ZIndex: =9
-
-                ReviewBtnContainer_2 As groupContainer.manualLayoutContainer:
-                    AlignInContainer: =AlignInContainer.Start
-                    FillPortions: =0
-                    Height: =ButtonGroup.Height
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    PaddingBottom: =2
-                    PaddingTop: =2
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Width: =RightPanel_1.Width
-                    ZIndex: =4
-
-                    NextBtn_1 As button:
-                        BorderColor: =RGBA(2, 188, 148, 1)
-                        BorderThickness: =1
-                        Color: =RGBA(2, 188, 148, 1)
-                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
-                        DisabledColor: =RGBA(208, 208, 208, 1)
-                        DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =If(Value(SumHoursCheck.Text)=160, DisplayMode.Edit, DisplayMode.Disabled)
-                        Fill: =RGBA(255, 255, 255, 1)
-                        FocusedBorderThickness: =2
-                        Font: ="Poppins"
-                        Height: =AddTaskBtn.Height
-                        HoverBorderColor: =RGBA(2, 188, 148, 1)
-                        HoverColor: =RGBA(2, 188, 148, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
+                        Height: =54
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(16, 110, 190, 1)
                         OnSelect: =
-                        PressedBorderColor: =RGBA(230, 230, 230, 1)
-                        PressedColor: =RGBA(2, 188, 148, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
-                        RadiusBottomLeft: =5
-                        RadiusBottomRight: =5
-                        RadiusTopLeft: =5
-                        RadiusTopRight: =5
-                        Size: =Self.Height/3
-                        Text: ="Next"
-                        Width: =RightPanel_1.Width*0.2
-                        X: =(ReviewBtnContainer_2.Width-Self.Width)/2
-                        Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
+                        PaddingLeft: =10
+                        PressedBorderColor: =RGBA(0, 69, 120, 1)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(16, 110, 190, 1)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Size: =15
+                        Text: =ThisItem.User_x0020_Email
+                        Width: =TaxonomyCollect_2.Width
                         ZIndex: =1
 
-                    LabelHours_1 As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        Font: ="Poppins"
-                        Height: =ReviewBtnContainer_2.Height
-                        Size: =Self.Height/8
-                        Text: |-
-                            ="Total Hours: " & Sum(TaxonomyCollect_1.AllItems,InputHours) &
-                            "
-                            Max Required: 160"
-                        Width: =TaxonomyCollect_1.Width - HrsSpentLabel_2.X
-                        Wrap: =false
-                        X: =ReviewBtnContainer_2.Width-Self.Width
-                        Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
+                    TaxonomyCollect_2 As gallery.galleryVertical:
+                        BorderColor: =RGBA(245, 245, 245, 1)
+                        DelayItemLoading: =true
+                        Height: =175
+                        Items: =ThisItem.GroupByEmail
+                        Layout: =Layout.Vertical
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplateFill: |-
+                            =If(
+                                Mod(ThisItem.ColourID,2) = 0,
+                               RGBA(208, 208, 208, 0.1), RGBA(0, 111, 121, 0.2)
+                            )
+                        TemplatePadding: =0
+                        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/6)
+                        Width: =1270
+                        Y: =105
                         ZIndex: =3
 
-                    ExceedHoursErrorMsg_1 As label:
-                        AutoHeight: =true
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =Color.Red
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Noto Sans"
-                        Height: =ReviewBtnContainer_2.Height/3
-                        Size: =LabelHours_1.Size
-                        Text: ="*Sum of input hours must be equal and not exceed 160 hours"
-                        VerticalAlign: =VerticalAlign.Bottom
-                        Visible: =If(Value(SumHoursCheck.Text)>160, true, false)
-                        Width: =RightPanel_1.Width/3
+                    HeaderTaxonomy_1 As groupContainer.manualLayoutContainer:
+                        Height: =RightPanel_1.Height/14
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =1270
+                        Y: =40
                         ZIndex: =4
 
         FooterContainerScreen3 As groupContainer.manualLayoutContainer:
