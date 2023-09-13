@@ -642,7 +642,7 @@
                             HoverColor: =RGBA(2, 188, 148, 1)
                             HoverFill: =RGBA(0, 0, 0, 0)
                             Icon: =Icon.Cancel
-                            OnSelect: =Remove(colTaxonomyTemp,ThisItem)
+                            OnSelect: =
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =RGBA(2, 188, 148, 1)
                             PressedFill: =RGBA(0, 0, 0, 0)
@@ -711,7 +711,7 @@
                             PaddingBottom: =0
                             PaddingTop: =0
                             Size: =ChosenTask_2.Height/8
-                            Text: =ThisItem.Associated_LE
+                            Text: =ThisItem.'Associated LE'
                             Width: =LegalEntityLabel.Width
                             X: =LegalEntityLabel.X
                             Y: =(TaxonomyCollect_2.TemplateHeight-Self.Height-LE_Name_2.Height)/2
