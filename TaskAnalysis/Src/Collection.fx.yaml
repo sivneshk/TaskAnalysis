@@ -74,7 +74,7 @@ Collection As screen:
         OnSelect: |
             =//Set(varPrepHours,Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"))
             //ClearCollect(MyCollection, JSON(varPrepHours.json)) 
-            Set(varPrepHours, Task_A_PreparerHours.Run(""));
+            Set(varPrepHours, Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"));
             ClearCollect(MyCollection, JSON(varPrepHours.json));
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
