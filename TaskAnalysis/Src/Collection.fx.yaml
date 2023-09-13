@@ -76,7 +76,7 @@ Collection As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(16, 110, 190, 1)
         OnSelect: |
-            =ClearCollect(
+            =/*ClearCollect(
                 PrepCollection,
                 ForAll(
                     Split(
@@ -88,6 +88,16 @@ Collection As screen:
                         ","),
                         Trim(Value)
                     )
+                )
+            )*/
+            ClearCollect(
+                PrepCollection,
+                ForAll(
+                    Split(
+                        Text(Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com").json),
+                        "\r\n"
+                    ),
+                    Trim(Value)
                 )
             )
         PressedBorderColor: =RGBA(0, 69, 120, 1)
