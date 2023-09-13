@@ -1127,13 +1127,12 @@
                         ZIndex: =2
 
             RightPanel_1 As groupContainer.verticalAutoLayoutContainer:
-                AlignInContainer: =AlignInContainer.SetByContainer
                 BorderColor: =RGBA(148, 148, 148, 1)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 DropShadow: =DropShadow.Regular
                 FillPortions: =0
-                Height: =BodyContainerScreen3.Height
+                Height: =BodyContainer.Height
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
@@ -1156,7 +1155,6 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Visible: =ShowResult
                     Width: =RightPanel_1.Width
                     ZIndex: =2
 
@@ -1287,7 +1285,6 @@
                     AlignInContainer: =AlignInContainer.SetByContainer
                     BorderColor: =RGBA(245, 245, 245, 1)
                     DelayItemLoading: =true
-                    DisplayMode: =DisplayMode.View
                     Height: =RightPanel_1.Height-ProcessNameLabel_2.Height-ReviewBtnContainer_2.Height
                     Items: ='Task Analysis Taxonomy Collection'
                     Layout: =Layout.Vertical
@@ -1301,7 +1298,6 @@
                         )
                     TemplatePadding: =0
                     TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/6)
-                    Visible: =ShowResult
                     Width: =RightPanel_1.Width
                     ZIndex: =3
 
@@ -1343,8 +1339,8 @@
 
                     InputHours_1 As text:
                         Align: =Align.Center
-                        BorderColor: =RGBA(208,208,208,1)
-                        Color: =RGBA(50, 49, 48, 1)
+                        BorderColor: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(208,208,208,1))
+                        Color: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
                         Default: =""
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
@@ -1353,8 +1349,8 @@
                         Font: ="Poppins"
                         Height: =TaxonomyCollect_1.TemplateHeight*0.5
                         HintText: ="Hours"
-                        HoverBorderColor: =RGBA(148, 148, 148, 1)
-                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverBorderColor: =If(Value(SumHoursCheck.Text)>160, ColorFade(Color.Red,-20%), RGBA(148, 148, 148, 1))
+                        HoverColor: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnChange: =
                         OnSelect: =
@@ -1485,7 +1481,7 @@
                 ReviewBtnContainer_2 As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.Start
                     FillPortions: =0
-                    Height: =ButtonGroup_1.Height
+                    Height: =ButtonGroup.Height
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     PaddingBottom: =2
@@ -1505,11 +1501,11 @@
                         DisabledBorderColor: =RGBA(208, 208, 208, 1)
                         DisabledColor: =RGBA(208, 208, 208, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =
+                        DisplayMode: =If(Value(SumHoursCheck.Text)=160, DisplayMode.Edit, DisplayMode.Disabled)
                         Fill: =RGBA(255, 255, 255, 1)
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
-                        Height: =AddTaskBtn_1.Height
+                        Height: =AddTaskBtn.Height
                         HoverBorderColor: =RGBA(2, 188, 148, 1)
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
@@ -1564,6 +1560,24 @@
                         X: =ReviewBtnContainer_2.Width-Self.Width
                         Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
                         ZIndex: =3
+
+                    ExceedHoursErrorMsg_1 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =Color.Red
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Noto Sans"
+                        Height: =ReviewBtnContainer_2.Height/3
+                        Size: =LabelHours_1.Size
+                        Text: ="*Sum of input hours must be equal and not exceed 160 hours"
+                        VerticalAlign: =VerticalAlign.Bottom
+                        Visible: =If(Value(SumHoursCheck.Text)>160, true, false)
+                        Width: =RightPanel_1.Width/3
+                        ZIndex: =4
 
         FooterContainerScreen3 As groupContainer.manualLayoutContainer:
             Height: =Parent.Height/25
