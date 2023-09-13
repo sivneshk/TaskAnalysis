@@ -1,33 +1,6 @@
 Collection As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
-    Button1 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(161, 159, 157, 1)
-        DisabledFill: =RGBA(242, 242, 241, 0)
-        Fill: =RGBA(0, 120, 212, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(16, 110, 190, 1)
-        OnSelect: |
-            =ClearCollect(PrepCollection, { "PREPARER EMAIL": "", "Coco": "", "Total Prepare Hours": 0 })
-        PressedBorderColor: =RGBA(0, 69, 120, 1)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(16, 110, 190, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =15
-        Text: ="Collect"
-        X: =171
-        Y: =129
-        ZIndex: =1
-
     DataTable1 As dataTable.datatable:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.Solid
@@ -102,7 +75,7 @@ Collection As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(16, 110, 190, 1)
-        OnSelect: |
+        OnSelect: |-
             =ClearCollect(
                 PrepCollection,
                 Split(Text(JSON(Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com").json).json), "\r\n")
