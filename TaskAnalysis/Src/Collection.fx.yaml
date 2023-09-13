@@ -73,7 +73,7 @@ Collection As screen:
         HoverFill: =RGBA(16, 110, 190, 1)
         OnSelect: |
             =Set(varPrepHours, Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"));
-            ClearCollect(MyCollection, JSON(varPrepHours.json));
+            ClearCollect(MyCollection, (varPrepHours.json));
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(16, 110, 190, 1)
