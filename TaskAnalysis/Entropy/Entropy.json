@@ -35,6 +35,7 @@
     "BusinessSeg_1": 226,
     "Button1": 5,
     "Button1_1": 7,
+    "Button1_2": 244,
     "Button2": 43,
     "ButtonGroup": 147,
     "ButtonGroup_1": 37,
@@ -247,7 +248,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/13/2023 16:38:18",
+  "HeaderLastSavedDateTimeUTC": "09/13/2023 16:48:33",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "2443c627-fb33-4399-9285-e7d666adb1fd": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/ac4c48e6d93a4c5a88f5bfc0008b8fb1\"",
@@ -337,6 +338,7 @@
     "BusinessSeg_1": {},
     "Button1": {},
     "Button1_1": {},
+    "Button1_2": {},
     "Button2": {},
     "ButtonGroup": {},
     "ButtonGroup_1": {},
@@ -752,6 +754,7 @@
     "BusinessSeg_1": 229,
     "Button1": 4,
     "Button1_1": 6,
+    "Button1_2": 4,
     "Button2": 43,
     "ButtonGroup": 61,
     "ButtonGroup_1": 19,
@@ -971,7 +974,7 @@
   "VolatileProperties": {
     "AnalysisLoadTime": 1.0054954,
     "ControlCount": {
-      "button": 13,
+      "button": 14,
       "dataTable": 1,
       "gallery": 4,
       "galleryTemplate": 4,
