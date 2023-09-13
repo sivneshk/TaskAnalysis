@@ -1287,8 +1287,9 @@
                     AlignInContainer: =AlignInContainer.SetByContainer
                     BorderColor: =RGBA(245, 245, 245, 1)
                     DelayItemLoading: =true
+                    DisplayMode: =DisplayMode.View
                     Height: =RightPanel_1.Height-ProcessNameLabel_2.Height-ReviewBtnContainer_2.Height
-                    Items: =colTaxonomyTemp
+                    Items: ='Task Analysis Taxonomy Collection'
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -1336,7 +1337,7 @@
                         OnSelect: =Select(Parent)
                         PaddingLeft: =10
                         Size: =ChosenTask_2.Height/8
-                        Text: =ThisItem.Task
+                        Text: =ThisItem.Title
                         Width: =ProcessNameLabel_2.Width
                         ZIndex: =2
 
