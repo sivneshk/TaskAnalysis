@@ -33,7 +33,7 @@
     "dependents": [],
     "id": "2443c627-fb33-4399-9285-e7d666adb1fd"
   },
-  "4ca738ac-8521-424b-ad53-d8247e2376fd": {
+  "76e2c2c7-1703-4e12-ab9c-ea0bc1fd45a0": {
     "connectionRef": {
       "displayName": "Power BI",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1651/1.0.1651.3382/powerbi/icon.png",
@@ -43,9 +43,9 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "d8bec0f8-9153-4aca-b671-df523293caa5"
+      "b68a2427-cb6a-441d-9cfe-0ee3bb544ff0"
     ],
-    "id": "4ca738ac-8521-424b-ad53-d8247e2376fd"
+    "id": "76e2c2c7-1703-4e12-ab9c-ea0bc1fd45a0"
   },
   "772eb637-780b-4505-ac82-d4fd749ecd5b": {
     "connectionRef": {
@@ -81,7 +81,7 @@
     "dependents": [],
     "id": "772eb637-780b-4505-ac82-d4fd749ecd5b"
   },
-  "d8bec0f8-9153-4aca-b671-df523293caa5": {
+  "b68a2427-cb6a-441d-9cfe-0ee3bb544ff0": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
@@ -104,10 +104,10 @@
       "Task_A_PreparerHours"
     ],
     "dependencies": {
-      "shared_powerbi": "4ca738ac-8521-424b-ad53-d8247e2376fd"
+      "shared_powerbi": "76e2c2c7-1703-4e12-ab9c-ea0bc1fd45a0"
     },
     "dependents": [],
-    "id": "d8bec0f8-9153-4aca-b671-df523293caa5"
+    "id": "b68a2427-cb6a-441d-9cfe-0ee3bb544ff0"
   },
   "efd6ad77-1458-4159-bb3e-452113a9f680": {
     "connectionRef": {
