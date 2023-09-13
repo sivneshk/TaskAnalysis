@@ -1,32 +1,4 @@
 {
-  "03523e6a-5278-4cda-8a88-82d01e87435d": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "e1763c40-e20b-4d4a-8462-03b0cf6bded7"
-        }
-      },
-      "parameterHintsV2": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "e1763c40-e20b-4d4a-8462-03b0cf6bded7"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "Task_A_PreparerHours"
-    ],
-    "dependencies": {
-      "shared_powerbi": "b91517d1-985a-425a-8e96-81957d48a935"
-    },
-    "dependents": [],
-    "id": "03523e6a-5278-4cda-8a88-82d01e87435d"
-  },
   "2443c627-fb33-4399-9285-e7d666adb1fd": {
     "connectionRef": {
       "displayName": "Logic flows",
@@ -61,6 +33,48 @@
     "dependents": [],
     "id": "2443c627-fb33-4399-9285-e7d666adb1fd"
   },
+  "24fc335f-2cda-4ef9-b787-c22fb479aa28": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "e1763c40-e20b-4d4a-8462-03b0cf6bded7"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "e1763c40-e20b-4d4a-8462-03b0cf6bded7"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Task_A_PreparerHours"
+    ],
+    "dependencies": {
+      "shared_powerbi": "6c6481d8-5f34-443f-911e-510e1666164b"
+    },
+    "dependents": [],
+    "id": "24fc335f-2cda-4ef9-b787-c22fb479aa28"
+  },
+  "6c6481d8-5f34-443f-911e-510e1666164b": {
+    "connectionRef": {
+      "displayName": "Power BI",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1651/1.0.1651.3382/powerbi/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_powerbi"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "24fc335f-2cda-4ef9-b787-c22fb479aa28"
+    ],
+    "id": "6c6481d8-5f34-443f-911e-510e1666164b"
+  },
   "772eb637-780b-4505-ac82-d4fd749ecd5b": {
     "connectionRef": {
       "displayName": "SharePoint",
@@ -94,20 +108,6 @@
     "dependencies": {},
     "dependents": [],
     "id": "772eb637-780b-4505-ac82-d4fd749ecd5b"
-  },
-  "b91517d1-985a-425a-8e96-81957d48a935": {
-    "connectionRef": {
-      "displayName": "Power BI",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1651/1.0.1651.3382/powerbi/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_powerbi"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "03523e6a-5278-4cda-8a88-82d01e87435d"
-    ],
-    "id": "b91517d1-985a-425a-8e96-81957d48a935"
   },
   "efd6ad77-1458-4159-bb3e-452113a9f680": {
     "connectionRef": {
