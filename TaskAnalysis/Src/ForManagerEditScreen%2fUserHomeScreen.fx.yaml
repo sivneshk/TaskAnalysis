@@ -505,88 +505,6 @@
                 Width: =Parent.Width*2/3
                 ZIndex: =2
 
-                ReviewBtnContainer_2 As groupContainer.manualLayoutContainer:
-                    AlignInContainer: =AlignInContainer.Start
-                    FillPortions: =0
-                    Height: =ButtonGroup.Height
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    PaddingBottom: =2
-                    PaddingTop: =2
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Width: =RightPanel_1.Width
-                    ZIndex: =4
-
-                    NextBtn_1 As button:
-                        BorderColor: =RGBA(2, 188, 148, 1)
-                        BorderThickness: =1
-                        Color: =RGBA(2, 188, 148, 1)
-                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
-                        DisabledColor: =RGBA(208, 208, 208, 1)
-                        DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =If(Value(SumHoursCheck.Text)=160, DisplayMode.Edit, DisplayMode.Disabled)
-                        Fill: =RGBA(255, 255, 255, 1)
-                        FocusedBorderThickness: =2
-                        Font: ="Poppins"
-                        Height: =AddTaskBtn.Height
-                        HoverBorderColor: =RGBA(2, 188, 148, 1)
-                        HoverColor: =RGBA(2, 188, 148, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: =
-                        PressedBorderColor: =RGBA(230, 230, 230, 1)
-                        PressedColor: =RGBA(2, 188, 148, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
-                        RadiusBottomLeft: =5
-                        RadiusBottomRight: =5
-                        RadiusTopLeft: =5
-                        RadiusTopRight: =5
-                        Size: =Self.Height/3
-                        Text: ="Next"
-                        Width: =RightPanel_1.Width*0.2
-                        X: =(ReviewBtnContainer_2.Width-Self.Width)/2
-                        Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
-                        ZIndex: =1
-
-                    LabelHours_1 As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        Font: ="Poppins"
-                        Height: =ReviewBtnContainer_2.Height
-                        Size: =Self.Height/8
-                        Text: |-
-                            ="Total Hours: " & Sum(TaxonomyCollect_1.AllItems,InputHours) &
-                            "
-                            Max Required: 160"
-                        Width: =TaxonomyCollect_1.Width - HrsSpentLabel_2.X
-                        Wrap: =false
-                        X: =ReviewBtnContainer_2.Width-Self.Width
-                        Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
-                        ZIndex: =3
-
-                    ExceedHoursErrorMsg_1 As label:
-                        AutoHeight: =true
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =Color.Red
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: ="Noto Sans"
-                        Height: =ReviewBtnContainer_2.Height/3
-                        Size: =LabelHours_1.Size
-                        Text: ="*Sum of input hours must be equal and not exceed 160 hours"
-                        VerticalAlign: =VerticalAlign.Bottom
-                        Visible: =If(Value(SumHoursCheck.Text)>160, true, false)
-                        Width: =RightPanel_1.Width/3
-                        ZIndex: =4
-
                 Gallery1 As gallery.galleryVertical:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     DelayItemLoading: =true
@@ -630,7 +548,7 @@
                     TaxonomyCollect_2 As gallery.galleryVertical:
                         BorderColor: =RGBA(245, 245, 245, 1)
                         DelayItemLoading: =true
-                        Height: =280
+                        Height: =175
                         Items: =ThisItem.GroupByEmail
                         Layout: =Layout.Vertical
                         LoadingSpinner: =LoadingSpinner.Data
@@ -642,6 +560,7 @@
                         TemplatePadding: =0
                         TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/6)
                         Width: =1270
+                        Y: =105
                         ZIndex: =3
 
                         ChosenCOCO_2 As label:
