@@ -125,12 +125,12 @@ Collection As screen:
                     JSON(
                         Concatenate(
                             If(
-                                Left(Result, 1) = "[",
+                                StartsWith(Result, "[{"),
                                 Result,
                                 Concatenate("{", Result)
                             ),
                             If(
-                                Right(Result, 1) = "]",
+                                EndsWith(Result, "}]"),
                                 Result,
                                 Concatenate(Result, "}")
                             )
