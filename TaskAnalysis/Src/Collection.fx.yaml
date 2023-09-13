@@ -81,7 +81,7 @@ Collection As screen:
                 ForAll(
                     Split(
                         Text(Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com").json),
-                        "\"
+                        "\r\n"
                     ),
                     ForAll(
                         Split(Text(Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com").json),
@@ -90,6 +90,7 @@ Collection As screen:
                     )
                 )
             )
+            //works with csv
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(16, 110, 190, 1)
@@ -119,21 +120,26 @@ Collection As screen:
             =ClearCollect(
                 PrepCollection,
                 ForAll(
-                    Split(
-                        Text(Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com").json),
-                        "},{"
-                    ),
                     JSON(
-                        If(
-                            StartsWith(Result, "[{"),
-                            Concatenate(Result, "}"),
-                            If(
-                                EndsWith(Result, "}]"),
-                                Concatenate("{", Result),
-                                Concatenate("{", Result, "}")
+                        Concatenate(
+                            "[",
+                            Replace(
+                                Replace(
+                                    Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com").json,
+                                    "[{\"MD_DAILY_RECON[PREPARER EMAIL]\":",
+                                    "{\"MD_DAILY_RECON[PREPARER EMAIL]\":"
+                                ),
+                                "}]",
+                                "}]}"
                             )
-                        )
-                    )
+                        ),
+                        ", "
+                    ),
+                    {
+                        "MD_DAILY_RECON[PREPARER EMAIL]": Text(Result."MD_DAILY_RECON[PREPARER EMAIL]"),
+                        "MD_DAILY_RECON[Coco]": Text(Result."MD_DAILY_RECON[Coco]"),
+                        "[Total Prepare Hours]": Value(Result."[Total Prepare Hours]")
+                    }
                 )
             )
         PressedBorderColor: =RGBA(0, 69, 120, 1)
