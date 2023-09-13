@@ -120,26 +120,24 @@ Collection As screen:
             =ClearCollect(
                 PrepCollection,
                 ForAll(
+                    Split(
+                        Text(Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com").json),
+                        "},{"
+                    ),
                     JSON(
                         Concatenate(
-                            "[",
-                            Replace(
-                                Replace(
-                                    Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com").json,
-                                    "[{\"MD_DAILY_RECON[PREPARER EMAIL]\":",
-                                    "{\"MD_DAILY_RECON[PREPARER EMAIL]\":"
-                                ),
-                                "}]",
-                                "}]}"
+                            If(
+                                StartsWith(Result, "[{"),
+                                Result,
+                                Concatenate("{", Result)
+                            ),
+                            If(
+                                EndsWith(Result, "}]"),
+                                Result,
+                                Concatenate(Result, "}")
                             )
-                        ),
-                        ", "
-                    ),
-                    {
-                        "MD_DAILY_RECON[PREPARER EMAIL]": Text(Result."MD_DAILY_RECON[PREPARER EMAIL]"),
-                        "MD_DAILY_RECON[Coco]": Text(Result."MD_DAILY_RECON[Coco]"),
-                        "[Total Prepare Hours]": Value(Result."[Total Prepare Hours]")
-                    }
+                        )
+                    )
                 )
             )
         PressedBorderColor: =RGBA(0, 69, 120, 1)
