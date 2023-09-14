@@ -10592,7 +10592,8 @@
           "InvariantPropertyName": "OnChange",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "AllowMultiSelect"
       ],
       "DynamicProperties": [
         {
@@ -10645,6 +10646,11 @@
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
+        {
+          "Category": "Data",
+          "PropertyName": "AllowMultiSelect",
+          "RuleProviderType": "Unknown"
+        },
         {
           "Category": "Data",
           "PropertyName": "Color",
@@ -11065,7 +11071,8 @@
           "InvariantPropertyName": "DefaultSelectedItems",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "AllowMultiSelect"
       ],
       "DynamicProperties": [
         {
@@ -11118,6 +11125,11 @@
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
+        {
+          "Category": "Data",
+          "PropertyName": "AllowMultiSelect",
+          "RuleProviderType": "Unknown"
+        },
         {
           "Category": "Data",
           "PropertyName": "DefaultSelectedItems",
