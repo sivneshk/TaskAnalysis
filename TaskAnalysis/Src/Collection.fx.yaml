@@ -180,7 +180,10 @@ Collection As screen:
                 }
             );
             
-            ForAll(PrepCollection, Collect(PrepTable, ThisRecord))
+            // Append the data to the table
+            ForAll(PrepCollection, Collect(PrepTable, ThisRecord));
+            
+            // Optionally, display a message to confirm the data has been loaded
             Notify("Data from Task_A_PreparerHours has been loaded into PrepTable.", NotificationType.Information)
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -214,7 +217,7 @@ Collection As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         InputFill: =RGBA(245, 245, 245, 1)
         InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: =Prep
+        Items: =PrepTable
         LinkColor: =RGBA(0, 120, 212, 1)
         PrimaryColor1: =RGBA(0, 120, 212, 1)
         PrimaryColor2: =RGBA(16, 110, 190, 1)
