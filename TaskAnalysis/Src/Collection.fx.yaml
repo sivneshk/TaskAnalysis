@@ -119,7 +119,7 @@ Collection As screen:
         Size: =15
         Text: ="Collect"
         Width: =360
-        X: =294
-        Y: =128
+        X: =150
+        Y: =118
         ZIndex: =6
 
