@@ -175,11 +175,11 @@ Collection As screen:
             ClearCollect(
                 PrepCollection,
                 ForAll(
-                    Table(ParseJSON(Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com")),
+                    Table(ParseJSON(Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com").json).body),
                     {
-                        Email: Text(Value.MD_DAILY_RECON[PREPARER EMAIL]),
-                        Coco: Text(Value.MD_DAILY_RECON[Coco]),
-                        PrepHours: Text(Value.[Prepare Hours])
+                        Email: Text(Value.Email),
+                        Coco: Text(Value.Coco),
+                        PrepHours: Text(Value.PrepHours)
                     }
                 )
             )
