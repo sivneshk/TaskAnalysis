@@ -46,8 +46,8 @@ Collection As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(16, 110, 190, 1)
         OnSelect: |
-            =Set(varPrepHours, Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"));
-            ClearCollect(PrepCollection, (varPrepHours.json));
+            =//Set(varPrepHours, Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"));
+            //ClearCollect(PrepCollection, (varPrepHours.json));
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(16, 110, 190, 1)
@@ -164,12 +164,24 @@ Collection As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(16, 110, 190, 1)
         OnSelect: |
-            =/*Set(varPrepHours, Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"));
-            ClearCollect(PrepCollection, ForAll(Table(varPrepHours.json), {
-                "MD_DAILY_RECON[PREPARER EMAIL]": ThisRecord."MD_DAILY_RECON[PREPARER EMAIL]",
-                "MD_DAILY_RECON[Coco]": ThisRecord."MD_DAILY_RECON[Coco]",
-                "[Total Prepare Hours]": ThisRecord."[Total Prepare Hours]"
-            }))*/
+            =// Call your Flow and store the JSON data in a variable
+            Set(varPrepHours, Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"));
+            
+            // Ensure varPrepHours.json is parsed as an array
+            ClearCollect(PrepCollection, JSON(varPrepHours.json));
+            
+            // Create a table and specify columns
+            ClearCollect(
+                PrepTable,
+                {
+                    "MD_DAILY_RECON[PREPARER EMAIL]": Text(""),
+                    "MD_DAILY_RECON[Coco]": Text(""),
+                    "[Total Prepare Hours]": 0
+                }
+            );
+            
+            ForAll(PrepCollection, Collect(PrepTable, ThisRecord))
+            Notify("Data from Task_A_PreparerHours has been loaded into PrepTable.", NotificationType.Information)
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(16, 110, 190, 1)
@@ -182,4 +194,36 @@ Collection As screen:
         X: =651
         Y: =609
         ZIndex: =6
+
+    DataTable1_1 As dataTable.datatable:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.Solid
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Normal
+        HeadingColor: =RGBA(255, 255, 255, 1)
+        HeadingFill: =RGBA(0, 120, 212, 1)
+        HeadingFont: =Font.'Segoe UI'
+        HeadingFontWeight: =FontWeight.Normal
+        HeadingSize: =13
+        Height: =268
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 120, 212, 1)
+        InputFill: =RGBA(245, 245, 245, 1)
+        InvertedColor: =RGBA(255, 255, 255, 1)
+        Items: =Prep
+        LinkColor: =RGBA(0, 120, 212, 1)
+        PrimaryColor1: =RGBA(0, 120, 212, 1)
+        PrimaryColor2: =RGBA(16, 110, 190, 1)
+        PrimaryColor3: =RGBA(0, 69, 120, 1)
+        SelectedColor: =RGBA(50, 49, 48, 1)
+        SelectedFill: =RGBA(199, 224, 244, 1)
+        Size: =13
+        Width: =404
+        X: =207
+        Y: =684
+        ZIndex: =7
 

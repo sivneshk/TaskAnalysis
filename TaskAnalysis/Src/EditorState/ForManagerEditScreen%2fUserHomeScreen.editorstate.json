@@ -4280,7 +4280,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "TemplatePadding",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "5",
+          "InvariantPropertyName": "TemplatePadding",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Layout",
         "Transition",
         "DelayItemLoading",
@@ -4323,15 +4330,7 @@
           "NameMapSourceSchema": "?"
         },
         "ZIndex",
-        "Visible",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "BorderThickness",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        }
+        "Visible"
       ],
       "GalleryTemplateChildName": "galleryTemplate1_2",
       "HasDynamicProperties": false,
@@ -4475,11 +4474,6 @@
         {
           "Category": "Design",
           "PropertyName": "TemplateSize",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "BorderThickness",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -4780,14 +4774,7 @@
         "HoverFill",
         "X",
         "Y",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "957",
-          "InvariantPropertyName": "Width",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Width",
         "Height",
         "ZIndex"
       ],
@@ -8627,14 +8614,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "FontWeight",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "FontWeight",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -8697,14 +8677,7 @@
           "NameMapSourceSchema": "?"
         },
         "FocusedBorderThickness",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "15",
-          "InvariantPropertyName": "Size",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Size",
         "Italic",
         "Underline",
         "Strikethrough",
@@ -8941,14 +8914,7 @@
         "DisabledBorderColor",
         "PressedBorderColor",
         "HoverBorderColor",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "BorderStyle",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "BorderStyle",
         "FocusedBorderColor",
         "Fill",
         "DisabledFill",
@@ -9007,14 +8973,7 @@
         "DisplayMode",
         "ZIndex",
         "LineHeight",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "BorderThickness",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "BorderThickness",
         "FocusedBorderThickness",
         {
           "AFDDataSourceName": "",
