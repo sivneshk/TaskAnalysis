@@ -46,8 +46,8 @@ Collection As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(16, 110, 190, 1)
         OnSelect: |
-            =//Set(varPrepHours, Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"));
-            //ClearCollect(PrepCollection, (varPrepHours.json));
+            =Set(varPrepHours, Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"));
+            ClearCollect(PrepCollection, (varPrepHours.json));
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(16, 110, 190, 1)
@@ -163,7 +163,26 @@ Collection As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(16, 110, 190, 1)
-        OnSelect: =ClearCollect(PrepCollection, Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"))
+        OnSelect: |-
+            =/*Set(varPrepHours, Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"));
+            ClearCollect(
+                PrepCollection,
+                MatchAll(
+                    varPrepHours,
+                    "\\"MD_DAILY_RECON\\[PREPARER EMAIL\\]\":\"(?<MD_DAILY_RECON\\[PREPARER EMAIL\\]>.+?)\",\"MD_DAILY_RECON\\[Coco\\]\":\"(?<MD_DAILY_RECON\\[Coco\\]>.+?)\",\"\\[Prepare Hours\\]\":(?<\\[Prepare Hours\\]>\d+\.\d+)"
+                )
+            )*/
+            ClearCollect(
+                PrepCollection,
+                ForAll(
+                    Table(ParseJSON(Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com")),
+                    {
+                        Email: Text(Value.MD_DAILY_RECON[PREPARER EMAIL]),
+                        Coco: Text(Value.MD_DAILY_RECON[Coco]),
+                        PrepHours: Text(Value.[Prepare Hours])
+                    }
+                )
+            )
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(16, 110, 190, 1)
@@ -176,4 +195,39 @@ Collection As screen:
         X: =651
         Y: =609
         ZIndex: =6
+
+    Button1_5 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        DisabledFill: =RGBA(242, 242, 241, 0)
+        Fill: =RGBA(0, 120, 212, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(16, 110, 190, 1)
+        OnSelect: |-
+            =Set(varPrepHours, Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"));
+            ClearCollect(PrepCollection, 
+                Table(varPrepHours)),
+                {
+                    Email:Text(Value.MD_DAILY_RECON[PREPARER EMAIL]\),
+                    Coco:Text(Value.MD_DAILY_RECON[Coco]\),
+                    PrepHours:Text(Value.[Prepare Hours]\)
+                }
+            )
+        PressedBorderColor: =RGBA(0, 69, 120, 1)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(16, 110, 190, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Collect"
+        X: =204
+        Y: =636
+        ZIndex: =7
 

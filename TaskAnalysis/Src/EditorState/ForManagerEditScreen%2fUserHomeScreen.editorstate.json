@@ -10592,14 +10592,6 @@
           "InvariantPropertyName": "OnChange",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "AllowMultiSelect",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
         }
       ],
       "DynamicProperties": [
@@ -10691,11 +10683,6 @@
         {
           "Category": "Data",
           "PropertyName": "FontSize",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "AllowMultiSelect",
           "RuleProviderType": "Unknown"
         },
         {
@@ -11078,14 +11065,6 @@
           "InvariantPropertyName": "DefaultSelectedItems",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "AllowMultiSelect",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
         }
       ],
       "DynamicProperties": [
@@ -11177,11 +11156,6 @@
         {
           "Category": "Data",
           "PropertyName": "FontSize",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "AllowMultiSelect",
           "RuleProviderType": "Unknown"
         },
         {
