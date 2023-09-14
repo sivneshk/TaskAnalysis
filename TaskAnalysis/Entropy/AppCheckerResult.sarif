@@ -3157,10 +3157,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 1,
-                  "charOffset": 590,
+                  "charLength": 9,
+                  "charOffset": 165,
                   "snippet": {
-                    "text": "["
+                    "text": "PrepHours"
                   }
                 }
               },
@@ -3172,16 +3172,12 @@
             }
           ],
           "message": {
-            "arguments": [
-              "BracketOpen",
-              "ParenClose"
-            ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
+          "ruleId": "app-ErrOperatorExpected",
           "ruleIndex": 0
         },
         {
@@ -3199,173 +3195,9 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 590,
+                  "charOffset": 174,
                   "snippet": {
-                    "text": "["
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Collection",
-                "type": "Collection.Button1_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "BracketOpen",
-              "CurlyClose"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Collection.Button1_4.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Collection.Button1_4.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 590,
-                  "snippet": {
-                    "text": "["
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Collection",
-                "type": "Collection.Button1_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "BracketOpen",
-              "ParenClose"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Collection.Button1_4.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Collection.Button1_4.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 590,
-                  "snippet": {
-                    "text": "["
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Collection",
-                "type": "Collection.Button1_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "BracketOpen",
-              "ParenClose"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Collection.Button1_4.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Collection.Button1_4.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 590,
-                  "snippet": {
-                    "text": "["
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Collection",
-                "type": "Collection.Button1_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "BracketOpen",
-              "ParenClose"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Collection.Button1_4.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Collection.Button1_4.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 590,
-                  "snippet": {
-                    "text": "["
+                    "text": ":"
                   }
                 }
               },
@@ -3399,10 +3231,47 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 70,
-                  "charOffset": 463,
+                  "charLength": 4,
+                  "charOffset": 176,
                   "snippet": {
-                    "text": "Task_A_PreparerHours.Run(\"ahmedelsaidmohamed.baioumy@bakerhughes.com\")"
+                    "text": "Text"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Collection",
+                "type": "Collection.Button1_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrOperatorExpected",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 187,
+                  "snippet": {
+                    "text": "\"PrepHours\""
                   }
                 }
               },
@@ -3415,15 +3284,15 @@
           ],
           "message": {
             "arguments": [
-              "Text",
-              "Record"
+              "PrepHours",
+              "Ident"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
+          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
           "ruleIndex": 2
         },
         {
@@ -3440,10 +3309,84 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 81,
-                  "charOffset": 453,
+                  "charLength": 11,
+                  "charOffset": 187,
                   "snippet": {
-                    "text": "ParseJSON(Task_A_PreparerHours.Run(\"ahmedelsaidmohamed.baioumy@bakerhughes.com\"))"
+                    "text": "\"PrepHours\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Collection",
+                "type": "Collection.Button1_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrOperatorExpected",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 198,
+                  "snippet": {
+                    "text": ")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Collection",
+                "type": "Collection.Button1_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadToken",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 208,
+                  "snippet": {
+                    "text": "}"
                   }
                 }
               },
@@ -3456,15 +3399,135 @@
           ],
           "message": {
             "arguments": [
-              "ParseJSON"
+              "CurlyClose",
+              "ParenClose"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 208,
+                  "snippet": {
+                    "text": "}"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Collection",
+                "type": "Collection.Button1_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "CurlyClose",
+              "ParenClose"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 208,
+                  "snippet": {
+                    "text": "}"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Collection",
+                "type": "Collection.Button1_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "CurlyClose",
+              "ParenClose"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 208,
+                  "snippet": {
+                    "text": "}"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Collection",
+                "type": "Collection.Button1_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadToken",
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -3481,7 +3544,7 @@
                 },
                 "region": {
                   "charLength": 5,
-                  "charOffset": 570,
+                  "charOffset": 181,
                   "snippet": {
                     "text": "Value"
                   }
@@ -3504,7 +3567,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3520,10 +3583,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 15,
-                  "charOffset": 575,
+                  "charLength": 1,
+                  "charOffset": 186,
                   "snippet": {
-                    "text": ".MD_DAILY_RECON"
+                    "text": "."
                   }
                 }
               },
@@ -3541,7 +3604,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3557,10 +3620,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 1,
-                  "charOffset": 569,
+                  "charLength": 11,
+                  "charOffset": 187,
                   "snippet": {
-                    "text": "("
+                    "text": "\"PrepHours\""
                   }
                 }
               },
@@ -3572,16 +3635,13 @@
             }
           ],
           "message": {
-            "arguments": [
-              "Text"
-            ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleId": "app-ErrOperatorExpected",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -3597,10 +3657,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 1,
-                  "charOffset": 452,
+                  "charLength": 4,
+                  "charOffset": 176,
                   "snippet": {
-                    "text": "("
+                    "text": "Text"
                   }
                 }
               },
@@ -3612,16 +3672,50 @@
             }
           ],
           "message": {
-            "arguments": [
-              "Table"
-            ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleId": "app-ErrOperatorExpected",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 165,
+                  "snippet": {
+                    "text": "PrepHours"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Collection",
+                "type": "Collection.Button1_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrOperatorExpected",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -3638,7 +3732,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 437,
+                  "charOffset": 137,
                   "snippet": {
                     "text": "("
                   }
@@ -3654,55 +3748,16 @@
           "message": {
             "arguments": [
               "1",
-              "2"
+              "2",
+              "3"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrBadArity",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Collection.Button1_4.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Collection.Button1_4.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 405,
-                  "snippet": {
-                    "text": "("
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Collection",
-                "type": "Collection.Button1_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ClearCollect"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleId": "app-ErrBadArityRange",
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -3742,7 +3797,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3779,7 +3834,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3819,7 +3874,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3859,7 +3914,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3899,7 +3954,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3939,7 +3994,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3979,7 +4034,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4016,7 +4071,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4053,7 +4108,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4214,7 +4269,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4254,7 +4309,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5102,16 +5157,16 @@
           "name": "PowerApps app checker",
           "rules": [
             {
-              "id": "app-ErrExpectedFound-Ex-Fnd",
+              "id": "app-ErrOperatorExpected",
               "messageStrings": {
                 "issue": {
-                  "text": "Unexpected characters. The formula contains '{0}' where '{1}' is expected."
+                  "text": "Expected operator. We expect an operator such as +, *, or & at this point in the formula."
                 }
               },
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Remove or replace the unexpected characters with an expected character."
+                  "Edit your formula so that it includes an operator between the operands."
                 ],
                 "level": "High",
                 "primaryCategory": "formula",
@@ -5136,28 +5191,17 @@
               }
             },
             {
-              "id": "app-ErrBadType-ExpectedType-ProvidedType",
+              "id": "app-ErrExpectedFound-Ex-Fnd",
               "messageStrings": {
                 "issue": {
-                  "text": "Invalid argument type ({1}). Expecting a {0} value instead."
+                  "text": "Unexpected characters. The formula contains '{0}' where '{1}' is expected."
                 }
               },
               "properties": {
                 "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrInvalidArgs-Func",
-              "messageStrings": {
-                "issue": {
-                  "text": "The function '{0}' has some invalid arguments."
-                }
-              },
-              "properties": {
-                "componentType": "app",
+                "howToFix": [
+                  "Remove or replace the unexpected characters with an expected character."
+                ],
                 "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
@@ -5195,10 +5239,24 @@
               }
             },
             {
-              "id": "app-ErrBadArity",
+              "id": "app-ErrBadArityRange",
               "messageStrings": {
                 "issue": {
-                  "text": "Invalid number of arguments: received {0}, expected {1}."
+                  "text": "Invalid number of arguments: received {0}, expected {1}-{2}."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidArgs-Func",
+              "messageStrings": {
+                "issue": {
+                  "text": "The function '{0}' has some invalid arguments."
                 }
               },
               "properties": {
