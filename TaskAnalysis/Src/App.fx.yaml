@@ -4,7 +4,19 @@ App As appinfo:
         =Set(iterator, 0);
         Clear(colTaxonomy);
         Clear(colTaxonomyTemp);
-        Clear(FinalTaxonomy)
+        Clear(FinalTaxonomy);
+        
+        ClearCollect(
+            PrepCollection,
+            ForAll(
+                Table(ParseJSON(Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com").json).body),
+                {
+                    Email: Text(Value.Email),
+                    Coco: Text(Value.Coco),
+                    PrepHours: Text(Value.PrepHours)
+                }
+            )
+        )
     StartScreen: =Switch(Param("ScreenName"), "MainPage", TaskAnalysisScreen, "asManager", 'ForManagerEditScreen/UserHomeScreen')
     Theme: =PowerAppsTheme
 
