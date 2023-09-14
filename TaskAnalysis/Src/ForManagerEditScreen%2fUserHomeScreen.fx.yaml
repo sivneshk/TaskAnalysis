@@ -238,7 +238,7 @@
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter_1.Height/11
-                        Items: =Sort(Distinct('Task Analysis Taxonomy Collection','User Email'),Value)
+                        Items: =Sort(Distinct('Task Analysis Taxonomy Collection','User Name'),Value)
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         OnChange: =Set(uniqueIDVar,SlicerUserMailScreen3.Selected.Value)
@@ -259,7 +259,7 @@
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter_1.Height/11
-                        Items: =If(SlicerUserMailScreen3.Selected.Value = Blank(),Sort(Distinct('Task Analysis Taxonomy Collection',CoCo),Value),Distinct(Filter('Task Analysis Taxonomy Collection','User Email'= SlicerUserMailScreen3.Selected.Value),CoCo))
+                        Items: =If(SlicerUserMailScreen3.Selected.Value = Blank(),Sort(Distinct('Task Analysis Taxonomy Collection',CoCo),Value),Distinct(Filter('Task Analysis Taxonomy Collection','User Name'= SlicerUserMailScreen3.Selected.Value),CoCo))
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         OnChange: =Set(varL1,SlicerCOCOScreen3.Selected.Value)
@@ -508,7 +508,10 @@
                     BorderColor: =RGBA(245, 245, 245, 1)
                     DelayItemLoading: =true
                     Height: =66
-                    Items: =GroupBy('Task Analysis Taxonomy Collection',"User_x0020_Email", "GroupByEmail")
+                    Items: |-
+                        =GroupBy(If(And(IsBlank(SlicerCOCOScreen3.Selected.Value),IsBlank(SlicerUniqueIDScreen3.Selected.Value)),
+                        'Task Analysis Taxonomy Collection',
+                        Filter('Task Analysis Taxonomy Collection', CoCo=SlicerCOCOScreen3.Selected.Value ||  Title=SlicerUniqueIDScreen3.Selected.Value)), "UserName", "GroupByName")
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -543,7 +546,7 @@
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
                         Size: =UserDisplayName_1.Size
-                        Text: =ThisItem.User_x0020_Email
+                        Text: =ThisItem.UserName
                         Width: =Gallery1.Width*0.97
                         ZIndex: =1
 
@@ -657,7 +660,7 @@
                             Height: =HeaderReview_1.Height
                             Size: =Self.Height/4
                             Text: ="Region"
-                            Width: =gallery1.Width/11
+                            Width: =Gallery1.Width/11
                             X: =BusinessSeg_2.X+BusinessSeg_2.Width
                             Y: =0.3571428571428612
                             ZIndex: =7
@@ -666,7 +669,7 @@
                         BorderColor: =RGBA(245, 245, 245, 1)
                         DelayItemLoading: =true
                         Height: =167
-                        Items: =ThisItem.GroupByEmail
+                        Items: =ThisItem.GroupByName
                         Layout: =Layout.Vertical
                         LoadingSpinner: =LoadingSpinner.Data
                         TemplateFill: |-
@@ -797,10 +800,10 @@
                             PaddingLeft: =0
                             PaddingRight: =0
                             PaddingTop: =0
-                            Size: =ChosenTask_2.Height/8
+                            Size: =ChosenTask_2.Size
                             Text: =ThisItem.Region
                             Width: =RegionLabel_2.Width
-                            X: =1065
+                            X: =RegionLabel_2.X
                             Y: =(FinalTaxonomyGallery_1.TemplateHeight-Self.Height)/2
                             ZIndex: =9
 
