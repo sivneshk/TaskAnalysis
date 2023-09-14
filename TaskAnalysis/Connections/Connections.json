@@ -67,48 +67,6 @@
     "dependents": [],
     "id": "772eb637-780b-4505-ac82-d4fd749ecd5b"
   },
-  "78caaeaa-e54d-46ff-840a-10441e26f00c": {
-    "connectionRef": {
-      "displayName": "Power BI",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1651/1.0.1651.3382/powerbi/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_powerbi"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "a3a7553d-2b01-4bf4-b375-1ab52f66a2f6"
-    ],
-    "id": "78caaeaa-e54d-46ff-840a-10441e26f00c"
-  },
-  "a3a7553d-2b01-4bf4-b375-1ab52f66a2f6": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "e1763c40-e20b-4d4a-8462-03b0cf6bded7"
-        }
-      },
-      "parameterHintsV2": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "e1763c40-e20b-4d4a-8462-03b0cf6bded7"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "Task_A_PreparerHours"
-    ],
-    "dependencies": {
-      "shared_powerbi": "78caaeaa-e54d-46ff-840a-10441e26f00c"
-    },
-    "dependents": [],
-    "id": "a3a7553d-2b01-4bf4-b375-1ab52f66a2f6"
-  },
   "efd6ad77-1458-4159-bb3e-452113a9f680": {
     "connectionRef": {
       "displayName": "Office 365 Users",
