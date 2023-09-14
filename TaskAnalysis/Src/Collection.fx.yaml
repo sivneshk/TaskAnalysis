@@ -216,7 +216,6 @@ Collection As screen:
                     Email:Text(Value.Email)
                 }
             )
-            )
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(16, 110, 190, 1)
