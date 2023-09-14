@@ -231,6 +231,7 @@
                     ZIndex: =3
 
                     "SlicerUserMailScreen3 As 'Combo box'.pcfdataset":
+                        AllowMultiSelect: =true
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: =Blank()
@@ -241,7 +242,7 @@
                         Items: =Sort(Distinct('Task Analysis Taxonomy Collection','User Name'),Value)
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        OnChange: =Set(uniqueIDVar,SlicerUserMailScreen3.Selected.Value)
+                        OnChange: =
                         OnSelect: =
                         PaddingStart: =10
                         PCFTeamsTheme: ="default"
@@ -251,7 +252,16 @@
                         Y: =16
                         ZIndex: =1
 
+                        Value8 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Value"
+                            FieldName: ="Value"
+                            FieldType: ="e"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =82
+
                     "SlicerCOCOScreen3 As 'Combo box'.pcfdataset":
+                        AllowMultiSelect: =true
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: =Blank()
@@ -271,6 +281,14 @@
                         Y: =16
                         ZIndex: =2
 
+                        Value9 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Value"
+                            FieldName: ="Value"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =83
+
                     "SlicerUniqueIDScreen3 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
@@ -289,6 +307,14 @@
                         X: =(LeftPanel_1.Width-Self.Width)/2
                         Y: =16
                         ZIndex: =3
+
+                        Value10 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Value"
+                            FieldName: ="Value"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =84
 
                     "DropdownL3_1 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
@@ -509,9 +535,19 @@
                     DelayItemLoading: =true
                     Height: =66
                     Items: |-
-                        =GroupBy(If(And(IsBlank(SlicerCOCOScreen3.Selected.Value),IsBlank(SlicerUniqueIDScreen3.Selected.Value)),
+                        =GroupBy(If(And(IsBlank(SlicerCOCOScreen3.Selected.Value),IsBlank(SlicerUniqueIDScreen3.Selected.Value),IsBlank(SlicerUserMailScreen3.Selected.Value)),
                         'Task Analysis Taxonomy Collection',
-                        Filter('Task Analysis Taxonomy Collection', CoCo=SlicerCOCOScreen3.Selected.Value ||  Title=SlicerUniqueIDScreen3.Selected.Value)), "UserName", "GroupByName")
+                        Filter('Task Analysis Taxonomy Collection', IsBlank(SlicerUserMailScreen3.SelectedItems.Value) Or
+                                       IsEmpty(SlicerUserMailScreen3.SelectedItems) Or
+                                       'User Name' in SlicerUserMailScreen3.SelectedItems, 
+                        
+                                       IsBlank(SlicerCOCOScreen3.SelectedItems.Value) Or
+                                       IsEmpty(SlicerCOCOScreen3.SelectedItems) Or
+                                       CoCo in SlicerCOCOScreen3.SelectedItems , 
+                                       
+                                       IsBlank(SlicerUniqueIDScreen3.SelectedItems.Value) Or
+                                       IsEmpty(SlicerUniqueIDScreen3.SelectedItems) Or
+                                       Title in SlicerUniqueIDScreen3.SelectedItems)),"UserName" , "GroupByName")
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
