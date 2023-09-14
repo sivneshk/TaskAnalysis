@@ -28,6 +28,7 @@ Collection As screen:
         SelectedColor: =RGBA(50, 49, 48, 1)
         SelectedFill: =RGBA(199, 224, 244, 1)
         Size: =13
+        Visible: =false
         Width: =800
         X: =955
         Y: =460
@@ -84,6 +85,7 @@ Collection As screen:
         Fill: =RGBA(0, 120, 212, 1)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =62
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(16, 110, 190, 1)
@@ -116,7 +118,8 @@ Collection As screen:
         RadiusTopRight: =0
         Size: =15
         Text: ="Collect"
-        X: =74
-        Y: =162
+        Width: =360
+        X: =294
+        Y: =128
         ZIndex: =6
 
