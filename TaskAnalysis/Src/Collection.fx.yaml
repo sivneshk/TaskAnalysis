@@ -172,7 +172,17 @@ Collection As screen:
                     "\\"MD_DAILY_RECON\\[PREPARER EMAIL\\]\":\"(?<MD_DAILY_RECON\\[PREPARER EMAIL\\]>.+?)\",\"MD_DAILY_RECON\\[Coco\\]\":\"(?<MD_DAILY_RECON\\[Coco\\]>.+?)\",\"\\[Prepare Hours\\]\":(?<\\[Prepare Hours\\]>\d+\.\d+)"
                 )
             )*/
-            ClearCollect(PrepC
+            ClearCollect(
+                PrepCollection,
+                ForAll(
+                    Table(ParseJSON(Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com")),
+                    {
+                        Email: Text(Value.MD_DAILY_RECON[PREPARER EMAIL]),
+                        Coco: Text(Value.MD_DAILY_RECON[Coco]),
+                        PrepHours: Text(Value.[Prepare Hours])
+                    }
+                )
+                )
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(16, 110, 190, 1)
