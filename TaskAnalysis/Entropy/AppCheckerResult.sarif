@@ -3090,6 +3090,18 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 11
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
             }
           ]
         }
@@ -3100,39 +3112,40 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Collection.DataTable1.Items"
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Collection.DataTable1.Items",
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 14,
-                  "charOffset": 0,
+                  "charLength": 32,
+                  "charOffset": 335,
                   "snippet": {
-                    "text": "PrepCollection"
+                    "text": "\"MD_DAILY_RECON[PREPARER EMAIL]\""
                   }
                 }
               },
               "properties": {
-                "member": "Items",
+                "member": "OnSelect",
                 "module": "Collection",
-                "type": "Collection.DataTable1"
+                "type": "Collection.Button1_4"
               }
             }
           ],
           "message": {
             "arguments": [
-              "PrepCollection"
+              "MD_DAILY_RECON[PREPARER EMAIL]",
+              "Ident"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrInvalidName",
+          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
           "ruleIndex": 0
         },
         {
@@ -3149,10 +3162,51 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 12,
-                  "charOffset": 197,
+                  "charLength": 32,
+                  "charOffset": 335,
                   "snippet": {
-                    "text": "ClearCollect"
+                    "text": "\"MD_DAILY_RECON[PREPARER EMAIL]\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Collection",
+                "type": "Collection.Button1_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "MD_DAILY_RECON[PREPARER EMAIL]",
+              "Colon"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 32,
+                  "charOffset": 335,
+                  "snippet": {
+                    "text": "\"MD_DAILY_RECON[PREPARER EMAIL]\""
                   }
                 }
               },
@@ -3169,7 +3223,7 @@
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrOperatorExpected",
+          "ruleId": "app-ErrColonExpected",
           "ruleIndex": 1
         },
         {
@@ -3187,9 +3241,9 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 224,
+                  "charOffset": 367,
                   "snippet": {
-                    "text": ","
+                    "text": ":"
                   }
                 }
               },
@@ -3202,8 +3256,8 @@
           ],
           "message": {
             "arguments": [
-              "Comma",
-              "ParenClose"
+              "Colon",
+              "CurlyClose"
             ],
             "id": "issue"
           },
@@ -3211,7 +3265,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrExpectedFound-Ex-Fnd",
-          "ruleIndex": 2
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -3228,9 +3282,50 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 224,
+                  "charOffset": 367,
                   "snippet": {
-                    "text": ","
+                    "text": ":"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Collection",
+                "type": "Collection.Button1_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Colon",
+              "ParenClose"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 367,
+                  "snippet": {
+                    "text": ":"
                   }
                 }
               },
@@ -3248,6 +3343,46 @@
             "level": "High"
           },
           "ruleId": "app-ErrBadToken",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Collection.Button1_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 310,
+                  "snippet": {
+                    "text": "PrepTable"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Collection",
+                "type": "Collection.Button1_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "PrepTable"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
           "ruleIndex": 3
         },
         {
@@ -3264,10 +3399,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 14,
-                  "charOffset": 210,
+                  "charLength": 1,
+                  "charOffset": 304,
                   "snippet": {
-                    "text": "PrepCollection"
+                    "text": "("
                   }
                 }
               },
@@ -3280,52 +3415,15 @@
           ],
           "message": {
             "arguments": [
-              "PrepCollection"
+              "ClearCollect"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Collection.Button1_4.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Collection.Button1_4.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 12,
-                  "charOffset": 197,
-                  "snippet": {
-                    "text": "ClearCollect"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Collection",
-                "type": "Collection.Button1_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrOperatorExpected",
-          "ruleIndex": 1
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3365,7 +3463,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3405,7 +3503,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3445,7 +3543,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3485,7 +3583,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3522,7 +3620,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -3559,7 +3657,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -3600,7 +3698,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 5
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3640,7 +3738,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3680,7 +3778,47 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 6
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Collection.DataTable1_1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Collection.DataTable1_1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 4,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Prep"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Collection",
+                "type": "Collection.DataTable1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Prep"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4528,40 +4666,6 @@
           "name": "PowerApps app checker",
           "rules": [
             {
-              "id": "app-ErrInvalidName",
-              "messageStrings": {
-                "issue": {
-                  "text": "Name isn't valid. '{0}' isn't recognized."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Remove or correct the reference to the name that isn't valid."
-                ],
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrOperatorExpected",
-              "messageStrings": {
-                "issue": {
-                  "text": "Expected operator. We expect an operator such as +, *, or & at this point in the formula."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Edit your formula so that it includes an operator between the operands."
-                ],
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
               "id": "app-ErrExpectedFound-Ex-Fnd",
               "messageStrings": {
                 "issue": {
@@ -4572,6 +4676,23 @@
                 "componentType": "app",
                 "howToFix": [
                   "Remove or replace the unexpected characters with an expected character."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrColonExpected",
+              "messageStrings": {
+                "issue": {
+                  "text": "Expected colon. We expect a colon (:) at this point in the formula."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Edit your formula so that it includes a colon."
                 ],
                 "level": "High",
                 "primaryCategory": "formula",
@@ -4590,6 +4711,37 @@
                 "howToFix": [
                   "Remove or replace the unexpected characters."
                 ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidName",
+              "messageStrings": {
+                "issue": {
+                  "text": "Name isn't valid. '{0}' isn't recognized."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove or correct the reference to the name that isn't valid."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidArgs-Func",
+              "messageStrings": {
+                "issue": {
+                  "text": "The function '{0}' has some invalid arguments."
+                }
+              },
+              "properties": {
+                "componentType": "app",
                 "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
@@ -4622,20 +4774,6 @@
                   "You might need to convert the value to be the same type, such as converting a date string (e.g., \"12/31/2018\") to a date value.",
                   "If you’re comparing records or tables, the field or column types must match exactly."
                 ],
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrInvalidArgs-Func",
-              "messageStrings": {
-                "issue": {
-                  "text": "The function '{0}' has some invalid arguments."
-                }
-              },
-              "properties": {
-                "componentType": "app",
                 "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
