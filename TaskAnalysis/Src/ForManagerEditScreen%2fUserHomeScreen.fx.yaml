@@ -529,7 +529,7 @@
                         Fill: =RGBA(255, 255, 255, 1)
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
-                        Height: =54
+                        Height: =Gallery1.TemplateHeight*0.1
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =RGBA(16, 110, 190, 1)
@@ -544,7 +544,7 @@
                         RadiusTopRight: =4
                         Size: =15
                         Text: =ThisItem.User_x0020_Email
-                        Width: =Gallery1.Width
+                        Width: =Gallery1.Width*0.97
                         ZIndex: =1
 
                     HeaderReview_1 As groupContainer.manualLayoutContainer:
@@ -556,7 +556,7 @@
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
                         Width: =1270
-                        Y: =71
+                        Y: =NameCard.Height
                         ZIndex: =2
 
                         ProcessNameLabel_2 As label:
@@ -678,7 +678,7 @@
                         TemplatePadding: =20
                         TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/6)
                         Width: =1270
-                        Y: =112
+                        Y: =HeaderReview_1.Y+HeaderReview_1.Height
                         ZIndex: =3
 
                         ChosenCOCO_2 As label:
@@ -694,7 +694,7 @@
                             Height: =FinalTaxonomyGallery_1.TemplateHeight*0.3
                             OnSelect: =Select(Parent)
                             Size: =ChosenTask_2.Height/8
-                            Text: =ThisItem.'Company Code'
+                            Text: =ThisItem.CoCo
                             Width: =CocoLabel_1.Width
                             X: =ChosenTask_2.Width
                             Y: =(FinalTaxonomyGallery_1.TemplateHeight-Self.Height)/2
@@ -776,7 +776,7 @@
                             PaddingBottom: =0
                             PaddingTop: =0
                             Size: =ChosenTask_2.Height/8
-                            Text: =ThisItem.Associated_LE
+                            Text: =ThisItem.'Associated LE'
                             Width: =LegalEntityLabel_1.Width
                             X: =950
                             Y: =(FinalTaxonomyGallery_1.TemplateHeight-Self.Height-LE_Name_2.Height)/2
