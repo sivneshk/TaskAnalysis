@@ -165,10 +165,10 @@ Collection As screen:
         HoverFill: =RGBA(16, 110, 190, 1)
         OnSelect: |
             =Set(varPrepHours, Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"));
-            ClearCollect(PrepCollection, ForAll(varPrepHours.json, {
-                "MD_DAILY_RECON[PREPARER EMAIL]": ThisRecord.Value."MD_DAILY_RECON[PREPARER EMAIL]",
-                "MD_DAILY_RECON[Coco]": ThisRecord.Value."MD_DAILY_RECON[Coco]",
-                "[Total Prepare Hours]": ThisRecord.Value."[Total Prepare Hours]"
+            ClearCollect(PrepCollection, ForAll(Table(varPrepHours.json), {
+                "MD_DAILY_RECON[PREPARER EMAIL]": ThisRecord."MD_DAILY_RECON[PREPARER EMAIL]",
+                "MD_DAILY_RECON[Coco]": ThisRecord."MD_DAILY_RECON[Coco]",
+                "[Total Prepare Hours]": ThisRecord."[Total Prepare Hours]"
             }))
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)

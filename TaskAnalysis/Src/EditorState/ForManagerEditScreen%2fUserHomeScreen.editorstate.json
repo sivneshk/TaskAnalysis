@@ -4959,7 +4959,7 @@
       "StyleName": "defaultGalleryStyle",
       "Type": "ControlInfo"
     },
-    "galleryTemplate1_3": {
+    "galleryTemplate1_2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "ItemAccessibleLabel",
@@ -4975,7 +4975,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "galleryTemplate1_3",
+      "Name": "galleryTemplate1_2",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
