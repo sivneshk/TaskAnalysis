@@ -1,22 +1,16 @@
 {
-  "03d26425-a6ea-4f24-8dfa-dfb7472873c4": {
+  "024e9f9d-d7e2-497c-93c0-7b5296631902": {
     "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "14d954fc-fa83-4da3-8686-ec617cd27b08": {
-          "value": "shared_powerbi"
-        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "e1763c40-e20b-4d4a-8462-03b0cf6bded7"
         }
       },
       "parameterHintsV2": {
-        "shared_powerbi": {
-          "value": "14d954fc-fa83-4da3-8686-ec617cd27b08"
-        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "e1763c40-e20b-4d4a-8462-03b0cf6bded7"
@@ -28,24 +22,10 @@
       "Task_A_PreparerHours"
     ],
     "dependencies": {
-      "shared_powerbi": "14d954fc-fa83-4da3-8686-ec617cd27b08"
+      "shared_powerbi": "45a97c73-8411-4fa2-8148-b74fe805e004"
     },
     "dependents": [],
-    "id": "03d26425-a6ea-4f24-8dfa-dfb7472873c4"
-  },
-  "14d954fc-fa83-4da3-8686-ec617cd27b08": {
-    "connectionRef": {
-      "displayName": "Power BI",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1651/1.0.1651.3382/powerbi/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_powerbi"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "03d26425-a6ea-4f24-8dfa-dfb7472873c4"
-    ],
-    "id": "14d954fc-fa83-4da3-8686-ec617cd27b08"
+    "id": "024e9f9d-d7e2-497c-93c0-7b5296631902"
   },
   "2443c627-fb33-4399-9285-e7d666adb1fd": {
     "connectionRef": {
@@ -80,6 +60,20 @@
     },
     "dependents": [],
     "id": "2443c627-fb33-4399-9285-e7d666adb1fd"
+  },
+  "45a97c73-8411-4fa2-8148-b74fe805e004": {
+    "connectionRef": {
+      "displayName": "Power BI",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1651/1.0.1651.3382/powerbi/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_powerbi"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "024e9f9d-d7e2-497c-93c0-7b5296631902"
+    ],
+    "id": "45a97c73-8411-4fa2-8148-b74fe805e004"
   },
   "772eb637-780b-4505-ac82-d4fd749ecd5b": {
     "connectionRef": {
