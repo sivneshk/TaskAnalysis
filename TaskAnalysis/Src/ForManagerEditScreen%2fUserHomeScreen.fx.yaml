@@ -518,7 +518,7 @@
                     X: =40
                     ZIndex: =5
 
-                    Button2 As button:
+                    NameCard As button:
                         Align: =Align.Left
                         BorderColor: =RGBA(206, 215, 212, 1)
                         BorderThickness: =1
@@ -529,7 +529,7 @@
                         Fill: =RGBA(255, 255, 255, 1)
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
-                        Height: =54
+                        Height: =Gallery1.TemplateHeight*0.1
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =RGBA(16, 110, 190, 1)
@@ -544,13 +544,129 @@
                         RadiusTopRight: =4
                         Size: =15
                         Text: =ThisItem.User_x0020_Email
-                        Width: =TaxonomyCollect_2.Width
+                        Width: =Gallery1.Width*0.97
                         ZIndex: =1
 
-                    TaxonomyCollect_2 As gallery.galleryVertical:
+                    HeaderReview_1 As groupContainer.manualLayoutContainer:
+                        Height: =27
+                        PaddingLeft: =20
+                        PaddingRight: =20
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =1270
+                        Y: =NameCard.Height
+                        ZIndex: =2
+
+                        ProcessNameLabel_2 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =HeaderReview_1.Height
+                            PaddingLeft: =10
+                            Size: =Self.Height/4
+                            Text: ="Process Name"
+                            Width: =ReviewScreenPanel.Width-CocoLabel_2.Width-BusinessSeg_2.Width-HrsSpentLabel_2.Width-LegalEntityLabel_2.Width-RegionLabel_2.Width-HeaderReview_1.PaddingLeft-HeaderReview_1.PaddingRight
+                            X: =HeaderReview_1.PaddingLeft
+                            ZIndex: =1
+
+                        CocoLabel_2 As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =HeaderReview_1.Height
+                            Size: =Self.Height/4
+                            Text: ="CoCo"
+                            Width: =ReviewScreenPanel.Width/11
+                            X: =ProcessNameLabel_2.Width+ProcessNameLabel_2.X
+                            ZIndex: =2
+
+                        BusinessSeg_2 As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =HeaderReview_1.Height
+                            Size: =Self.Height/4
+                            Text: ="Business Segment"
+                            Width: =ReviewScreenPanel.Width/11
+                            X: =1105
+                            ZIndex: =3
+
+                        HrsSpentLabel_2 As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =HeaderReview_1.Height
+                            Size: =Self.Height/4
+                            Text: ="Monthly Hours"
+                            Width: =ReviewScreenPanel.Width/12
+                            X: =1118
+                            ZIndex: =4
+
+                        LegalEntityLabel_2 As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =HeaderReview_1.Height
+                            Size: =Self.Height/4
+                            Text: ="LE"
+                            Width: =ReviewScreenPanel.Width/6.5
+                            X: =990
+                            Y: =0.3571428571428612
+                            ZIndex: =6
+
+                        RegionLabel_2 As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =HeaderReview_1.Height
+                            Size: =Self.Height/4
+                            Text: ="Region"
+                            Width: =ReviewScreenPanel.Width/11
+                            X: =1105
+                            Y: =0.3571428571428612
+                            ZIndex: =7
+
+                    FinalTaxonomyGallery_1 As gallery.galleryVertical:
                         BorderColor: =RGBA(245, 245, 245, 1)
                         DelayItemLoading: =true
-                        Height: =175
+                        Height: =167
                         Items: =ThisItem.GroupByEmail
                         Layout: =Layout.Vertical
                         LoadingSpinner: =LoadingSpinner.Data
@@ -559,23 +675,155 @@
                                 Mod(ThisItem.ColourID,2) = 0,
                                RGBA(208, 208, 208, 0.1), RGBA(0, 111, 121, 0.2)
                             )
-                        TemplatePadding: =0
+                        TemplatePadding: =20
                         TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/6)
                         Width: =1270
-                        Y: =105
+                        Y: =HeaderReview_1.Y+HeaderReview_1.Height
                         ZIndex: =3
 
-                    HeaderTaxonomy_1 As groupContainer.manualLayoutContainer:
-                        Height: =RightPanel_1.Height/14
-                        PaddingLeft: =5
-                        PaddingRight: =5
-                        RadiusBottomLeft: =4
-                        RadiusBottomRight: =4
-                        RadiusTopLeft: =4
-                        RadiusTopRight: =4
-                        Width: =1270
-                        Y: =40
-                        ZIndex: =4
+                        ChosenCOCO_2 As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =FinalTaxonomyGallery_1.TemplateHeight*0.3
+                            OnSelect: =Select(Parent)
+                            Size: =ChosenTask_2.Height/8
+                            Text: =ThisItem.CoCo
+                            Width: =CocoLabel_1.Width
+                            X: =ChosenTask_2.Width
+                            Y: =(FinalTaxonomyGallery_1.TemplateHeight-Self.Height)/2
+                            ZIndex: =1
+
+                        ChosenTask_2 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =FinalTaxonomyGallery_1.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =10
+                            Size: =ChosenTask_2.Height/8
+                            Text: =ThisItem.'Process Name'
+                            Width: =ProcessNameLabel_1.Width
+                            ZIndex: =2
+
+                        LE_Name_2 As label:
+                            Align: =Align.Center
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            FontWeight: =FontWeight.Lighter
+                            Height: =FinalTaxonomyGallery_1.TemplateHeight*0.5
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =associatedLE_2.Size*0.9
+                            Text: =ThisItem.'LE Name'
+                            Width: =LegalEntityLabel_1.Width
+                            X: =950
+                            Y: =associatedLE_2.Y+associatedLE_2.Height
+                            ZIndex: =5
+
+                        BizSegment_2 As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =FinalTaxonomyGallery_1.TemplateHeight*0.3
+                            OnSelect: =Select(Parent)
+                            Size: =ChosenTask_2.Height/8
+                            Text: =ThisItem.'Business Segment'
+                            Width: =BusinessSeg_1.Width
+                            X: =1065
+                            Y: =(FinalTaxonomyGallery_1.TemplateHeight-Self.Height)/2
+                            ZIndex: =6
+
+                        associatedLE_2 As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            FontWeight: =FontWeight.Semibold
+                            Height: =FinalTaxonomyGallery_1.TemplateHeight*0.3
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingTop: =0
+                            Size: =ChosenTask_2.Height/8
+                            Text: =ThisItem.'Associated LE'
+                            Width: =LegalEntityLabel_1.Width
+                            X: =950
+                            Y: =(FinalTaxonomyGallery_1.TemplateHeight-Self.Height-LE_Name_2.Height)/2
+                            ZIndex: =7
+
+                        Region_2 As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =FinalTaxonomyGallery_1.TemplateHeight*0.3
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =ChosenTask_2.Height/8
+                            Text: =ThisItem.Region
+                            Width: =RegionLabel_1.Width
+                            X: =1065
+                            Y: =(FinalTaxonomyGallery_1.TemplateHeight-Self.Height)/2
+                            ZIndex: =9
+
+                        HoursInputReview_1 As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(208, 208, 208, 1)
+                            BorderThickness: =1
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(148, 148, 148, 1)
+                            DisabledColor: =RGBA(50, 49, 48, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =1
+                            Font: ="Poppins"
+                            FontWeight: =FontWeight.Semibold
+                            Height: =FinalTaxonomyGallery_1.TemplateHeight*0.5
+                            OnSelect: =Select(Parent)
+                            Size: =ChosenTask_2.Height/8
+                            Text: =ThisItem.'Input Hours'
+                            Width: =HrsSpentLabel_1.Width*0.7
+                            X: =1124
+                            Y: =(FinalTaxonomyGallery_1.TemplateHeight-Self.Height)/2
+                            ZIndex: =10
 
         FooterContainerScreen3 As groupContainer.manualLayoutContainer:
             Height: =Parent.Height/25
