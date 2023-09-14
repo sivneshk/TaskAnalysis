@@ -3719,9 +3719,46 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 190,
+                  "charOffset": 182,
                   "snippet": {
-                    "text": "["
+                    "text": ","
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Collection",
+                "type": "Collection.Button1_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColonExpected",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Collection.Button1_5.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Collection.Button1_5.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 188,
+                  "snippet": {
+                    "text": "}"
                   }
                 }
               },
@@ -3734,8 +3771,8 @@
           ],
           "message": {
             "arguments": [
-              "BracketOpen",
-              "ParenClose"
+              "CurlyClose",
+              "Ident"
             ],
             "id": "issue"
           },
@@ -3760,91 +3797,9 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 190,
+                  "charOffset": 192,
                   "snippet": {
-                    "text": "["
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Collection",
-                "type": "Collection.Button1_5"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "BracketOpen",
-              "CurlyClose"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Collection.Button1_5.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Collection.Button1_5.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 190,
-                  "snippet": {
-                    "text": "["
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Collection",
-                "type": "Collection.Button1_5"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "BracketOpen",
-              "ParenClose"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Collection.Button1_5.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Collection.Button1_5.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 190,
-                  "snippet": {
-                    "text": "["
+                    "text": ")"
                   }
                 }
               },
@@ -3863,83 +3818,6 @@
           },
           "ruleId": "app-ErrBadToken",
           "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Collection.Button1_5.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Collection.Button1_5.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 19,
-                  "charOffset": 124,
-                  "snippet": {
-                    "text": "Table(varPrepHours)"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Collection",
-                "type": "Collection.Button1_5"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Table"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Collection.Button1_5.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Collection.Button1_5.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 12,
-                  "charOffset": 130,
-                  "snippet": {
-                    "text": "varPrepHours"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Collection",
-                "type": "Collection.Button1_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrBadType",
-          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3995,10 +3873,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 15,
+                  "charLength": 6,
                   "charOffset": 175,
                   "snippet": {
-                    "text": ".MD_DAILY_RECON"
+                    "text": ".Email"
                   }
                 }
               },
@@ -4032,10 +3910,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 1,
-                  "charOffset": 169,
+                  "charLength": 17,
+                  "charOffset": 165,
                   "snippet": {
-                    "text": "("
+                    "text": "Text(Value.Email)"
                   }
                 }
               },
@@ -5446,14 +5324,17 @@
               }
             },
             {
-              "id": "app-ErrBadType",
+              "id": "app-ErrColonExpected",
               "messageStrings": {
                 "issue": {
-                  "text": "Invalid argument type."
+                  "text": "Expected colon. We expect a colon (:) at this point in the formula."
                 }
               },
               "properties": {
                 "componentType": "app",
+                "howToFix": [
+                  "Edit your formula so that it includes a colon."
+                ],
                 "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""

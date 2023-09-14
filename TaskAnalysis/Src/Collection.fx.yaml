@@ -213,9 +213,7 @@ Collection As screen:
             ClearCollect(PrepCollection,
                 Table(varPrepHours),
                 {
-                    Email:Text(Value.MD_DAILY_RECON[PREPARER EMAIL]\),
-                    Coco:Text(Value.MD_DAILY_RECON[Coco]\),
-                    PrepHours:Text(Value.[Prepare Hours]\)
+                    Email:Text(Value.Email),
                 }
             )
             )
