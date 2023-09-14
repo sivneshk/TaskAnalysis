@@ -213,7 +213,7 @@ Collection As screen:
             ClearCollect(PrepCollection,
                 Table(varPrepHours),
                 {
-                    Email:Text(Value.Email),
+                    Email:Text(Value.Email)
                 }
             )
             )
