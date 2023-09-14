@@ -164,12 +164,24 @@ Collection As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(16, 110, 190, 1)
         OnSelect: |
-            =/*Set(varPrepHours, Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"));
-            ClearCollect(PrepCollection, ForAll(Table(varPrepHours.json), {
-                "MD_DAILY_RECON[PREPARER EMAIL]": ThisRecord."MD_DAILY_RECON[PREPARER EMAIL]",
-                "MD_DAILY_RECON[Coco]": ThisRecord."MD_DAILY_RECON[Coco]",
-                "[Total Prepare Hours]": ThisRecord."[Total Prepare Hours]"
-            }))*/
+            =// Call your Flow and store the JSON data in a variable
+            Set(varPrepHours, Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com"))
+            
+            // Ensure varPrepHours.json is parsed as an array
+            ClearCollect(PrepCollection, JSON(varPrepHours.json))
+            
+            // Create a table and specify columns
+            ClearCollect(
+                PrepTable,
+                {
+                    "MD_DAILY_RECON[PREPARER EMAIL]": Text(""),
+                    "MD_DAILY_RECON[Coco]": Text(""),
+                    "[Total Prepare Hours]": 0
+                }
+            );
+            
+            ForAll(PrepCollection, Collect(PrepTable, ThisRecord))
+            Notify("Data from Task_A_PreparerHours has been loaded into PrepTable.", NotificationType.Information)
         PressedBorderColor: =RGBA(0, 69, 120, 1)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(16, 110, 190, 1)
