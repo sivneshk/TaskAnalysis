@@ -1,0 +1,2136 @@
+TaskAnalysisScreen_Dup As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: =
+
+    HomeContainer_1 As groupContainer.manualLayoutContainer:
+        Height: |
+            =Parent.Height
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer_1 As groupContainer.manualLayoutContainer:
+            Height: =Parent.Height/10
+            PaddingLeft: =20
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =Parent.Width
+            ZIndex: =1
+
+            MainTitle_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(5, 50, 43, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: ="Poppins"
+                FontWeight: =FontWeight.Semibold
+                Height: =HeaderContainer_1.Height*0.7
+                Size: =MainTitle_1.Height/2.5
+                Text: ="Task Analysis"
+                Width: =Parent.Width*0.2
+                X: =BodyContainer_1.PaddingLeft
+                Y: =(Parent.Height-MainTitle_1.Height)/2
+                ZIndex: =1
+
+            "'BH Logo_1' As image":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =HeaderContainer_1.Height*0.9
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =bh_lg_tm_hrz_rgb_pos
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =Parent.Width*0.1
+                X: =Parent.Width-Self.Width
+                Y: =(HeaderContainer_1.Height-Self.Height)/2
+                ZIndex: =2
+
+        BodyContainer_1 As groupContainer.horizontalAutoLayoutContainer:
+            Height: =Parent.Height-HeaderContainer_1.Height-FooterContainer_1.Height
+            LayoutGap: =20
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =5
+            PaddingLeft: =20
+            PaddingRight: =20
+            PaddingTop: =5
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =Parent.Width
+            Y: =HeaderContainer_1.Height
+            ZIndex: =2
+
+            LeftPanel_2 As groupContainer.verticalAutoLayoutContainer:
+                BorderColor: =RGBA(148, 148, 148, 1)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =1
+                DropShadow: =DropShadow.Regular
+                Height: =BodyContainer_1.Height
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                ZIndex: =1
+
+                LeftPanelTitle_2 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderStyle: =BorderStyle.None
+                    Fill: =RGBA(236, 236, 235, 1)
+                    FillPortions: =0
+                    Height: =LeftPanel_2.Height/15
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    RadiusTopLeft: =10
+                    RadiusTopRight: =10
+                    Width: =LeftPanel_2.Width
+                    ZIndex: =1
+
+                    ProcessTaxoLabel_2 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =LeftPanelTitle_2.Height
+                        Size: =Self.Height/3.5
+                        Text: ="Process Taxonomy"
+                        Width: =DropdownL1_1.Width
+                        X: =DropdownL1_1.X
+                        ZIndex: =1
+
+                UserInfo_2 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =LeftPanel_2.Height/5
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =LeftPanel_2.Width
+                    ZIndex: =2
+
+                    UserDisplayName_2 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =UserImage_2.Height*0.75
+                        PaddingBottom: =0
+                        PaddingLeft: =15
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =Self.Height/5
+                        Text: =Office365Users.MyProfile().DisplayName
+                        Width: =DropdownL1_1.Width-UserImage_2.Width
+                        X: =UserImage_2.X+UserImage_2.Width
+                        Y: =UserImage_2.Y
+                        ZIndex: =2
+
+                    UserPositionTitle_2 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Lighter
+                        Height: =UserImage_2.Height*0.25
+                        PaddingBottom: =0
+                        PaddingLeft: =15
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =Self.Height/2
+                        Text: =Office365Users.MyProfile().JobTitle
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =DropdownL1_1.Width-UserImage_2.Width
+                        X: =UserImage_2.X+UserImage_2.Width
+                        Y: =UserDisplayName_2.Y+UserDisplayName_2.Height
+                        ZIndex: =3
+
+                    UserImage_2 As image:
+                        BorderColor: =RGBA(204, 204, 204, 1)
+                        BorderThickness: =1
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =UserInfo_2.Height*0.6
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: |
+                            =Office365Users.UserPhoto(Office365Users.MyProfile().Id)
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        RadiusBottomLeft: =Self.Height
+                        RadiusBottomRight: =Self.Height
+                        RadiusTopLeft: =Self.Height
+                        RadiusTopRight: =Self.Height
+                        Width: =Self.Height
+                        X: =DropdownL1_1.X
+                        Y: =(UserInfo_2.Height-Self.Height)/2
+                        ZIndex: =4
+
+                TaskFilter_2 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Center
+                    Height: =LeftPanel_2.Height-UserInfo_2.Height-ButtonGroup_2.Height-LeftPanelTitle_2.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =10
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =LeftPanel_2.Width
+                    ZIndex: =3
+
+                    "DropdownUniqueID_1 As 'Combo box'.pcfdataset":
+                        AllowSearching: =true
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: =Blank()
+                        DisplayMode: =DisplayMode.Edit
+                        Font: ="Noto Sans"
+                        FontSize: =Self.Height/3.1
+                        Height: =TaskFilter_2.Height/11
+                        Items: =Sort(Distinct('Process Taxonomy',Title),Value)
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        OnChange: =Set(uniqueIDVar,DropdownUniqueID_1.Selected.Value)
+                        OnSelect: =
+                        PaddingStart: =10
+                        PCFTeamsTheme: ="default"
+                        Text: ="Unique ID"
+                        Width: =LeftPanel_2.Width*0.85
+                        X: =(LeftPanel_2.Width-Self.Width)/2
+                        Y: =16
+                        ZIndex: =1
+
+                        Title2_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Title"
+                            FieldName: ="Title"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =8
+
+                        Global_Process_ID2_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Global_Process_ID"
+                            FieldName: ="GlobalProcessID"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =9
+
+                        L12_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L1"
+                            FieldName: ="OData__x004c_1"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =10
+
+                        L22_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L2"
+                            FieldName: ="OData__x004c_2"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =11
+
+                        L32_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L3"
+                            FieldName: ="OData__x004c_3"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =12
+
+                        L42_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L4"
+                            FieldName: ="OData__x004c_4"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =13
+
+                        L52_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L5"
+                            FieldName: ="OData__x004c_5"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =8
+                            ZIndex: =14
+
+                        L62_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L6"
+                            FieldName: ="OData__x004c_6"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =9
+                            ZIndex: =15
+
+                        Comboname2_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Comboname"
+                            FieldName: ="Comboname"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =10
+                            ZIndex: =16
+
+                        Attachments2_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Attachments"
+                            FieldName: ="{Attachments}"
+                            FieldType: ="r*"
+                            FieldVariantName: ="textualColumn"
+                            Order: =11
+                            ZIndex: =17
+
+                        Value1_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Value"
+                            FieldName: ="Value"
+                            FieldType: ="e"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =29
+
+                    "DropdownL1_1 As 'Combo box'.pcfdataset":
+                        AllowSearching: =true
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: =If(DropdownUniqueID_1.Selected.Value = Blank(), Blank(), First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L1)))
+                        DisplayMode: =DisplayMode.Edit
+                        Font: ="Noto Sans"
+                        FontSize: =Self.Height/3.1
+                        Height: =TaskFilter_2.Height/11
+                        Items: |
+                            =If(DropdownUniqueID_1.Selected.Value = Blank(), Sort(Distinct('Process Taxonomy',L1),Value), Distinct(Filter('Process Taxonomy',Title=DropdownUniqueID_1.Selected.Value),L1))
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        OnChange: =Set(varL1,DropdownL1_1.Selected.Value)
+                        PaddingStart: =10
+                        PCFTeamsTheme: ="default"
+                        Text: ="L1 Taxonomy"
+                        Width: =LeftPanel_2.Width*0.85
+                        X: =(LeftPanel_2.Width-Self.Width)/2
+                        Y: =16
+                        ZIndex: =2
+
+                        Title3_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Title"
+                            FieldName: ="Title"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =18
+
+                        Global_Process_ID3_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Global_Process_ID"
+                            FieldName: ="GlobalProcessID"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =19
+
+                        L13_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L1"
+                            FieldName: ="OData__x004c_1"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =20
+
+                        L23_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L2"
+                            FieldName: ="OData__x004c_2"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =21
+
+                        L33_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L3"
+                            FieldName: ="OData__x004c_3"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =22
+
+                        L43_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L4"
+                            FieldName: ="OData__x004c_4"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =23
+
+                        L53_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L5"
+                            FieldName: ="OData__x004c_5"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =8
+                            ZIndex: =24
+
+                        L63_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L6"
+                            FieldName: ="OData__x004c_6"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =9
+                            ZIndex: =25
+
+                        Comboname3_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Comboname"
+                            FieldName: ="Comboname"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =10
+                            ZIndex: =26
+
+                        Attachments3_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Attachments"
+                            FieldName: ="{Attachments}"
+                            FieldType: ="r*"
+                            FieldVariantName: ="textualColumn"
+                            Order: =11
+                            ZIndex: =27
+
+                        Value2_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Value"
+                            FieldName: ="Value"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =28
+
+                    "DropdownL2_1 As 'Combo box'.pcfdataset":
+                        AllowSearching: =true
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: |-
+                            =If(DropdownUniqueID_1.Selected.Value = Blank()
+                                ,
+                                Blank()
+                                ,
+                                First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L2))
+                                
+                            )
+                        DisplayMode: =DisplayMode.Edit
+                        Font: ="Noto Sans"
+                        FontSize: =Self.Height/3.1
+                        Height: =TaskFilter_2.Height/11
+                        Items: |-
+                            =If(DropdownUniqueID_1.Selected.Value = Blank()
+                                , 
+                                Sort(Distinct(Filter('Process Taxonomy',L1 = DropdownL1_1.Selected.Value),L2),Value)
+                                ,
+                                Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L2)
+                            )
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        PaddingStart: =10
+                        PCFTeamsTheme: ="default"
+                        Text: ="L2 Taxonomy"
+                        Width: =LeftPanel_2.Width*0.85
+                        X: =(LeftPanel_2.Width-Self.Width)/2
+                        Y: =16
+                        ZIndex: =3
+
+                        Title4_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Title"
+                            FieldName: ="Title"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =30
+
+                        Global_Process_ID4_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Global_Process_ID"
+                            FieldName: ="GlobalProcessID"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =31
+
+                        L14_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L1"
+                            FieldName: ="OData__x004c_1"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =32
+
+                        L24_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L2"
+                            FieldName: ="OData__x004c_2"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =33
+
+                        L34_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L3"
+                            FieldName: ="OData__x004c_3"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =34
+
+                        L44_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L4"
+                            FieldName: ="OData__x004c_4"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =35
+
+                        L54_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L5"
+                            FieldName: ="OData__x004c_5"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =8
+                            ZIndex: =36
+
+                        L64_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L6"
+                            FieldName: ="OData__x004c_6"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =9
+                            ZIndex: =37
+
+                        Comboname4_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Comboname"
+                            FieldName: ="Comboname"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =10
+                            ZIndex: =38
+
+                        Attachments4_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Attachments"
+                            FieldName: ="{Attachments}"
+                            FieldType: ="r*"
+                            FieldVariantName: ="textualColumn"
+                            Order: =11
+                            ZIndex: =39
+
+                        Value3_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Value"
+                            FieldName: ="Value"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =40
+
+                    "DropdownL3_2 As 'Combo box'.pcfdataset":
+                        AllowSearching: =true
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: |-
+                            =If(DropdownUniqueID_1.Selected.Value = Blank()
+                                ,
+                                Blank()
+                                ,
+                                First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L3))
+                                
+                            )
+                        DisplayMode: =DisplayMode.Edit
+                        Font: ="Noto Sans"
+                        FontSize: =Self.Height/3.1
+                        Height: =TaskFilter_2.Height/11
+                        Items: |-
+                            =If(DropdownUniqueID_1.Selected.Value = Blank()
+                                , 
+                                Sort(Distinct(Filter('Process Taxonomy',L2 = DropdownL2_1.Selected.Value),L3),Value)
+                                ,
+                                Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L3)
+                            )
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        PaddingStart: =10
+                        PCFTeamsTheme: ="default"
+                        Text: ="L3 Taxonomy"
+                        Width: =LeftPanel_2.Width*0.85
+                        X: =(LeftPanel_2.Width-Self.Width)/2
+                        Y: =16
+                        ZIndex: =4
+
+                        Title1_2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Title"
+                            FieldName: ="Title"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =41
+
+                        Global_Process_ID1_2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Global_Process_ID"
+                            FieldName: ="GlobalProcessID"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =42
+
+                        L11_2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L1"
+                            FieldName: ="OData__x004c_1"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =43
+
+                        L21_2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L2"
+                            FieldName: ="OData__x004c_2"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =44
+
+                        L31_2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L3"
+                            FieldName: ="OData__x004c_3"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =45
+
+                        L41_2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L4"
+                            FieldName: ="OData__x004c_4"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =46
+
+                        L51_2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L5"
+                            FieldName: ="OData__x004c_5"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =8
+                            ZIndex: =47
+
+                        L61_2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L6"
+                            FieldName: ="OData__x004c_6"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =9
+                            ZIndex: =48
+
+                        Comboname1_2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Comboname"
+                            FieldName: ="Comboname"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =10
+                            ZIndex: =49
+
+                        Attachments1_2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Attachments"
+                            FieldName: ="{Attachments}"
+                            FieldType: ="r*"
+                            FieldVariantName: ="textualColumn"
+                            Order: =11
+                            ZIndex: =50
+
+                        Value4_2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Value"
+                            FieldName: ="Value"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =81
+
+                    "DropdownL4_1 As 'Combo box'.pcfdataset":
+                        AllowSearching: =true
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: |-
+                            =If(DropdownUniqueID_1.Selected.Value = Blank()
+                                ,
+                                Blank()
+                                ,
+                                First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L4))
+                                
+                            )
+                        DisplayMode: =DisplayMode.Edit
+                        Font: ="Noto Sans"
+                        FontSize: =Self.Height/3.1
+                        Height: =TaskFilter_2.Height/11
+                        Items: |-
+                            =If(DropdownUniqueID_1.Selected.Value = Blank()
+                                , 
+                                Sort(Distinct(Filter('Process Taxonomy',L3 = DropdownL3_2.Selected.Value),L4),Value)
+                                ,
+                                Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L4)
+                            )
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        OnChange: =
+                        PaddingStart: =10
+                        PCFTeamsTheme: ="default"
+                        Text: ="L4 Taxonomy"
+                        Width: =LeftPanel_2.Width*0.85
+                        X: =(LeftPanel_2.Width-Self.Width)/2
+                        Y: =16
+                        ZIndex: =85
+
+                        Title5_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Title"
+                            FieldName: ="Title"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =51
+
+                        Global_Process_ID5_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Global_Process_ID"
+                            FieldName: ="GlobalProcessID"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =52
+
+                        L15_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L1"
+                            FieldName: ="OData__x004c_1"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =53
+
+                        L25_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L2"
+                            FieldName: ="OData__x004c_2"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =54
+
+                        L35_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L3"
+                            FieldName: ="OData__x004c_3"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =55
+
+                        L45_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L4"
+                            FieldName: ="OData__x004c_4"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =56
+
+                        L55_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L5"
+                            FieldName: ="OData__x004c_5"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =8
+                            ZIndex: =57
+
+                        L65_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L6"
+                            FieldName: ="OData__x004c_6"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =9
+                            ZIndex: =58
+
+                        Comboname5_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Comboname"
+                            FieldName: ="Comboname"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =10
+                            ZIndex: =59
+
+                        Attachments5_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Attachments"
+                            FieldName: ="{Attachments}"
+                            FieldType: ="r*"
+                            FieldVariantName: ="textualColumn"
+                            Order: =11
+                            ZIndex: =60
+
+                        Value5_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Value"
+                            FieldName: ="Value"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =82
+
+                    "DropdownL5_1 As 'Combo box'.pcfdataset":
+                        AllowSearching: =true
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: |-
+                            =If(DropdownUniqueID_1.Selected.Value = Blank()
+                                ,
+                               Blank()
+                                ,
+                                First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L5))
+                                
+                            )
+                        DisplayMode: =DisplayMode.Edit
+                        Font: ="Noto Sans"
+                        FontSize: =Self.Height/3.1
+                        Height: =TaskFilter_2.Height/11
+                        Items: |-
+                            =If(uniqueIDVar = Blank()
+                                , 
+                                Sort(Distinct(Filter('Process Taxonomy',L4 = DropdownL4_1.Selected.Value),L5),Value)
+                                ,
+                                Distinct(Filter('Process Taxonomy',Title = uniqueIDVar),L5)
+                            )
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        PaddingStart: =10
+                        PCFTeamsTheme: ="default"
+                        Text: ="L5 Taxonomy"
+                        Width: =LeftPanel_2.Width*0.85
+                        X: =(LeftPanel_2.Width-Self.Width)/2
+                        Y: =16
+                        ZIndex: =86
+
+                        Title6_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Title"
+                            FieldName: ="Title"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =61
+
+                        Global_Process_ID6_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Global_Process_ID"
+                            FieldName: ="GlobalProcessID"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =62
+
+                        L16_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L1"
+                            FieldName: ="OData__x004c_1"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =63
+
+                        L26_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L2"
+                            FieldName: ="OData__x004c_2"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =64
+
+                        L36_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L3"
+                            FieldName: ="OData__x004c_3"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =65
+
+                        L46_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L4"
+                            FieldName: ="OData__x004c_4"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =66
+
+                        L56_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L5"
+                            FieldName: ="OData__x004c_5"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =8
+                            ZIndex: =67
+
+                        L66_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L6"
+                            FieldName: ="OData__x004c_6"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =9
+                            ZIndex: =68
+
+                        Comboname6_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Comboname"
+                            FieldName: ="Comboname"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =10
+                            ZIndex: =69
+
+                        Attachments6_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Attachments"
+                            FieldName: ="{Attachments}"
+                            FieldType: ="r*"
+                            FieldVariantName: ="textualColumn"
+                            Order: =11
+                            ZIndex: =70
+
+                        Value6_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Value"
+                            FieldName: ="Value"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =83
+
+                    "DropdownL6_1 As 'Combo box'.pcfdataset":
+                        AllowSearching: =true
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: |-
+                            =If(DropdownUniqueID_1.Selected.Value = Blank()
+                                ,
+                                Blank()
+                                ,
+                                First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L6))
+                                
+                            )
+                        DisplayMode: =DisplayMode.Edit
+                        Font: ="Noto Sans"
+                        FontSize: =Self.Height/3.1
+                        Height: =TaskFilter_2.Height/11
+                        Items: |-
+                            =If(DropdownUniqueID_1.Selected.Value = Blank()
+                                , 
+                                Sort(Distinct(Filter('Process Taxonomy',L5 = DropdownL5_1.Selected.Value),L6),Value)
+                                ,
+                                Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L6)
+                            )
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        PaddingStart: =10
+                        PCFTeamsTheme: ="default"
+                        Text: ="L6 Taxonomy"
+                        Width: =LeftPanel_2.Width*0.85
+                        X: =(LeftPanel_2.Width-Self.Width)/2
+                        Y: =16
+                        ZIndex: =87
+
+                        Title7_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Title"
+                            FieldName: ="Title"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =71
+
+                        Global_Process_ID7_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Global_Process_ID"
+                            FieldName: ="GlobalProcessID"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =72
+
+                        L17_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L1"
+                            FieldName: ="OData__x004c_1"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =73
+
+                        L27_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L2"
+                            FieldName: ="OData__x004c_2"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =74
+
+                        L37_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L3"
+                            FieldName: ="OData__x004c_3"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =75
+
+                        L47_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L4"
+                            FieldName: ="OData__x004c_4"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =76
+
+                        L57_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L5"
+                            FieldName: ="OData__x004c_5"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =8
+                            ZIndex: =77
+
+                        L67_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="L6"
+                            FieldName: ="OData__x004c_6"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =9
+                            ZIndex: =78
+
+                        Comboname7_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Comboname"
+                            FieldName: ="Comboname"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =10
+                            ZIndex: =79
+
+                        Attachments7_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Attachments"
+                            FieldName: ="{Attachments}"
+                            FieldType: ="r*"
+                            FieldVariantName: ="textualColumn"
+                            Order: =11
+                            ZIndex: =80
+
+                        Value7_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Value"
+                            FieldName: ="Value"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =84
+
+                ButtonGroup_2 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =LeftPanel_2.Height/9
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =LeftPanel_2.Width
+                    ZIndex: =8
+
+                    ClearBtn_2 As button:
+                        BorderColor: =RGBA(148, 148, 148, 1)
+                        BorderThickness: =1
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        Fill: =RGBA(148, 148, 148, 1)
+                        FocusedBorderThickness: =2
+                        Font: ="Poppins"
+                        Height: =ButtonGroup_2.Height/2
+                        HoverBorderColor: =RGBA(148, 148, 148, 1)
+                        HoverColor: =RGBA(148, 148, 148, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: |-
+                            =Reset(DropdownL1_1);
+                            Reset(DropdownUniqueID_1);
+                            Reset(DropdownL2_1);
+                            Reset(DropdownL3_2);
+                            Reset(DropdownL4_1);
+                            Reset(DropdownL5_1);
+                            Reset(DropdownL6_1);
+                        PressedBorderColor: =RGBA(208, 208, 208, 1)
+                        PressedColor: =RGBA(208, 208, 208, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =Self.Height/3
+                        Text: ="Clear"
+                        Width: =DropdownL1_1.Width*0.25
+                        X: =DropdownL1_1.X
+                        Y: =(ButtonGroup_2.Height-Self.Height)/2
+                        ZIndex: =1
+
+                    AddTaskBtn_2 As button:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderThickness: =1
+                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
+                        DisabledColor: =RGBA(208, 208, 208, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayMode: =If(And(DropdownUniqueID_1.Selected.Value <> Blank(), DropdownL1_1.Selected.Value <> Blank(),DropdownL2_1.Selected.Value <> Blank(),DropdownL3_2.Selected.Value <> Blank(),DropdownL4_1.Selected.Value <> Blank()), DisplayMode.Edit, DisplayMode.Disabled)
+                        Fill: =RGBA(2, 188, 148, 1)
+                        FocusedBorderThickness: =2
+                        Font: ="Poppins"
+                        Height: =ButtonGroup_2.Height/2
+                        HoverBorderColor: =RGBA(2, 188, 148, 1)
+                        HoverColor: =RGBA(2, 188, 148, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: =Set(ShowPopUp,true);
+                        PressedBorderColor: =RGBA(230, 230, 230, 1)
+                        PressedColor: =RGBA(2, 188, 148, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =Self.Height/3
+                        Text: ="+ Add Task to List"
+                        Width: =DropdownL1_1.Width*0.72
+                        X: =ButtonGroup_2.Width-ClearBtn_2.X-Self.Width
+                        Y: =(ButtonGroup_2.Height-Self.Height)/2
+                        ZIndex: =2
+
+            RightPanel_2 As groupContainer.verticalAutoLayoutContainer:
+                BorderColor: =RGBA(148, 148, 148, 1)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =1
+                DropShadow: =DropShadow.Regular
+                FillPortions: =0
+                Height: =BodyContainer_1.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =10
+                RadiusBottomRight: =10
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =Parent.Width*2/3
+                ZIndex: =2
+
+                HeaderTaxonomy_1 As groupContainer.manualLayoutContainer:
+                    FillPortions: =0
+                    Height: =RightPanel_2.Height/14
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Visible: =ShowResult
+                    Width: =RightPanel_2.Width
+                    ZIndex: =2
+
+                    ProcessNameLabel_3 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =HeaderTaxonomy_1.Height
+                        PaddingLeft: =10
+                        Size: =Self.Height/4
+                        Text: ="Process Name"
+                        Width: =RightPanel_2.Width-CocoLabel_3.Width-BusinessSeg_3.Width-HrsSpentLabel_3.Width-Filler_1.Width-LegalEntityLabel_3.Width-RegionLabel_3.Width
+                        X: =HeaderTaxonomy_1.PaddingLeft
+                        ZIndex: =1
+
+                    CocoLabel_3 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =HeaderTaxonomy_1.Height
+                        Size: =Self.Height/4
+                        Text: ="CoCo"
+                        Width: =RightPanel_2.Width/11
+                        X: =ProcessNameLabel_3.Width+ProcessNameLabel_3.X
+                        ZIndex: =2
+
+                    BusinessSeg_3 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =HeaderTaxonomy_1.Height
+                        Size: =Self.Height/4
+                        Text: |-
+                            ="Business
+                            Segment"
+                        Width: =RightPanel_2.Width/11
+                        X: =LegalEntityLabel_3.X+LegalEntityLabel_3.Width
+                        ZIndex: =3
+
+                    HrsSpentLabel_3 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =HeaderTaxonomy_1.Height
+                        Size: =Self.Height/4
+                        Text: ="Monthly Hours"
+                        Width: =RightPanel_2.Width/12
+                        X: =RegionLabel_3.X+RegionLabel_3.Width
+                        ZIndex: =4
+
+                    Filler_1 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =61
+                        Size: =0
+                        Text: =""
+                        Width: =RightPanel_2.Width*0.05
+                        X: =HrsSpentLabel_3.X+HrsSpentLabel_3.Width
+                        ZIndex: =5
+
+                    LegalEntityLabel_3 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =HeaderTaxonomy_1.Height
+                        Size: =Self.Height/4
+                        Text: ="LE"
+                        Width: =RightPanel_2.Width/6.5
+                        X: =CocoLabel_3.Width+CocoLabel_3.X
+                        Y: =0.3571428571428612
+                        ZIndex: =6
+
+                    RegionLabel_3 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =HeaderTaxonomy_1.Height
+                        Size: =Self.Height/4
+                        Text: ="Region"
+                        Width: =RightPanel_2.Width/11
+                        X: =BusinessSeg_3.X+BusinessSeg_3.Width
+                        Y: =0.3571428571428612
+                        ZIndex: =7
+
+                TaxonomyCollect_1 As gallery.galleryVertical:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    DelayItemLoading: =true
+                    Height: =RightPanel_2.Height-ProcessNameLabel_3.Height-ReviewBtnContainer_2.Height
+                    Items: =colTaxonomyTemp
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplateFill: |-
+                        =If(
+                            Mod(ThisItem.ColourID,2) = 0,
+                           RGBA(208, 208, 208, 0.1), RGBA(0, 111, 121, 0.2)
+                        )
+                    TemplatePadding: =0
+                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/6)
+                    Visible: =ShowResult
+                    Width: =RightPanel_2.Width
+                    ZIndex: =3
+
+                    ChosenCOCO_3 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =TaxonomyCollect_1.TemplateHeight*0.3
+                        OnSelect: =Select(Parent)
+                        Size: =ChosenTask_3.Height/8
+                        Text: =ThisItem.'Company Code'
+                        Width: =CocoLabel_3.Width
+                        X: =ChosenTask_3.Width
+                        Y: =(TaxonomyCollect_1.TemplateHeight-Self.Height)/2
+                        ZIndex: =1
+
+                    ChosenTask_3 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =TaxonomyCollect_1.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        PaddingLeft: =10
+                        Size: =ChosenTask_3.Height/8
+                        Text: =ThisItem.Task
+                        Width: =ProcessNameLabel_3.Width
+                        ZIndex: =2
+
+                    InputHours_1 As text:
+                        Align: =Align.Center
+                        BorderColor: =If(Value(SumHoursCheck_1.Text)>160, Color.Red, RGBA(208,208,208,1))
+                        Color: =If(Value(SumHoursCheck_1.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
+                        Default: |
+                            =Default(
+                                InputHours_1,
+                                LookUp(
+                                    PrepCollection,
+                                    Text(Coco) = Text(ChosenCOCO_3) && Text(Email) = Text(Office365Users.MyProfile().Mail)
+                                ).PrepHours
+                            )
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        FocusedBorderThickness: =2
+                        Font: ="Poppins"
+                        Height: =TaxonomyCollect_1.TemplateHeight*0.5
+                        HintText: ="Hours"
+                        HoverBorderColor: =If(Value(SumHoursCheck_1.Text)>160, ColorFade(Color.Red,-20%), RGBA(148, 148, 148, 1))
+                        HoverColor: =If(Value(SumHoursCheck_1.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnChange: =
+                        OnSelect: =
+                        PressedBorderColor: =RGBA(208, 208, 208, 1)
+                        PressedColor: =RGBA(50, 49, 48, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =2
+                        RadiusBottomRight: =2
+                        RadiusTopLeft: =2
+                        RadiusTopRight: =2
+                        Size: =ChosenTask_3.Height/8
+                        Tooltip: ="How many total working hours per month do you spend on this process?"
+                        Width: =HrsSpentLabel_3.Width*0.7
+                        X: =HrsSpentLabel_3.X + ((HrsSpentLabel_3.Width-Self.Width)/2)
+                        Y: =(TaxonomyCollect_1.TemplateHeight-Self.Height)/2
+                        ZIndex: =3
+
+                    DeleteRowIcon_1 As icon.Cancel:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =TaxonomyCollect_1.TemplateHeight/3
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(2, 188, 148, 1)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Cancel
+                        OnSelect: =Remove(colTaxonomyTemp,ThisItem)
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(2, 188, 148, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="Delete"
+                        Width: =(RightPanel_2.Width-InputHours_1.X-InputHours_1.Width)/3
+                        X: =Filler_1.X
+                        Y: =(TaxonomyCollect_1.TemplateHeight-Self.Height)/2
+                        ZIndex: =4
+
+                    LE_Name_3 As label:
+                        Align: =Align.Center
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Lighter
+                        Height: =TaxonomyCollect_1.TemplateHeight*0.5
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =associatedLE_3.Size*0.9
+                        Text: =ThisItem.'LE Name'
+                        Width: =LegalEntityLabel_3.Width
+                        X: =LegalEntityLabel_3.X
+                        Y: =associatedLE_3.Y+associatedLE_3.Height
+                        ZIndex: =5
+
+                    BizSegment_3 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =TaxonomyCollect_1.TemplateHeight*0.3
+                        OnSelect: =Select(Parent)
+                        Size: =ChosenTask_3.Height/8
+                        Text: =ThisItem.'Business Segment'
+                        Width: =BusinessSeg_3.Width
+                        X: =BusinessSeg_3.X
+                        Y: =(TaxonomyCollect_1.TemplateHeight-Self.Height)/2
+                        ZIndex: =6
+
+                    associatedLE_3 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =TaxonomyCollect_1.TemplateHeight*0.3
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingTop: =0
+                        Size: =ChosenTask_3.Height/8
+                        Text: =ThisItem.Associated_LE
+                        Width: =LegalEntityLabel_3.Width
+                        X: =LegalEntityLabel_3.X
+                        Y: =(TaxonomyCollect_1.TemplateHeight-Self.Height-LE_Name_3.Height)/2
+                        ZIndex: =7
+
+                    Region_3 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =TaxonomyCollect_1.TemplateHeight*0.3
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =ChosenTask_3.Height/8
+                        Text: =ThisItem.Region
+                        Width: =RegionLabel_3.Width
+                        X: =RegionLabel_3.X
+                        Y: =(TaxonomyCollect_1.TemplateHeight-Self.Height)/2
+                        ZIndex: =9
+
+                ReviewBtnContainer_2 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Start
+                    FillPortions: =0
+                    Height: =ButtonGroup_2.Height
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    PaddingBottom: =2
+                    PaddingTop: =2
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Visible: =ShowResult
+                    Width: =RightPanel_2.Width
+                    ZIndex: =4
+
+                    NextBtn_1 As button:
+                        BorderColor: =RGBA(2, 188, 148, 1)
+                        BorderThickness: =1
+                        Color: =RGBA(2, 188, 148, 1)
+                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
+                        DisabledColor: =RGBA(208, 208, 208, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayMode: =If(Value(SumHoursCheck_1.Text)=160, DisplayMode.Edit, DisplayMode.Disabled)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FocusedBorderThickness: =2
+                        Font: ="Poppins"
+                        Height: =AddTaskBtn_2.Height
+                        HoverBorderColor: =RGBA(2, 188, 148, 1)
+                        HoverColor: =RGBA(2, 188, 148, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: |-
+                            =ClearCollect(colTaxonomy,ForAll(Sequence(CountRows(colTaxonomyTemp)), Patch(Last(FirstN(colTaxonomyTemp,Value)), {rowNumber: Value})));
+                            
+                            
+                            Clear(colHoursWithNoRowID);
+                            ForAll(TaxonomyCollect_1.AllItems, Collect(colHoursWithNoRowID, {Hours: InputHours.Text}));
+                            
+                            ClearCollect(colHoursWithRowID,ForAll(Sequence(CountRows(colHoursWithNoRowID)), Patch(Last(FirstN(colHoursWithNoRowID,Value)), {rowID: Value})));
+                            
+                            ClearCollect(
+                                           FinalTaxonomy,
+                                           AddColumns(
+                                                       colTaxonomy,
+                                                       "Input Hours",
+                                                       LookUp(colHoursWithRowID, rowID = colTaxonomy[@rowNumber], Hours)
+                                           )
+                            );
+                            
+                            Navigate(TaxonomyReviewScreen)
+                        PressedBorderColor: =RGBA(230, 230, 230, 1)
+                        PressedColor: =RGBA(2, 188, 148, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =Self.Height/3
+                        Text: ="Next"
+                        Width: =RightPanel_2.Width*0.2
+                        X: =(ReviewBtnContainer_2.Width-Self.Width)/2
+                        Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
+                        ZIndex: =1
+
+                    LabelHours_1 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        Font: ="Poppins"
+                        Height: =ReviewBtnContainer_2.Height
+                        Size: =Self.Height/8
+                        Text: |-
+                            ="Total Hours: " & Sum(TaxonomyCollect_1.AllItems,InputHours) &
+                            "
+                            Max Required: 160"
+                        Width: =TaxonomyCollect_1.Width - HrsSpentLabel_3.X
+                        Wrap: =false
+                        X: =ReviewBtnContainer_2.Width-Self.Width
+                        Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
+                        ZIndex: =3
+
+                    ExceedHoursErrorMsg_1 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =Color.Red
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Noto Sans"
+                        Height: =ReviewBtnContainer_2.Height/3
+                        Size: =LabelHours_1.Size
+                        Text: ="*Sum of input hours must be equal and not exceed 160 hours"
+                        VerticalAlign: =VerticalAlign.Bottom
+                        Visible: =If(Value(SumHoursCheck_1.Text)>160, true, false)
+                        Width: =RightPanel_2.Width/3
+                        ZIndex: =4
+
+        FooterContainer_1 As groupContainer.manualLayoutContainer:
+            Height: =Parent.Height/25
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =Parent.Width
+            Y: =BodyContainer_1.Y+BodyContainer_1.Height
+            ZIndex: =3
+
+            CopyrightLabel_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: ="Poppins"
+                Height: =FooterContainer_1.Height
+                Size: =Self.Height/4
+                Text: ="Designed and Developed by GFO Data and Analytics Team"
+                Width: =Parent.Width*0.5
+                X: =MainTitle_1.X
+                ZIndex: =1
+
+            SumHoursCheck_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                Font: ="Poppins"
+                Height: =43.2
+                Size: =Self.Height/4
+                Text: =Sum(TaxonomyCollect_1.AllItems,InputHours)
+                Visible: =false
+                Width: =InputHours_1.Width/2
+                Wrap: =false
+                X: =CopyrightLabel_1.Width
+                ZIndex: =2
+
+    DialogBoxPopUp_1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(34, 48, 45, 0.8)
+        Height: |
+            =Parent.Height
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =ShowPopUp
+        Width: =Parent.Width
+        ZIndex: =2
+
+        DialogBox_1 As groupContainer.verticalAutoLayoutContainer:
+            BorderColor: =RGBA(148, 148, 148, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Parent.Height*0.6
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =Parent.Width*0.5
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+            EmptyHeaderMargin_1 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox_1.Height/10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox_1.Width*0.85
+                ZIndex: =1
+
+            DialogStartsHere_1 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox_1.Height/10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                Width: =DialogBox_1.Width*0.85
+                ZIndex: =2
+
+                CloseIcon_1 As icon.Cancel:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Color: =RGBA(97, 97, 97, 1)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =DialogStartsHere_1.Height
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =RGBA(208, 208, 208, 1)
+                    Icon: =Icon.Cancel
+                    OnSelect: =Set(ShowPopUp,false);
+                    PaddingBottom: =5
+                    PaddingTop: =5
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Width: =Self.Height
+                    X: =DialogStartsHere_1.Width-Self.Width
+                    ZIndex: =1
+
+                SelectCompanyCode_1 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(5, 50, 43, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: ="Poppins"
+                    FontWeight: =FontWeight.Semibold
+                    Height: =DialogStartsHere_1.Height
+                    Size: =SelectCompanyCode_1.Height/2.5
+                    Text: ="Select Company Code"
+                    Width: =DialogStartsHere_1.Width-CloseIcon_1.Width
+                    ZIndex: =2
+
+            PleaseChooseCompanyCode_1 As label:
+                Align: =Align.Justify
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(5, 50, 43, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: ="Poppins"
+                Height: =DialogBox_1.Height*0.15
+                PaddingTop: =10
+                Size: =PleaseChooseCompanyCode_1.Height/4
+                Text: ="Please choose the active company code(s) for selected process."
+                VerticalAlign: =VerticalAlign.Top
+                Width: =DialogStartsHere_1.Width
+                ZIndex: =3
+
+            DropdownCOCOLabel_1 As label:
+                Align: =Align.Justify
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(5, 50, 43, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: ="Poppins"
+                Height: =DialogBox_1.Height*0.1
+                PaddingTop: =10
+                Size: =DropdownCOCOLabel_1.Height/3
+                Text: ="Company Code"
+                VerticalAlign: =VerticalAlign.Bottom
+                Width: =DialogStartsHere_1.Width
+                ZIndex: =4
+
+            DropdownCOCOContainer_1 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox_1.Height-EmptyHeaderMargin_1.Height-DialogStartsHere_1.Height-PleaseChooseCompanyCode_1.Height-DropdownCOCOLabel_1.Height-BackSubmitButtonContainer_1.Height-EmptyFooterMargin_1.Height
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox_1.Width*0.85
+                ZIndex: =5
+
+                "DropdownCOCO_1 As 'Combo box'.pcfdataset":
+                    AllowMultiSelect: =true
+                    AllowSearching: =true
+                    Color: =RGBA(26, 35, 33, 1)
+                    DefaultSelectedItems: =Blank()
+                    DisplayMode: =DisplayMode.Edit
+                    Font: ="Noto Sans"
+                    FontSize: =Self.Height/3.1
+                    Height: =TaskFilter_2.Height/11
+                    Items: ='Coco Mapping'
+                    OnChange: =Set(cocoVar,DropdownCOCO_1.SelectedItems)
+                    PaddingStart: =10
+                    PCFTeamsTheme: ="default"
+                    Text: ="Select Company Code"
+                    Width: =PleaseChooseCompanyCode_1.Width
+                    X: =0
+                    Y: =13
+                    ZIndex: =2
+
+                    COMPANY_CODE1_1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="COMPANY_CODE"
+                        FieldName: ="Title"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =1
+                        ZIndex: =85
+
+                    CATEGORY1_1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="CATEGORY"
+                        FieldName: ="field_1"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =2
+                        ZIndex: =86
+
+                    "'LE Name1_1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="LE Name"
+                        FieldName: ="field_2"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =3
+                        ZIndex: =87
+
+                    ASSOCIATED_LE1_1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="ASSOCIATED_LE"
+                        FieldName: ="field_3"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =4
+                        ZIndex: =88
+
+                    ERP1_1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="ERP"
+                        FieldName: ="field_4"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =5
+                        ZIndex: =89
+
+                    PC1_1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="PC"
+                        FieldName: ="field_5"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =6
+                        ZIndex: =90
+
+                    "'Business Segment1_1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="Business Segment"
+                        FieldName: ="field_6"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =7
+                        ZIndex: =91
+
+                    Country1_1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="Country"
+                        FieldName: ="field_7"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =8
+                        ZIndex: =92
+
+                    Region1_1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="Region"
+                        FieldName: ="field_8"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =9
+                        ZIndex: =93
+
+                    "'DRM Region1_1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="DRM Region"
+                        FieldName: ="field_9"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =10
+                        ZIndex: =94
+
+                    "'SAP CoCo1_1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="SAP CoCo"
+                        FieldName: ="field_10"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =11
+                        ZIndex: =95
+
+                    OA1_1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="OA"
+                        FieldName: ="field_11"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =12
+                        ZIndex: =96
+
+                    OL1_1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="OL"
+                        FieldName: ="field_12"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =13
+                        ZIndex: =97
+
+                    "'OL-GRNI1_1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="OL-GRNI"
+                        FieldName: ="field_13"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =14
+                        ZIndex: =98
+
+                    CSR1_1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="CSR"
+                        FieldName: ="field_14"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =15
+                        ZIndex: =99
+
+                    "'Cost Accrual PO1_1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="Cost Accrual PO"
+                        FieldName: ="CostAccrualPO"
+                        FieldType: ="b"
+                        FieldVariantName: ="textualColumn"
+                        Order: =16
+                        ZIndex: =100
+
+                    "'Cost Accrual Non-PO1_1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="Cost Accrual Non-PO"
+                        FieldName: ="CostAccrualNon_x002d_PO"
+                        FieldType: ="b"
+                        FieldVariantName: ="textualColumn"
+                        Order: =17
+                        ZIndex: =101
+
+                    "'CSR-Channel Partner1_1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="CSR-Channel Partner"
+                        FieldName: ="CSR_x002d_ChannelPartner"
+                        FieldType: ="b"
+                        FieldVariantName: ="textualColumn"
+                        Order: =18
+                        ZIndex: =102
+
+                    "'Deposit, Pre-Payment and Sundry-Receivables1_1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="Deposit, Pre-Payment and Sundry-Receivables"
+                        FieldName: ="Deposit_x002c_Pre_x002d_Paymenta"
+                        FieldType: ="b"
+                        FieldVariantName: ="textualColumn"
+                        Order: =19
+                        ZIndex: =103
+
+                    "'Unclaimed property1_1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="Unclaimed property"
+                        FieldName: ="Unclaimedproperty"
+                        FieldType: ="b"
+                        FieldVariantName: ="textualColumn"
+                        Order: =20
+                        ZIndex: =104
+
+                    GRNI1_1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="GRNI"
+                        FieldName: ="GRNI"
+                        FieldType: ="b"
+                        FieldVariantName: ="textualColumn"
+                        Order: =21
+                        ZIndex: =105
+
+                    "'Reconciliation Preparation1_1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="Reconciliation Preparation"
+                        FieldName: ="ReconciliationPreparation"
+                        FieldType: ="b"
+                        FieldVariantName: ="textualColumn"
+                        Order: =22
+                        ZIndex: =106
+
+                    "'Reconciliation Approval1_1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="Reconciliation Approval"
+                        FieldName: ="ReconciliationApproval"
+                        FieldType: ="b"
+                        FieldVariantName: ="textualColumn"
+                        Order: =23
+                        ZIndex: =107
+
+                    Attachments8_1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="Attachments"
+                        FieldName: ="{Attachments}"
+                        FieldType: ="r*"
+                        FieldVariantName: ="textualColumn"
+                        Order: =24
+                        ZIndex: =108
+
+            BackSubmitButtonContainer_1 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox_1.Height/5
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox_1.Width*0.85
+                ZIndex: =6
+
+                CancelButton_1 As button:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderThickness: =1
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    Fill: =RGBA(0, 0, 0, 1)
+                    FocusedBorderThickness: =2
+                    Font: ="Poppins"
+                    Height: =BackSubmitButtonContainer_1.Height/2
+                    HoverBorderColor: =RGBA(0, 0, 0, 1)
+                    HoverColor: =RGBA(0, 0, 0, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: =Reset(DropdownCOCO_1)
+                    PressedBorderColor: =RGBA(0, 0, 0, 1)
+                    PressedColor: =RGBA(0, 0, 0, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Size: =Self.Height/3.5
+                    Text: ="Clear"
+                    Width: =DropdownCOCO_1.Width*0.2
+                    X: =AddTaskButton2_1.X-Self.Width*1.1
+                    Y: =BackSubmitButtonContainer_1.Height-Self.Height-BackSubmitButtonContainer_1.PaddingBottom
+                    ZIndex: =1
+
+                AddTaskButton2_1 As button:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderThickness: =1
+                    DisabledBorderColor: =RGBA(161, 159, 157, 1)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    DisplayMode: =If(IsEmpty(DropdownCOCO_1.SelectedItems), DisplayMode.Disabled, DisplayMode.Edit)
+                    Fill: =RGBA(2, 188, 148, 1)
+                    FocusedBorderThickness: =2
+                    Font: ="Poppins"
+                    Height: =BackSubmitButtonContainer_1.Height/2
+                    HoverBorderColor: =RGBA(2, 188, 148, 1)
+                    HoverColor: =RGBA(2, 188, 148, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: |
+                        =Set(
+                            iterator,
+                            (Last(TaxonomyCollect_1.AllItems).ColourID) + 1
+                        );
+                        ForAll(
+                            DropdownCOCO_1.SelectedItems,
+                            Collect(
+                                colTaxonomyTemp,
+                                {
+                                    Task: (If(
+                                        And(
+                                            DropdownL6_1.Selected.Value <> "-",
+                                            DropdownL6_1.Selected.Value <> Blank()
+                                        ),
+                                        DropdownL6_1.Selected.Value,
+                                        And(
+                                            DropdownL5_1.Selected.Value <> "-",
+                                            DropdownL5_1.Selected.Value <> Blank()
+                                        ),
+                                        DropdownL5_1.Selected.Value,
+                                        DropdownL4_1.Selected.Value
+                                    )),
+                                    UniqueID: DropdownUniqueID_1.Selected.Value,
+                                    'Company Code': ThisRecord.COMPANY_CODE,
+                                    'LE Name': ThisRecord.'LE Name',
+                                    'Business Segment': ThisRecord.'Business Segment',
+                                    Associated_LE: ThisRecord.ASSOCIATED_LE,
+                                    PC: ThisRecord.PC,
+                                    Country: ThisRecord.Country,
+                                    Region: ThisRecord.Region,
+                                    ColourID: iterator,
+                                    'User Email': Office365Users.MyProfile().Mail,
+                                    'User Name': Office365Users.MyProfile().DisplayName
+                                }
+                            )
+                        );
+                        
+                        
+                        Reset(DropdownL1_1);
+                        Reset(DropdownUniqueID_1);
+                        Reset(DropdownL2_1);
+                        Reset(DropdownL3_2);
+                        Reset(DropdownL4_1);
+                        Reset(DropdownL5_1);
+                        Reset(DropdownL6_1);
+                        Reset(DropdownCOCO_1);
+                        Set(
+                            ShowPopUp,
+                            false
+                        );
+                        Set(
+                            ShowResult,
+                            true
+                        );
+                    PressedBorderColor: =RGBA(230, 230, 230, 1)
+                    PressedColor: =RGBA(2, 188, 148, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Size: =Self.Height/3.5
+                    Text: ="+ Add Task"
+                    Width: =DropdownCOCO_1.Width*0.2
+                    X: =BackSubmitButtonContainer_1.Width-Self.Width-BackSubmitButtonContainer_1.PaddingRight
+                    Y: =BackSubmitButtonContainer_1.Height-Self.Height-BackSubmitButtonContainer_1.PaddingBottom
+                    ZIndex: =2
+
+            EmptyFooterMargin_1 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox_1.Height/10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox_1.Width*0.85
+                ZIndex: =7
+
