@@ -1345,7 +1345,7 @@ TaskAnalysisScreen As screen:
                             If(
                                 Text(InputHours.Text) = Text(LookUp(
                                     PrepCollection,
-                                    Text(Coco) = Text(ChosenCOCO_3) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
+                                    Text(Coco) = Text(ChosenCOCO) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
                                 ).PrepHours),
                                 If(
                                     Value(SumHoursCheck.Text) > 160,
@@ -1359,7 +1359,7 @@ TaskAnalysisScreen As screen:
                             =//""
                             LookUp(
                                 PrepCollection,
-                                Text(Coco) = Text(ChosenCOCO_3) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
+                                Text(Coco) = Text(ChosenCOCO) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
                             ).PrepHours
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
