@@ -1343,19 +1343,24 @@ TaskAnalysisScreen As screen:
                         BorderColor: |-
                             =//If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(208,208,208,1))
                             If(
-                                Text(InputHours_1.Text) = Text(LookUp(
+                                Text(InputHours.Text) = Text(LookUp(
                                     PrepCollection,
                                     Text(Coco) = Text(ChosenCOCO_3) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
                                 ).PrepHours),
                                 If(
-                                    Value(SumHoursCheck_1.Text) > 160,
+                                    Value(SumHoursCheck.Text) > 160,
                                     Color.Red,
                                     Color.Green
                                 ),
                                 Color.Red
                             )
                         Color: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
-                        Default: =""
+                        Default: |
+                            =//""
+                            LookUp(
+                                PrepCollection,
+                                Text(Coco) = Text(ChosenCOCO_3) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
+                            ).PrepHours
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
