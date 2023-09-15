@@ -1342,18 +1342,31 @@ TaskAnalysisScreen_Dup As screen:
                         Align: =Align.Center
                         BorderColor: |+
                             =//If(Value(SumHoursCheck_1.Text)>160, Color.Red, RGBA(208,208,208,1))
-                            If(
-                                IsBlank(InputHours_1.Text),
-                                Color.FromHex("#CCCCCC"),  // Set to light gray when nothing is entered
-                                If(
+                            //If(
+                                //IsBlank(InputHours_1.Text),
+                                //Parent.DefaultBorderColor,
+                                /*If(
                                     Text(InputHours_1.Text) = Text(LookUp(
                                         PrepCollection,
                                         Text(Coco) = Text(ChosenCOCO_3) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
                                     ).PrepHours),
                                     Color.Green,
                                     Color.Red
-                                )
+                                ) */
+                            If(
+                                Text(InputHours_1.Text) = Text(LookUp(
+                                    PrepCollection,
+                                    Text(Coco) = Text(ChosenCOCO_3) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
+                                ).PrepHours),
+                                If(
+                                    Value(SumHoursCheck_1.Text) > 160,
+                                    Color.Red,
+                                    Color.Green
+                                ),
+                                Color.Red
                             )
+                            
+                            
                             
                             
                             
