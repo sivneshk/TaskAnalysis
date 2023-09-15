@@ -1340,7 +1340,23 @@ TaskAnalysisScreen_Dup As screen:
 
                     InputHours_1 As text:
                         Align: =Align.Center
-                        BorderColor: =If(Value(SumHoursCheck_1.Text)>160, Color.Red, RGBA(208,208,208,1))
+                        BorderColor: |+
+                            =//If(Value(SumHoursCheck_1.Text)>160, Color.Red, RGBA(208,208,208,1))
+                            If(
+                                IsBlank(InputHours_1.Text),
+                                Color.FromHex("#CCCCCC"),  // Set to light gray when nothing is entered
+                                If(
+                                    Text(InputHours_1.Text) = Text(LookUp(
+                                        PrepCollection,
+                                        Text(Coco) = Text(ChosenCOCO_3) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
+                                    ).PrepHours),
+                                    Color.Green,
+                                    Color.Red
+                                )
+                            )
+                            
+                            
+                            
                         Color: =If(Value(SumHoursCheck_1.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
                         Default: |
                             =LookUp(
@@ -2130,4 +2146,21 @@ TaskAnalysisScreen_Dup As screen:
                 RadiusTopRight: =10
                 Width: =DialogBox_1.Width*0.85
                 ZIndex: =7
+
+    Label1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =195
+        Size: =13
+        Text: ="DUPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP"
+        Width: =318
+        X: =1012
+        Y: =550
+        ZIndex: =3
 
