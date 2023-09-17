@@ -16,7 +16,9 @@ App As appinfo:
                     PrepHours: Text(Value.PrepHours)
                 }
             )
-        )
+        );
+        
+        ClearCollect(colGrpByName, GroupBy('Task Analysis Taxonomy Collection', "UserName", "GroupByName"))
     StartScreen: =Switch(Param("ScreenName"), "MainPage", TaskAnalysisScreen, "asManager", 'ForManagerEditScreen/UserHomeScreen')
     Theme: =PowerAppsTheme
 

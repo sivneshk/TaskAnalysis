@@ -1247,7 +1247,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BizSegment_3",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2367,7 +2367,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ChosenCOCO_3",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5095,7 +5095,14 @@
           "NameMapSourceSchema": "?"
         },
         "WrapCount",
-        "TemplateSize",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "280",
+          "InvariantPropertyName": "TemplateSize",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Layout",
         "Transition",
         "DelayItemLoading",
@@ -5319,7 +5326,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "galleryTemplate6",
-      "ParentIndex": 7,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6181,7 +6188,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HoursInputReview_2",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7357,7 +7364,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LE_Name_3",
-      "ParentIndex": 2,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10014,7 +10021,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Region_3",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
