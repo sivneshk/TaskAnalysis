@@ -534,9 +534,10 @@
                     BorderColor: =RGBA(245, 245, 245, 1)
                     DelayItemLoading: =true
                     Items: |-
-                        =GroupBy(If(And(IsBlank(SlicerCOCOScreen3.Selected.Value),IsBlank(SlicerUniqueIDScreen3.Selected.Value),IsBlank(SlicerUserMailScreen3.Selected.Value)),
-                        'Task Analysis Taxonomy Collection',
-                        Filter('Task Analysis Taxonomy Collection', IsBlank(SlicerUserMailScreen3.SelectedItems.Value) Or
+                        =AddColumns(
+                            GroupBy(If(And(IsBlank(SlicerCOCOScreen3.Selected.Value),IsBlank(SlicerUniqueIDScreen3.Selected.Value),IsBlank(SlicerUserMailScreen3.Selected.Value)),
+                                    'Task Analysis Taxonomy Collection',
+                                    Filter('Task Analysis Taxonomy Collection', IsBlank(SlicerUserMailScreen3.SelectedItems.Value) Or
                                        IsEmpty(SlicerUserMailScreen3.SelectedItems) Or
                                        'User Name' in SlicerUserMailScreen3.SelectedItems, 
                         
@@ -546,7 +547,9 @@
                                        
                                        IsBlank(SlicerUniqueIDScreen3.SelectedItems.Value) Or
                                        IsEmpty(SlicerUniqueIDScreen3.SelectedItems) Or
-                                       Title in SlicerUniqueIDScreen3.SelectedItems)),"UserName" , "GroupByName")
+                                       Title in SlicerUniqueIDScreen3.SelectedItems)),"UserName" , "GroupByName"), 
+                        
+                        "ItemsCount", CountRows(GroupByName))
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -609,11 +612,12 @@
                     Gallery5 As gallery.variableTemplateHeightGallery:
                         BorderColor: =RGBA(245, 245, 245, 1)
                         DelayItemLoading: =true
-                        Height: =280
+                        Height: =((RightPanel_1.Height-NameCard_1.Height-HeaderTaxonomy_1.Height)/6)*(ThisItem.ItemsCount+1)
                         Items: =ThisItem.GroupByName
                         Layout: =Layout.Vertical
                         LoadingSpinner: =LoadingSpinner.Data
-                        TemplateSize: =
+                        ShowScrollbar: =false
+                        TemplateSize: =ChosenTask_3.Height
                         Width: =Gallery2.Width
                         Y: =HeaderTaxonomy_1.Y+HeaderTaxonomy_1.Height
                         ZIndex: =5
@@ -628,13 +632,13 @@
                             DisabledColor: =RGBA(161, 159, 157, 1)
                             FocusedBorderThickness: =4
                             Font: ="Poppins"
-                            Height: =TaxonomyCollect.TemplateHeight
+                            Height: =ChosenTask_3.Height*0.3
                             OnSelect: =Select(Parent)
                             Size: =ChosenTask_3.Size
                             Text: =ThisItem.CoCo
                             Width: =CocoLabel_2.Width
                             X: =ChosenTask_3.Width
-                            Y: =(FinalTaxonomyGallery_1.TemplateHeight-Self.Height)/2
+                            Y: =(ChosenTask_3.Height-Self.Height)/2
                             ZIndex: =2
 
                         ChosenTask_3 As label:
@@ -646,7 +650,7 @@
                             DisabledColor: =RGBA(161, 159, 157, 1)
                             FocusedBorderThickness: =4
                             Font: ="Poppins"
-                            Height: =TaxonomyCollect.TemplateHeight
+                            Height: =(RightPanel_1.Height-NameCard_1.Height-HeaderTaxonomy_1.Height)/6
                             OnSelect: =Select(Parent)
                             PaddingLeft: =10
                             Size: =ProcessNameLabel_2.Size
@@ -666,7 +670,7 @@
                             FocusedBorderThickness: =4
                             Font: ="Poppins"
                             FontWeight: =FontWeight.Lighter
-                            Height: =TaxonomyCollect.TemplateHeight*0.5
+                            Height: =ChosenTask_3.Height*0.5
                             OnSelect: =Select(Parent)
                             PaddingBottom: =0
                             PaddingRight: =0
@@ -689,13 +693,13 @@
                             DisabledColor: =RGBA(161, 159, 157, 1)
                             FocusedBorderThickness: =4
                             Font: ="Poppins"
-                            Height: =TaxonomyCollect.TemplateHeight*0.3
+                            Height: =ChosenTask_3.Height*0.3
                             OnSelect: =Select(Parent)
                             Size: =ChosenTask_3.Size
                             Text: =ThisItem.'Business Segment'
                             Width: =BusinessSeg_2.Width
                             X: =BusinessSeg_2.X
-                            Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
+                            Y: =(ChosenTask_3.Height-Self.Height)/2
                             ZIndex: =5
 
                         associatedLE_3 As label:
@@ -709,7 +713,7 @@
                             FocusedBorderThickness: =4
                             Font: ="Poppins"
                             FontWeight: =FontWeight.Semibold
-                            Height: =TaxonomyCollect.TemplateHeight*0.3
+                            Height: =ChosenTask_3.Height*0.3
                             OnSelect: =Select(Parent)
                             PaddingBottom: =0
                             PaddingTop: =0
@@ -717,7 +721,7 @@
                             Text: =ThisItem.'Associated LE'
                             Width: =LegalEntityLabel_2.Width
                             X: =LegalEntityLabel_2.X
-                            Y: =(TaxonomyCollect.TemplateHeight-Self.Height-LE_Name_3.Height)/2
+                            Y: =(ChosenTask_3.Height-Self.Height-LE_Name_3.Height)/2
                             ZIndex: =6
 
                         Region_3 As label:
@@ -731,7 +735,7 @@
                             DisabledColor: =RGBA(161, 159, 157, 1)
                             FocusedBorderThickness: =4
                             Font: ="Poppins"
-                            Height: =TaxonomyCollect.TemplateHeight*0.3
+                            Height: =ChosenTask_3.Height*0.3
                             OnSelect: =Select(Parent)
                             PaddingBottom: =0
                             PaddingLeft: =0
@@ -741,7 +745,7 @@
                             Text: =ThisItem.Region
                             Width: =RegionLabel_2.Width
                             X: =RegionLabel_2.X
-                            Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
+                            Y: =(ChosenTask_3.Height-Self.Height)/2
                             ZIndex: =7
 
                         HoursInputReview_2 As label:
@@ -756,13 +760,13 @@
                             FocusedBorderThickness: =1
                             Font: ="Poppins"
                             FontWeight: =FontWeight.Semibold
-                            Height: =TaxonomyCollect.TemplateHeight*0.5
+                            Height: =ChosenTask_3.Height*0.5
                             OnSelect: =Select(Parent)
                             Size: =ChosenTask_3.Size
                             Text: =ThisItem.'Input Hours'
                             Width: =HrsSpentLabel_2.Width*0.7
                             X: =HrsSpentLabel_2.X
-                            Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
+                            Y: =(ChosenTask_3.Height-Self.Height)/2
                             ZIndex: =8
 
                     HeaderTaxonomy_1 As groupContainer.manualLayoutContainer:
@@ -773,7 +777,6 @@
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Visible: =ShowResult
                         Width: =Gallery2.Width
                         Y: =NameCard_1.Height
                         ZIndex: =6
