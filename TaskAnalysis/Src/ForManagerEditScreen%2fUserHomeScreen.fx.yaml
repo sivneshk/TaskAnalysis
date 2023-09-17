@@ -863,6 +863,27 @@
                             Y: =(FinalTaxonomyGallery_1.TemplateHeight-Self.Height)/2
                             ZIndex: =10
 
+                    UserImage_2 As image:
+                        BorderColor: =RGBA(204, 204, 204, 1)
+                        BorderThickness: =1
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =NameCard.Height
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: |
+                            =Office365Users.UserPhoto(Office365Users.MyProfile().Id)
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        RadiusBottomLeft: =Self.Height
+                        RadiusBottomRight: =Self.Height
+                        RadiusTopLeft: =Self.Height
+                        RadiusTopRight: =Self.Height
+                        Width: =NameCard.Height
+                        X: =442
+                        ZIndex: =4
+
         FooterContainerScreen3 As groupContainer.manualLayoutContainer:
             Height: =Parent.Height/25
             RadiusBottomLeft: =4
