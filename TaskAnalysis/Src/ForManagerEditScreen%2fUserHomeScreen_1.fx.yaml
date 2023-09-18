@@ -665,6 +665,7 @@
                     AlignInContainer: =AlignInContainer.SetByContainer
                     BorderColor: =RGBA(245, 245, 245, 1)
                     DelayItemLoading: =true
+                    Height: =RightPanel3.Height-ReviewBtnContainer_2.Height
                     Items: |-
                         =AddColumns(
                             GroupBy(If(And(IsBlank(SlicerUserMailScreen3.Selected.Value),IsBlank(SlicerUniqueIDScreen3.Selected.Value),IsBlank(SlicerCOCOScreen3.Selected.Value)),
@@ -1027,6 +1028,79 @@
                             Width: =RightPanel.Width/11
                             X: =BusinessSegScreen3_1.X+BusinessSegScreen3_1.Width
                             ZIndex: =7
+
+                ReviewBtnContainer_2 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Start
+                    FillPortions: =0
+                    Height: =ButtonGroupScreen3_1.Height
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    PaddingBottom: =2
+                    PaddingTop: =2
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =RightPanel.Width
+                    Y: =GroupedTaxonomyGallery3.Height
+                    ZIndex: =7
+
+                    SaveBtn As button:
+                        BorderColor: =RGBA(2, 188, 148, 1)
+                        BorderThickness: =1
+                        Color: =RGBA(2, 188, 148, 1)
+                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
+                        DisabledColor: =RGBA(208, 208, 208, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FocusedBorderThickness: =2
+                        Font: ="Poppins"
+                        Height: =AddTaskBtn_1.Height
+                        HoverBorderColor: =ColorFade(Self.BorderColor,-10%)
+                        HoverColor: =ColorFade(Self.Color,-10%)
+                        HoverFill: =RGBA(2, 188, 148, 0.1)
+                        OnSelect: =
+                        PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
+                        PressedColor: =ColorFade(Self.Color,-20%)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =Self.Height/3
+                        Text: ="Save"
+                        Width: =RightPanel3.Width*0.1
+                        X: =(EmployeeNameCardScreen3_1.Width-Self.Width)
+                        Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
+                        ZIndex: =1
+
+                    EditBtn As button:
+                        BorderColor: =RGBA(5, 50, 43, 1)
+                        BorderThickness: =1
+                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
+                        DisabledColor: =RGBA(208, 208, 208, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        Fill: =RGBA(5, 50, 43, 1)
+                        FocusedBorderThickness: =2
+                        Font: ="Poppins"
+                        Height: =AddTaskBtn_1.Height
+                        HoverBorderColor: =ColorFade(Self.Fill,20%)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(Self.Fill,20%)
+                        OnSelect: =
+                        PressedBorderColor: =ColorFade(Self.Fill,-20%)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =ColorFade(Self.Fill,-20%)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =Self.Height/3
+                        Text: ="Edit"
+                        Width: =RightPanel3.Width*0.1
+                        X: =SaveBtn.X-Self.Width-10
+                        Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
+                        ZIndex: =2
 
         FooterContainerScreen3_1 As groupContainer.manualLayoutContainer:
             Height: =Parent.Height/25
