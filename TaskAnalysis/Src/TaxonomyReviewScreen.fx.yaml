@@ -254,7 +254,7 @@ TaxonomyReviewScreen As screen:
                         PaddingBottom: =0
                         PaddingRight: =0
                         PaddingTop: =0
-                        Size: =associatedLE_1.Size*0.9
+                        Size: =associatedLE_1.Size*0.8
                         Text: =ThisItem.'LE Name'
                         Width: =LegalEntityLabel_1.Width
                         X: =LegalEntityLabel_1.X

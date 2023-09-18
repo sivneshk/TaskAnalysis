@@ -1448,7 +1448,7 @@ TaskAnalysisScreen As screen:
                         PaddingBottom: =0
                         PaddingRight: =0
                         PaddingTop: =0
-                        Size: =associatedLE.Size*0.9
+                        Size: =associatedLE.Size*0.8
                         Text: =ThisItem.'LE Name'
                         Width: =LegalEntityLabel.Width
                         X: =LegalEntityLabel.X

@@ -750,7 +750,7 @@
                             PaddingBottom: =0
                             PaddingRight: =0
                             PaddingTop: =0
-                            Size: =associatedLE_3.Size*0.9
+                            Size: =associatedLE_3.Size*0.8
                             Text: =ThisItem.'LE Name'
                             Width: =LegalEntityLabelScreen3_1.Width
                             X: =associatedLE_3.X
