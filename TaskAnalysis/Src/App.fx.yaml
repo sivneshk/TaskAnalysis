@@ -21,7 +21,7 @@ App As appinfo:
         ClearCollect(
             AppCollection,
             ForAll(
-                Table(ParseJSON(Task_A_ApproverHours.Run("adebayo.oyekunle@bakerhughes.com").json).body),
+                Table(ParseJSON(Task_A_ApproverHours.Run("bassem.abdelrahman@bakerhughes.com").json).body),
                 {
                     Email: Text(Value.Email),
                     Coco: Text(Value.Coco),
