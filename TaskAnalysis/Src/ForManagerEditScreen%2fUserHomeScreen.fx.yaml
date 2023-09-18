@@ -122,8 +122,8 @@
                         Height: =LeftPanelTitleScreen3.Height
                         Size: =Self.Height/3.5
                         Text: ="Process Taxonomy"
-                        Width: =SlicerCOCOScreen3.Width
-                        X: =SlicerCOCOScreen3.X
+                        Width: =SlicerUserMailScreen3.Width
+                        X: =SlicerUserMailScreen3.X
                         ZIndex: =1
 
                 UserInfoScreen3 As groupContainer.manualLayoutContainer:
@@ -160,7 +160,7 @@
                         PaddingTop: =0
                         Size: =Self.Height/5
                         Text: =Office365Users.MyProfile().DisplayName
-                        Width: =SlicerCOCOScreen3.Width-UserImageScreen3.Width
+                        Width: =SlicerUserMailScreen3.Width-UserImageScreen3.Width
                         X: =UserImageScreen3.X+UserImageScreen3.Width
                         Y: =UserImageScreen3.Y
                         ZIndex: =2
@@ -183,7 +183,7 @@
                         Size: =Self.Height/2
                         Text: =Office365Users.MyProfile().JobTitle
                         VerticalAlign: =VerticalAlign.Top
-                        Width: =SlicerCOCOScreen3.Width-UserImageScreen3.Width
+                        Width: =SlicerUserMailScreen3.Width-UserImageScreen3.Width
                         X: =UserImageScreen3.X+UserImageScreen3.Width
                         Y: =UserDisplayNameScreen3.Y+UserDisplayNameScreen3.Height
                         ZIndex: =3
@@ -206,7 +206,7 @@
                         RadiusTopLeft: =Self.Height
                         RadiusTopRight: =Self.Height
                         Width: =Self.Height
-                        X: =SlicerCOCOScreen3.X
+                        X: =SlicerUserMailScreen3.X
                         Y: =(UserInfoScreen3.Height-Self.Height)/2
                         ZIndex: =4
 
@@ -266,15 +266,15 @@
                     DelayItemLoading: =true
                     Items: |-
                         =AddColumns(
-                            GroupBy(If(And(IsBlank(SlicerCOCOScreen3.Selected.Value),IsBlank(SlicerUniqueIDScreen3.Selected.Value),IsBlank(SlicerUserMailScreen3.Selected.Value)),
+                            GroupBy(If(And(IsBlank(SlicerUserMailScreen3.Selected.Value),IsBlank(SlicerUniqueIDScreen3.Selected.Value),IsBlank(SlicerUserMailScreen3.Selected.Value)),
                                     'Task Analysis Taxonomy Collection',
                                     Filter('Task Analysis Taxonomy Collection', IsBlank(SlicerUserMailScreen3.SelectedItems.Value) Or
                                        IsEmpty(SlicerUserMailScreen3.SelectedItems) Or
                                        'User Name' in SlicerUserMailScreen3.SelectedItems, 
                         
-                                       IsBlank(SlicerCOCOScreen3.SelectedItems.Value) Or
-                                       IsEmpty(SlicerCOCOScreen3.SelectedItems) Or
-                                       CoCo in SlicerCOCOScreen3.SelectedItems , 
+                                       IsBlank(SlicerUserMailScreen3.SelectedItems.Value) Or
+                                       IsEmpty(SlicerUserMailScreen3.SelectedItems) Or
+                                       CoCo in SlicerUserMailScreen3.SelectedItems , 
                                        
                                        IsBlank(SlicerUniqueIDScreen3.SelectedItems.Value) Or
                                        IsEmpty(SlicerUniqueIDScreen3.SelectedItems) Or
