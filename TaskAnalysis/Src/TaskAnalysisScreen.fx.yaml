@@ -1341,8 +1341,8 @@ TaskAnalysisScreen As screen:
                     InputHours As text:
                         Align: =Align.Center
                         BorderColor: |-
-                            =//If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(208,208,208,1))
-                            If(
+                            =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(208,208,208,1))
+                            /*If(
                                 Text(InputHours.Text) = Text(LookUp(
                                     PrepCollection,
                                     Text(Coco) = Text(ChosenCOCO) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
@@ -1353,7 +1353,7 @@ TaskAnalysisScreen As screen:
                                     Color.Green
                                 ),
                                 Color.Red
-                            )
+                            )*/
                         Color: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
                         Default: |
                             =//""
