@@ -230,7 +230,7 @@
                     Width: =LeftPanelScreen3_1.Width
                     ZIndex: =3
 
-                    "SlicerUserName As 'Combo box'.pcfdataset":
+                    "SlicerUserMailScreen3 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: =Blank()
@@ -241,7 +241,7 @@
                         Items: =Sort(Distinct('Task Analysis Taxonomy Collection','User Name'),Value)
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        OnChange: =Set(uniqueIDVar,SlicerUserName.Selected.Value)
+                        OnChange: =Set(uniqueIDVar,SlicerUserMailScreen3.Selected.Value)
                         OnSelect: =
                         PaddingStart: =10
                         PCFTeamsTheme: ="default"
@@ -339,19 +339,19 @@
                             Order: =1
                             ZIndex: =29
 
-                    "SlicerCoco As 'Combo box'.pcfdataset":
+                    "SlicerCOCOScreen3 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
-                        DefaultSelectedItems: =If(SlicerUserName.Selected.Value = Blank(), Blank(), First(Distinct(Filter('Process Taxonomy',Title = SlicerUserName.Selected.Value),L1)))
+                        DefaultSelectedItems: =If(SlicerUserMailScreen3.Selected.Value = Blank(), Blank(), First(Distinct(Filter('Process Taxonomy',Title = SlicerUserMailScreen3.Selected.Value),L1)))
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter.Height/11
                         Items: |
-                            =If(SlicerUserName.Selected.Value = Blank(), Sort(Distinct('Task Analysis Taxonomy Collection',CoCo),Value), Distinct(Filter('Task Analysis Taxonomy Collection','User Name'=SlicerUserName.Selected.Value),CoCo))
+                            =If(SlicerUserMailScreen3.Selected.Value = Blank(), Sort(Distinct('Task Analysis Taxonomy Collection',CoCo),Value), Distinct(Filter('Task Analysis Taxonomy Collection','User Name'=SlicerUserMailScreen3.Selected.Value),CoCo))
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        OnChange: =Set(varL1,SlicerCoco.Selected.Value)
+                        OnChange: =Set(varL1,SlicerCOCOScreen3.Selected.Value)
                         PaddingStart: =10
                         PCFTeamsTheme: ="default"
                         Text: ="CoCo"
@@ -448,15 +448,15 @@
                             Order: =1
                             ZIndex: =28
 
-                    "SlicerUniqueID As 'Combo box'.pcfdataset":
+                    "SlicerUniqueIDScreen3 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: |-
-                            =If(SlicerUserName.Selected.Value = Blank()
+                            =If(SlicerUserMailScreen3.Selected.Value = Blank()
                                 ,
                                 Blank()
                                 ,
-                                First(Distinct(Filter('Process Taxonomy',Title = SlicerUserName.Selected.Value),L2))
+                                First(Distinct(Filter('Process Taxonomy',Title = SlicerUserMailScreen3.Selected.Value),L2))
                                 
                             )
                         DisplayMode: =DisplayMode.Edit
@@ -464,11 +464,11 @@
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter.Height/11
                         Items: |-
-                            =If(SlicerUserName.Selected.Value = Blank()
+                            =If(SlicerUserMailScreen3.Selected.Value = Blank()
                                 , 
-                                Sort(Distinct(Filter('Task Analysis Taxonomy Collection',CoCo= SlicerCoco.Selected.Value),Title),Value)
+                                Sort(Distinct(Filter('Task Analysis Taxonomy Collection',CoCo= SlicerCOCOScreen3.Selected.Value),Title),Value)
                                 ,
-                                Distinct(Filter('Process Taxonomy',Title = SlicerUserName.Selected.Value),Title)
+                                Distinct(Filter('Process Taxonomy',Title = SlicerUserMailScreen3.Selected.Value),Title)
                             )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
