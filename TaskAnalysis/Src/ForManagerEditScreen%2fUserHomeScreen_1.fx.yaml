@@ -708,13 +708,13 @@
                             DisabledColor: =RGBA(161, 159, 157, 1)
                             FocusedBorderThickness: =4
                             Font: ="Poppins"
-                            Height: =TaxonomyCollect.TemplateHeight*0.3
+                            Height: =FinalTaxonomyGallery.TemplateHeight*0.3
                             OnSelect: =Select(Parent)
                             Size: =ChosenTask_3.Height/8
-                            Text: =ThisItem.'Company Code'
-                            Width: =CocoLabel.Width
+                            Text: =ThisItem.CoCo
+                            Width: =CocoLabel_1.Width
                             X: =ChosenTask_3.Width
-                            Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
+                            Y: =(FinalTaxonomyGallery.TemplateHeight-Self.Height)/2
                             ZIndex: =2
 
                         ChosenTask_3 As label:
@@ -726,86 +726,14 @@
                             DisabledColor: =RGBA(161, 159, 157, 1)
                             FocusedBorderThickness: =4
                             Font: ="Poppins"
-                            Height: =TaxonomyCollect.TemplateHeight
+                            Height: =FinalTaxonomyGallery.TemplateHeight
                             OnSelect: =Select(Parent)
                             PaddingLeft: =10
                             Size: =ChosenTask_3.Height/8
-                            Text: =ThisItem.Task
-                            Width: =ProcessNameLabel.Width
-                            X: =23.999999999999773
+                            Text: =ThisItem.'Process Name'
+                            Width: =ProcessNameLabel_1.Width
                             Y: =60
                             ZIndex: =3
-
-                        InputHours_3 As text:
-                            Align: =Align.Center
-                            BorderColor: |-
-                                =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(208,208,208,1))
-                                /*If(
-                                    Text(InputHours.Text) = Text(LookUp(
-                                        PrepCollection,
-                                        Text(Coco) = Text(ChosenCOCO) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
-                                    ).PrepHours),
-                                    If(
-                                        Value(SumHoursCheck.Text) > 160,
-                                        Color.Red,
-                                        Color.Green
-                                    ),
-                                    Color.Red
-                                )*/
-                            Color: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
-                            Default: |+
-                                =//""
-                                If(
-                                    !IsBlank(
-                                        LookUp(
-                                            PrepCollection,
-                                            Text(Coco) = Text(ChosenCOCO_3) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
-                                        )
-                                    ),
-                                    LookUp(
-                                        PrepCollection,
-                                        Text(Coco) = Text(ChosenCOCO_3) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
-                                    ).PrepHours,
-                                    Blank()
-                                )
-                                
-                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                            DisabledColor: =RGBA(161, 159, 157, 1)
-                            DisabledFill: =RGBA(242, 242, 241, 0)
-                            DisplayMode: |
-                                =//DisplayMode.Edit
-                                If(
-                                    !IsBlank(
-                                        LookUp(
-                                            PrepCollection,
-                                            Text(Coco) = Text(ChosenCOCO_3) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
-                                        ).PrepHours
-                                    ),
-                                    DisplayMode.View,
-                                    DisplayMode.Edit
-                                )
-                            FocusedBorderThickness: =2
-                            Font: ="Poppins"
-                            Height: =TaxonomyCollect.TemplateHeight*0.5
-                            HintText: ="Hours"
-                            HoverBorderColor: =If(Value(SumHoursCheck.Text)>160, ColorFade(Color.Red,-20%), RGBA(148, 148, 148, 1))
-                            HoverColor: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
-                            HoverFill: =RGBA(255, 255, 255, 1)
-                            OnChange: =
-                            OnSelect: =
-                            PressedBorderColor: =RGBA(208, 208, 208, 1)
-                            PressedColor: =RGBA(50, 49, 48, 1)
-                            PressedFill: =RGBA(255, 255, 255, 1)
-                            RadiusBottomLeft: =2
-                            RadiusBottomRight: =2
-                            RadiusTopLeft: =2
-                            RadiusTopRight: =2
-                            Size: =ChosenTask_3.Height/8
-                            Tooltip: ="How many total working hours per month do you spend on this process?"
-                            Width: =HrsSpentLabel.Width*0.7
-                            X: =HrsSpentLabel.X + ((HrsSpentLabel.Width-Self.Width)/2)
-                            Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
-                            ZIndex: =4
 
                         LE_Name_3 As label:
                             Align: =Align.Center
@@ -819,17 +747,17 @@
                             FocusedBorderThickness: =4
                             Font: ="Poppins"
                             FontWeight: =FontWeight.Lighter
-                            Height: =TaxonomyCollect.TemplateHeight*0.5
+                            Height: =FinalTaxonomyGallery.TemplateHeight*0.5
                             OnSelect: =Select(Parent)
                             PaddingBottom: =0
                             PaddingRight: =0
                             PaddingTop: =0
                             Size: =associatedLE_3.Size*0.9
                             Text: =ThisItem.'LE Name'
-                            Width: =LegalEntityLabel.Width
-                            X: =LegalEntityLabel.X
+                            Width: =LegalEntityLabel_1.Width
+                            X: =989.3846153846154
                             Y: =associatedLE_3.Y+associatedLE_3.Height
-                            ZIndex: =6
+                            ZIndex: =4
 
                         BizSegment_3 As label:
                             Align: =Align.Center
@@ -841,14 +769,14 @@
                             DisabledColor: =RGBA(161, 159, 157, 1)
                             FocusedBorderThickness: =4
                             Font: ="Poppins"
-                            Height: =TaxonomyCollect.TemplateHeight*0.3
+                            Height: =FinalTaxonomyGallery.TemplateHeight*0.3
                             OnSelect: =Select(Parent)
                             Size: =ChosenTask_3.Height/8
                             Text: =ThisItem.'Business Segment'
-                            Width: =BusinessSeg.Width
-                            X: =BusinessSeg.X
-                            Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
-                            ZIndex: =7
+                            Width: =BusinessSeg_1.Width
+                            X: =1104.1818181818182
+                            Y: =(FinalTaxonomyGallery.TemplateHeight-Self.Height)/2
+                            ZIndex: =5
 
                         associatedLE_3 As label:
                             Align: =Align.Center
@@ -861,16 +789,16 @@
                             FocusedBorderThickness: =4
                             Font: ="Poppins"
                             FontWeight: =FontWeight.Semibold
-                            Height: =TaxonomyCollect.TemplateHeight*0.3
+                            Height: =FinalTaxonomyGallery.TemplateHeight*0.3
                             OnSelect: =Select(Parent)
                             PaddingBottom: =0
                             PaddingTop: =0
                             Size: =ChosenTask_3.Height/8
-                            Text: =ThisItem.Associated_LE
-                            Width: =LegalEntityLabel.Width
-                            X: =LegalEntityLabel.X
-                            Y: =(TaxonomyCollect.TemplateHeight-Self.Height-LE_Name_3.Height)/2
-                            ZIndex: =8
+                            Text: =ThisItem.'Associated LE'
+                            Width: =LegalEntityLabel_1.Width
+                            X: =989.3846153846154
+                            Y: =(FinalTaxonomyGallery.TemplateHeight-Self.Height-LE_Name_3.Height)/2
+                            ZIndex: =6
 
                         Region_3 As label:
                             Align: =Align.Center
@@ -882,7 +810,7 @@
                             DisabledColor: =RGBA(161, 159, 157, 1)
                             FocusedBorderThickness: =4
                             Font: ="Poppins"
-                            Height: =TaxonomyCollect.TemplateHeight*0.3
+                            Height: =FinalTaxonomyGallery.TemplateHeight*0.3
                             OnSelect: =Select(Parent)
                             PaddingBottom: =0
                             PaddingLeft: =0
@@ -890,10 +818,30 @@
                             PaddingTop: =0
                             Size: =ChosenTask_3.Height/8
                             Text: =ThisItem.Region
-                            Width: =RegionLabel.Width
-                            X: =RegionLabel.X
-                            Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2
-                            ZIndex: =9
+                            Width: =RegionLabel_1.Width
+                            X: =1104.1818181818182
+                            Y: =(FinalTaxonomyGallery.TemplateHeight-Self.Height)/2
+                            ZIndex: =7
+
+                        HoursInputReview_3 As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(208, 208, 208, 1)
+                            BorderThickness: =1
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(148, 148, 148, 1)
+                            DisabledColor: =RGBA(50, 49, 48, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =1
+                            Font: ="Poppins"
+                            FontWeight: =FontWeight.Semibold
+                            Height: =FinalTaxonomyGallery.TemplateHeight*0.5
+                            OnSelect: =Select(Parent)
+                            Size: =ChosenTask_3.Height/8
+                            Text: =ThisItem.'Input Hours'
+                            Width: =HrsSpentLabel_1.Width*0.7
+                            X: =1163.6
+                            Y: =(FinalTaxonomyGallery.TemplateHeight-Self.Height)/2
+                            ZIndex: =8
 
                     HeaderTaxonomyContainerScreen3_1 As groupContainer.manualLayoutContainer:
                         Height: =RightPanelScreen3_1.Height/15
