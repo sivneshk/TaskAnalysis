@@ -354,7 +354,7 @@
                         OnChange: =Set(varL1,SlicerCoco.Selected.Value)
                         PaddingStart: =10
                         PCFTeamsTheme: ="default"
-                        Text: ="L1 Taxonomy"
+                        Text: ="CoCo"
                         Width: =LeftPanel.Width*0.85
                         X: =(LeftPanel.Width-Self.Width)/2
                         Y: =16
@@ -466,15 +466,15 @@
                         Items: |-
                             =If(SlicerUserName.Selected.Value = Blank()
                                 , 
-                                Sort(Distinct(Filter('Process Taxonomy',L1 = SlicerCoco.Selected.Value),L2),Value)
+                                Sort(Distinct(Filter('Task Analysis Taxonomy Collection',CoCo= SlicerCoco.Selected.Value),Title),Value)
                                 ,
-                                Distinct(Filter('Process Taxonomy',Title = SlicerUserName.Selected.Value),L2)
+                                Distinct(Filter('Process Taxonomy',Title = SlicerUserName.Selected.Value),Title)
                             )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         PaddingStart: =10
                         PCFTeamsTheme: ="default"
-                        Text: ="L2 Taxonomy"
+                        Text: ="Unique ID"
                         Width: =LeftPanel.Width*0.85
                         X: =(LeftPanel.Width-Self.Width)/2
                         Y: =16
