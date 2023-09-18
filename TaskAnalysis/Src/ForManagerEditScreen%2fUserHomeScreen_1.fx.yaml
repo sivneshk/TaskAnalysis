@@ -714,7 +714,7 @@
                             Text: =ThisItem.CoCo
                             Width: =CocoLabelScreen3_1.Width
                             X: =ChosenTask_3.Width
-                            Y: =(FinalTaxonomyGallery.TemplateHeight-Self.Height)/2
+                            Y: =(ChosenTask_3.Height-Self.Height)/2
                             ZIndex: =2
 
                         ChosenTask_3 As label:
@@ -773,7 +773,7 @@
                             Text: =ThisItem.'Business Segment'
                             Width: =BusinessSegScreen3_1.Width
                             X: =associatedLE_3.X+associatedLE_3.Width
-                            Y: =(FinalTaxonomyGallery.TemplateHeight-Self.Height)/2
+                            Y: =(ChosenTask_3.Height-Self.Height)/2
                             ZIndex: =5
 
                         associatedLE_3 As label:
@@ -795,7 +795,7 @@
                             Text: =ThisItem.'Associated LE'
                             Width: =LegalEntityLabelScreen3_1.Width
                             X: =ChosenCOCO_3.X+ChosenCOCO_3.Width
-                            Y: =(FinalTaxonomyGallery.TemplateHeight-Self.Height-LE_Name_3.Height)/2
+                            Y: =(ChosenTask_3.Height-Self.Height-LE_Name_3.Height)/2
                             ZIndex: =6
 
                         Region_3 As label:
@@ -818,7 +818,7 @@
                             Text: =ThisItem.Region
                             Width: =RegionLabelScreen3_1.Width
                             X: =BizSegment_3.X+BizSegment_3.Width
-                            Y: =(FinalTaxonomyGallery.TemplateHeight-Self.Height)/2
+                            Y: =(ChosenTask_3.Height-Self.Height)/2
                             ZIndex: =7
 
                         HoursInputReview_3 As label:
@@ -838,7 +838,7 @@
                             Text: =ThisItem.'Input Hours'
                             Width: =HrsSpentLabel_1.Width*0.7
                             X: =1163.6
-                            Y: =(FinalTaxonomyGallery.TemplateHeight-Self.Height)/2
+                            Y: =(ChosenTask_3.Height-Self.Height)/2
                             ZIndex: =8
 
                     HeaderTaxonomyContainer3 As groupContainer.manualLayoutContainer:
