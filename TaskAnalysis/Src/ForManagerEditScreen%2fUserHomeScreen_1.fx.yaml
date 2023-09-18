@@ -238,14 +238,14 @@
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter.Height/11
-                        Items: =Sort(Distinct('Process Taxonomy',Title),Value)
+                        Items: =Sort(Distinct('Task Analysis Taxonomy Collection','User Name'),Value)
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         OnChange: =Set(uniqueIDVar,DropdownUniqueID_1.Selected.Value)
                         OnSelect: =
                         PaddingStart: =10
                         PCFTeamsTheme: ="default"
-                        Text: ="Unique ID"
+                        Text: ="Employee Name"
                         Width: =LeftPanel.Width*0.85
                         X: =(LeftPanel.Width-Self.Width)/2
                         Y: =16
