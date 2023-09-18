@@ -694,7 +694,7 @@
                         ShowScrollbar: =false
                         TemplatePadding: =0
                         TemplateSize: =ChosenTask_3.Height
-                        Width: =1270
+                        Width: =GroupedTaxonomyGallery3.Width
                         Y: =HeaderTaxonomyContainer3.Y+HeaderTaxonomyContainer3.Height
                         ZIndex: =5
 
@@ -753,7 +753,7 @@
                             Size: =associatedLE_3.Size*0.9
                             Text: =ThisItem.'LE Name'
                             Width: =LegalEntityLabelScreen3_1.Width
-                            X: =989.3846153846154
+                            X: =associatedLE_3.X
                             Y: =associatedLE_3.Y+associatedLE_3.Height
                             ZIndex: =4
 
@@ -772,7 +772,7 @@
                             Size: =ChosenTask_3.Height/8
                             Text: =ThisItem.'Business Segment'
                             Width: =BusinessSegScreen3_1.Width
-                            X: =1104.1818181818182
+                            X: =associatedLE_3.X+associatedLE_3.Width
                             Y: =(FinalTaxonomyGallery.TemplateHeight-Self.Height)/2
                             ZIndex: =5
 
@@ -794,7 +794,7 @@
                             Size: =ChosenTask_3.Height/8
                             Text: =ThisItem.'Associated LE'
                             Width: =LegalEntityLabelScreen3_1.Width
-                            X: =989.3846153846154
+                            X: =ChosenCOCO_3.X+ChosenCOCO_3.Width
                             Y: =(FinalTaxonomyGallery.TemplateHeight-Self.Height-LE_Name_3.Height)/2
                             ZIndex: =6
 
@@ -817,7 +817,7 @@
                             Size: =ChosenTask_3.Height/8
                             Text: =ThisItem.Region
                             Width: =RegionLabelScreen3_1.Width
-                            X: =1104.1818181818182
+                            X: =BizSegment_3.X+BizSegment_3.Width
                             Y: =(FinalTaxonomyGallery.TemplateHeight-Self.Height)/2
                             ZIndex: =7
 
