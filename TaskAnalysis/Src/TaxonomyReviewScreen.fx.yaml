@@ -376,10 +376,12 @@ TaxonomyReviewScreen As screen:
                         HoverBorderColor: =ColorFade(RGBA(2, 188, 148, 1),-20%)
                         HoverColor: =ColorFade(RGBA(2, 188, 148, 1),-20%)
                         HoverFill: =ColorFade(RGBA(255, 255, 255, 1),-5%)
-                        OnSelect: |-
+                        OnSelect: |
                             =Set(sendThisToJSON, JSON(FinalTaxonomy));
                             
-                            Task_A_JSONFlowUsertoSP.Run(sendThisToJSON)
+                            Task_A_JSONFlowUsertoSP.Run(sendThisToJSON);
+                            
+                            If(Task_A_JSONFlowUsertoSP.Run(sendThisToJSON).success="true", Notify("Your response has been successfully received."))
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
