@@ -1423,6 +1423,8 @@ TaskAnalysisScreen As screen:
                                 )
                             )
                             
+                            //APPROVER NOT WORKING 
+                            // ADJUST ALSO IN APP(1ST PAGE)
                             
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
