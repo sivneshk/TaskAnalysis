@@ -467,12 +467,11 @@
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilterScreen3_1.Height/11
                         Items: |-
-                            =If(SlicerUserMailScreen3.Selected.Value = Blank() && SlicerCOCOScreen3.Selected.Value = Blank()
-                                ,
-                                Distinct(Filter('Process Taxonomy',Title = SlicerUserMailScreen3.Selected.Value),Title)
+                            =If(SlicerUserMailScreen3.Selected.Value = Blank()
                                 , 
                                 Sort(Distinct(Filter('Task Analysis Taxonomy Collection',CoCo= SlicerCOCOScreen3.Selected.Value),Title),Value)
-                                
+                                ,
+                                Distinct(Filter('Task Analysis Taxonomy Collection','User Name'=SlicerUserMailScreen3.Selected.Value),Title)
                             )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
