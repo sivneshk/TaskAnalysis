@@ -467,7 +467,7 @@
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilterScreen3_1.Height/11
                         Items: |-
-                            =If(SlicerUserMailScreen3.Selected.Value = Blank()
+                            =If(SlicerUserMailScreen3.Selected.Value = Blank() && SlicerCOCOScreen3.Selected.Value = Blank()
                                 , 
                                 Sort(Distinct(Filter('Task Analysis Taxonomy Collection',CoCo= SlicerCOCOScreen3.Selected.Value),Title),Value)
                                 ,
