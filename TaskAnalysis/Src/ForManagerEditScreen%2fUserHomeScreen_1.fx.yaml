@@ -581,6 +581,66 @@
                     Width: =LeftPanelScreen3_1.Width
                     ZIndex: =8
 
+                    ClearBtn_1 As button:
+                        BorderColor: =RGBA(148, 148, 148, 1)
+                        BorderThickness: =1
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        Fill: =RGBA(148, 148, 148, 1)
+                        FocusedBorderThickness: =2
+                        Font: ="Poppins"
+                        Height: =ButtonGroup.Height/2
+                        HoverBorderColor: =RGBA(148, 148, 148, 1)
+                        HoverColor: =RGBA(148, 148, 148, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: |
+                            =Reset(SlicerUserMailScreen3);
+                            Reset(SlicerCOCOScreen3);
+                            Reset(SlicerUniqueIDScreen3);
+                        PressedBorderColor: =RGBA(208, 208, 208, 1)
+                        PressedColor: =RGBA(208, 208, 208, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =Self.Height/3
+                        Text: ="Clear"
+                        Width: =DropdownL1.Width*0.25
+                        X: =DropdownL1.X
+                        Y: =(ButtonGroup.Height-Self.Height)/2
+                        ZIndex: =2
+
+                    AddTaskBtn_1 As button:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderThickness: =1
+                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
+                        DisabledColor: =RGBA(208, 208, 208, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayMode: =If(And(DropdownUniqueID.Selected.Value <> Blank(), DropdownL1.Selected.Value <> Blank(),DropdownL2.Selected.Value <> Blank(),DropdownL3.Selected.Value <> Blank(),DropdownL4.Selected.Value <> Blank()), DisplayMode.Edit, DisplayMode.Disabled)
+                        Fill: =RGBA(2, 188, 148, 1)
+                        FocusedBorderThickness: =2
+                        Font: ="Poppins"
+                        Height: =ButtonGroup.Height/2
+                        HoverBorderColor: =RGBA(2, 188, 148, 1)
+                        HoverColor: =RGBA(2, 188, 148, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: =Set(ShowPopUp,true);
+                        PressedBorderColor: =RGBA(230, 230, 230, 1)
+                        PressedColor: =RGBA(2, 188, 148, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =Self.Height/3
+                        Text: ="+ Add Task to List"
+                        Width: =DropdownL1.Width*0.72
+                        X: =ButtonGroup.Width-ClearBtn_1.X-Self.Width
+                        Y: =(ButtonGroup.Height-Self.Height)/2
+                        ZIndex: =3
+
             RightPanel3 As groupContainer.verticalAutoLayoutContainer:
                 BorderColor: =RGBA(148, 148, 148, 1)
                 BorderStyle: =BorderStyle.None
