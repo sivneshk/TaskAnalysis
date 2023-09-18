@@ -2115,7 +2115,8 @@ TaskAnalysisScreen As screen:
                                     Region: ThisRecord.Region,
                                     ColourID: iterator,
                                     'User Email': Office365Users.MyProfile().Mail,
-                                    'User Name': Office365Users.MyProfile().DisplayName
+                                    'User Name': Office365Users.MyProfile().DisplayName,
+                                    EmployeeID: Office365Users.MyProfile().Id
                                 }
                             )
                         );
