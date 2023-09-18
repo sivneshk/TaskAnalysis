@@ -3160,12 +3160,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.ClearBtn_1.OnSelect"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.ClearBtn_1.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.ClearBtn_1.OnSelect",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.ClearBtn_1.OnSelect",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -3179,7 +3179,7 @@
               "properties": {
                 "member": "OnSelect",
                 "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.ClearBtn_1"
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.ClearBtn_1"
               }
             }
           ],
@@ -3200,12 +3200,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.ClearBtn_1.OnSelect"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.ClearBtn_1.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.ClearBtn_1.OnSelect",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.ClearBtn_1.OnSelect",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -3219,7 +3219,7 @@
               "properties": {
                 "member": "OnSelect",
                 "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.ClearBtn_1"
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.ClearBtn_1"
               }
             }
           ],
@@ -3240,12 +3240,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.ClearBtn_1.OnSelect"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.ClearBtn_1.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.ClearBtn_1.OnSelect",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.ClearBtn_1.OnSelect",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -3259,7 +3259,7 @@
               "properties": {
                 "member": "OnSelect",
                 "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.ClearBtn_1"
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.ClearBtn_1"
               }
             }
           ],
@@ -3280,12 +3280,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.AddTaskBtn_1.DisplayMode"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.AddTaskBtn_1.DisplayMode"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.AddTaskBtn_1.DisplayMode",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.AddTaskBtn_1.DisplayMode",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -3299,7 +3299,7 @@
               "properties": {
                 "member": "DisplayMode",
                 "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.AddTaskBtn_1"
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.AddTaskBtn_1"
               }
             }
           ],
@@ -3320,12 +3320,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.AddTaskBtn_1.DisplayMode"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.AddTaskBtn_1.DisplayMode"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.AddTaskBtn_1.DisplayMode",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.AddTaskBtn_1.DisplayMode",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -3339,7 +3339,7 @@
               "properties": {
                 "member": "DisplayMode",
                 "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.AddTaskBtn_1"
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.AddTaskBtn_1"
               }
             }
           ],
@@ -3357,12 +3357,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.AddTaskBtn_1.DisplayMode"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.AddTaskBtn_1.DisplayMode"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.AddTaskBtn_1.DisplayMode",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.AddTaskBtn_1.DisplayMode",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -3376,7 +3376,7 @@
               "properties": {
                 "member": "DisplayMode",
                 "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.AddTaskBtn_1"
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.AddTaskBtn_1"
               }
             }
           ],
@@ -3394,12 +3394,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.AddTaskBtn_1.DisplayMode"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.AddTaskBtn_1.DisplayMode"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.AddTaskBtn_1.DisplayMode",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.AddTaskBtn_1.DisplayMode",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -3413,7 +3413,7 @@
               "properties": {
                 "member": "DisplayMode",
                 "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.ButtonGroup_1.AddTaskBtn_1"
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.ButtonGroupScreen3.AddTaskBtn_1"
               }
             }
           ],
@@ -3435,12 +3435,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2.Items"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2.Items",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.Items",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -3454,7 +3454,7 @@
               "properties": {
                 "member": "Items",
                 "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2"
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3"
               }
             }
           ],
@@ -3475,12 +3475,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2.Items"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2.Items",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.Items",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -3494,7 +3494,7 @@
               "properties": {
                 "member": "Items",
                 "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2"
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3"
               }
             }
           ],
@@ -3515,19 +3515,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.TaskFilter_1.SlicerUserMailScreen3.AccessibleLabel"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.TaskFilterScreen3.SlicerUserMailScreen3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.TaskFilter_1.SlicerUserMailScreen3.AccessibleLabel",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.TaskFilterScreen3.SlicerUserMailScreen3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.TaskFilter_1.SlicerUserMailScreen3"
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.TaskFilterScreen3.SlicerUserMailScreen3"
               }
             }
           ],
@@ -3545,19 +3545,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.TaskFilter_1.SlicerCOCOScreen3.AccessibleLabel"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.TaskFilterScreen3.SlicerCOCOScreen3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.TaskFilter_1.SlicerCOCOScreen3.AccessibleLabel",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.TaskFilterScreen3.SlicerCOCOScreen3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.TaskFilter_1.SlicerCOCOScreen3"
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.TaskFilterScreen3.SlicerCOCOScreen3"
               }
             }
           ],
@@ -3575,19 +3575,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.TaskFilter_1.SlicerUniqueIDScreen3.AccessibleLabel"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.TaskFilterScreen3.SlicerUniqueIDScreen3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.TaskFilter_1.SlicerUniqueIDScreen3.AccessibleLabel",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.TaskFilterScreen3.SlicerUniqueIDScreen3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.TaskFilter_1.SlicerUniqueIDScreen3"
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.TaskFilterScreen3.SlicerUniqueIDScreen3"
               }
             }
           ],
@@ -3605,19 +3605,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.TaskFilter_1.DropdownL3_1.AccessibleLabel"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.TaskFilterScreen3.DropdownL3_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.TaskFilter_1.DropdownL3_1.AccessibleLabel",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.TaskFilterScreen3.DropdownL3_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanel_1.TaskFilter_1.DropdownL3_1"
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.TaskFilterScreen3.DropdownL3_1"
               }
             }
           ],
@@ -3635,19 +3635,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2.AccessibleLabel"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2.AccessibleLabel",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2"
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3"
               }
             }
           ],
@@ -3665,19 +3665,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2.TabIndex"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2.TabIndex",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2"
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3"
               }
             }
           ],
@@ -3695,19 +3695,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2.Gallery5.AccessibleLabel"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2.Gallery5.AccessibleLabel",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2.Gallery5"
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy"
               }
             }
           ],
@@ -3725,19 +3725,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2.Gallery5.TabIndex"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2.Gallery5.TabIndex",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanel_1.Gallery2.Gallery5"
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy"
               }
             }
           ],
