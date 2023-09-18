@@ -1355,12 +1355,22 @@ TaskAnalysisScreen As screen:
                                 Color.Red
                             )*/
                         Color: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
-                        Default: |
+                        Default: |+
                             =//""
-                            LookUp(
-                                PrepCollection,
-                                Text(Coco) = Text(ChosenCOCO) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
-                            ).PrepHours
+                            If(
+                                !IsBlank(
+                                    LookUp(
+                                        PrepCollection,
+                                        Text(Coco) = Text(ChosenCOCO) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
+                                    )
+                                ),
+                                LookUp(
+                                    PrepCollection,
+                                    Text(Coco) = Text(ChosenCOCO) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
+                                ).PrepHours,
+                                Blank()
+                            )
+                            
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
