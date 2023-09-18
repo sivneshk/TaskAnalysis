@@ -730,7 +730,7 @@
                         Image: |
                             =If(
                                Office365Users.UserPhotoMetadata(LookUp('Task Analysis Taxonomy Collection','User Name'=ThisItem.UserName, 'User Email')).HasPhoto = true,
-                               Office365Users.UserPhoto(LookUp('Task Analysis Taxonomy Collection','User Name'=ThisItem.UserName, 'User Email')),
+                               Office365Users.UserPhotoV2(LookUp('Task Analysis Taxonomy Collection','User Name'=ThisItem.UserName, 'User Email')),
                                SampleImage
                             )
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
