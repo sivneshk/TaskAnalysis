@@ -18,6 +18,18 @@ App As appinfo:
             )
         );
         
+        ClearCollect(
+            AppCollection,
+            ForAll(
+                Table(ParseJSON(Task_A_ApproverHours.Run("adebayo.oyekunle@bakerhughes.com").json).body),
+                {
+                    Email: Text(Value.Email),
+                    Coco: Text(Value.Coco),
+                    AppHours: Text(Value.AppHours)
+                }
+            )
+        );
+        
         ClearCollect(colGrpByName, GroupBy('Task Analysis Taxonomy Collection', "UserName", "GroupByName"))
     StartScreen: =Switch(Param("ScreenName"), "MainPage", TaskAnalysisScreen, "asManager", 'ForManagerEditScreen/UserHomeScreen')
     Theme: =PowerAppsTheme
