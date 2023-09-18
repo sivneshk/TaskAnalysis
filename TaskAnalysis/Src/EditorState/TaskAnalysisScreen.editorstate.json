@@ -14437,7 +14437,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "DisplayMode",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "//DisplayMode.Edit\nIf(\n    !IsBlank(\n        LookUp(\n            PrepCollection,\n            Text(Coco) = Text(ChosenCOCO) && Text(Email) = \"ahmedelsaidmohamed.baioumy@bakerhughes.com\"\n        ).PrepHours\n    ),\n    DisplayMode.View,\n    DisplayMode.Edit\n)\n",
+          "InvariantPropertyName": "DisplayMode",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,

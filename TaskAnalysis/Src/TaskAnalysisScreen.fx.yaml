@@ -1387,9 +1387,9 @@ TaskAnalysisScreen As screen:
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: |
+                        DisplayMode: |+
                             =//DisplayMode.Edit
-                            If(
+                            /*If(
                                 !IsBlank(
                                     LookUp(
                                         PrepCollection,
@@ -1398,7 +1398,32 @@ TaskAnalysisScreen As screen:
                                 ),
                                 DisplayMode.View,
                                 DisplayMode.Edit
+                            )*/
+                            
+                            Coalesce(
+                                If(
+                                    !IsBlank(
+                                        LookUp(
+                                            PrepCollection,
+                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
+                                        ).PrepHours
+                                    ),
+                                    DisplayMode.View,
+                                    DisplayMode.Edit
+                                ),
+                                If(
+                                    !IsBlank(
+                                        LookUp(
+                                            AppCollection,
+                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = "bassem.abdelrahman@bakerhughes.com"
+                                        ).AppHours
+                                    ),
+                                    DisplayMode.View,
+                                    DisplayMode.Edit
+                                )
                             )
+                            
+                            
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
                         Height: =TaxonomyCollect.TemplateHeight*0.5
