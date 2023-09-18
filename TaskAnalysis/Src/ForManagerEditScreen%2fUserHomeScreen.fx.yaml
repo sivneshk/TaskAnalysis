@@ -574,7 +574,9 @@
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =RGBA(16, 110, 190, 1)
                         OnSelect: =
-                        PaddingLeft: =10
+                        PaddingBottom: =3
+                        PaddingLeft: =20+UserImage_3.Width
+                        PaddingTop: =3
                         PressedBorderColor: =RGBA(0, 69, 120, 1)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(16, 110, 190, 1)
@@ -609,7 +611,7 @@
                         RadiusTopLeft: =Self.Height
                         RadiusTopRight: =Self.Height
                         Width: =Self.Height
-                        X: =450
+                        X: =10
                         Y: =(NameCard_1.Height-Self.Height)/2
                         ZIndex: =3
 
@@ -621,6 +623,7 @@
                         Layout: =Layout.Vertical
                         LoadingSpinner: =LoadingSpinner.Data
                         ShowScrollbar: =false
+                        TemplatePadding: =0
                         TemplateSize: =ChosenTask_3.Height
                         Width: =Gallery2.Width
                         Y: =HeaderTaxonomy_1.Y+HeaderTaxonomy_1.Height
@@ -775,8 +778,6 @@
 
                     HeaderTaxonomy_1 As groupContainer.manualLayoutContainer:
                         Height: =RightPanel_1.Height/15
-                        PaddingLeft: =5
-                        PaddingRight: =5
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
