@@ -730,6 +730,10 @@
                         Height: =EmployeeNameCardScreen3_1.Height-EmployeeNameCardScreen3_1.PaddingBottom-EmployeeNameCardScreen3_1.PaddingTop
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: |-
+                            =If(!IsBlank(ThisItem.UserName) And Office365Users.UserPhotoMetadata(LookUp('Task Analysis Taxonomy Collection','User Name'=ThisItem.UserName,emplo)).HasPhoto,
+                            Office365Users.UserPhotoV2(Id),SampleImage)
+                            }
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedFill: =RGBA(0, 0, 0, 0)
                         RadiusBottomLeft: =Self.Height
