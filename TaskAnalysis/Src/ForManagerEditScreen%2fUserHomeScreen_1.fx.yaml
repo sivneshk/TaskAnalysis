@@ -237,7 +237,7 @@
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
-                        Height: =TaskFilter.Height/11
+                        Height: =TaskFilterScreen3_1.Height/11
                         Items: =Sort(Distinct('Task Analysis Taxonomy Collection','User Name'),Value)
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
@@ -346,7 +346,7 @@
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
-                        Height: =TaskFilter.Height/11
+                        Height: =TaskFilterScreen3_1.Height/11
                         Items: |
                             =If(SlicerUserMailScreen3.Selected.Value = Blank(), Sort(Distinct('Task Analysis Taxonomy Collection',CoCo),Value), Distinct(Filter('Task Analysis Taxonomy Collection','User Name'=SlicerUserMailScreen3.Selected.Value),CoCo))
                         LayoutMinHeight: =32
@@ -462,7 +462,7 @@
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
-                        Height: =TaskFilter.Height/11
+                        Height: =TaskFilterScreen3_1.Height/11
                         Items: |-
                             =If(SlicerUserMailScreen3.Selected.Value = Blank()
                                 , 
