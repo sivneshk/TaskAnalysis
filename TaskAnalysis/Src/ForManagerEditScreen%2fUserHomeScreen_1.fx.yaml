@@ -80,7 +80,7 @@
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 DropShadow: =DropShadow.Regular
-                Height: =BodyContainerScreen3_1.Height
+                Height: =BodyContainerScreen3_1.Height-BodyContainerScreen3_1.PaddingBottom-BodyContainerScreen3_1.PaddingTop
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
@@ -231,6 +231,7 @@
                     ZIndex: =3
 
                     "SlicerUserMailScreen3 As 'Combo box'.pcfdataset":
+                        AllowMultiSelect: =true
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: =Blank()
@@ -246,7 +247,7 @@
                         PaddingStart: =10
                         PCFTeamsTheme: ="default"
                         Text: ="Employee Name"
-                        Width: =LeftPanel.Width*0.85
+                        Width: =LeftPanelScreen3_1.Width*0.85
                         X: =(LeftPanel.Width-Self.Width)/2
                         Y: =16
                         ZIndex: =1
@@ -340,6 +341,7 @@
                             ZIndex: =29
 
                     "SlicerCOCOScreen3 As 'Combo box'.pcfdataset":
+                        AllowMultiSelect: =true
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: =If(SlicerUserMailScreen3.Selected.Value = Blank(), Blank(), First(Distinct(Filter('Process Taxonomy',Title = SlicerUserMailScreen3.Selected.Value),L1)))
@@ -355,7 +357,7 @@
                         PaddingStart: =10
                         PCFTeamsTheme: ="default"
                         Text: ="CoCo"
-                        Width: =LeftPanel.Width*0.85
+                        Width: =LeftPanelScreen3_1.Width*0.85
                         X: =(LeftPanel.Width-Self.Width)/2
                         Y: =16
                         ZIndex: =2
@@ -449,6 +451,7 @@
                             ZIndex: =28
 
                     "SlicerUniqueIDScreen3 As 'Combo box'.pcfdataset":
+                        AllowMultiSelect: =true
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: |-
@@ -475,7 +478,7 @@
                         PaddingStart: =10
                         PCFTeamsTheme: ="default"
                         Text: ="Unique ID"
-                        Width: =LeftPanel.Width*0.85
+                        Width: =LeftPanelScreen3_1.Width*0.85
                         X: =(LeftPanel.Width-Self.Width)/2
                         Y: =16
                         ZIndex: =3
@@ -590,7 +593,7 @@
                         Fill: =RGBA(148, 148, 148, 1)
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
-                        Height: =ButtonGroup.Height/2
+                        Height: =ButtonGroupScreen3_1.Height/2
                         HoverBorderColor: =RGBA(148, 148, 148, 1)
                         HoverColor: =RGBA(148, 148, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
@@ -607,7 +610,7 @@
                         RadiusTopRight: =5
                         Size: =Self.Height/3
                         Text: ="Clear"
-                        Width: =DropdownL1.Width*0.25
+                        Width: =SlicerUserMailScreen3.Width*0.25
                         X: =DropdownL1.X
                         Y: =(ButtonGroup.Height-Self.Height)/2
                         ZIndex: =2
@@ -622,7 +625,7 @@
                         Fill: =RGBA(2, 188, 148, 1)
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
-                        Height: =ButtonGroup.Height/2
+                        Height: =ButtonGroupScreen3_1.Height/2
                         HoverBorderColor: =RGBA(2, 188, 148, 1)
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
@@ -636,7 +639,7 @@
                         RadiusTopRight: =5
                         Size: =Self.Height/3
                         Text: ="+ Add Task to List"
-                        Width: =DropdownL1.Width*0.72
+                        Width: =SlicerUserMailScreen3.Width*0.72
                         X: =ButtonGroup.Width-ClearBtn_1.X-Self.Width
                         Y: =(ButtonGroup.Height-Self.Height)/2
                         ZIndex: =3
@@ -646,7 +649,7 @@
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 FillPortions: =0
-                Height: =BodyContainer.Height
+                Height: =BodyContainerScreen3_1.Height-BodyContainerScreen3_1.PaddingBottom-BodyContainerScreen3_1.PaddingTop
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
@@ -705,7 +708,6 @@
                         OnSelect: =
                         PaddingBottom: =3
                         PaddingLeft: =20+EmployeePhotoScreen3_1.Width
-                        PaddingTop: =3
                         PressedBorderColor: =RGBA(0, 69, 120, 1)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(16, 110, 190, 1)
