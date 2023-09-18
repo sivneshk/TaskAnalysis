@@ -3642,6 +3642,90 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 8
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 8
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 8
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 8
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 8
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 8
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 8
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
             }
           ]
         }
@@ -3732,83 +3816,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.TemplateSize"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.TemplateSize",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 12,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ChosenTask_3"
-                  }
-                }
-              },
-              "properties": {
-                "member": "TemplateSize",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ChosenTask_3"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.TemplateSize"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.TemplateSize",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 7,
-                  "charOffset": 12,
-                  "snippet": {
-                    "text": ".Height"
-                  }
-                }
-              },
-              "properties": {
-                "member": "TemplateSize",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.Items"
                 }
               ],
@@ -3889,32 +3896,32 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1.TemplateSize"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1.ChosenCOCO_3.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1.TemplateSize",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1.ChosenCOCO_3.Text",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 12,
-                  "charOffset": 0,
+                  "charLength": 15,
+                  "charOffset": 8,
                   "snippet": {
-                    "text": "ChosenTask_3"
+                    "text": ".'Company Code'"
                   }
                 }
               },
               "properties": {
-                "member": "TemplateSize",
+                "member": "Text",
                 "module": "ForManagerEditScreen/UserHomeScreen_1",
-                "type": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1"
+                "type": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1.ChosenCOCO_3"
               }
             }
           ],
           "message": {
             "arguments": [
-              "ChosenTask_3"
+              "Company Code"
             ],
             "id": "issue"
           },
@@ -3929,37 +3936,80 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1.TemplateSize"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1.ChosenTask_3.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1.TemplateSize",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1.ChosenTask_3.Text",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 7,
-                  "charOffset": 12,
+                  "charLength": 5,
+                  "charOffset": 8,
                   "snippet": {
-                    "text": ".Height"
+                    "text": ".Task"
                   }
                 }
               },
               "properties": {
-                "member": "TemplateSize",
+                "member": "Text",
                 "module": "ForManagerEditScreen/UserHomeScreen_1",
-                "type": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1"
+                "type": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1.ChosenTask_3"
               }
             }
           ],
           "message": {
+            "arguments": [
+              "Task"
+            ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1.associatedLE_3.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1.associatedLE_3.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 14,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".Associated_LE"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "ForManagerEditScreen/UserHomeScreen_1",
+                "type": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1.associatedLE_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Associated_LE"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -3989,7 +4039,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4019,7 +4069,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4049,7 +4099,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4079,7 +4129,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4109,7 +4159,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4139,7 +4189,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4169,7 +4219,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4199,7 +4249,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4229,7 +4279,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4259,7 +4309,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4289,7 +4339,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4319,7 +4369,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4349,7 +4399,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4379,7 +4429,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4409,7 +4459,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4439,7 +4489,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4469,7 +4519,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4499,7 +4549,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4529,7 +4579,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4559,7 +4609,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4589,7 +4639,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4619,7 +4669,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4649,7 +4699,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4679,7 +4729,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4709,7 +4759,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4739,7 +4789,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4769,7 +4819,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4799,7 +4849,37 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1.InputHours_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1.InputHours_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ForManagerEditScreen/UserHomeScreen_1",
+                "type": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanelScreen3_1.GroupedTaxonomyGalleryScreen3_1.GroupByNameTaxonomy_1.InputHours_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4829,7 +4909,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -4859,7 +4939,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -4888,6 +4968,35 @@
             "level": "Medium"
           },
           "ruleId": "app-DataSourceDefaultMaxRowsLimit",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "module": "ForManagerEditScreen/UserHomeScreen_1",
+                "type": "'ForManagerEditScreen/UserHomeScreen_1'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ScreenHasManyControls",
           "ruleIndex": 7
         }
       ],
@@ -4947,20 +5056,6 @@
                 "howToFix": [
                   "Remove or correct the reference to the name that isn't valid."
                 ],
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrInvalidDot",
-              "messageStrings": {
-                "issue": {
-                  "text": "Invalid use of '.'"
-                }
-              },
-              "properties": {
-                "componentType": "app",
                 "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
@@ -5032,6 +5127,27 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "A 'data row limit' more than 500 may result in a slower app when running non-delegable queries, because the app will have to process every row itself, rather than running the query on the server."
+              }
+            },
+            {
+              "id": "app-ScreenHasManyControls",
+              "messageStrings": {
+                "issue": {
+                  "text": "Too many controls on a screen"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Reduce the number of controls on the screen.",
+                  "Break the app into more screens to reduce the per-screen complexity.",
+                  "Use components to unify grouped controls that are identical across screens, reducing duplication.",
+                  "Use galleries to represent a series of repeated similar controls.",
+                  "Break the app into multiple apps so that each app is small and performant."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"ForManagerEditScreen/UserHomeScreen_1\" is 314, which exceeds the maximum threshold recommended (300)."
               }
             },
             {
