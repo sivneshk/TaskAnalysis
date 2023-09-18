@@ -664,15 +664,15 @@
                     DelayItemLoading: =true
                     Items: |-
                         =AddColumns(
-                            GroupBy(If(And(IsBlank(SlicerUserMailScreen3.Selected.Value),IsBlank(SlicerUniqueIDScreen3.Selected.Value),IsBlank(SlicerUserMailScreen3.Selected.Value)),
+                            GroupBy(If(And(IsBlank(SlicerUserMailScreen3.Selected.Value),IsBlank(SlicerUniqueIDScreen3.Selected.Value),IsBlank(SlicerCOCOScreen3.Selected.Value)),
                                     'Task Analysis Taxonomy Collection',
                                     Filter('Task Analysis Taxonomy Collection', IsBlank(SlicerUserMailScreen3.SelectedItems.Value) Or
                                        IsEmpty(SlicerUserMailScreen3.SelectedItems) Or
                                        'User Name' in SlicerUserMailScreen3.SelectedItems, 
                         
-                                       IsBlank(SlicerUserMailScreen3.SelectedItems.Value) Or
-                                       IsEmpty(SlicerUserMailScreen3.SelectedItems) Or
-                                       CoCo in SlicerUserMailScreen3.SelectedItems , 
+                                       IsBlank(SlicerCOCOScreen3.SelectedItems.Value) Or
+                                       IsEmpty(SlicerCOCOScreen3.SelectedItems) Or
+                                       CoCo in SlicerCOCOScreen3.SelectedItems , 
                                        
                                        IsBlank(SlicerUniqueIDScreen3.SelectedItems.Value) Or
                                        IsEmpty(SlicerUniqueIDScreen3.SelectedItems) Or
@@ -727,12 +727,6 @@
                         Height: =EmployeeNameCardScreen3_1.Height-EmployeeNameCardScreen3_1.PaddingBottom-EmployeeNameCardScreen3_1.PaddingTop
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverFill: =RGBA(0, 0, 0, 0)
-                        Image: |
-                            =If(
-                               Office365Users.UserPhotoMetadata(LookUp('Task Analysis Taxonomy Collection','User Name'=ThisItem.UserName, 'User Email')).HasPhoto = true,
-                               Office365Users.UserPhotoV2(LookUp('Task Analysis Taxonomy Collection','User Name'=ThisItem.UserName, 'User Email')),
-                               SampleImage
-                            )
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedFill: =RGBA(0, 0, 0, 0)
                         RadiusBottomLeft: =Self.Height
