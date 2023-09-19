@@ -771,7 +771,7 @@
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Width: =1270
+                        Width: =EmployeeNameCardScreen3_1.Width
                         Y: =EmployeeNameCardScreen3_1.Height
                         ZIndex: =6
 
@@ -788,7 +788,7 @@
                             PaddingLeft: =10
                             Size: =Self.Height/4
                             Text: ="Process Name"
-                            Width: =RightPanel.Width-CocoLabelScreen3_1.Width-BusinessSegScreen3_1.Width-HrsSpentLabelScreen3_1.Width-FillerScreen3_1.Width-LegalEntityLabelScreen3_1.Width-RegionLabelScreen3_1.Width
+                            Width: =Parent.Width-CocoLabelScreen3_1.Width-BusinessSegScreen3_1.Width-HrsSpentLabelScreen3_1.Width-FillerScreen3_1.Width-LegalEntityLabelScreen3_1.Width-RegionLabelScreen3_1.Width
                             X: =HeaderTaxonomyContainer3.PaddingLeft
                             ZIndex: =1
 
@@ -805,7 +805,7 @@
                             Height: =HeaderTaxonomyContainer3.Height
                             Size: =Self.Height/4
                             Text: ="CoCo"
-                            Width: =RightPanel.Width/11
+                            Width: =Parent.Width/11
                             X: =ProcessNameLabelScreen3_1.Width+ProcessNameLabelScreen3_1.X
                             ZIndex: =2
 
@@ -824,7 +824,7 @@
                             Text: |-
                                 ="Business
                                 Segment"
-                            Width: =RightPanel.Width/11
+                            Width: =Parent.Width/11
                             X: =LegalEntityLabelScreen3_1.X+LegalEntityLabelScreen3_1.Width
                             ZIndex: =3
 
@@ -841,7 +841,7 @@
                             Height: =HeaderTaxonomyContainer3.Height
                             Size: =Self.Height/4
                             Text: ="Monthly Hours"
-                            Width: =RightPanel.Width/12
+                            Width: =Parent.Width/12
                             X: =RegionLabelScreen3_1.X+RegionLabelScreen3_1.Width
                             ZIndex: =4
 
@@ -858,7 +858,7 @@
                             Height: =61
                             Size: =0
                             Text: =""
-                            Width: =RightPanel.Width*0.05
+                            Width: =Parent.Width*0.05
                             X: =1206
                             ZIndex: =5
 
@@ -875,7 +875,7 @@
                             Height: =HeaderTaxonomyContainer3.Height
                             Size: =Self.Height/4
                             Text: ="LE"
-                            Width: =RightPanel.Width/6.5
+                            Width: =Parent.Width/6.5
                             X: =CocoLabelScreen3_1.Width+CocoLabelScreen3_1.X
                             ZIndex: =6
 
@@ -892,7 +892,7 @@
                             Height: =HeaderTaxonomyContainer3.Height
                             Size: =Self.Height/4
                             Text: ="Region"
-                            Width: =RightPanel.Width/11
+                            Width: =Parent.Width/11
                             X: =BusinessSegScreen3_1.X+BusinessSegScreen3_1.Width
                             ZIndex: =7
 
