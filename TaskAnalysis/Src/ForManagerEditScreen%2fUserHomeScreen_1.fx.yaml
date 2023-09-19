@@ -344,13 +344,28 @@
                         AllowMultiSelect: =true
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
-                        DefaultSelectedItems: =If(SlicerUserMailScreen3.Selected.Value = Blank(), Blank(), First(Distinct(Filter('Process Taxonomy',Title = SlicerUserMailScreen3.Selected.Value),L1)))
+                        DefaultSelectedItems: =Blank()
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilterScreen3_1.Height/11
-                        Items: |
-                            =If(SlicerUserMailScreen3.Selected.Value = Blank(), Sort(Distinct('Task Analysis Taxonomy Collection',CoCo),Value), Distinct(Filter('Task Analysis Taxonomy Collection','User Name'=SlicerUserMailScreen3.Selected.Value),CoCo))
+                        Items: |-
+                            =If(
+                                IsBlank(SlicerUserMailScreen3.SelectedItems) && IsEmpty(SlicerUserMailScreen3.SelectedItems),
+                                Sort(
+                                    Distinct(
+                                        'Task Analysis Taxonomy Collection',
+                                        CoCo
+                                    ),
+                                    Value
+                                ),
+                                Distinct(
+                                    Filter(
+                                        'Task Analysis Taxonomy Collection',
+                                        'User Name' in SlicerUserMailScreen3.SelectedItems),
+                                    CoCo
+                                )
+                            )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         OnChange: =Set(varL1,SlicerCOCOScreen3.Selected.Value)
@@ -454,28 +469,21 @@
                         AllowMultiSelect: =true
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
-                        DefaultSelectedItems: |-
-                            =If(SlicerUserMailScreen3.Selected.Value = Blank()
-                                ,
-                                Blank()
-                                ,
-                                First(Distinct(Filter('Process Taxonomy',Title = SlicerUserMailScreen3.Selected.Value),L2))
-                                
-                            )
+                        DefaultSelectedItems: =Blank()
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilterScreen3_1.Height/11
                         Items: |-
-                            =If(SlicerUserMailScreen3.Selected.Value = Blank() && SlicerCOCOScreen3.Selected.Value=Blank()
+                            =If(IsBlank(SlicerUserMailScreen3.SelectedItems) && IsBlank(SlicerCOCOScreen3.SelectedItems) && IsEmpty(SlicerUserMailScreen3.SelectedItems) && IsEmpty(SlicerCOCOScreen3.SelectedItems)
                                 ,
                                 Sort(Distinct('Task Analysis Taxonomy Collection',Title),Value)
                                 , 
-                                SlicerUserMailScreen3.Selected.Value = Blank() 
+                                IsBlank(SlicerUserMailScreen3.SelectedItems) && IsEmpty(SlicerUserMailScreen3.SelectedItems)
                                 ,
-                                Sort(Distinct(Filter('Task Analysis Taxonomy Collection',CoCo= SlicerCOCOScreen3.Selected.Value),Title),Value)
+                                Sort(Distinct(Filter('Task Analysis Taxonomy Collection',CoCo in SlicerCOCOScreen3.SelectedItems),Title),Value)
                                 ,
-                                Distinct(Filter('Task Analysis Taxonomy Collection','User Name'=SlicerUserMailScreen3.Selected.Value),Title)
+                                Distinct(Filter('Task Analysis Taxonomy Collection','User Name'in SlicerUserMailScreen3.SelectedItems),Title)
                             )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
