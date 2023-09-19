@@ -1497,7 +1497,7 @@ TaskAnalysisScreen As screen:
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
-                        Tooltip: ="Delete"
+                        Tooltip: ="Remove"
                         Width: =(RightPanel.Width-InputHours.X-InputHours.Width)/3
                         X: =Filler.X
                         Y: =(TaxonomyCollect.TemplateHeight-Self.Height)/2

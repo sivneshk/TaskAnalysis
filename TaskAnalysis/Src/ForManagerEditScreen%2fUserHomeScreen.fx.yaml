@@ -792,6 +792,29 @@
                             Y: =(ChosenTask_3.Height-Self.Height)/2
                             ZIndex: =9
 
+                        DeleteRowIcon_3 As icon.Cancel:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            DisplayMode: =varEdit
+                            FocusedBorderThickness: =4
+                            Height: =ChosenTask_3.Height/3
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =RGBA(2, 188, 148, 1)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Icon: =Icon.Cancel
+                            OnSelect: =Remove(GroupByNameTaxonomy3,ThisItem)
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedColor: =RGBA(2, 188, 148, 1)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Tooltip: ="Remove"
+                            Width: =(Parent.Width-InputHoursReview_3.X-InputHoursReview_3.Width)/3
+                            X: =FillerScreen3_1.X
+                            Y: =(ChosenTask_3.Height-Self.Height)/2
+                            ZIndex: =10
+
                     HeaderTaxonomyContainer3 As groupContainer.manualLayoutContainer:
                         Height: =RightPanel3.Height/15
                         RadiusBottomLeft: =4
@@ -886,7 +909,7 @@
                             Size: =0
                             Text: =""
                             Width: =Parent.Width*0.05
-                            X: =1206
+                            X: =HrsSpentLabelScreen3_1.X+HrsSpentLabelScreen3_1.Width
                             ZIndex: =5
 
                         LegalEntityLabelScreen3_1 As label:
@@ -954,7 +977,7 @@
                         HoverBorderColor: =ColorFade(Self.BorderColor,-10%)
                         HoverColor: =ColorFade(Self.Color,-10%)
                         HoverFill: =RGBA(2, 188, 148, 0.1)
-                        OnSelect: =Set(varEdit, DisplayMode.View)
+                        OnSelect: =Set(varEdit, DisplayMode.Disabled)
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
                         PressedColor: =ColorFade(Self.Color,-20%)
                         PressedFill: =RGBA(255, 255, 255, 1)
@@ -997,7 +1020,7 @@
                         Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
                         ZIndex: =2
 
-                    Icon1 As icon.Reload:
+                    RefreshTableIcon As icon.Reload:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         Color: =RGBA(5, 50, 43, 1)
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
