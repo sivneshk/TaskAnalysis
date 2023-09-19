@@ -734,26 +734,6 @@
                             Y: =(ChosenTask_3.Height-Self.Height)/2
                             ZIndex: =7
 
-                        HoursInputReview_3 As label:
-                            Align: =Align.Center
-                            BorderColor: =RGBA(208, 208, 208, 1)
-                            BorderThickness: =1
-                            Color: =RGBA(50, 49, 48, 1)
-                            DisabledBorderColor: =RGBA(148, 148, 148, 1)
-                            DisabledColor: =RGBA(50, 49, 48, 1)
-                            DisplayMode: =DisplayMode.View
-                            FocusedBorderThickness: =1
-                            Font: ="Poppins"
-                            FontWeight: =FontWeight.Semibold
-                            Height: =ChosenTask_3.Height*0.5
-                            OnSelect: =Select(Parent)
-                            Size: =ChosenTask_3.Height/8
-                            Text: =ThisItem.'Input Hours'
-                            Width: =HrsSpentLabel_1.Width*0.7
-                            X: =HrsSpentLabelScreen3_1.X + (HrsSpentLabelScreen3_1.Width-Self.Width)/2
-                            Y: =(ChosenTask_3.Height-Self.Height)/2
-                            ZIndex: =8
-
                         InputHoursReview_3 As text:
                             Align: =Align.Center
                             BorderColor: =RGBA(208,208,208,1)
