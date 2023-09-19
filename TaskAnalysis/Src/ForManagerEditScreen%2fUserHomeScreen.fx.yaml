@@ -271,7 +271,7 @@
                         Height: =TaskFilterScreen3_1.Height/11
                         Items: |-
                             =If(
-                                IsEmpty(SlicerUserMailScreen3.SelectedItems),
+                                IsBlank(SlicerUserMailScreen3.SelectedItems) || IsEmpty(SlicerUserMailScreen3.SelectedItems),
                                 Sort(
                                     Distinct(
                                         'Task Analysis Taxonomy Collection',
@@ -315,15 +315,39 @@
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilterScreen3_1.Height/11
                         Items: |-
-                            =If(IsEmpty(SlicerUserMailScreen3.SelectedItems) && IsEmpty(SlicerCOCOScreen3.SelectedItems)
-                                ,
-                                Sort(Distinct('Task Analysis Taxonomy Collection',Title),Value)
-                                , 
-                                IsBlank(SlicerUserMailScreen3.SelectedItems) && IsEmpty(SlicerUserMailScreen3.SelectedItems)
-                                ,
-                                Sort(Distinct(Filter('Task Analysis Taxonomy Collection',CoCo in SlicerCOCOScreen3.SelectedItems),Title),Value)
-                                ,
-                                Distinct(Filter('Task Analysis Taxonomy Collection','User Name'in SlicerUserMailScreen3.SelectedItems),Title)
+                            =If(
+                                Or(
+                                    IsBlank(SlicerUserMailScreen3.SelectedItems),
+                                    IsEmpty(SlicerUserMailScreen3.SelectedItems)
+                                ) && Or(
+                                    IsEmpty(SlicerCOCOScreen3.SelectedItems),
+                                    IsBlank(SlicerCOCOScreen3.SelectedItems)
+                                ),
+                                Sort(
+                                    Distinct(
+                                        'Task Analysis Taxonomy Collection',
+                                        Title
+                                    ),
+                                    Value
+                                ),
+                                IsBlank(SlicerUserMailScreen3.SelectedItems) || IsEmpty(SlicerUserMailScreen3.SelectedItems),
+                                Sort(
+                                    Distinct(
+                                        Filter(
+                                            'Task Analysis Taxonomy Collection',
+                                            CoCo in SlicerCOCOScreen3.SelectedItems
+                                        ),
+                                        Title
+                                    ),
+                                    Value
+                                ),
+                                Distinct(
+                                    Filter(
+                                        'Task Analysis Taxonomy Collection',
+                                        'User Name' in SlicerUserMailScreen3.SelectedItems
+                                    ),
+                                    Title
+                                )
                             )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
