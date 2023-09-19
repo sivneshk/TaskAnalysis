@@ -463,8 +463,8 @@
                         Size: =Self.Height/3
                         Text: ="Clear"
                         Width: =SlicerUserMailScreen3.Width*0.25
-                        X: =DropdownL1.X
-                        Y: =(ButtonGroup.Height-Self.Height)/2
+                        X: =SlicerUserMailScreen3.X
+                        Y: =(ButtonGroupScreen3_1.Height-Self.Height)/2
                         ZIndex: =2
 
                     AddTaskBtn_1 As button:
@@ -492,8 +492,8 @@
                         Size: =Self.Height/3
                         Text: ="+ Add Task to List"
                         Width: =SlicerUserMailScreen3.Width*0.72
-                        X: =ButtonGroup.Width-ClearBtn_1.X-Self.Width
-                        Y: =(ButtonGroup.Height-Self.Height)/2
+                        X: =ButtonGroupScreen3_1.Width-ClearBtn_1.X-Self.Width
+                        Y: =(ButtonGroupScreen3_1.Height-Self.Height)/2
                         ZIndex: =3
 
             RightPanel3 As groupContainer.verticalAutoLayoutContainer:
@@ -554,7 +554,7 @@
                         Fill: =RGBA(255, 255, 255, 1)
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
-                        Height: =HeaderTaxonomy.Height
+                        Height: =LeftPanelTitleScreen3_1.Height*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =RGBA(16, 110, 190, 1)
@@ -989,6 +989,7 @@
                         PressedColor: =ColorFade(Self.Color,20%)
                         PressedFill: =RGBA(0, 0, 0, 0)
                         Rotation: =80
+                        Tooltip: ="Click to refresh table"
                         Width: =Self.Height
                         X: =EditBtn.X-Self.Width-10
                         Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
