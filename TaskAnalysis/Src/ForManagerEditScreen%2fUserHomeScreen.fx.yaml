@@ -1,4 +1,4 @@
-"'ForManagerEditScreen/UserHomeScreen_1' As screen":
+"'ForManagerEditScreen/UserHomeScreen' As screen":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: =
 
