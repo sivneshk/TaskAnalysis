@@ -450,7 +450,8 @@
                         HoverColor: =RGBA(148, 148, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |
-                            =Reset(SlicerUserMailScreen3);
+                            =Set(varEdit, DisplayMode.View)
+                            Reset(SlicerUserMailScreen3);
                             Reset(SlicerCOCOScreen3);
                             Reset(SlicerUniqueIDScreen3);
                         PressedBorderColor: =RGBA(208, 208, 208, 1)
@@ -753,6 +754,38 @@
                             Y: =(ChosenTask_3.Height-Self.Height)/2
                             ZIndex: =8
 
+                        InputHoursReview_3 As text:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(208,208,208,1)
+                            Color: =RGBA(50, 49, 48, 1)
+                            Default: =ThisItem.'Input Hours'
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(50, 49, 48, 1)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            DisplayMode: =varEdit
+                            FocusedBorderThickness: =2
+                            Font: ="Poppins"
+                            Height: =ChosenTask_3.Height*0.5
+                            HintText: ="Hours"
+                            HoverBorderColor: =If(Value(SumHoursCheck.Text)>160, ColorFade(Color.Red,-20%), RGBA(148, 148, 148, 1))
+                            HoverColor: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            OnChange: =
+                            OnSelect: =
+                            PressedBorderColor: =RGBA(208, 208, 208, 1)
+                            PressedColor: =RGBA(50, 49, 48, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =2
+                            RadiusBottomRight: =2
+                            RadiusTopLeft: =2
+                            RadiusTopRight: =2
+                            Size: =ChosenTask_3.Height/8
+                            Tooltip: ="How many total working hours per month do you spend on this process?"
+                            Width: =HrsSpentLabel_1.Width*0.7
+                            X: =HrsSpentLabelScreen3_1.X + (HrsSpentLabelScreen3_1.Width-Self.Width)/2
+                            Y: =(ChosenTask_3.Height-Self.Height)/2
+                            ZIndex: =9
+
                     HeaderTaxonomyContainer3 As groupContainer.manualLayoutContainer:
                         Height: =RightPanel3.Height/15
                         RadiusBottomLeft: =4
@@ -942,7 +975,7 @@
                         HoverBorderColor: =ColorFade(Self.Fill,20%)
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(Self.Fill,20%)
-                        OnSelect: =
+                        OnSelect: =Set(varEdit, DisplayMode.Edit)
                         PressedBorderColor: =ColorFade(Self.Fill,-20%)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =ColorFade(Self.Fill,-20%)
