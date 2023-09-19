@@ -1,7 +1,11 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |-
-        =Set(iterator, 0);
+    OnStart: |
+        =/*Set Global Variable */
+        Set(iterator, 0);                  /* this is for Color ID in TaxonomyCollect */               
+        Set(varEdit, DisplayMode.View);    /* so the Manager Review Screen is in View Mode upon OnStart */
+        
+        /* Clear all non-permanent Collections OnStart */
         Clear(colTaxonomy);
         Clear(colTaxonomyTemp);
         Clear(FinalTaxonomy);
@@ -53,10 +57,6 @@ App As appinfo:
                 }
             )
         );*/
-        
-        
-        
-        ClearCollect(colGrpByName, GroupBy('Task Analysis Taxonomy Collection', "UserName", "GroupByName"))
     StartScreen: =Switch(Param("ScreenName"), "MainPage", TaskAnalysisScreen, "asManager", 'ForManagerEditScreen/UserHomeScreen')
     Theme: =PowerAppsTheme
 
