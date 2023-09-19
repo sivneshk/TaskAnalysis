@@ -969,6 +969,29 @@
                         Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
                         ZIndex: =2
 
+                    Icon1 As icon.Reload:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(5, 50, 43, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =SaveBtn.Height
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =ColorFade(Self.Color,40%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Reload
+                        PaddingBottom: =5
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =ColorFade(Self.Color,20%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        X: =EditBtn.X-Self.Width-10
+                        Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
+                        ZIndex: =3
+
         FooterContainerScreen3_1 As groupContainer.manualLayoutContainer:
             Height: =Parent.Height/25
             RadiusBottomLeft: =4
