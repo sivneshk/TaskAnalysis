@@ -7371,6 +7371,14 @@
           "InvariantPropertyName": "PaddingLeft",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Rotation",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -7519,6 +7527,11 @@
         {
           "Category": "Design",
           "PropertyName": "PaddingLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Rotation",
           "RuleProviderType": "Unknown"
         }
       ],

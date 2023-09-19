@@ -988,6 +988,7 @@
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =ColorFade(Self.Color,20%)
                         PressedFill: =RGBA(0, 0, 0, 0)
+                        Rotation: =80
                         Width: =Self.Height
                         X: =EditBtn.X-Self.Width-10
                         Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
