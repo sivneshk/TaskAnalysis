@@ -787,7 +787,7 @@
                             RadiusTopRight: =2
                             Size: =ChosenTask_3.Height/8
                             Tooltip: ="How many total working hours per month do you spend on this process?"
-                            Width: =HrsSpentLabel_1.Width*0.7
+                            Width: =HrsSpentLabelScreen3_1.Width*0.7
                             X: =HrsSpentLabelScreen3_1.X + (HrsSpentLabelScreen3_1.Width-Self.Width)/2
                             Y: =(ChosenTask_3.Height-Self.Height)/2
                             ZIndex: =9
