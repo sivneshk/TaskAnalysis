@@ -1400,28 +1400,25 @@ TaskAnalysisScreen As screen:
                                 DisplayMode.Edit
                             )*/
                             
-                            Coalesce(
-                                If(
+                            If(
+                                Or(
                                     !IsBlank(
                                         LookUp(
                                             PrepCollection,
                                             Text(Coco) = Text(ChosenCOCO) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
                                         ).PrepHours
                                     ),
-                                    DisplayMode.View,
-                                    DisplayMode.Edit
-                                ),
-                                If(
                                     !IsBlank(
                                         LookUp(
                                             AppCollection,
                                             Text(Coco) = Text(ChosenCOCO) && Text(Email) = "bassem.abdelrahman@bakerhughes.com"
                                         ).AppHours
-                                    ),
-                                    DisplayMode.View,
-                                    DisplayMode.Edit
-                                )
+                                    )
+                                ),
+                                DisplayMode.View,
+                                DisplayMode.Edit
                             )
+                            
                             
                             //APPROVER NOT WORKING 
                             // ADJUST ALSO IN APP(1ST PAGE) AND DEFAULT
