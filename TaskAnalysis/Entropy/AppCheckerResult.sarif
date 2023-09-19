@@ -1287,36 +1287,6 @@
           },
           "ruleId": "app-InefficientDelayLoading",
           "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanel3.ReviewBtnContainer_2.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanel3.ReviewBtnContainer_2.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanel3.ReviewBtnContainer_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
         }
       ],
       "tool": {

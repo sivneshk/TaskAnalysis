@@ -530,6 +530,9 @@
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
                 RadiusBottomLeft: =10
                 RadiusBottomRight: =10
                 RadiusTopLeft: =10
@@ -564,7 +567,7 @@
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplateSize: =280
-                    Width: =RightPanel3.Width
+                    Width: =RightPanel3.Width-RightPanel3.PaddingLeft-RightPanel3.PaddingRight
                     ZIndex: =6
 
                     EmployeeNameCardScreen3_1 As button:
@@ -922,6 +925,7 @@
 
                 ReviewBtnContainer_2 As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.Start
+                    DropShadow: =DropShadow.Light
                     FillPortions: =0
                     Height: =ButtonGroupScreen3_1.Height
                     LayoutMinHeight: =100
@@ -932,7 +936,7 @@
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =RightPanel.Width
+                    Width: =RightPanel3.Width-RightPanel3.PaddingLeft-RightPanel3.PaddingRight
                     Y: =GroupedTaxonomyGallery3.Height
                     ZIndex: =7
 
