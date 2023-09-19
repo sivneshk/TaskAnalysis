@@ -14,86 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 420,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 390,
-                  "snippet": {
-                    "text": "Or"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanel3.GroupedTaxonomyGallery3.Items"
                 }
               ],
@@ -174,19 +94,99 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.AccessibleLabel"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.AccessibleLabel",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 420,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 390,
+                  "snippet": {
+                    "text": "Or"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3"
+                "module": "TaxonomyReviewScreen",
+                "type": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery"
               }
             }
           ],
@@ -204,79 +204,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.TabIndex"
+                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.TabIndex",
+                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy"
+                "module": "TaxonomyReviewScreen",
+                "type": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery"
               }
             }
           ],
@@ -954,19 +894,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.AccessibleLabel"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.AccessibleLabel",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "TaxonomyReviewScreen",
-                "type": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery"
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3"
               }
             }
           ],
@@ -984,19 +924,79 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.TabIndex"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.TabIndex",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "TaxonomyReviewScreen",
-                "type": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery"
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy"
               }
             }
           ],
@@ -1103,469 +1103,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.LeftPanelTitleScreen3.ProcessTaxoLabelScreen3.X"
+                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.FooterContainerScreen2.CopyrightScreen2.X"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.LeftPanelTitleScreen3.ProcessTaxoLabelScreen3.X",
+                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.FooterContainerScreen2.CopyrightScreen2.X",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "X",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.LeftPanelTitleScreen3.ProcessTaxoLabelScreen3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.LeftPanelTitleScreen3.ProcessTaxoLabelScreen3.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.LeftPanelTitleScreen3.ProcessTaxoLabelScreen3.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.LeftPanelTitleScreen3.ProcessTaxoLabelScreen3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserImageScreen3.X"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserImageScreen3.X",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "X",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserImageScreen3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserDisplayNameScreen3.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserDisplayNameScreen3.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserDisplayNameScreen3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserPositionTitleScreen3.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserPositionTitleScreen3.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserPositionTitleScreen3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.Height"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.Height",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Height",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.Items",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.EmployeeNameCardScreen3.Height"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.EmployeeNameCardScreen3.Height",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Height",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.EmployeeNameCardScreen3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.ProcessNameLabelScreen3.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.ProcessNameLabelScreen3.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.ProcessNameLabelScreen3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.CocoLabelScreen3.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.CocoLabelScreen3.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.CocoLabelScreen3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.LegalEntityLabelScreen3.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.LegalEntityLabelScreen3.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.LegalEntityLabelScreen3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.BusinessSegScreen3.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.BusinessSegScreen3.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.BusinessSegScreen3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.RegionLabelScreen3.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.RegionLabelScreen3.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.RegionLabelScreen3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.HrsSpentLabelScreen3.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.HrsSpentLabelScreen3.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.HrsSpentLabelScreen3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.FillerScreen3.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.FillerScreen3.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.FillerScreen3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.TemplateSize"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.TemplateSize",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TemplateSize",
-                "module": "ForManagerEditScreen/UserHomeScreen",
-                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy"
+                "module": "TaxonomyReviewScreen",
+                "type": "TaxonomyReviewScreen.HomeContainerScreen2.FooterContainerScreen2.CopyrightScreen2"
               }
             }
           ],
@@ -2152,19 +1702,469 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.FooterContainerScreen2.CopyrightScreen2.X"
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.LeftPanelTitleScreen3.ProcessTaxoLabelScreen3.X"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.FooterContainerScreen2.CopyrightScreen2.X",
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.LeftPanelTitleScreen3.ProcessTaxoLabelScreen3.X",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "X",
-                "module": "TaxonomyReviewScreen",
-                "type": "TaxonomyReviewScreen.HomeContainerScreen2.FooterContainerScreen2.CopyrightScreen2"
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.LeftPanelTitleScreen3.ProcessTaxoLabelScreen3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.LeftPanelTitleScreen3.ProcessTaxoLabelScreen3.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.LeftPanelTitleScreen3.ProcessTaxoLabelScreen3.Width",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.LeftPanelTitleScreen3.ProcessTaxoLabelScreen3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserImageScreen3.X"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserImageScreen3.X",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "X",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserImageScreen3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserDisplayNameScreen3.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserDisplayNameScreen3.Width",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserDisplayNameScreen3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserPositionTitleScreen3.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserPositionTitleScreen3.Width",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.LeftPanelScreen3.UserInfoScreen3.UserPositionTitleScreen3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.Height"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.Height",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Height",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.EmployeeNameCardScreen3.Height"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.EmployeeNameCardScreen3.Height",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Height",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.EmployeeNameCardScreen3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.ProcessNameLabelScreen3.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.ProcessNameLabelScreen3.Width",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.ProcessNameLabelScreen3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.CocoLabelScreen3.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.CocoLabelScreen3.Width",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.CocoLabelScreen3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.LegalEntityLabelScreen3.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.LegalEntityLabelScreen3.Width",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.LegalEntityLabelScreen3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.BusinessSegScreen3.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.BusinessSegScreen3.Width",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.BusinessSegScreen3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.RegionLabelScreen3.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.RegionLabelScreen3.Width",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.RegionLabelScreen3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.HrsSpentLabelScreen3.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.HrsSpentLabelScreen3.Width",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.HrsSpentLabelScreen3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.FillerScreen3.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.FillerScreen3.Width",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.HeaderTaxonomyContainerScreen3.FillerScreen3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.TemplateSize"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy.TemplateSize",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TemplateSize",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.HomeContainerScreen3.BodyContainerScreen3.RightPanelScreen3.GroupedTaxonomyGalleryScreen3.GroupByNameTaxonomy"
               }
             }
           ],
