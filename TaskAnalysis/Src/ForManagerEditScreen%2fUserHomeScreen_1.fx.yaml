@@ -450,8 +450,7 @@
                         HoverColor: =RGBA(148, 148, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |
-                            =Set(varEdit, DisplayMode.View);
-                            Reset(SlicerUserMailScreen3);
+                            =Reset(SlicerUserMailScreen3);
                             Reset(SlicerCOCOScreen3);
                             Reset(SlicerUniqueIDScreen3);
                         PressedBorderColor: =RGBA(208, 208, 208, 1)
@@ -927,7 +926,7 @@
                         HoverBorderColor: =ColorFade(Self.BorderColor,-10%)
                         HoverColor: =ColorFade(Self.Color,-10%)
                         HoverFill: =RGBA(2, 188, 148, 0.1)
-                        OnSelect: =
+                        OnSelect: =Set(varEdit, DisplayMode.View)
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
                         PressedColor: =ColorFade(Self.Color,-20%)
                         PressedFill: =RGBA(255, 255, 255, 1)
