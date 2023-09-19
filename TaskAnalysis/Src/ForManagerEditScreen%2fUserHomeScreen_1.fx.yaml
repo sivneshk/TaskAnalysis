@@ -271,7 +271,7 @@
                         Height: =TaskFilterScreen3_1.Height/11
                         Items: |-
                             =If(
-                                IsBlank(SlicerUserMailScreen3.SelectedItems) && IsEmpty(SlicerUserMailScreen3.SelectedItems),
+                                IsEmpty(SlicerUserMailScreen3.SelectedItems),
                                 Sort(
                                     Distinct(
                                         'Task Analysis Taxonomy Collection',
@@ -315,7 +315,7 @@
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilterScreen3_1.Height/11
                         Items: |-
-                            =If(IsBlank(SlicerUserMailScreen3.SelectedItems) && IsBlank(SlicerCOCOScreen3.SelectedItems) && IsEmpty(SlicerUserMailScreen3.SelectedItems) && IsEmpty(SlicerCOCOScreen3.SelectedItems)
+                            =If(IsEmpty(SlicerUserMailScreen3.SelectedItems) && IsEmpty(SlicerCOCOScreen3.SelectedItems)
                                 ,
                                 Sort(Distinct('Task Analysis Taxonomy Collection',Title),Value)
                                 , 
