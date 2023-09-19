@@ -14525,7 +14525,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Value1_1",
-      "ParentIndex": 10,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14606,7 +14606,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Value2_1",
-      "ParentIndex": 10,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
