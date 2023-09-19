@@ -214,80 +214,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.LeftPanelScreen3_1.ButtonGroupScreen3_1.ClearBtn_1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.LeftPanelScreen3_1.ButtonGroupScreen3_1.ClearBtn_1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 5,
-                  "charOffset": 31,
-                  "snippet": {
-                    "text": "Reset"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "ForManagerEditScreen/UserHomeScreen_1",
-                "type": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.LeftPanelScreen3_1.ButtonGroupScreen3_1.ClearBtn_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrOperatorExpected",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.LeftPanelScreen3_1.ButtonGroupScreen3_1.ClearBtn_1.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.LeftPanelScreen3_1.ButtonGroupScreen3_1.ClearBtn_1.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 5,
-                  "charOffset": 31,
-                  "snippet": {
-                    "text": "Reset"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "ForManagerEditScreen/UserHomeScreen_1",
-                "type": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.LeftPanelScreen3_1.ButtonGroupScreen3_1.ClearBtn_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrOperatorExpected",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen_1'.HomeContainerScreen3_1.BodyContainerScreen3_1.RightPanel3.GroupedTaxonomyGallery3.Items"
                 }
               ],
@@ -391,7 +317,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -421,7 +347,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -451,7 +377,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -481,7 +407,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -511,7 +437,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -541,7 +467,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -571,7 +497,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -601,7 +527,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -631,7 +557,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -661,7 +587,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -691,7 +617,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -721,7 +647,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -751,7 +677,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -781,7 +707,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -811,7 +737,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -841,7 +767,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -871,7 +797,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -901,7 +827,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -931,7 +857,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -961,7 +887,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -991,7 +917,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1021,7 +947,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1051,7 +977,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1081,7 +1007,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1111,7 +1037,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1141,7 +1067,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1171,7 +1097,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1201,7 +1127,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1231,7 +1157,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1261,7 +1187,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1291,7 +1217,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1320,7 +1246,7 @@
             "level": "Medium"
           },
           "ruleId": "app-DataSourceDefaultMaxRowsLimit",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1350,7 +1276,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1380,7 +1306,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1410,7 +1336,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1440,7 +1366,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1470,7 +1396,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1500,7 +1426,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1530,7 +1456,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1560,7 +1486,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1590,7 +1516,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1620,7 +1546,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1650,7 +1576,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1680,7 +1606,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1710,7 +1636,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1740,7 +1666,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1770,7 +1696,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1800,7 +1726,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1830,7 +1756,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1860,7 +1786,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1890,7 +1816,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1920,7 +1846,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1950,7 +1876,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1980,7 +1906,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2010,7 +1936,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2040,7 +1966,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2070,7 +1996,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2100,7 +2026,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2130,7 +2056,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2160,7 +2086,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2190,7 +2116,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2220,7 +2146,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2250,7 +2176,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2280,7 +2206,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2310,7 +2236,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2340,7 +2266,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2370,7 +2296,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2400,7 +2326,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2430,7 +2356,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 7
+          "ruleIndex": 6
         }
       ],
       "tool": {
@@ -2473,23 +2399,6 @@
                   "Try moving your data to a different data source."
                 ],
                 "level": "Medium",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrOperatorExpected",
-              "messageStrings": {
-                "issue": {
-                  "text": "Expected operator. We expect an operator such as +, *, or & at this point in the formula."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Edit your formula so that it includes an operator between the operands."
-                ],
-                "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
               }

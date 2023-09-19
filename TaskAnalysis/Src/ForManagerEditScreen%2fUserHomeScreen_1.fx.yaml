@@ -450,7 +450,7 @@
                         HoverColor: =RGBA(148, 148, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |
-                            =Set(varEdit, DisplayMode.View)
+                            =Set(varEdit, DisplayMode.View);
                             Reset(SlicerUserMailScreen3);
                             Reset(SlicerCOCOScreen3);
                             Reset(SlicerUniqueIDScreen3);
