@@ -1034,19 +1034,16 @@
                                 )));
                             */
                             
+                            
                             ClearCollect(colToUpdate,
-                                Ungroup(
-                                    ForAll(GroupedTaxonomyGallery3.AllItems,
-                                        ForAll(Filter(
-                                    GroupByNameTaxonomy3.AllItems,
-                                    ToggleDetectChange.Value = true
-                                ) As aPatch,
-                                            {ID: aPatch.'Process Name'
-                                            }
-                                        )
+                                ForAll(
+                                    Ungroup(
+                                        ForAll(GroupedTaxonomyGallery3.AllItems, Filter(GroupByNameTaxonomy3.AllItems, ToggleDetectChange.Value = true)),
+                                        "Value"
                                     ),
-                                    "Value"
-                                 )
+                                    {ID: ThisRecord.ID
+                                    }
+                                )
                             );
                                     
                             
