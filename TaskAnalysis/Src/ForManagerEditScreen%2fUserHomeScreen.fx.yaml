@@ -1092,6 +1092,9 @@
                         HoverColor: =ColorFade(Self.Color,40%)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.Reload
+                        OnSelect: |-
+                            =Refresh('Task Analysis Taxonomy Collection');
+                            ClearCollect(colTaskAnalysisSP, 'Task Analysis Taxonomy Collection');
                         PaddingBottom: =2
                         PaddingLeft: =2
                         PaddingRight: =2
