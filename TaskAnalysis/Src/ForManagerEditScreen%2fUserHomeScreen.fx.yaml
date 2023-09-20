@@ -1035,7 +1035,7 @@
                             */
                             
                             
-                            ClearCollect(colToUpdate,
+                            /*ClearCollect(colToUpdate,
                                 ForAll(
                                     Ungroup(
                                         ForAll(GroupedTaxonomyGallery3.AllItems, Filter(GroupByNameTaxonomy3.AllItems, ToggleDetectChange.Value = true)),
@@ -1044,8 +1044,22 @@
                                     {ID: ID
                                     }
                                 )
-                            );
-                                    
+                            );*/
+                            
+                            Clear(colToUpdateV2);
+                            ForAll(
+                               GroupedTaxonomyGallery3.AllItems,
+                               ForAll(
+                                  GroupByNameTaxonomy3.AllItems,
+                                  If(
+                                     ThisRecord.ToggleDetectChange,
+                                     Collect(
+                                        colToUpdateV2,
+                                        {ID:ThisRecord.ID}
+                                     )
+                                  )
+                               )
+                            );   
                             
                             
                             Set(

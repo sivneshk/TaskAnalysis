@@ -3,7 +3,7 @@
     "IsComponentScoped": false,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "colToUpdate",
+    "Name": "colToUpdateV2",
     "Type": "CollectionDataSourceInfo"
   }
 ]
