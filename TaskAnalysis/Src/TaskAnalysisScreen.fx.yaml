@@ -1460,6 +1460,7 @@ TaskAnalysisScreen As screen:
                             
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
+                        Format: =TextFormat.Number
                         Height: =TaxonomyCollect.TemplateHeight*0.5
                         HintText: ="Hours"
                         HoverBorderColor: =If(Value(SumHoursCheck.Text)>160, ColorFade(Color.Red,-20%), RGBA(148, 148, 148, 1))
@@ -1627,7 +1628,7 @@ TaskAnalysisScreen As screen:
                             
                             
                             Clear(colHoursWithNoRowID);
-                            ForAll(TaxonomyCollect.AllItems, Collect(colHoursWithNoRowID, {Hours: InputHours.Text}));
+                            ForAll(TaxonomyCollect.AllItems, Collect(colHoursWithNoRowID, {Hours: Value(InputHours.Text)}));
                             
                             ClearCollect(colHoursWithRowID,ForAll(Sequence(CountRows(colHoursWithNoRowID)), Patch(Last(FirstN(colHoursWithNoRowID,Value)), {rowID: Value})));
                             

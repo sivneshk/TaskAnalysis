@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
     "CdpRevision": {
       "BaseUrl": "/",
-      "LastChangedTimeString": "2023-09-06T21:41:49.4930000Z",
+      "LastChangedTimeString": "2023-09-19T16:29:14.0420000Z",
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
