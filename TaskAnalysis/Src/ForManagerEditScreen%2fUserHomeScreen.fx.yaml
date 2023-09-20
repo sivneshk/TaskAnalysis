@@ -1027,15 +1027,15 @@
                                 ),
                                 Collect(
                                     colToUpdate,
-                                    {'Input Hours': Value(InputHoursReview_3.Text),
-                                     ID: ThisRecord.ID}
+                                    {'New Input Hours': Value(InputHoursReview_3.Text),
+                                     'SP ID': ThisRecord.ID}
                                 )
                             );
                             
                             Set(
                                 varEdit,
                                 DisplayMode.Disabled
-                            )
+                            );
                             
                             
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
