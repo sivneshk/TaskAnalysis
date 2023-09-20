@@ -1019,24 +1019,42 @@
                         HoverBorderColor: =ColorFade(Self.BorderColor,-10%)
                         HoverColor: =ColorFade(Self.Color,-10%)
                         HoverFill: =RGBA(2, 188, 148, 0.1)
-                        OnSelect: |+
-                            =ForAll(
-                                Filter(
+                        OnSelect: |
+                            =/*ForAll(
+                                GroupedTaxonomyGallery3.AllItems,
+                                ForAll(
+                                    
+                                    Filter(
+                                    GroupByNameTaxonomy3.AllItems,
+                                    ToggleDetectChange.Value = true
+                                ) As aPatch,
+                                Collect(
+                                    colToUpdate,
+                                    {'SP ID': aPatch.ID}
+                                )));
+                            */
+                            
+                            ClearCollect(colToUpdate,
+                                Ungroup(
+                                    ForAll(GroupedTaxonomyGallery3.AllItems,
+                                        ForAll(Filter(
                                     GroupByNameTaxonomy3.AllItems,
                                     ToggleDetectChange.Value = true
                                 ),
-                                Collect(
-                                    colToUpdate,
-                                    {         'SP ID': ThisRecord.ID}
-                                )
+                                            {ID: ThisRecord.ID
+                                            }
+                                        )
+                                    ),
+                                    "Value"
+                                 )
                             );
+                                    
+                            
                             
                             Set(
                                 varEdit,
                                 DisplayMode.Disabled
                             );
-                            
-                            
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
                         PressedColor: =ColorFade(Self.Color,-20%)
                         PressedFill: =RGBA(255, 255, 255, 1)
