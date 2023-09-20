@@ -1027,8 +1027,7 @@
                                 ),
                                 Collect(
                                     colToUpdate,
-                                    {'New Input Hours': Value(InputHoursReview_3.Text),
-                                     'SP ID': ThisRecord.ID}
+                                    {         'SP ID': ThisRecord.ID}
                                 )
                             );
                             
