@@ -10,6 +10,8 @@ App As appinfo:
         Clear(colTaxonomyTemp);
         Clear(FinalTaxonomy);
         
+        ClearCollect(colTaskAnalysisSP, 'Task Analysis Taxonomy Collection');
+        
         ClearCollect(
             PrepCollection,
             ForAll(
