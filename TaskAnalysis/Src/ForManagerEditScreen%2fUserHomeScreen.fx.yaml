@@ -1040,8 +1040,8 @@
                                         ForAll(Filter(
                                     GroupByNameTaxonomy3.AllItems,
                                     ToggleDetectChange.Value = true
-                                ),
-                                            {ID: ThisRecord.'Process Name'
+                                ) As aPatch,
+                                            {ID: aPatch.'Process Name'
                                             }
                                         )
                                     ),
