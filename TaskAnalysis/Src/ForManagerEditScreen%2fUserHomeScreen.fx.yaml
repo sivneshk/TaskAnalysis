@@ -610,8 +610,23 @@
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Image: |-
-                            =If(!IsBlank(ThisItem.UserName) && Office365Users.UserPhotoMetadata(LookUp('Task Analysis Taxonomy Collection','User Name'=ThisItem.UserName,EmployeeID)).HasPhoto,
-                            Office365Users.UserPhotoV2(LookUp('Task Analysis Taxonomy Collection','User Name'=ThisItem.UserName,EmployeeID)),SampleImage)
+                            =If(
+                                !IsBlank(ThisItem.UserName) && Office365Users.UserPhotoMetadata(
+                                    LookUp(
+                                        'Task Analysis Taxonomy Collection',
+                                        'User Name' = ThisItem.UserName,
+                                        EmployeeID
+                                    )
+                                ).HasPhoto,
+                                Office365Users.UserPhotoV2(
+                                    LookUp(
+                                        'Task Analysis Taxonomy Collection',
+                                        'User Name' = ThisItem.UserName,
+                                        EmployeeID
+                                    )
+                                ),
+                                SampleImage
+                            )
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedFill: =RGBA(0, 0, 0, 0)
                         RadiusBottomLeft: =Self.Height
