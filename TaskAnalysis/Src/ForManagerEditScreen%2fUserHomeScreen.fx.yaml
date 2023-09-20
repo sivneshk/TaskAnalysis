@@ -1041,7 +1041,7 @@
                                     GroupByNameTaxonomy3.AllItems,
                                     ToggleDetectChange.Value = true
                                 ),
-                                            {ID: ThisRecord.ID
+                                            {ID: ThisRecord.'Process Name'
                                             }
                                         )
                                     ),
