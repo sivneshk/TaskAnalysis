@@ -1041,7 +1041,7 @@
                                         ForAll(GroupedTaxonomyGallery3.AllItems, Filter(GroupByNameTaxonomy3.AllItems, ToggleDetectChange.Value = true)),
                                         "Value"
                                     ),
-                                    {ID: Value(InputHoursReview_3.Text)
+                                    {ID: ID
                                     }
                                 )
                             );
