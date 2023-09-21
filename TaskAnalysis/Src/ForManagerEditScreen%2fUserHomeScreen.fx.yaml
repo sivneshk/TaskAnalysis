@@ -1021,6 +1021,23 @@
                             X: =BusinessSegScreen3_1.X+BusinessSegScreen3_1.Width
                             ZIndex: =7
 
+                    Label2 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        OnSelect: =Select(Parent)
+                        Size: =13
+                        Text: =Concat(GroupByNameTaxonomy3.AllItems, Title)
+                        Visible: =false
+                        X: =195
+                        Y: =102
+                        ZIndex: =7
+
                 ReviewBtnContainer_2 As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.Start
                     DropShadow: =DropShadow.Light
@@ -1064,7 +1081,7 @@
                                     }
                                 )
                             );*/
-                            ForAll(GroupByNameTaxonomy3.AllItems, Task_A_UpdateorAddItems_ManagerScrntoSP.Run(Value(ID.Text), Value(InputHoursReview_3.Text)));
+                            ForAll(GroupByNameTaxonomy3.AllItems, Task_A_UpdateorAddItems_ManagerScrntoSP.Run(ID.Text,InputHoursReview_3.Text));
                             
                             Set(varEdit,DisplayMode.Disabled);
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
