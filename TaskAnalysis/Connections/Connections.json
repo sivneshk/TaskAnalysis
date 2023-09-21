@@ -33,6 +33,32 @@
     "dependents": [],
     "id": "32042caa-da35-4dde-bea6-a2ec68a6fef5"
   },
+  "65652baa-9e95-4c68-81d2-7b96a97fd6b1": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "19b5e644-cb10-42ed-8f11-529c8c1a7d1d"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "19b5e644-cb10-42ed-8f11-529c8c1a7d1d"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Task_A_UpdateorAddItems_ManagerScrntoSP"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "65652baa-9e95-4c68-81d2-7b96a97fd6b1"
+  },
   "772eb637-780b-4505-ac82-d4fd749ecd5b": {
     "connectionRef": {
       "displayName": "SharePoint",

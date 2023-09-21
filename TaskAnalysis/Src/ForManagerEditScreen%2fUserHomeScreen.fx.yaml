@@ -796,7 +796,7 @@
                             OnChange: |-
                                 =If(
                                     ThisItem.'Input Hours' <> Value(InputHoursReview_3.Text),
-                                    Collect(
+                                    ClearCollect(
                                         colToUpdate,
                                         {
                                             ID: ThisItem.ID,
@@ -833,7 +833,7 @@
                             HoverFill: =RGBA(0, 0, 0, 0)
                             Icon: =Icon.Cancel
                             OnSelect: |-
-                                =Collect(colToDelete, {ItemID: ThisItem.ID});
+                                =ClearCollect(colToDelete, {ItemID: ThisItem.ID});
                                 Remove(colTaskAnalysisSP,ThisItem)
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =RGBA(2, 188, 148, 1)
@@ -1030,11 +1030,20 @@
                         HoverColor: =ColorFade(Self.Color,-10%)
                         HoverFill: =RGBA(2, 188, 148, 0.1)
                         OnSelect: |
-                            =Clear(colToUpdate);
+                            =/*Clear(colToUpdate);
                             ClearCollect(test, GroupedTaxonomyGallery3.AllItems);
                             
+                            Collect(colToUpdate,
+                                ForAll(
+                                 Filter(GroupedTaxonomyGallery3.AllItems, ToggleDetectChange.Value),
+                                    ),
+                                    {ID: ThisRecord.ID
+                                    }
+                                )
+                            );*/
+                            
                             ForAll(GroupedTaxonomyGallery3.AllItems,
-                            ForAll(Filter(GroupByName, ToggleDetectChange.Value = true), Collect(colToUpdate, {ID: ThisRecord.ID})));
+                            Task_A_UpdateorAddItems_ManagerScrntoSP.Run(JSON(GroupByNameTaxonomy3.AllItems, JSONFormat.IgnoreBinaryData & JSONFormat.IgnoreUnsupportedTypes)));
                             
                             Set(
                                 varEdit,
