@@ -1069,24 +1069,27 @@
                         HoverBorderColor: =ColorFade(Self.BorderColor,-10%)
                         HoverColor: =ColorFade(Self.Color,-10%)
                         HoverFill: =RGBA(2, 188, 148, 0.1)
-                        OnSelect: |-
-                            =Clear(colToUpdate);
-                            
-                            ClearCollect(colToUpdate,
-                                Ungroup(
-                                    ForAll(Filter(GroupedTaxonomyGallery3.AllItems, ToggleDetectChange.Value = true) As _class,
-                                        {Answers: 
-                                            ForAll(_class.GroupByNameTaxonomy3.AllItems As _ans, 
-                                                {ID: Value(_ans.ID.Text)
-                                                }
-                                            )
-                                        }
+                        OnSelect: |
+                            =/* colToUpdate contains rows that has been UPDATED/CHANGED ONLY */
+                            Clear(colToUpdate);
+                            ForAll(
+                                Filter(
+                                    GroupByNameTaxonomy3.AllItems,
+                                    ToggleDetectChange.Value = true
                                 ),
-                                    "Answers"
+                                Collect(
+                                    colToUpdate,
+                                    {
+                                        'Sharepoint ID': Value(ID.Text),
+                                        'Updated Hours': Value(InputHoursReview_3.Text)
+                                    }
                                 )
-                            );   
+                            );
                             
-                            Set(varEdit,DisplayMode.Disabled);
+                            Set(
+                                varEdit,
+                                DisplayMode.Disabled
+                            );
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
                         PressedColor: =ColorFade(Self.Color,-20%)
                         PressedFill: =RGBA(255, 255, 255, 1)
