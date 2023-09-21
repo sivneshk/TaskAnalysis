@@ -867,6 +867,29 @@
                             Y: =(ChosenTask_3.Height-Self.Height)/2
                             ZIndex: =11
 
+                        ID As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =ChosenTask_3.Height/8
+                            Text: =ThisItem.ID
+                            Visible: =false
+                            Width: =RegionLabelScreen3_1.Width
+                            X: =BizSegment_3.X+BizSegment_3.Width
+                            ZIndex: =12
+
                     HeaderTaxonomyContainer3 As groupContainer.manualLayoutContainer:
                         Height: =RightPanel3.Height/15
                         RadiusBottomLeft: =4
@@ -1029,7 +1052,7 @@
                         HoverBorderColor: =ColorFade(Self.BorderColor,-10%)
                         HoverColor: =ColorFade(Self.Color,-10%)
                         HoverFill: =RGBA(2, 188, 148, 0.1)
-                        OnSelect: |
+                        OnSelect: |-
                             =/*Clear(colToUpdate);
                             ClearCollect(test, GroupedTaxonomyGallery3.AllItems);
                             
@@ -1041,14 +1064,9 @@
                                     }
                                 )
                             );*/
+                            ForAll(GroupByNameTaxonomy3.AllItems, Task_A_UpdateorAddItems_ManagerScrntoSP.Run(Value(ID.Text), Value(InputHoursReview_3.Text)));
                             
-                            ForAll(GroupedTaxonomyGallery3.AllItems,
-                            Task_A_UpdateorAddItems_ManagerScrntoSP.Run(JSON(GroupByNameTaxonomy3.AllItems, JSONFormat.IgnoreBinaryData & JSONFormat.IgnoreUnsupportedTypes)));
-                            
-                            Set(
-                                varEdit,
-                                DisplayMode.Disabled
-                            );
+                            Set(varEdit,DisplayMode.Disabled);
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
                         PressedColor: =ColorFade(Self.Color,-20%)
                         PressedFill: =RGBA(255, 255, 255, 1)

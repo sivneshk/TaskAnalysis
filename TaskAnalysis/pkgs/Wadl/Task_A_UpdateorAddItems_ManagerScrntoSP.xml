@@ -2,9 +2,11 @@
   <doc title="Task_A_Update or Add Items_Manager Scrn to SP" />
   <grammars>
     <jsonTypes targetNamespace="https://unitedstates-002.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
-      <string name="ManualTriggerInput_text_def" />
+      <number name="ManualTriggerInput_number_def" />
+      <number name="ManualTriggerInput_number_1_def" />
       <object name="ManualTriggerInput">
-        <property name="text" type="string" />
+        <property name="number" type="number" />
+        <property name="number_1" type="number" />
       </object>
     </jsonTypes>
   </grammars>
@@ -18,8 +20,11 @@
             <doc title="The api version" />
           </param>
           <representation mediaType="application/json">
-            <param style="plain" name="text" path="/text" type="xs:string" required="true">
-              <doc title="Input" />
+            <param style="plain" name="number" path="/number" type="xs:double" required="true">
+              <doc title="Number" />
+            </param>
+            <param style="plain" name="number_1" path="/number_1" type="xs:double" required="true">
+              <doc title="Number 1" />
             </param>
           </representation>
         </request>

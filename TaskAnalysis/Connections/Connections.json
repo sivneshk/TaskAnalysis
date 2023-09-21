@@ -33,32 +33,6 @@
     "dependents": [],
     "id": "32042caa-da35-4dde-bea6-a2ec68a6fef5"
   },
-  "65652baa-9e95-4c68-81d2-7b96a97fd6b1": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "19b5e644-cb10-42ed-8f11-529c8c1a7d1d"
-        }
-      },
-      "parameterHintsV2": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "19b5e644-cb10-42ed-8f11-529c8c1a7d1d"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "Task_A_UpdateorAddItems_ManagerScrntoSP"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "65652baa-9e95-4c68-81d2-7b96a97fd6b1"
-  },
   "772eb637-780b-4505-ac82-d4fd749ecd5b": {
     "connectionRef": {
       "displayName": "SharePoint",
@@ -90,8 +64,44 @@
       "Task Analysis Taxonomy Collection"
     ],
     "dependencies": {},
-    "dependents": [],
+    "dependents": [
+      "7c3136fd-0385-45c7-9653-7cb64c73c272"
+    ],
     "id": "772eb637-780b-4505-ac82-d4fd749ecd5b"
+  },
+  "7c3136fd-0385-45c7-9653-7cb64c73c272": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "772eb637-780b-4505-ac82-d4fd749ecd5b": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "19b5e644-cb10-42ed-8f11-529c8c1a7d1d"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "772eb637-780b-4505-ac82-d4fd749ecd5b"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "19b5e644-cb10-42ed-8f11-529c8c1a7d1d"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Task_A_UpdateorAddItems_ManagerScrntoSP"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "772eb637-780b-4505-ac82-d4fd749ecd5b"
+    },
+    "dependents": [],
+    "id": "7c3136fd-0385-45c7-9653-7cb64c73c272"
   },
   "8f1584d2-755a-4259-b7ee-f94afc161d49": {
     "connectionRef": {
