@@ -1250,7 +1250,7 @@
                         Size: =13
                         Text: =ThisItem.Title
                         X: =71
-                        Y: =10
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
                         ZIndex: =1
 
                     Checkbox1 As checkbox:
@@ -1264,6 +1264,7 @@
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
+                        Height: =Parent.TemplateHeight/2
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =RGBA(50, 49, 48, 1)
                         HoverFill: =RGBA(0, 0, 0, 0)
@@ -1273,6 +1274,8 @@
                         PressedFill: =RGBA(0, 0, 0, 0)
                         Size: =13
                         Text: =""
+                        Width: =Self.Height
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
                         ZIndex: =3
 
                     Label4 As label:
@@ -1288,7 +1291,7 @@
                         Size: =13
                         Text: =ThisItem.L1
                         X: =221
-                        Y: =10
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
                         ZIndex: =4
 
                     Label5 As label:
@@ -1304,6 +1307,7 @@
                         Size: =13
                         Text: =ThisItem.L2
                         X: =419
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
                         ZIndex: =5
 
                     Label6 As label:
@@ -1319,7 +1323,7 @@
                         Size: =13
                         Text: =ThisItem.L3
                         X: =607
-                        Y: =5
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
                         ZIndex: =6
 
                     Label7 As label:
@@ -1335,7 +1339,7 @@
                         Size: =13
                         Text: =ThisItem.L4
                         X: =768
-                        Y: =10
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
                         ZIndex: =7
 
                     Label8 As label:
@@ -1351,7 +1355,7 @@
                         Size: =13
                         Text: =ThisItem.L5
                         X: =918
-                        Y: =10
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
                         ZIndex: =8
 
                     Label9 As label:
@@ -1367,7 +1371,7 @@
                         Size: =13
                         Text: =ThisItem.L6
                         X: =1068
-                        Y: =10
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
                         ZIndex: =9
 
             BottomContainer As groupContainer.manualLayoutContainer:
