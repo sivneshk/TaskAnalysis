@@ -794,7 +794,16 @@
                             HoverColor: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
                             HoverFill: =RGBA(255, 255, 255, 1)
                             OnChange: |-
-                                =Collect(colToUpdate, {ID: ThisItem.ID, 'Updated Hours': Value(InputHoursReview_3.Text)})
+                                =If(
+                                    ThisItem.'Input Hours' <> Value(InputHoursReview_3.Text),
+                                    Collect(
+                                        colToUpdate,
+                                        {
+                                            ID: ThisItem.ID,
+                                            'Updated Hours': Value(InputHoursReview_3.Text)
+                                        }
+                                    )
+                                )
                             OnSelect: =
                             PressedBorderColor: =RGBA(208, 208, 208, 1)
                             PressedColor: =RGBA(50, 49, 48, 1)
@@ -1021,49 +1030,7 @@
                         HoverColor: =ColorFade(Self.Color,-10%)
                         HoverFill: =RGBA(2, 188, 148, 0.1)
                         OnSelect: |
-                            =/*ForAll(
-                                GroupedTaxonomyGallery3.AllItems,
-                                ForAll(
-                                    
-                                    Filter(
-                                    GroupByNameTaxonomy3.AllItems,
-                                    ToggleDetectChange.Value = true
-                                ) As aPatch,
-                                Collect(
-                                    colToUpdate,
-                                    {'SP ID': aPatch.ID}
-                                )));
-                            */
-                            
-                            
-                            /*ClearCollect(colToUpdate,
-                                ForAll(
-                                    Ungroup(
-                                        ForAll(GroupedTaxonomyGallery3.AllItems, Filter(GroupByNameTaxonomy3.AllItems, ToggleDetectChange.Value = true)),
-                                        "Value"
-                                    ),
-                                    {ID: ID
-                                    }
-                                )
-                            );*/
-                            
-                            Clear(colToUpdateV2);
-                            ForAll(
-                               GroupedTaxonomyGallery3.AllItems,
-                               ForAll(
-                                  GroupByNameTaxonomy3.AllItems,
-                                  If(
-                                     ThisRecord.ToggleDetectChange,
-                                     Collect(
-                                        colToUpdateV2,
-                                        {ID:ThisRecord.ID}
-                                     )
-                                  )
-                               )
-                            );   
-                            
-                            
-                            Set(
+                            =Set(
                                 varEdit,
                                 DisplayMode.Disabled
                             );
