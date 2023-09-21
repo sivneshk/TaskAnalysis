@@ -1070,18 +1070,21 @@
                         HoverColor: =ColorFade(Self.Color,-10%)
                         HoverFill: =RGBA(2, 188, 148, 0.1)
                         OnSelect: |-
-                            =/*Clear(colToUpdate);
-                            ClearCollect(test, GroupedTaxonomyGallery3.AllItems);
+                            =Clear(colToUpdate);
                             
-                            Collect(colToUpdate,
-                                ForAll(
-                                 Filter(GroupedTaxonomyGallery3.AllItems, ToggleDetectChange.Value),
-                                    ),
-                                    {ID: ThisRecord.ID
-                                    }
+                            ClearCollect(colToUpdate,
+                                Ungroup(
+                                    ForAll(Filter(GroupedTaxonomyGallery3.AllItems, ToggleDetectChange.Value = true) As _class,
+                                        {Answers: 
+                                            ForAll(_class.GroupByNameTaxonomy3.AllItems As _ans, 
+                                                {ID: Value(_ans.ID.Text)
+                                                }
+                                            )
+                                        }
+                                ),
+                                    "Answers"
                                 )
-                            );*/
-                            ForAll(GroupByNameTaxonomy3.AllItems, Task_A_UpdateorAddItems_ManagerScrntoSP.Run(ID.Text,InputHoursReview_3.Text));
+                            );   
                             
                             Set(varEdit,DisplayMode.Disabled);
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
