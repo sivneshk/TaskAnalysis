@@ -1030,7 +1030,13 @@
                         HoverColor: =ColorFade(Self.Color,-10%)
                         HoverFill: =RGBA(2, 188, 148, 0.1)
                         OnSelect: |
-                            =Set(
+                            =
+                            ClearCollect(test, GroupedTaxonomyGallery3.AllItems);
+                            
+                            ForAll(GroupedTaxonomyGallery3.AllItems,
+                            ForAll(Filter(GroupByName, ToggleDetectChange.Value = true), Collect(colToUpdate, {ID: ThisRecord.ID})));
+                            
+                            Set(
                                 varEdit,
                                 DisplayMode.Disabled
                             );
