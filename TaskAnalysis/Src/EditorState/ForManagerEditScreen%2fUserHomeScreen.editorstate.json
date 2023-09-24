@@ -2868,7 +2868,14 @@
     "Checkbox1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "CheckmarkFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 120, 212, 1)",
+          "InvariantPropertyName": "CheckmarkFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "CheckboxBackgroundFill",
         "CheckboxBorderColor",
         {
@@ -2889,7 +2896,14 @@
         "DisabledColor",
         "Fill",
         "DisabledFill",
-        "Font",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Font.'Segoe UI'",
+          "InvariantPropertyName": "Font",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "PressedColor",
         "HoverColor",
         "PressedFill",

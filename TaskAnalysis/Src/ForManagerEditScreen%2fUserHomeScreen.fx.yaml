@@ -1196,7 +1196,6 @@
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Visible: =false
         Width: =Parent.Width
         ZIndex: =2
 
@@ -1264,12 +1263,12 @@
                         BorderThickness: =2
                         CheckboxBorderColor: =RGBA(96, 94, 92, 1)
                         CheckboxSize: =Self.Height*0.9
-                        CheckmarkFill: =RGBA(0, 120, 212, 1)
+                        CheckmarkFill: =RGBA(5, 50, 43, 1)
                         Color: =RGBA(50, 49, 48, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
+                        Font: ="Poppins"
                         Height: =Parent.TemplateHeight/2
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =RGBA(50, 49, 48, 1)
