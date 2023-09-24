@@ -550,6 +550,7 @@
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         Fill: =RGBA(255, 255, 255, 1)
+                        FocusedBorderThickness: =2
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =LeftPanelTitleScreen3_1.Height*1.5
