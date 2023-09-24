@@ -1224,9 +1224,10 @@
                 ZIndex: =8
 
                 Gallery2 As gallery.galleryVertical:
-                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderColor: =RGBA(255, 255, 255, 1)
+                    BorderThickness: =1
                     DelayItemLoading: =true
-                    Height: =Parent.Height*0.8
+                    Height: =Parent.Height*0.75
                     Items: ='Process Taxonomy'
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
@@ -1235,6 +1236,24 @@
                     Width: =Parent.Width
                     Y: =Container1.Y+Container1.Height
                     ZIndex: =1
+
+                    Label1 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        Size: =ChosenTask.Size
+                        Text: =ThisItem.Title
+                        Width: =HeaderUniqueID.Width
+                        X: =HeaderUniqueID.X
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
+                        ZIndex: =1
 
                     Checkbox1 As checkbox:
                         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1262,133 +1281,117 @@
                         Y: =(Parent.TemplateHeight-Self.Height)/2
                         ZIndex: =3
 
-                    Group3 As group:
-                        Height: =5
-                        Width: =5
-                        X: =40
-                        Y: =40
-                        ZIndex: =10
+                    Label4 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        Size: =ChosenTask.Size
+                        Text: =ThisItem.L1
+                        Width: =HeaderL1.Width
+                        X: =HeaderL1.X
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
+                        ZIndex: =4
 
-                        Label1 As label:
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            BorderStyle: =BorderStyle.None
-                            BorderThickness: =2
-                            Color: =RGBA(50, 49, 48, 1)
-                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                            DisabledColor: =RGBA(161, 159, 157, 1)
-                            FocusedBorderThickness: =4
-                            Font: ="Poppins"
-                            Height: =Parent.TemplateHeight
-                            OnSelect: =Select(Parent)
-                            Size: =ChosenTask.Size
-                            Text: =ThisItem.Title
-                            X: =38
-                            Y: =(Parent.TemplateHeight-Self.Height)/2
-                            ZIndex: =1
+                    Label5 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        Size: =ChosenTask.Size
+                        Text: =ThisItem.L2
+                        Width: =HeaderL2.Width
+                        X: =HeaderL2.X
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
+                        ZIndex: =5
 
-                        Label4 As label:
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            BorderStyle: =BorderStyle.None
-                            BorderThickness: =2
-                            Color: =RGBA(50, 49, 48, 1)
-                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                            DisabledColor: =RGBA(161, 159, 157, 1)
-                            FocusedBorderThickness: =4
-                            Font: ="Poppins"
-                            Height: =Parent.TemplateHeight
-                            OnSelect: =Select(Parent)
-                            Size: =ChosenTask.Size
-                            Text: =ThisItem.L1
-                            X: =165
-                            Y: =(Parent.TemplateHeight-Self.Height)/2
-                            ZIndex: =4
+                    Label6 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        Size: =ChosenTask.Size
+                        Text: =ThisItem.L3
+                        Width: =HeaderL3.Width
+                        X: =HeaderL3.X
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
+                        ZIndex: =6
 
-                        Label5 As label:
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            BorderStyle: =BorderStyle.None
-                            BorderThickness: =2
-                            Color: =RGBA(50, 49, 48, 1)
-                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                            DisabledColor: =RGBA(161, 159, 157, 1)
-                            FocusedBorderThickness: =4
-                            Font: ="Poppins"
-                            Height: =Parent.TemplateHeight
-                            OnSelect: =Select(Parent)
-                            Size: =ChosenTask.Size
-                            Text: =ThisItem.L2
-                            X: =296
-                            Y: =(Parent.TemplateHeight-Self.Height)/2
-                            ZIndex: =5
+                    Label7 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        Size: =ChosenTask.Size
+                        Text: =ThisItem.L4
+                        Width: =HeaderL4.Width
+                        X: =HeaderL4.X
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
+                        ZIndex: =7
 
-                        Label6 As label:
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            BorderStyle: =BorderStyle.None
-                            BorderThickness: =2
-                            Color: =RGBA(50, 49, 48, 1)
-                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                            DisabledColor: =RGBA(161, 159, 157, 1)
-                            FocusedBorderThickness: =4
-                            Font: ="Poppins"
-                            Height: =Parent.TemplateHeight
-                            OnSelect: =Select(Parent)
-                            Size: =ChosenTask.Size
-                            Text: =ThisItem.L3
-                            X: =446
-                            Y: =(Parent.TemplateHeight-Self.Height)/2
-                            ZIndex: =6
+                    Label8 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        Size: =ChosenTask.Size
+                        Text: =ThisItem.L5
+                        Width: =HeaderL5.Width
+                        X: =HeaderL5.X
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
+                        ZIndex: =8
 
-                        Label7 As label:
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            BorderStyle: =BorderStyle.None
-                            BorderThickness: =2
-                            Color: =RGBA(50, 49, 48, 1)
-                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                            DisabledColor: =RGBA(161, 159, 157, 1)
-                            FocusedBorderThickness: =4
-                            Font: ="Poppins"
-                            Height: =Parent.TemplateHeight
-                            OnSelect: =Select(Parent)
-                            Size: =ChosenTask.Size
-                            Text: =ThisItem.L4
-                            X: =596
-                            Y: =(Parent.TemplateHeight-Self.Height)/2
-                            ZIndex: =7
-
-                        Label8 As label:
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            BorderStyle: =BorderStyle.None
-                            BorderThickness: =2
-                            Color: =RGBA(50, 49, 48, 1)
-                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                            DisabledColor: =RGBA(161, 159, 157, 1)
-                            FocusedBorderThickness: =4
-                            Font: ="Poppins"
-                            Height: =Parent.TemplateHeight
-                            OnSelect: =Select(Parent)
-                            Size: =ChosenTask.Size
-                            Text: =ThisItem.L5
-                            X: =918
-                            Y: =(Parent.TemplateHeight-Self.Height)/2
-                            ZIndex: =8
-
-                        Label9 As label:
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            BorderStyle: =BorderStyle.None
-                            BorderThickness: =2
-                            Color: =RGBA(50, 49, 48, 1)
-                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                            DisabledColor: =RGBA(161, 159, 157, 1)
-                            FocusedBorderThickness: =4
-                            Font: ="Poppins"
-                            Height: =Parent.TemplateHeight
-                            OnSelect: =Select(Parent)
-                            Size: =ChosenTask.Size
-                            Text: =ThisItem.L6
-                            X: =1068
-                            Y: =(Parent.TemplateHeight-Self.Height)/2
-                            ZIndex: =9
+                    Label9 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =Parent.TemplateHeight
+                        OnSelect: =Select(Parent)
+                        Size: =ChosenTask.Size
+                        Text: =ThisItem.L6
+                        Width: =HeaderL5.Width
+                        X: =HeaderL6.X
+                        Y: =(Parent.TemplateHeight-Self.Height)/2
+                        ZIndex: =9
 
                 Container1 As groupContainer.manualLayoutContainer:
+                    BorderColor: =RGBA(208, 208, 208, 1)
+                    BorderThickness: =1
                     DropShadow: =DropShadow.Light
                     Height: =Gallery2.TemplateHeight
                     RadiusBottomLeft: =4
@@ -1400,7 +1403,7 @@
                     Y: =Parent.Height*0.05
                     ZIndex: =2
 
-                    Label3 As label:
+                    HeaderUniqueID As label:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -1409,11 +1412,159 @@
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
-                        Size: =13
-                        Text: ="Text"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =ChosenTask.Size
+                        Text: ="Unique ID"
+                        Width: =(Parent.Width-Checkbox1.Width)/10
+                        X: =HeaderL1.X-Self.Width
+                        ZIndex: =1
+
+                    HeaderL1 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =ChosenTask.Size
+                        Text: ="L1"
                         Width: =(Parent.Width-Checkbox1.Width)/7
-                        X: =40
-                        Y: =37.760000000000005
+                        X: =HeaderL2.X-Self.Width
+                        ZIndex: =2
+
+                    HeaderL2 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =ChosenTask.Size
+                        Text: ="L2"
+                        Width: =(Parent.Width-Checkbox1.Width)/7
+                        X: =HeaderL3.X-Self.Width
+                        ZIndex: =3
+
+                    HeaderL3 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =ChosenTask.Size
+                        Text: ="L3"
+                        Width: =(Parent.Width-Checkbox1.Width)/7
+                        X: =HeaderL4.X-Self.Width
+                        ZIndex: =4
+
+                    HeaderL4 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =ChosenTask.Size
+                        Text: ="L4"
+                        Width: =(Parent.Width-Checkbox1.Width)/7
+                        X: =HeaderL5.X-Self.Width
+                        ZIndex: =5
+
+                    HeaderL5 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =ChosenTask.Size
+                        Text: ="L5"
+                        Width: =(Parent.Width-Checkbox1.Width)/7
+                        X: =HeaderL6.X-Self.Width
+                        ZIndex: =6
+
+                    HeaderL6 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =ChosenTask.Size
+                        Text: ="L6"
+                        Width: =(Parent.Width-Checkbox1.Width)/7
+                        X: =Parent.Width-Self.Width
+                        ZIndex: =7
+
+                FooterButtonContainer As groupContainer.manualLayoutContainer:
+                    BorderStyle: =BorderStyle.None
+                    Height: =Parent.Height-Gallery2.Y-Gallery2.Height
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    Y: =Gallery2.Y+Gallery2.Height
+                    ZIndex: =4
+
+                    AddTaskBtn_2 As button:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderThickness: =1
+                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
+                        DisabledColor: =RGBA(208, 208, 208, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        Fill: =RGBA(2, 188, 148, 1)
+                        FocusedBorderThickness: =2
+                        Font: ="Poppins"
+                        Height: =Parent.Height*0.4
+                        HoverBorderColor: =RGBA(2, 188, 148, 1)
+                        HoverColor: =RGBA(2, 188, 148, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: =
+                        PressedBorderColor: =RGBA(230, 230, 230, 1)
+                        PressedColor: =RGBA(2, 188, 148, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =Self.Height/3
+                        Text: ="+ Add Task to List"
+                        Width: =Parent.Width *0.3
+                        X: =Parent.Width-Self.Width*1.05
+                        Y: =(Parent.Height-Self.Height)/2
                         ZIndex: =1
 
             BottomContainer As groupContainer.manualLayoutContainer:
