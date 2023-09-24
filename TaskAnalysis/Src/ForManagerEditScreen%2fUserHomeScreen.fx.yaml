@@ -1205,11 +1205,10 @@
             Fill: =RGBA(255, 255, 255, 1)
             Height: =Parent.Height*0.9
             LayoutAlignItems: =LayoutAlignItems.Center
-            LayoutDirection: =LayoutDirection.Vertical
             LayoutMode: =LayoutMode.Auto
             PaddingLeft: =10
             PaddingRight: =10
-            Width: =Parent.Width*0.9
+            Width: =Parent.Width*0.95
             X: =(Parent.Width-Self.Width)/2
             Y: =(Parent.Height-Self.Height)/2
             ZIndex: =1
@@ -1227,37 +1226,22 @@
                 Gallery2 As gallery.galleryVertical:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     DelayItemLoading: =true
-                    Height: =405
+                    Height: =Parent.Height*0.8
                     Items: ='Process Taxonomy'
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
-                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/6)
-                    Width: =1708
-                    Y: =80
+                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/10)
+                    Width: =Parent.Width
+                    Y: =Container1.Y+Container1.Height
                     ZIndex: =1
-
-                    Label1 As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        OnSelect: =Select(Parent)
-                        Size: =13
-                        Text: =ThisItem.Title
-                        X: =71
-                        Y: =(Parent.TemplateHeight-Self.Height)/2
-                        ZIndex: =1
 
                     Checkbox1 As checkbox:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         CheckboxBorderColor: =RGBA(96, 94, 92, 1)
+                        CheckboxSize: =Self.Height*0.9
                         CheckmarkFill: =RGBA(0, 120, 212, 1)
                         Color: =RGBA(50, 49, 48, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1278,87 +1262,145 @@
                         Y: =(Parent.TemplateHeight-Self.Height)/2
                         ZIndex: =3
 
-                    Label4 As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        OnSelect: =Select(Parent)
-                        Size: =13
-                        Text: =ThisItem.L1
-                        X: =221
-                        Y: =(Parent.TemplateHeight-Self.Height)/2
-                        ZIndex: =4
+                    Group3 As group:
+                        Height: =5
+                        Width: =5
+                        X: =40
+                        Y: =40
+                        ZIndex: =10
 
-                    Label5 As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        OnSelect: =Select(Parent)
-                        Size: =13
-                        Text: =ThisItem.L2
-                        X: =419
-                        Y: =(Parent.TemplateHeight-Self.Height)/2
-                        ZIndex: =5
+                        Label1 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =Parent.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Size: =ChosenTask.Size
+                            Text: =ThisItem.Title
+                            X: =38
+                            Y: =(Parent.TemplateHeight-Self.Height)/2
+                            ZIndex: =1
 
-                    Label6 As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        OnSelect: =Select(Parent)
-                        Size: =13
-                        Text: =ThisItem.L3
-                        X: =607
-                        Y: =(Parent.TemplateHeight-Self.Height)/2
-                        ZIndex: =6
+                        Label4 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =Parent.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Size: =ChosenTask.Size
+                            Text: =ThisItem.L1
+                            X: =165
+                            Y: =(Parent.TemplateHeight-Self.Height)/2
+                            ZIndex: =4
 
-                    Label7 As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        OnSelect: =Select(Parent)
-                        Size: =13
-                        Text: =ThisItem.L4
-                        X: =768
-                        Y: =(Parent.TemplateHeight-Self.Height)/2
-                        ZIndex: =7
+                        Label5 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =Parent.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Size: =ChosenTask.Size
+                            Text: =ThisItem.L2
+                            X: =296
+                            Y: =(Parent.TemplateHeight-Self.Height)/2
+                            ZIndex: =5
 
-                    Label8 As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        OnSelect: =Select(Parent)
-                        Size: =13
-                        Text: =ThisItem.L5
-                        X: =918
-                        Y: =(Parent.TemplateHeight-Self.Height)/2
-                        ZIndex: =8
+                        Label6 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =Parent.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Size: =ChosenTask.Size
+                            Text: =ThisItem.L3
+                            X: =446
+                            Y: =(Parent.TemplateHeight-Self.Height)/2
+                            ZIndex: =6
 
-                    Label9 As label:
+                        Label7 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =Parent.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Size: =ChosenTask.Size
+                            Text: =ThisItem.L4
+                            X: =596
+                            Y: =(Parent.TemplateHeight-Self.Height)/2
+                            ZIndex: =7
+
+                        Label8 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =Parent.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Size: =ChosenTask.Size
+                            Text: =ThisItem.L5
+                            X: =918
+                            Y: =(Parent.TemplateHeight-Self.Height)/2
+                            ZIndex: =8
+
+                        Label9 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =Parent.TemplateHeight
+                            OnSelect: =Select(Parent)
+                            Size: =ChosenTask.Size
+                            Text: =ThisItem.L6
+                            X: =1068
+                            Y: =(Parent.TemplateHeight-Self.Height)/2
+                            ZIndex: =9
+
+                Container1 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =Gallery2.TemplateHeight
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    X: =
+                    Y: =Parent.Height*0.05
+                    ZIndex: =2
+
+                    Label3 As label:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -1366,13 +1408,13 @@
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        OnSelect: =Select(Parent)
+                        Font: ="Poppins"
                         Size: =13
-                        Text: =ThisItem.L6
-                        X: =1068
-                        Y: =(Parent.TemplateHeight-Self.Height)/2
-                        ZIndex: =9
+                        Text: ="Text"
+                        Width: =(Parent.Width-Checkbox1.Width)/7
+                        X: =40
+                        Y: =37.760000000000005
+                        ZIndex: =1
 
             BottomContainer As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
