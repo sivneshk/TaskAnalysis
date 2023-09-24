@@ -491,34 +491,6 @@
                         Y: =(ButtonGroupScreen3_1.Height-Self.Height)/2
                         ZIndex: =2
 
-                    AddTaskBtn_1 As button:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderThickness: =1
-                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
-                        DisabledColor: =RGBA(208, 208, 208, 1)
-                        DisabledFill: =RGBA(242, 242, 241, 0)
-                        Fill: =RGBA(2, 188, 148, 1)
-                        FocusedBorderThickness: =2
-                        Font: ="Poppins"
-                        Height: =ButtonGroupScreen3_1.Height/2
-                        HoverBorderColor: =RGBA(2, 188, 148, 1)
-                        HoverColor: =RGBA(2, 188, 148, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: =Set(ManagerScreenPopUp,true);
-                        PressedBorderColor: =RGBA(230, 230, 230, 1)
-                        PressedColor: =RGBA(2, 188, 148, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
-                        RadiusBottomLeft: =5
-                        RadiusBottomRight: =5
-                        RadiusTopLeft: =5
-                        RadiusTopRight: =5
-                        Size: =Self.Height/3
-                        Text: ="+ Add Task to List"
-                        Width: =SlicerUserMailScreen3.Width*0.72
-                        X: =ButtonGroupScreen3_1.Width-ClearBtn_1.X-Self.Width
-                        Y: =(ButtonGroupScreen3_1.Height-Self.Height)/2
-                        ZIndex: =3
-
             RightPanel3 As groupContainer.verticalAutoLayoutContainer:
                 BorderColor: =RGBA(148, 148, 148, 1)
                 BorderStyle: =BorderStyle.None
@@ -1146,10 +1118,10 @@
                         OnSelect: |-
                             =Refresh('Task Analysis Taxonomy Collection');
                             ClearCollect(colTaskAnalysisSP, ShowColumns('Task Analysis Taxonomy Collection', "Title", "Associated_x0020_LE", "CoCo", "EmployeeID", "LE_x0020_Name", "UserName", "Process_x0020_Name", "ID", "InputHours", "Region", "Unique_x0020_ID"));
-                        PaddingBottom: =2
-                        PaddingLeft: =2
-                        PaddingRight: =2
-                        PaddingTop: =2
+                        PaddingBottom: =4
+                        PaddingLeft: =4
+                        PaddingRight: =4
+                        PaddingTop: =4
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =ColorFade(Self.Color,20%)
                         PressedFill: =RGBA(0, 0, 0, 0)
@@ -1159,6 +1131,35 @@
                         X: =EditBtn.X-Self.Width-10
                         Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
                         ZIndex: =3
+
+                    AddTaskBtn_1 As button:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderThickness: =1
+                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
+                        DisabledColor: =RGBA(208, 208, 208, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        Fill: =RGBA(2, 188, 148, 1)
+                        FocusedBorderThickness: =2
+                        Font: ="Poppins"
+                        Height: =ButtonGroupScreen3_1.Height/2
+                        HoverBorderColor: =RGBA(2, 188, 148, 1)
+                        HoverColor: =RGBA(2, 188, 148, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: =Set(ManagerScreenPopUp,true);
+                        PressedBorderColor: =RGBA(230, 230, 230, 1)
+                        PressedColor: =RGBA(2, 188, 148, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =Self.Height/2
+                        Text: ="+"
+                        Tooltip: ="Click to add task"
+                        Width: =RightPanel3.Width*0.05
+                        X: =Parent.Width*0.01
+                        Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
+                        ZIndex: =4
 
         FooterContainerScreen3_1 As groupContainer.manualLayoutContainer:
             Height: =Parent.Height/25
@@ -1194,6 +1195,7 @@
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
+        Visible: =false
         Width: =Parent.Width
         ZIndex: =2
 
@@ -1563,7 +1565,7 @@
                         Size: =Self.Height/3
                         Text: ="+ Add Task to List"
                         Width: =Parent.Width *0.3
-                        X: =Parent.Width-Self.Width*1.05
+                        X: =(Parent.Width-Self.Width)/2
                         Y: =(Parent.Height-Self.Height)/2
                         ZIndex: =1
 
