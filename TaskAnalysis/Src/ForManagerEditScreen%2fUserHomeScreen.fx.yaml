@@ -485,8 +485,8 @@
                         RadiusTopLeft: =5
                         RadiusTopRight: =5
                         Size: =Self.Height/3
-                        Text: ="Clear"
-                        Width: =SlicerUserMailScreen3.Width*0.25
+                        Text: ="Clear All Filter"
+                        Width: =SlicerUserMailScreen3.Width
                         X: =SlicerUserMailScreen3.X
                         Y: =(ButtonGroupScreen3_1.Height-Self.Height)/2
                         ZIndex: =2
@@ -1069,7 +1069,7 @@
                         RadiusTopLeft: =5
                         RadiusTopRight: =5
                         Size: =Self.Height/3
-                        Text: ="Save"
+                        Text: ="Submit"
                         Width: =RightPanel3.Width*0.1
                         X: =(EmployeeNameCardScreen3_1.Width-Self.Width)
                         Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
