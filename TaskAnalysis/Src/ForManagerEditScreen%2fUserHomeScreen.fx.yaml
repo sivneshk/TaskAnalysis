@@ -1402,7 +1402,7 @@
                     RadiusTopRight: =4
                     Width: =Parent.Width
                     X: =
-                    Y: =Parent.Height*0.05
+                    Y: =ProcessTaxoLabelScreen3_2.Height
                     ZIndex: =2
 
                     HeaderUniqueID As label:
@@ -1568,6 +1568,22 @@
                         X: =(Parent.Width-Self.Width)/2
                         Y: =(Parent.Height-Self.Height)/2
                         ZIndex: =1
+
+                ProcessTaxoLabelScreen3_2 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: ="Poppins"
+                    FontWeight: =FontWeight.Semibold
+                    Height: =Parent.Height*0.06
+                    Size: =Self.Height/3.5
+                    Text: ="Process Taxonomy"
+                    Width: =SlicerUserMailScreen3.Width
+                    ZIndex: =5
 
             BottomContainer As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
