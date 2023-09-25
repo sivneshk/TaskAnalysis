@@ -1678,7 +1678,322 @@
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
                     Width: =Parent.Width
+                    Y: =Container1_1.Y
                     ZIndex: =1
+
+                    ForUniqueID As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =Parent.TemplateHeight/8
+                        OnSelect: =Select(Parent)
+                        Size: =HeaderUniqueID_1.Size
+                        Text: |-
+                            ="Unique ID: " & ThisItem.'Unique ID'
+                        Width: =Parent.Width*0.9
+                        X: =(Parent.Width-Self.Width)/2
+                        Y: =
+                        ZIndex: =4
+
+                    ForProcessName As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =Parent.TemplateHeight/6
+                        OnSelect: =Select(Parent)
+                        Size: =HeaderUniqueID_1.Size
+                        Text: |-
+                            ="Process Name: " & If(ThisItem.L6 <> Blank() && ThisItem.L6 <> "-", ThisItem.L6, ThisItem.L5 <> Blank() && ThisItem.L5 <> "-", ThisItem.L5, ThisItem.L4)
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.Width*0.9
+                        X: =(Parent.Width-Self.Width)/2
+                        Y: =ForUniqueID.Height
+                        ZIndex: =5
+
+                    ForCOCO As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =Parent.TemplateHeight/8
+                        OnSelect: =Select(Parent)
+                        Size: =HeaderUniqueID_1.Size
+                        Text: ="CoCo"
+                        Width: =Parent.Width*0.9
+                        X: =(Parent.Width-Self.Width)/2
+                        Y: =EmployeeNameDropdown.Y+EmployeeNameDropdown.Height
+                        ZIndex: =6
+
+                    ForAssignTo As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =Parent.TemplateHeight/8
+                        OnSelect: =Select(Parent)
+                        Size: =HeaderUniqueID_1.Size
+                        Text: ="Assign To"
+                        Width: =Parent.Width*0.9
+                        X: =(Parent.Width-Self.Width)/2
+                        Y: =ForProcessName.Y+ForProcessName.Height
+                        ZIndex: =7
+
+                    "EmployeeNameDropdown As 'Combo box'.pcfdataset":
+                        AllowMultiSelect: =true
+                        AllowSearching: =true
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: =Blank()
+                        DisplayMode: =DisplayMode.Edit
+                        Font: ="Noto Sans"
+                        FontSize: =HeaderUniqueID_1.Size
+                        Height: =Parent.TemplateHeight/8
+                        Items: =Sort(Distinct('Task Analysis Taxonomy Collection','User Name'),Value)
+                        OnChange: =Set(uniqueIDVar,EmployeeNameDropdown.Selected.Value)
+                        OnSelect: =
+                        PaddingStart: =0
+                        PCFTeamsTheme: ="default"
+                        Text: ="Employee Name"
+                        Width: =Parent.Width*0.9
+                        X: =(Parent.Width-Self.Width)/2
+                        Y: =ForAssignTo.Y+ForAssignTo.Height
+                        ZIndex: =8
+
+                        Value1_2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Value"
+                            FieldName: ="Value"
+                            FieldType: ="e"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =29
+
+                    "COCODropdown As 'Combo box'.pcfdataset":
+                        AllowMultiSelect: =true
+                        AllowSearching: =true
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: =Blank()
+                        DisplayMode: =DisplayMode.Edit
+                        Font: ="Noto Sans"
+                        FontSize: =HeaderUniqueID_1.Size
+                        Height: =Parent.TemplateHeight/8
+                        Items: ='Coco Mapping'
+                        OnChange: =Set(cocoVar,COCODropdown.SelectedItems)
+                        PaddingStart: =0
+                        PCFTeamsTheme: ="default"
+                        Text: ="Select Company Code"
+                        Width: =Parent.Width*0.9
+                        X: =(Parent.Width-Self.Width)/2
+                        Y: =ForCOCO.Y+ForCOCO.Height
+                        ZIndex: =9
+
+                        COMPANY_CODE1_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="COMPANY_CODE"
+                            FieldName: ="Title"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =85
+
+                        CATEGORY1_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="CATEGORY"
+                            FieldName: ="field_1"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =86
+
+                        "'LE Name1_1' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="LE Name"
+                            FieldName: ="field_2"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =87
+
+                        ASSOCIATED_LE1_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="ASSOCIATED_LE"
+                            FieldName: ="field_3"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =88
+
+                        ERP1_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="ERP"
+                            FieldName: ="field_4"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =89
+
+                        PC1_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="PC"
+                            FieldName: ="field_5"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =90
+
+                        "'Business Segment1_1' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="Business Segment"
+                            FieldName: ="field_6"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =91
+
+                        Country1_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Country"
+                            FieldName: ="field_7"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =8
+                            ZIndex: =92
+
+                        Region1_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Region"
+                            FieldName: ="field_8"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =9
+                            ZIndex: =93
+
+                        "'DRM Region1_1' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="DRM Region"
+                            FieldName: ="field_9"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =10
+                            ZIndex: =94
+
+                        "'SAP CoCo1_1' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="SAP CoCo"
+                            FieldName: ="field_10"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =11
+                            ZIndex: =95
+
+                        OA1_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="OA"
+                            FieldName: ="field_11"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =12
+                            ZIndex: =96
+
+                        OL1_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="OL"
+                            FieldName: ="field_12"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =13
+                            ZIndex: =97
+
+                        "'OL-GRNI1_1' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="OL-GRNI"
+                            FieldName: ="field_13"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =14
+                            ZIndex: =98
+
+                        CSR1_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="CSR"
+                            FieldName: ="field_14"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =15
+                            ZIndex: =99
+
+                        "'Cost Accrual PO1_1' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="Cost Accrual PO"
+                            FieldName: ="CostAccrualPO"
+                            FieldType: ="b"
+                            FieldVariantName: ="textualColumn"
+                            Order: =16
+                            ZIndex: =100
+
+                        "'Cost Accrual Non-PO1_1' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="Cost Accrual Non-PO"
+                            FieldName: ="CostAccrualNon_x002d_PO"
+                            FieldType: ="b"
+                            FieldVariantName: ="textualColumn"
+                            Order: =17
+                            ZIndex: =101
+
+                        "'CSR-Channel Partner1_1' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="CSR-Channel Partner"
+                            FieldName: ="CSR_x002d_ChannelPartner"
+                            FieldType: ="b"
+                            FieldVariantName: ="textualColumn"
+                            Order: =18
+                            ZIndex: =102
+
+                        "'Deposit, Pre-Payment and Sundry-Receivables1_1' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="Deposit, Pre-Payment and Sundry-Receivables"
+                            FieldName: ="Deposit_x002c_Pre_x002d_Paymenta"
+                            FieldType: ="b"
+                            FieldVariantName: ="textualColumn"
+                            Order: =19
+                            ZIndex: =103
+
+                        "'Unclaimed property1_1' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="Unclaimed property"
+                            FieldName: ="Unclaimedproperty"
+                            FieldType: ="b"
+                            FieldVariantName: ="textualColumn"
+                            Order: =20
+                            ZIndex: =104
+
+                        GRNI1_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="GRNI"
+                            FieldName: ="GRNI"
+                            FieldType: ="b"
+                            FieldVariantName: ="textualColumn"
+                            Order: =21
+                            ZIndex: =105
+
+                        "'Reconciliation Preparation1_1' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="Reconciliation Preparation"
+                            FieldName: ="ReconciliationPreparation"
+                            FieldType: ="b"
+                            FieldVariantName: ="textualColumn"
+                            Order: =22
+                            ZIndex: =106
+
+                        "'Reconciliation Approval1_1' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="Reconciliation Approval"
+                            FieldName: ="ReconciliationApproval"
+                            FieldType: ="b"
+                            FieldVariantName: ="textualColumn"
+                            Order: =23
+                            ZIndex: =107
+
+                        Attachments8_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Attachments"
+                            FieldName: ="{Attachments}"
+                            FieldType: ="r*"
+                            FieldVariantName: ="textualColumn"
+                            Order: =24
+                            ZIndex: =108
 
                 FooterButtonContainer_2 As groupContainer.manualLayoutContainer:
                     BorderStyle: =BorderStyle.None

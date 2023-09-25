@@ -1234,6 +1234,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.ManagerPopUp.Container2.SecondContainer.Gallery1_1.EmployeeNameDropdown.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.ManagerPopUp.Container2.SecondContainer.Gallery1_1.EmployeeNameDropdown.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.ManagerPopUp.Container2.SecondContainer.Gallery1_1.EmployeeNameDropdown"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.ManagerPopUp.Container2.SecondContainer.Gallery1_1.COCODropdown.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.ManagerPopUp.Container2.SecondContainer.Gallery1_1.COCODropdown.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.ManagerPopUp.Container2.SecondContainer.Gallery1_1.COCODropdown"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.varL1"
                 }
               ],
@@ -1705,7 +1765,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"ForManagerEditScreen/UserHomeScreen\" is 453, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"ForManagerEditScreen/UserHomeScreen\" is 608, which exceeds the maximum threshold recommended (300)."
               }
             },
             {
