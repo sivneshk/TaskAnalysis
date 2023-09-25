@@ -1324,6 +1324,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.ShowManagerPopUp"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.ShowManagerPopUp",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "ShowManagerPopUp",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.OnStart"
                 }
               ],

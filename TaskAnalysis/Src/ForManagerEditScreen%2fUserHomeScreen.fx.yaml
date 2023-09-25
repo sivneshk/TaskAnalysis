@@ -1656,7 +1656,7 @@
                         HoverColor: =ColorFade(Self.Color,-10%)
                         HoverFill: =RGBA(2, 188, 148, 0.1)
                         OnSelect: |
-                            =/* colToUpdate contains rows that has been UPDATED/CHANGED ONLY */
+                            =/* colToUpdate contains rows that has been UPDATED/CHANGED ONLY 
                             Clear(colToUpdate);
                             ForAll(
                                 Filter(
@@ -1670,11 +1670,11 @@
                                         'Updated Hours': Value(InputHoursReview_3.Text)
                                     }
                                 )
-                            );
+                            );*/
                             
                             Set(
-                                varEdit,
-                                DisplayMode.Disabled
+                                ShowManagerPopUp,
+                                false
                             );
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
                         PressedColor: =ColorFade(Self.Color,-20%)
@@ -1703,7 +1703,11 @@
                         HoverBorderColor: =ColorFade(Self.Fill,20%)
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(Self.Fill,20%)
-                        OnSelect: =Set(varEdit, DisplayMode.Edit)
+                        OnSelect: |
+                            =Set(
+                                ShowManagerPopUp,
+                                false
+                            );
                         PressedBorderColor: =ColorFade(Self.Fill,-20%)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =ColorFade(Self.Fill,-20%)
