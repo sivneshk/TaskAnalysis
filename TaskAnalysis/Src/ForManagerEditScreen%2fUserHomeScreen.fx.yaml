@@ -1677,7 +1677,7 @@
                     Items: =colNewTaskV1
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
-                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/3)
                     Width: =Parent.Width
                     Y: =Container1_1.Y
                     ZIndex: =1
@@ -1691,7 +1691,7 @@
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisplayMode: =DisplayMode.View
                         Font: ="Poppins"
-                        Height: =Parent.TemplateHeight/9
+                        Height: =Parent.TemplateHeight/8
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
                         Text: |-
@@ -1711,7 +1711,7 @@
                         DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
-                        Height: =Parent.TemplateHeight/6
+                        Height: =Parent.TemplateHeight/5
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
                         Text: |-
@@ -1731,7 +1731,7 @@
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
-                        Height: =Parent.TemplateHeight/9
+                        Height: =Parent.TemplateHeight/8
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
                         Text: ="CoCo"
@@ -1749,7 +1749,7 @@
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
-                        Height: =Parent.TemplateHeight/9
+                        Height: =Parent.TemplateHeight/8
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
                         Text: ="Assign To"
@@ -1766,7 +1766,7 @@
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =HeaderUniqueID_1.Size
-                        Height: =Parent.TemplateHeight/9
+                        Height: =Parent.TemplateHeight/5
                         Items: =Sort(Distinct('Task Analysis Taxonomy Collection','User Name'),Value)
                         OnChange: =Set(uniqueIDVar,EmployeeNameDropdown.Selected.Value)
                         OnSelect: =
@@ -1794,7 +1794,7 @@
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =HeaderUniqueID_1.Size
-                        Height: =Parent.TemplateHeight/9
+                        Height: =Parent.TemplateHeight/5
                         Items: ='Coco Mapping'
                         OnChange: =Set(cocoVar,COCODropdown.SelectedItems)
                         PaddingStart: =0
@@ -2004,7 +2004,7 @@
                         DisabledColor: =RGBA(225, 223, 221, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
                         FocusedBorderThickness: =4
-                        Height: =ForUniqueID.Height*0.7
+                        Height: =ForUniqueID.Height*0.8
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =ColorFade(Self.Color,-50%)
                         HoverFill: =RGBA(0, 0, 0, 0)
