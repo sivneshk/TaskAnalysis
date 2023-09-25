@@ -1283,6 +1283,7 @@
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(50, 49, 48, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
+                        Reset: =varResetCheckbox
                         Size: =13
                         Text: =""
                         Width: =Self.Height
@@ -1590,7 +1591,8 @@
                                 )
                             );
                             
-                            Reset(Checkbox1_1);
+                            UpdateContext({varResetCheckbox:true});
+                            UpdateContext({varResetCheckbox:false});
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
