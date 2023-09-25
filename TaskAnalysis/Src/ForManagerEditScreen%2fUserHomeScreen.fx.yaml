@@ -1239,7 +1239,7 @@
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
-                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/10)
+                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/9)
                     Width: =Parent.Width-Parent.PaddingRight
                     Y: =Container1_1.Y+Container1_1.Height
                     ZIndex: =1
@@ -1734,11 +1734,11 @@
                         Size: =Self.Height/3
                         Text: ="Save"
                         Width: =Parent.Width*0.2
-                        X: =Parent.Width-Self.Width
+                        X: =CancelBtn.X+CancelBtn.Width+10
                         Y: =(Parent.Height-Self.Height)/2
                         ZIndex: =1
 
-                    EditBtn_1 As button:
+                    CancelBtn As button:
                         BorderColor: =RGBA(5, 50, 43, 1)
                         BorderThickness: =1
                         DisabledBorderColor: =RGBA(208, 208, 208, 1)
@@ -1766,7 +1766,7 @@
                         Size: =Self.Height/3
                         Text: ="Cancel"
                         Width: =Parent.Width*0.2
-                        X: =SaveBtn.X-Self.Width*1.05
+                        X: =(Parent.Width-SaveBtn.Width-Self.Width-10)/2
                         Y: =(Parent.Height-Self.Height)/2
                         ZIndex: =2
 
