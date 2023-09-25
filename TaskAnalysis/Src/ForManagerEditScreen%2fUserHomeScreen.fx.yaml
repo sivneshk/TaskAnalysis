@@ -1441,7 +1441,7 @@
                         Height: =Parent.Height
                         Size: =Self.Height*0.19
                         Text: ="L1"
-                        Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width)/6
+                        Width: =(Parent.Width-Checkbox1_1.Width)/9
                         X: =HeaderL2_1.X-Self.Width
                         ZIndex: =2
 
