@@ -1422,6 +1422,7 @@
                         HeaderUniqueID_1 As label:
                             Align: =Align.Center
                             BorderColor: =RGBA(99, 139, 44, 1)
+                            BorderStyle: =BorderStyle.None
                             BorderThickness: =2
                             Color: =RGBA(50, 49, 48, 1)
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1682,15 +1683,15 @@
                     ZIndex: =1
 
                     ForUniqueID As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderColor: =RGBA(151, 0, 0, 1)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         Color: =RGBA(50, 49, 48, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
+                        DisplayMode: =DisplayMode.View
                         Font: ="Poppins"
-                        Height: =Parent.TemplateHeight/8
+                        Height: =Parent.TemplateHeight/9
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
                         Text: |-
@@ -1707,6 +1708,7 @@
                         Color: =RGBA(50, 49, 48, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
                         Height: =Parent.TemplateHeight/6
@@ -1729,7 +1731,7 @@
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
-                        Height: =Parent.TemplateHeight/8
+                        Height: =Parent.TemplateHeight/9
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
                         Text: ="CoCo"
@@ -1747,7 +1749,7 @@
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
-                        Height: =Parent.TemplateHeight/8
+                        Height: =Parent.TemplateHeight/9
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
                         Text: ="Assign To"
@@ -1764,7 +1766,7 @@
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =HeaderUniqueID_1.Size
-                        Height: =Parent.TemplateHeight/8
+                        Height: =Parent.TemplateHeight/9
                         Items: =Sort(Distinct('Task Analysis Taxonomy Collection','User Name'),Value)
                         OnChange: =Set(uniqueIDVar,EmployeeNameDropdown.Selected.Value)
                         OnSelect: =
@@ -1792,7 +1794,7 @@
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =HeaderUniqueID_1.Size
-                        Height: =Parent.TemplateHeight/8
+                        Height: =Parent.TemplateHeight/9
                         Items: ='Coco Mapping'
                         OnChange: =Set(cocoVar,COCODropdown.SelectedItems)
                         PaddingStart: =0
@@ -1994,6 +1996,31 @@
                             FieldVariantName: ="textualColumn"
                             Order: =24
                             ZIndex: =108
+
+                    Icon1 As icon.Trash:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(255, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =ForUniqueID.Height*0.7
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =ColorFade(Self.Color,-50%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Trash
+                        OnSelect: =Remove(colNewTaskV1,ThisItem)
+                        PaddingBottom: =3
+                        PaddingLeft: =3
+                        PaddingRight: =3
+                        PaddingTop: =3
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =ColorFade(Self.Color,-30%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="Delete Item"
+                        Width: =Self.Height
+                        X: =ForUniqueID.Width
+                        ZIndex: =10
 
                 FooterButtonContainer_2 As groupContainer.manualLayoutContainer:
                     BorderStyle: =BorderStyle.None
