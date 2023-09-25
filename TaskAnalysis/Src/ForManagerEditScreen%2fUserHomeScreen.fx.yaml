@@ -1196,6 +1196,8 @@
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
+        Visible: |
+            =ShowManagerPopUp
         Width: =Parent.Width
         ZIndex: =2
 
