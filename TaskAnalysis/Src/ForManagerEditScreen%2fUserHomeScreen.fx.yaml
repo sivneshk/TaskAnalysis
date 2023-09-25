@@ -1146,7 +1146,11 @@
                         HoverBorderColor: =RGBA(2, 188, 148, 1)
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: =Set(ManagerScreenPopUp,true);
+                        OnSelect: |
+                            =Set(
+                                ShowManagerPopUp,
+                                true
+                            );
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
