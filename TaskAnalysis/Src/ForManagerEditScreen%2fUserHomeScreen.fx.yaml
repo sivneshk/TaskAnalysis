@@ -1239,7 +1239,7 @@
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
-                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/9)
+                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/8)
                     Width: =Parent.Width-Parent.PaddingRight
                     Y: =Container1_1.Y+Container1_1.Height
                     ZIndex: =1
@@ -1390,6 +1390,7 @@
                         Font: ="Poppins"
                         Height: =Parent.TemplateHeight
                         OnSelect: =Select(Parent)
+                        Overflow: =Overflow.Scroll
                         Size: =HeaderUniqueID_1.Size
                         Text: =ThisItem.L6
                         Width: =HeaderL5_1.Width
@@ -1485,7 +1486,7 @@
                             Height: =Parent.Height
                             Size: =Self.Height*0.19
                             Text: ="L3"
-                            Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width-HeaderL1_1.Width-HeaderL2_1.Width-Parent.PaddingRight)/4
+                            Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width-HeaderL1_1.Width-HeaderL2_1.Width-Parent.PaddingRight)/4.2
                             X: =HeaderL4_1.X-Self.Width
                             ZIndex: =4
 
@@ -1503,7 +1504,7 @@
                             Height: =Parent.Height
                             Size: =Self.Height*0.19
                             Text: ="L4"
-                            Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width-HeaderL1_1.Width-HeaderL2_1.Width-Parent.PaddingRight)/4
+                            Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width-HeaderL1_1.Width-HeaderL2_1.Width-Parent.PaddingRight)/4.2
                             X: =HeaderL5_1.X-Self.Width
                             ZIndex: =5
 
@@ -1521,7 +1522,7 @@
                             Height: =Parent.Height
                             Size: =Self.Height*0.19
                             Text: ="L5"
-                            Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width-HeaderL1_1.Width-HeaderL2_1.Width-Parent.PaddingRight)/4
+                            Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width-HeaderL1_1.Width-HeaderL2_1.Width-Parent.PaddingRight)/4.2
                             X: =HeaderL6_1.X-Self.Width
                             ZIndex: =6
 
@@ -1539,7 +1540,7 @@
                             Height: =Parent.Height
                             Size: =Self.Height*0.19
                             Text: ="L6"
-                            Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width-HeaderL1_1.Width-HeaderL2_1.Width-Parent.PaddingRight)/4
+                            Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width-HeaderL1_1.Width-HeaderL2_1.Width-Parent.PaddingRight)/4.2
                             X: =Parent.Width-Self.Width
                             ZIndex: =7
 
