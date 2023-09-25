@@ -134,7 +134,6 @@
     "Global_Process_ID7": 198,
     "GRNI1": 267,
     "Group1": 302,
-    "Group4_1": 89,
     "GroupByNameTaxonomy3": 58,
     "GroupedTaxonomyGallery3": 45,
     "HeaderContainer": 112,
@@ -308,7 +307,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/25/2023 04:30:24",
+  "HeaderLastSavedDateTimeUTC": "09/25/2023 04:32:30",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "32042caa-da35-4dde-bea6-a2ec68a6fef5": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cc60574d83604bc299034d4e456947b4-0b29ac70f27706ac\"",
@@ -357,14 +356,6 @@
       "BackBTN": 0,
       "BackBTNOverlay": 2,
       "BackIcon": 1
-    },
-    "Group4_1": {
-      "HeaderL1_1": 0,
-      "HeaderL2_1": 1,
-      "HeaderL3_1": 2,
-      "HeaderL4_1": 3,
-      "HeaderL5_1": 4,
-      "HeaderL6_1": 5
     }
   },
   "OrderPcfTemplate": {
@@ -516,7 +507,6 @@
     "Global_Process_ID7": {},
     "GRNI1": {},
     "Group1": {},
-    "Group4_1": {},
     "GroupByNameTaxonomy3": {},
     "GroupedTaxonomyGallery3": {},
     "HeaderContainer": {},
@@ -978,7 +968,6 @@
     "Global_Process_ID7": 87,
     "GRNI1": 156,
     "Group1": 190,
-    "Group4_1": 264,
     "GroupByNameTaxonomy3": 238,
     "GroupedTaxonomyGallery3": 225,
     "HeaderContainer": 1,

@@ -1427,120 +1427,113 @@
                         X: =HeaderL1_1.X-Self.Width
                         ZIndex: =1
 
-                    Group4_1 As group:
-                        Height: =5
-                        Width: =5
-                        X: =40
-                        Y: =40
-                        ZIndex: =8
+                    HeaderL1_1 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =Self.Height*0.19
+                        Text: ="L1"
+                        Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width)/6
+                        X: =HeaderL2_1.X-Self.Width
+                        ZIndex: =2
 
-                        HeaderL1_1 As label:
-                            Align: =Align.Center
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            BorderStyle: =BorderStyle.None
-                            BorderThickness: =2
-                            Color: =RGBA(50, 49, 48, 1)
-                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                            DisabledColor: =RGBA(161, 159, 157, 1)
-                            FocusedBorderThickness: =4
-                            Font: ="Poppins"
-                            FontWeight: =FontWeight.Semibold
-                            Height: =Parent.Height
-                            Size: =Self.Height*0.19
-                            Text: ="L1"
-                            Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width)/6
-                            X: =HeaderL2_1.X-Self.Width
-                            ZIndex: =2
+                    HeaderL2_1 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =Self.Height*0.19
+                        Text: ="L2"
+                        Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width)/6
+                        X: =HeaderL3_1.X-Self.Width
+                        ZIndex: =3
 
-                        HeaderL2_1 As label:
-                            Align: =Align.Center
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            BorderStyle: =BorderStyle.None
-                            BorderThickness: =2
-                            Color: =RGBA(50, 49, 48, 1)
-                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                            DisabledColor: =RGBA(161, 159, 157, 1)
-                            FocusedBorderThickness: =4
-                            Font: ="Poppins"
-                            FontWeight: =FontWeight.Semibold
-                            Height: =Parent.Height
-                            Size: =Self.Height*0.19
-                            Text: ="L2"
-                            Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width)/6
-                            X: =HeaderL3_1.X-Self.Width
-                            ZIndex: =3
+                    HeaderL3_1 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =Self.Height*0.19
+                        Text: ="L3"
+                        Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width)/6
+                        X: =HeaderL4_1.X-Self.Width
+                        ZIndex: =4
 
-                        HeaderL3_1 As label:
-                            Align: =Align.Center
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            BorderStyle: =BorderStyle.None
-                            BorderThickness: =2
-                            Color: =RGBA(50, 49, 48, 1)
-                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                            DisabledColor: =RGBA(161, 159, 157, 1)
-                            FocusedBorderThickness: =4
-                            Font: ="Poppins"
-                            FontWeight: =FontWeight.Semibold
-                            Height: =Parent.Height
-                            Size: =Self.Height*0.19
-                            Text: ="L3"
-                            Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width)/6
-                            X: =HeaderL4_1.X-Self.Width
-                            ZIndex: =4
+                    HeaderL4_1 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =Self.Height*0.19
+                        Text: ="L4"
+                        Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width)/6
+                        X: =HeaderL5_1.X-Self.Width
+                        ZIndex: =5
 
-                        HeaderL4_1 As label:
-                            Align: =Align.Center
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            BorderStyle: =BorderStyle.None
-                            BorderThickness: =2
-                            Color: =RGBA(50, 49, 48, 1)
-                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                            DisabledColor: =RGBA(161, 159, 157, 1)
-                            FocusedBorderThickness: =4
-                            Font: ="Poppins"
-                            FontWeight: =FontWeight.Semibold
-                            Height: =Parent.Height
-                            Size: =Self.Height*0.19
-                            Text: ="L4"
-                            Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width)/6
-                            X: =HeaderL5_1.X-Self.Width
-                            ZIndex: =5
+                    HeaderL5_1 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =Self.Height*0.19
+                        Text: ="L5"
+                        Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width)/6
+                        X: =HeaderL6_1.X-Self.Width
+                        ZIndex: =6
 
-                        HeaderL5_1 As label:
-                            Align: =Align.Center
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            BorderStyle: =BorderStyle.None
-                            BorderThickness: =2
-                            Color: =RGBA(50, 49, 48, 1)
-                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                            DisabledColor: =RGBA(161, 159, 157, 1)
-                            FocusedBorderThickness: =4
-                            Font: ="Poppins"
-                            FontWeight: =FontWeight.Semibold
-                            Height: =Parent.Height
-                            Size: =Self.Height*0.19
-                            Text: ="L5"
-                            Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width)/6
-                            X: =HeaderL6_1.X-Self.Width
-                            ZIndex: =6
-
-                        HeaderL6_1 As label:
-                            Align: =Align.Center
-                            BorderColor: =RGBA(0, 0, 0, 0)
-                            BorderStyle: =BorderStyle.None
-                            BorderThickness: =2
-                            Color: =RGBA(50, 49, 48, 1)
-                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                            DisabledColor: =RGBA(161, 159, 157, 1)
-                            FocusedBorderThickness: =4
-                            Font: ="Poppins"
-                            FontWeight: =FontWeight.Semibold
-                            Height: =Parent.Height
-                            Size: =Self.Height*0.19
-                            Text: ="L6"
-                            Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width)/6
-                            X: =Parent.Width-Self.Width
-                            ZIndex: =7
+                    HeaderL6_1 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =Self.Height*0.19
+                        Text: ="L6"
+                        Width: =(Parent.Width-Checkbox1_1.Width-HeaderUniqueID_1.Width)/6
+                        X: =Parent.Width-Self.Width
+                        ZIndex: =7
 
                 FooterButtonContainer_1 As groupContainer.manualLayoutContainer:
                     BorderStyle: =BorderStyle.None
