@@ -1560,7 +1560,9 @@
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |-
-                            =ForAll(
+                            =Clear(colNewTaskV1);
+                            
+                            ForAll(
                                 Filter(
                                     Gallery2_1.AllItems,
                                     Checkbox1_1.Value = true
@@ -1568,7 +1570,7 @@
                                 Collect(
                                     colNewTaskV1,
                                     {
-                                        'Unique ID': Value(Label1_1.Text),
+                                        'Unique ID': Label1_1.Text,
                                         L1: Label4_1.Text,
                                         L2: Label5_1.Text,
                                         L3: Label6_1.Text,
