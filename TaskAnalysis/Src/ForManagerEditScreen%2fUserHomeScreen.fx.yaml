@@ -1027,7 +1027,7 @@
                     Y: =GroupedTaxonomyGallery3.Height
                     ZIndex: =7
 
-                    SaveBtn As button:
+                    SubmitBtnManagerScreen As button:
                         BorderColor: =RGBA(2, 188, 148, 1)
                         BorderThickness: =1
                         Color: =RGBA(2, 188, 148, 1)
@@ -1100,7 +1100,7 @@
                         Size: =Self.Height/3
                         Text: ="Edit"
                         Width: =RightPanel3.Width*0.1
-                        X: =SaveBtn.X-Self.Width-10
+                        X: =SubmitBtnManagerScreen.X-Self.Width-10
                         Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
                         ZIndex: =2
 
@@ -1111,7 +1111,7 @@
                         DisabledColor: =RGBA(225, 223, 221, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
                         FocusedBorderThickness: =4
-                        Height: =SaveBtn.Height
+                        Height: =SubmitBtnManagerScreen.Height
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =ColorFade(Self.Color,40%)
                         HoverFill: =RGBA(0, 0, 0, 0)
@@ -1622,11 +1622,99 @@
                 Gallery1_1 As gallery.galleryVertical:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     DelayItemLoading: =true
-                    Height: =Parent.Height
-                    Items: =CustomGallerySample
+                    Height: =Parent.Height*0.8
+                    Items: =colNewTaskV1
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
                     Width: =Parent.Width
                     ZIndex: =1
+
+                FooterButtonContainer_2 As groupContainer.manualLayoutContainer:
+                    BorderStyle: =BorderStyle.None
+                    Height: =FooterButtonContainer_1.Height
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    Y: =FooterButtonContainer_1.Y
+                    ZIndex: =2
+
+                    SaveBtn As button:
+                        BorderColor: =RGBA(2, 188, 148, 1)
+                        BorderThickness: =1
+                        Color: =RGBA(2, 188, 148, 1)
+                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
+                        DisabledColor: =RGBA(208, 208, 208, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FocusedBorderThickness: =2
+                        Font: ="Poppins"
+                        Height: =Parent.Height*0.4
+                        HoverBorderColor: =ColorFade(Self.BorderColor,-10%)
+                        HoverColor: =ColorFade(Self.Color,-10%)
+                        HoverFill: =RGBA(2, 188, 148, 0.1)
+                        OnSelect: |
+                            =/* colToUpdate contains rows that has been UPDATED/CHANGED ONLY */
+                            Clear(colToUpdate);
+                            ForAll(
+                                Filter(
+                                    GroupByNameTaxonomy3.AllItems,
+                                    ToggleDetectChange.Value = true
+                                ),
+                                Collect(
+                                    colToUpdate,
+                                    {
+                                        'Sharepoint ID': Value(ID.Text),
+                                        'Updated Hours': Value(InputHoursReview_3.Text)
+                                    }
+                                )
+                            );
+                            
+                            Set(
+                                varEdit,
+                                DisplayMode.Disabled
+                            );
+                        PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
+                        PressedColor: =ColorFade(Self.Color,-20%)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =Self.Height/3
+                        Text: ="Save"
+                        Width: =Parent.Width*0.2
+                        X: =Parent.Width-Self.Width
+                        Y: =(Parent.Height-Self.Height)/2
+                        ZIndex: =1
+
+                    EditBtn_1 As button:
+                        BorderColor: =RGBA(5, 50, 43, 1)
+                        BorderThickness: =1
+                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
+                        DisabledColor: =RGBA(208, 208, 208, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        Fill: =RGBA(5, 50, 43, 1)
+                        FocusedBorderThickness: =2
+                        Font: ="Poppins"
+                        Height: =Parent.Height*0.4
+                        HoverBorderColor: =ColorFade(Self.Fill,20%)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(Self.Fill,20%)
+                        OnSelect: =Set(varEdit, DisplayMode.Edit)
+                        PressedBorderColor: =ColorFade(Self.Fill,-20%)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =ColorFade(Self.Fill,-20%)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =Self.Height/3
+                        Text: ="Cancel"
+                        Width: =Parent.Width*0.2
+                        X: =SaveBtn.X-Self.Width*1.05
+                        Y: =(Parent.Height-Self.Height)/2
+                        ZIndex: =2
 
