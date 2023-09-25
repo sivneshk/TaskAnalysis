@@ -834,6 +834,7 @@
                             Size: =13
                             TrueFill: =RGBA(0, 120, 212, 1)
                             TrueHoverFill: =RGBA(16, 110, 190, 1)
+                            Visible: =false
                             Width: =DeleteRowIcon_3.Width
                             X: =DeleteRowIcon_3.X+DeleteRowIcon_3.Width
                             Y: =(ChosenTask_3.Height-Self.Height)/2
