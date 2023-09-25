@@ -1559,6 +1559,7 @@
                         DisabledBorderColor: =RGBA(208, 208, 208, 1)
                         DisabledColor: =RGBA(208, 208, 208, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayMode: =If(Value(CountSelectedItems.Text)<1, DisplayMode.Disabled, DisplayMode.Edit)
                         Fill: =RGBA(2, 188, 148, 1)
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
@@ -1593,11 +1594,51 @@
                         RadiusTopLeft: =5
                         RadiusTopRight: =5
                         Size: =Self.Height/3
-                        Text: ="+ Add Task to List"
+                        Text: ="+ Assign Selected Task"
                         Width: =Parent.Width *0.3
                         X: =(Parent.Width-Self.Width)/2
                         Y: =(Parent.Height-Self.Height)/2
                         ZIndex: =1
+
+                    CountSelectedItems As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(0, 0, 0, 0)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisplayMode: =DisplayMode.View
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Size: =13
+                        Text: |-
+                            =CountRows(
+                                Filter(
+                                    Gallery2_1.AllItems,
+                                    Checkbox1_1.Value = true
+                                ))
+                        Visible: =false
+                        X: =854
+                        Y: =38
+                        ZIndex: =2
+
+                    LabelForSelectedItems As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisplayMode: =DisplayMode.View
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        Height: =Parent.Height
+                        Size: =HeaderUniqueID_1.Size
+                        Text: =Value(CountSelectedItems.Text) & " Item(s) Selected"
+                        Visible: =If(Value(CountSelectedItems.Text)<1, false, true)
+                        Width: =Parent.Width*0.3
+                        Y: =(Parent.Height-Self.Height)/2
+                        ZIndex: =3
 
                 ProcessTaxoLabelScreen3_3 As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
