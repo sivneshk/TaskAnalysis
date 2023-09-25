@@ -1589,6 +1589,8 @@
                                     }
                                 )
                             );
+                            
+                            Reset(Checkbox1_1);
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
@@ -1677,7 +1679,7 @@
                     Items: =colNewTaskV1
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
-                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/3)
+                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/2.5)
                     Width: =Parent.Width
                     Y: =Container1_1.Y
                     ZIndex: =1
@@ -1691,7 +1693,7 @@
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisplayMode: =DisplayMode.View
                         Font: ="Poppins"
-                        Height: =Parent.TemplateHeight/8
+                        Height: =Parent.TemplateHeight/7
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
                         Text: |-
@@ -2004,22 +2006,19 @@
                         DisabledColor: =RGBA(225, 223, 221, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
                         FocusedBorderThickness: =4
-                        Height: =ForUniqueID.Height*0.8
+                        Height: =ForUniqueID.Height
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =ColorFade(Self.Color,-50%)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.Trash
                         OnSelect: =Remove(colNewTaskV1,ThisItem)
-                        PaddingBottom: =3
-                        PaddingLeft: =3
-                        PaddingRight: =3
-                        PaddingTop: =3
+                        PaddingTop: =1
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =ColorFade(Self.Color,-30%)
                         PressedFill: =RGBA(0, 0, 0, 0)
                         Tooltip: ="Delete Item"
                         Width: =Self.Height
-                        X: =ForUniqueID.Width
+                        X: =ForUniqueID.Width+ForUniqueID.X-Self.Width
                         ZIndex: =10
 
                 FooterButtonContainer_2 As groupContainer.manualLayoutContainer:

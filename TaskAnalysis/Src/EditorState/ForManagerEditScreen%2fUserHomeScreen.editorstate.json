@@ -713,7 +713,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AddTaskBtn_3",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1124,7 +1124,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "associatedLE_3",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6684,7 +6684,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CountSelectedItems",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12241,7 +12241,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "GroupByNameTaxonomy3",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16680,7 +16680,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "InputHoursReview_3",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17762,7 +17762,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label2",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27551,7 +27551,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ToggleDetectChange",
-      "ParentIndex": 3,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
