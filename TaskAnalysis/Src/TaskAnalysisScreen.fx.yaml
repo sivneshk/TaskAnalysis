@@ -242,7 +242,7 @@ TaskAnalysisScreen As screen:
                         LayoutMinWidth: =320
                         OnChange: =Set(uniqueIDVar,DropdownUniqueID.Selected.Value)
                         OnSelect: =
-                        PaddingStart: =10
+                        PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="Unique ID"
                         Width: =LeftPanel.Width*0.85
@@ -351,7 +351,7 @@ TaskAnalysisScreen As screen:
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         OnChange: =Set(varL1,DropdownL1.Selected.Value)
-                        PaddingStart: =10
+                        PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L1 Taxonomy"
                         Width: =LeftPanel.Width*0.85
@@ -471,7 +471,7 @@ TaskAnalysisScreen As screen:
                             )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        PaddingStart: =10
+                        PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L2 Taxonomy"
                         Width: =LeftPanel.Width*0.85
@@ -591,7 +591,7 @@ TaskAnalysisScreen As screen:
                             )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        PaddingStart: =10
+                        PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L3 Taxonomy"
                         Width: =LeftPanel.Width*0.85
@@ -712,7 +712,7 @@ TaskAnalysisScreen As screen:
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         OnChange: =
-                        PaddingStart: =10
+                        PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L4 Taxonomy"
                         Width: =LeftPanel.Width*0.85
@@ -832,7 +832,7 @@ TaskAnalysisScreen As screen:
                             )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        PaddingStart: =10
+                        PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L5 Taxonomy"
                         Width: =LeftPanel.Width*0.85
@@ -952,7 +952,7 @@ TaskAnalysisScreen As screen:
                             )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        PaddingStart: =10
+                        PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L6 Taxonomy"
                         Width: =LeftPanel.Width*0.85
@@ -1355,108 +1355,41 @@ TaskAnalysisScreen As screen:
                                 Color.Red
                             )*/
                         Color: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
-                        Default: |+
+                        Default: |-
                             =Coalesce(
-                                If(
-                                    !IsBlank(
-                                        LookUp(
-                                            PrepCollection,
-                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com" 
-                                        )
-                                    ),
-                                    LookUp(
-                                        PrepCollection,
-                                        Text(Coco) = Text(ChosenCOCO) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
-                                    ).PrepHours,
-                                    Blank()
+                                LookUp(
+                                    PrepCollection,
+                                    Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail,
+                                    PrepHours
                                 ),
-                                If(
-                                    !IsBlank(
-                                        LookUp(
-                                            AppCollection,
-                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = "bassem.abdelrahman@bakerhughes.com" 
-                                        )
-                                    ),
-                                    LookUp(
-                                        AppCollection,
-                                        Text(Coco) = Text(ChosenCOCO) && Text(Email) = "bassem.abdelrahman@bakerhughes.com"
-                                    ).AppHours,
-                                    Blank()
+                                LookUp(
+                                    AppCollection,
+                                    Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail,
+                                    AppHours
                                 )
                             )
-                            
-                            /*Coalesce(
-                                If(
-                                    !IsBlank(
-                                        LookUp(
-                                            PrepCollection,
-                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = "Office365Users.MyProfile().Mail" 
-                                        )
-                                    ),
-                                    LookUp(
-                                        PrepCollection,
-                                        Text(Coco) = Text(ChosenCOCO) && Text(Email) = "Office365Users.MyProfile().Mail"
-                                    ).PrepHours,
-                                    Blank()
-                                ),
-                                If(
-                                    !IsBlank(
-                                        LookUp(
-                                            AppCollection,
-                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = "Office365Users.MyProfile().Mail" 
-                                        )
-                                    ),
-                                    LookUp(
-                                        AppCollection,
-                                        Text(Coco) = Text(ChosenCOCO) && Text(Email) = "Office365Users.MyProfile().Mail"
-                                    ).AppHours,
-                                    Blank()
-                                )
-                            )*/
-                            
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         DisplayMode: |+
-                            =
-                            If(
+                            =If(
                                 Or(
                                     !IsBlank(
                                         LookUp(
                                             PrepCollection,
-                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = "ahmedelsaidmohamed.baioumy@bakerhughes.com"
+                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = Office365Users.MyProfile().Mail
                                         ).PrepHours
                                     ),
                                     !IsBlank(
                                         LookUp(
                                             AppCollection,
-                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = "bassem.abdelrahman@bakerhughes.com"
+                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = Office365Users.MyProfile().Mail
                                         ).AppHours
                                     )
                                 ),
                                 DisplayMode.View,
                                 DisplayMode.Edit
                             )
-                            
-                            
-                            /*If(
-                                Or(
-                                    !IsBlank(
-                                        LookUp(
-                                            PrepCollection,
-                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = "Office365Users.MyProfile().Mail"
-                                        ).PrepHours
-                                    ),
-                                    !IsBlank(
-                                        LookUp(
-                                            AppCollection,
-                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = "Office365Users.MyProfile().Mail"
-                                        ).AppHours
-                                    )
-                                ),
-                                DisplayMode.View,
-                                DisplayMode.Edit
-                            ) */
                             
                         FocusedBorderThickness: =2
                         Font: ="Poppins"

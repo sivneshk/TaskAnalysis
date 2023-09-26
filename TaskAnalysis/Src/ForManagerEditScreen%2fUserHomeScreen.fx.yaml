@@ -244,7 +244,7 @@
                         LayoutMinWidth: =320
                         OnChange: =Set(uniqueIDVar,SlicerUserMailScreen3.Selected.Value)
                         OnSelect: =
-                        PaddingStart: =10
+                        PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="Employee Name"
                         Width: =LeftPanelScreen3_1.Width*0.85
@@ -289,7 +289,7 @@
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         OnChange: =Set(varL1,SlicerCOCOScreen3.Selected.Value)
-                        PaddingStart: =10
+                        PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="CoCo"
                         Width: =LeftPanelScreen3_1.Width*0.85
@@ -351,7 +351,7 @@
                             )
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        PaddingStart: =10
+                        PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="Unique ID"
                         Width: =LeftPanelScreen3_1.Width*0.85

@@ -9511,14 +9511,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "0",
-          "InvariantPropertyName": "PaddingStart",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "PaddingStart",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -9750,14 +9743,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "0",
-          "InvariantPropertyName": "PaddingStart",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "PaddingStart",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -9976,14 +9962,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "0",
-          "InvariantPropertyName": "PaddingStart",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "PaddingStart",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -10202,14 +10181,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "0",
-          "InvariantPropertyName": "PaddingStart",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "PaddingStart",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -10441,14 +10413,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "0",
-          "InvariantPropertyName": "PaddingStart",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "PaddingStart",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -10667,14 +10632,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "0",
-          "InvariantPropertyName": "PaddingStart",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "PaddingStart",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -10893,14 +10851,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "0",
-          "InvariantPropertyName": "PaddingStart",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "PaddingStart",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
