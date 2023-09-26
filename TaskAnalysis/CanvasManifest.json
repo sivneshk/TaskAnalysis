@@ -134,7 +134,6 @@
   "ScreenOrder": [
     "TaskAnalysisScreen",
     "TaxonomyReviewScreen",
-    "ForManagerEditScreen/UserHomeScreen",
-    "Collection"
+    "ForManagerEditScreen/UserHomeScreen"
   ]
 }

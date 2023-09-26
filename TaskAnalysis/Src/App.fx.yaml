@@ -11,6 +11,7 @@ App As appinfo:
         Clear(FinalTaxonomy);
         Clear(colToDelete);
         
+        
         ClearCollect(colTaskAnalysisSP, 'Task Analysis Taxonomy Collection');
         
         ClearCollect(
