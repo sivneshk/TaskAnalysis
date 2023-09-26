@@ -1242,7 +1242,34 @@
                     BorderThickness: =1
                     DelayItemLoading: =true
                     Height: =Parent.Height*0.75
-                    Items: ='Process Taxonomy'
+                    Items: |-
+                        =Filter('Process Taxonomy', And(Or(IsBlank(DropdownUniqueID_1.SelectedItems),
+                                       IsEmpty(DropdownUniqueID_1.SelectedItems),
+                                       Title = Index(DropdownUniqueID_1.SelectedItems,1).Value, 
+                                       Title = Index(DropdownUniqueID_1.SelectedItems,2).Value,
+                                       Title = Index(DropdownUniqueID_1.SelectedItems,3).Value,
+                                       Title = Index(DropdownUniqueID_1.SelectedItems,4).Value,
+                                       Title = Index(DropdownUniqueID_1.SelectedItems,5).Value, 
+                                       Title = Index(DropdownUniqueID_1.SelectedItems,6).Value,
+                                       Title = Index(DropdownUniqueID_1.SelectedItems,7).Value,
+                                       Title = Index(DropdownUniqueID_1.SelectedItems,8).Value,
+                                       Title = Index(DropdownUniqueID_1.SelectedItems,9).Value, 
+                                       Title = Index(DropdownUniqueID_1.SelectedItems,10).Value),
+                        
+                        
+                                       Or(IsBlank(DropdownL1_1.SelectedItems),
+                                       IsEmpty(DropdownL1_1.SelectedItems),
+                                        L1 = Index(DropdownL1_1.SelectedItems,1).Value, 
+                                       L1 = Index(DropdownL1_1.SelectedItems,2).Value,
+                                       L1 = Index(DropdownL1_1.SelectedItems,3).Value,
+                                       L1 = Index(DropdownL1_1.SelectedItems,4).Value,
+                                       L1 = Index(DropdownL1_1.SelectedItems,5).Value, 
+                                       L1 = Index(DropdownL1_1.SelectedItems,6).Value,
+                                       L1 = Index(DropdownL1_1.SelectedItems,7).Value,
+                                       L1 = Index(DropdownL1_1.SelectedItems,8).Value,
+                                       L1 = Index(DropdownL1_1.SelectedItems,9).Value, 
+                                       L1 = Index(DropdownL1_1.SelectedItems,10).Value))
+                        )
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
@@ -1674,7 +1701,7 @@
                     Y: =(ProcessTaxoLabelScreen3.Height-Self.Height)/2
                     ZIndex: =7
 
-                    FilterIcon As icon.FilterFlatFilled:
+                    FilterToOpenIcon As icon.FilterFlatFilled:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -1686,6 +1713,7 @@
                         HoverColor: =ColorFade(Self.Color, -20%)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
+                        OnSelect: =Set(ShowFilter, true);
                         PaddingBottom: =7
                         PaddingLeft: =5
                         PaddingRight: =5
@@ -1698,6 +1726,33 @@
                         X: =(Parent.Width-Self.Width)/2
                         Y: =(Parent.Height-Self.Height)/2
                         ZIndex: =1
+
+                    FilterToCloseIcon As icon.FilterFlatFilled:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =Parent.Height
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =ColorFade(Self.Color, -20%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.FilterFlatFilled
+                        OnSelect: =Set(ShowFilter, false);
+                        PaddingBottom: =7
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =7
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =ColorFade(Self.Color, -50%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="Filter"
+                        Visible: =ShowFilter
+                        Width: =Parent.Width
+                        X: =(Parent.Width-Self.Width)/2
+                        Y: =(Parent.Height-Self.Height)/2
+                        ZIndex: =2
 
             SecondContainer As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
@@ -2158,6 +2213,7 @@
             FilterPaneOnSelectContainer As groupContainer.manualLayoutContainer:
                 Fill: =RGBA(255, 255, 255, 0.5)
                 Height: =SecondContainer.Height
+                Visible: =ShowFilter
                 Width: =SecondContainer.Width
                 X: =SecondContainer.X
                 Y: =SecondContainer.Y
@@ -2174,15 +2230,27 @@
                     ZIndex: =8
 
                     "DropdownUniqueID_1 As 'Combo box'.pcfdataset":
+                        AllowMultiSelect: =true
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
-                        DefaultSelectedItems: =Blank()
+                        DefaultSelectedItems: =If(Not(IsEmpty(Selections)),FirstN(Selections,10),Blank())
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =HeaderUniqueID_1.Size
                         Height: =Parent.Height/15
                         Items: =Sort(Distinct('Process Taxonomy',Title),Value)
-                        OnChange: =Set(uniqueIDVar,DropdownUniqueID_1.Selected.Value)
+                        OnChange: |-
+                            =If(CountRows(Selections)=3,UpdateContext({Selections: Blank()}));
+                            If(
+                               CountRows(Self.SelectedItems) > 10,
+                               Reset(Self);
+                               Notify(
+                                  "Only Up to 10 Selections Allowed",
+                                  NotificationType.Error
+                               )
+                            );
+                            
+                            UpdateContext({Selections: Self.SelectedItems.Value});
                         OnSelect: =
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
@@ -2281,16 +2349,28 @@
                             ZIndex: =29
 
                     "DropdownL1_1 As 'Combo box'.pcfdataset":
+                        AllowMultiSelect: =true
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
-                        DefaultSelectedItems: =If(DropdownUniqueID_1.Selected.Value = Blank(), Blank(), First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L1)))
+                        DefaultSelectedItems: =If(Not(IsEmpty(SelectionsL1)),FirstN(SelectionsL1,10),Blank())
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =HeaderUniqueID_1.Size
                         Height: =Parent.Height/15
                         Items: |
                             =If(DropdownUniqueID_1.Selected.Value = Blank(), Sort(Distinct('Process Taxonomy',L1),Value), Distinct(Filter('Process Taxonomy',Title=DropdownUniqueID_1.Selected.Value),L1))
-                        OnChange: =Set(varL1,DropdownL1_1.Selected.Value)
+                        OnChange: |-
+                            =If(CountRows(SelectionsL1)=3,UpdateContext({SelectionsL1: Blank()}));
+                            If(
+                               CountRows(Self.SelectedItems) > 10,
+                               Reset(Self);
+                               Notify(
+                                  "Only Up to 10 Selections Allowed",
+                                  NotificationType.Error
+                               )
+                            );
+                            
+                            UpdateContext({SelectionsL1: Self.SelectedItems.Value});
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L1 Taxonomy"
@@ -2388,16 +2468,10 @@
                             ZIndex: =28
 
                     "DropdownL2_1 As 'Combo box'.pcfdataset":
+                        AllowMultiSelect: =true
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
-                        DefaultSelectedItems: |-
-                            =If(DropdownUniqueID_1.Selected.Value = Blank()
-                                ,
-                                Blank()
-                                ,
-                                First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L2))
-                                
-                            )
+                        DefaultSelectedItems: =If(Not(IsEmpty(SelectionsL2)),FirstN(SelectionsL2,10),Blank())
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =HeaderUniqueID_1.Size
@@ -2409,6 +2483,18 @@
                                 ,
                                 Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L2)
                             )
+                        OnChange: |-
+                            =If(CountRows(SelectionsL2)=3,UpdateContext({SelectionsL2: Blank()}));
+                            If(
+                               CountRows(Self.SelectedItems) > 10,
+                               Reset(Self);
+                               Notify(
+                                  "Only Up to 10 Selections Allowed",
+                                  NotificationType.Error
+                               )
+                            );
+                            
+                            UpdateContext({SelectionsL2: Self.SelectedItems.Value});
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L2 Taxonomy"
@@ -2506,16 +2592,10 @@
                             ZIndex: =40
 
                     "DropdownL3_1 As 'Combo box'.pcfdataset":
+                        AllowMultiSelect: =true
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
-                        DefaultSelectedItems: |-
-                            =If(DropdownUniqueID_1.Selected.Value = Blank()
-                                ,
-                                Blank()
-                                ,
-                                First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L3))
-                                
-                            )
+                        DefaultSelectedItems: =If(Not(IsEmpty(SelectionsL3)),FirstN(SelectionsL3,10),Blank())
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =HeaderUniqueID_1.Size
@@ -2527,6 +2607,18 @@
                                 ,
                                 Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L3)
                             )
+                        OnChange: |-
+                            =If(CountRows(SelectionsL3)=3,UpdateContext({SelectionsL3: Blank()}));
+                            If(
+                               CountRows(Self.SelectedItems) > 10,
+                               Reset(Self);
+                               Notify(
+                                  "Only Up to 10 Selections Allowed",
+                                  NotificationType.Error
+                               )
+                            );
+                            
+                            UpdateContext({SelectionsL3: Self.SelectedItems.Value});
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L3 Taxonomy"
@@ -2624,16 +2716,10 @@
                             ZIndex: =81
 
                     "DropdownL4_1 As 'Combo box'.pcfdataset":
+                        AllowMultiSelect: =true
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
-                        DefaultSelectedItems: |-
-                            =If(DropdownUniqueID_1.Selected.Value = Blank()
-                                ,
-                                Blank()
-                                ,
-                                First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L4))
-                                
-                            )
+                        DefaultSelectedItems: =If(Not(IsEmpty(SelectionsL4)),FirstN(SelectionsL4,10),Blank())
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =HeaderUniqueID_1.Size
@@ -2645,7 +2731,18 @@
                                 ,
                                 Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L4)
                             )
-                        OnChange: =
+                        OnChange: |-
+                            =If(CountRows(SelectionsL4)=3,UpdateContext({SelectionsL4: Blank()}));
+                            If(
+                               CountRows(Self.SelectedItems) > 10,
+                               Reset(Self);
+                               Notify(
+                                  "Only Up to 10 Selections Allowed",
+                                  NotificationType.Error
+                               )
+                            );
+                            
+                            UpdateContext({SelectionsL4: Self.SelectedItems.Value});
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L4 Taxonomy"
@@ -2743,16 +2840,10 @@
                             ZIndex: =82
 
                     "DropdownL5_1 As 'Combo box'.pcfdataset":
+                        AllowMultiSelect: =true
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
-                        DefaultSelectedItems: |-
-                            =If(DropdownUniqueID_1.Selected.Value = Blank()
-                                ,
-                               Blank()
-                                ,
-                                First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L5))
-                                
-                            )
+                        DefaultSelectedItems: =If(Not(IsEmpty(SelectionsL5)),FirstN(SelectionsL5,10),Blank())
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =HeaderUniqueID_1.Size
@@ -2764,6 +2855,18 @@
                                 ,
                                 Distinct(Filter('Process Taxonomy',Title = uniqueIDVar),L5)
                             )
+                        OnChange: |-
+                            =If(CountRows(SelectionsL5)=3,UpdateContext({SelectionsL5: Blank()}));
+                            If(
+                               CountRows(Self.SelectedItems) > 10,
+                               Reset(Self);
+                               Notify(
+                                  "Only Up to 10 Selections Allowed",
+                                  NotificationType.Error
+                               )
+                            );
+                            
+                            UpdateContext({SelectionsL5: Self.SelectedItems.Value});
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L5 Taxonomy"
@@ -2861,16 +2964,10 @@
                             ZIndex: =83
 
                     "DropdownL6_1 As 'Combo box'.pcfdataset":
+                        AllowMultiSelect: =true
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
-                        DefaultSelectedItems: |-
-                            =If(DropdownUniqueID_1.Selected.Value = Blank()
-                                ,
-                                Blank()
-                                ,
-                                First(Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L6))
-                                
-                            )
+                        DefaultSelectedItems: =If(Not(IsEmpty(SelectionsL6)),FirstN(SelectionsL6,10),Blank())
                         DisplayMode: =DisplayMode.Edit
                         Font: ="Noto Sans"
                         FontSize: =HeaderUniqueID_1.Size
@@ -2882,6 +2979,18 @@
                                 ,
                                 Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L6)
                             )
+                        OnChange: |-
+                            =If(CountRows(SelectionsL6)=3,UpdateContext({SelectionsL6: Blank()}));
+                            If(
+                               CountRows(Self.SelectedItems) > 10,
+                               Reset(Self);
+                               Notify(
+                                  "Only Up to 10 Selections Allowed",
+                                  NotificationType.Error
+                               )
+                            );
+                            
+                            UpdateContext({SelectionsL6: Self.SelectedItems.Value});
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L6 Taxonomy"
@@ -2977,4 +3086,47 @@
                             FieldVariantName: ="textualColumn"
                             Order: =1
                             ZIndex: =84
+
+                    ClearBtn_2 As button:
+                        BorderColor: =RGBA(148, 148, 148, 1)
+                        BorderThickness: =1
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        Fill: =RGBA(148, 148, 148, 1)
+                        FocusedBorderThickness: =2
+                        Font: ="Poppins"
+                        Height: =65
+                        HoverBorderColor: =RGBA(148, 148, 148, 1)
+                        HoverColor: =RGBA(148, 148, 148, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: |-
+                            =UpdateContext({Selections: Blank()});
+                            UpdateContext({SelectionsL1: Blank()});
+                            UpdateContext({SelectionsL2: Blank()});
+                            UpdateContext({SelectionsL3: Blank()});
+                            UpdateContext({SelectionsL4: Blank()});
+                            UpdateContext({SelectionsL5: Blank()});
+                            UpdateContext({SelectionsL6: Blank()});
+                            
+                            Reset(DropdownUniqueID_1);
+                            Reset(DropdownL1_1);
+                            Reset(DropdownL2_1);
+                            Reset(DropdownL3_1);
+                            Reset(DropdownL4_1);
+                            Reset(DropdownL5_1);
+                            Reset(DropdownL6_1);
+                        PressedBorderColor: =RGBA(208, 208, 208, 1)
+                        PressedColor: =RGBA(208, 208, 208, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =Self.Height/3
+                        Text: ="Clear All Filter"
+                        Width: =309
+                        X: =145
+                        Y: =670
+                        ZIndex: =8
 
