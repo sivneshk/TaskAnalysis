@@ -1243,7 +1243,35 @@
                     DelayItemLoading: =true
                     Height: =Parent.Height*0.75
                     Items: |-
-                        =Filter('Process Taxonomy', And(Or(IsBlank(DropdownUniqueID_1.SelectedItems),
+                        =Filter('Process Taxonomy', And(Or(IsBlank(Selections),
+                                       IsEmpty(Selections),
+                                       Title = Index(Selections,1).Value, 
+                                       Title = Index(Selections,2).Value,
+                                       Title = Index(Selections,3).Value,
+                                       Title = Index(Selections,4).Value,
+                                       Title = Index(Selections,5).Value, 
+                                       Title = Index(Selections,6).Value,
+                                       Title = Index(Selections,7).Value,
+                                       Title = Index(Selections,8).Value,
+                                       Title = Index(Selections,9).Value, 
+                                       Title = Index(Selections,10).Value),
+                        
+                        
+                                       Or(IsBlank(SelectionsL1),
+                                       IsEmpty(SelectionsL1),
+                                       L1 = Index(SelectionsL1,1).Value, 
+                                       L1 = Index(SelectionsL1,2).Value,
+                                       L1 = Index(SelectionsL1,3).Value,
+                                       L1 = Index(SelectionsL1,4).Value,
+                                       L1 = Index(SelectionsL1,5).Value, 
+                                       L1 = Index(SelectionsL1,6).Value,
+                                       L1 = Index(SelectionsL1,7).Value,
+                                       L1 = Index(SelectionsL1,8).Value,
+                                       L1 = Index(SelectionsL1,9).Value, 
+                                       L1 = Index(SelectionsL1,10).Value))
+                        )
+                        
+                        /*Filter('Process Taxonomy', And(Or(IsBlank(DropdownUniqueID_1.SelectedItems),
                                        IsEmpty(DropdownUniqueID_1.SelectedItems),
                                        Title = Index(DropdownUniqueID_1.SelectedItems,1).Value, 
                                        Title = Index(DropdownUniqueID_1.SelectedItems,2).Value,
@@ -1269,7 +1297,7 @@
                                        L1 = Index(DropdownL1_1.SelectedItems,8).Value,
                                        L1 = Index(DropdownL1_1.SelectedItems,9).Value, 
                                        L1 = Index(DropdownL1_1.SelectedItems,10).Value))
-                        )
+                        )*/
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
@@ -1336,7 +1364,7 @@
                         Height: =Parent.TemplateHeight
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
-                        Text: =ThisItem.L1
+                        Text: =ThisItem.Global_Process_ID
                         Width: =HeaderL1.Width
                         X: =HeaderL1.X
                         Y: =(Parent.TemplateHeight-Self.Height)/2
@@ -1354,7 +1382,7 @@
                         Height: =Parent.TemplateHeight
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
-                        Text: =ThisItem.L2
+                        Text: =ThisItem.L1
                         Width: =HeaderL2.Width
                         X: =HeaderL2.X
                         Y: =(Parent.TemplateHeight-Self.Height)/2
@@ -1372,7 +1400,7 @@
                         Height: =Parent.TemplateHeight
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
-                        Text: =ThisItem.L3
+                        Text: =ThisItem.L2
                         Width: =HeaderL3.Width
                         X: =HeaderL3.X
                         Y: =(Parent.TemplateHeight-Self.Height)/2
@@ -1390,7 +1418,7 @@
                         Height: =Parent.TemplateHeight
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
-                        Text: =ThisItem.L4
+                        Text: =ThisItem.L3
                         Width: =HeaderL4.Width
                         X: =HeaderL4.X
                         Y: =(Parent.TemplateHeight-Self.Height)/2
@@ -1408,7 +1436,7 @@
                         Height: =Parent.TemplateHeight
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
-                        Text: =ThisItem.L5
+                        Text: =ThisItem.L4
                         Width: =HeaderL5.Width
                         X: =HeaderL5.X
                         Y: =(Parent.TemplateHeight-Self.Height)/2
@@ -1427,7 +1455,7 @@
                         OnSelect: =Select(Parent)
                         Overflow: =Overflow.Scroll
                         Size: =HeaderUniqueID_1.Size
-                        Text: =ThisItem.L6
+                        Text: =ThisItem.L5
                         Width: =HeaderL5.Width
                         X: =HeaderL6.X
                         Y: =(Parent.TemplateHeight-Self.Height)/2
