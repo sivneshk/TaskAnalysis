@@ -1254,22 +1254,11 @@
                                        Title = Index(Selections,7).Value,
                                        Title = Index(Selections,8).Value,
                                        Title = Index(Selections,9).Value, 
-                                       Title = Index(Selections,10).Value),
-                        
-                        
-                                       Or(IsBlank(SelectionsL1),
-                                       IsEmpty(SelectionsL1),
-                                       L1 = Index(SelectionsL1,1).Value, 
-                                       L1 = Index(SelectionsL1,2).Value,
-                                       L1 = Index(SelectionsL1,3).Value,
-                                       L1 = Index(SelectionsL1,4).Value,
-                                       L1 = Index(SelectionsL1,5).Value, 
-                                       L1 = Index(SelectionsL1,6).Value,
-                                       L1 = Index(SelectionsL1,7).Value,
-                                       L1 = Index(SelectionsL1,8).Value,
-                                       L1 = Index(SelectionsL1,9).Value, 
-                                       L1 = Index(SelectionsL1,10).Value))
+                                       Title = Index(Selections,10).Value)
                         )
+                        
+                        
+                        
                         
                         /*Filter('Process Taxonomy', And(Or(IsBlank(DropdownUniqueID_1.SelectedItems),
                                        IsEmpty(DropdownUniqueID_1.SelectedItems),
@@ -1297,6 +1286,23 @@
                                        L1 = Index(DropdownL1_1.SelectedItems,8).Value,
                                        L1 = Index(DropdownL1_1.SelectedItems,9).Value, 
                                        L1 = Index(DropdownL1_1.SelectedItems,10).Value))
+                        
+                        
+                                       ,
+                        
+                        
+                                       Or(IsBlank(SelectionsL1),
+                                       IsEmpty(SelectionsL1),
+                                       L1 = Index(SelectionsL1,1).Value, 
+                                       L1 = Index(SelectionsL1,2).Value,
+                                       L1 = Index(SelectionsL1,3).Value,
+                                       L1 = Index(SelectionsL1,4).Value,
+                                       L1 = Index(SelectionsL1,5).Value, 
+                                       L1 = Index(SelectionsL1,6).Value,
+                                       L1 = Index(SelectionsL1,7).Value,
+                                       L1 = Index(SelectionsL1,8).Value,
+                                       L1 = Index(SelectionsL1,9).Value, 
+                                       L1 = Index(SelectionsL1,10).Value))
                         )*/
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
