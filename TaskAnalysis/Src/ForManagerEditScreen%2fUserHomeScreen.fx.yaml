@@ -3169,7 +3169,7 @@
                         Fill: =RGBA(148, 148, 148, 1)
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
-                        Height: =65
+                        Height: =Parent.Height/15
                         HoverBorderColor: =RGBA(148, 148, 148, 1)
                         HoverColor: =RGBA(148, 148, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
@@ -3198,8 +3198,33 @@
                         RadiusTopRight: =5
                         Size: =Self.Height/3
                         Text: ="Clear All Filter"
-                        Width: =309
-                        X: =145
-                        Y: =670
+                        Width: =Parent.Width*0.7
+                        X: =(Parent.Width-Self.Width)/2
+                        Y: =Parent.Height*0.85
                         ZIndex: =8
+
+                    Icon2 As icon.Erase:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =Parent.Height/15
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: |
+                            =ColorFade(Self.Color, -20%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Erase
+                        PaddingBottom: =3
+                        PaddingLeft: =5
+                        PaddingTop: =3
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: |
+                            =ColorFade(Self.Color, -40%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Self.Height
+                        X: =DropdownUniqueID_1.X+DropdownUniqueID_1.Width
+                        Y: =DropdownUniqueID_1.Y
+                        ZIndex: =9
 
