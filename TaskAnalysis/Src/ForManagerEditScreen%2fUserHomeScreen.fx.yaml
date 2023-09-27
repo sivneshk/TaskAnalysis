@@ -1695,12 +1695,7 @@
                                     colNewTaskV1,
                                     {
                                         'Unique ID': LabelUniqueID.Text,
-                                        L1: LabelL1.Text,
-                                        L2: LabelL2.Text,
-                                        L3: LabelL3.Text,
-                                        L4: LabelL4.Text,
-                                        L5: LabelL5.Text,
-                                        L6: LabelL6.Text
+                                        Task: If(LabelL6.Text <> Blank() && LabelL6.Text <> "-", LabelL6.Text, LabelL5.Text <> Blank() && LabelL5.Text <> "-", LabelL5.Text, LabelL4.Text)
                                     }
                                 )
                             );
@@ -1898,7 +1893,7 @@
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
                         Text: |-
-                            ="Process Name: " & If(ThisItem.L6 <> Blank() && ThisItem.L6 <> "-", ThisItem.L6, ThisItem.L5 <> Blank() && ThisItem.L5 <> "-", ThisItem.L5, ThisItem.L4)
+                            ="Process Name: " & ThisItem.Task
                         VerticalAlign: =VerticalAlign.Top
                         Width: =Parent.Width*0.9
                         X: =(Parent.Width-Self.Width)/2
@@ -2231,26 +2226,19 @@
                         HoverColor: =ColorFade(Self.Color,-10%)
                         HoverFill: =RGBA(2, 188, 148, 0.1)
                         OnSelect: |
-                            =/* colToUpdate contains rows that has been UPDATED/CHANGED ONLY 
-                            Clear(colToUpdate);
-                            ForAll(
-                                Filter(
-                                    GroupByNameTaxonomy3.AllItems,
-                                    ToggleDetectChange.Value = true
-                                ),
-                                Collect(
-                                    colToUpdate,
-                                    {
-                                        'Sharepoint ID': Value(ID.Text),
-                                        'Updated Hours': Value(InputHoursReview_3.Text)
-                                    }
-                                )
-                            );*/
+                            =/*colToAddByManager contains rows that has been ADDED ONLY */
                             
-                            Set(
+                            ForAll(Gallery1_1.AllItems As aPatch,
+                                ForAll(aPatch.EmployeeNameDropdown.SelectedItems As bPatch,
+                                    Collect(colNewTaskV2, {
+                                        Task: ForProcessName.Text,
+                                        UniqueID: ForUniqueID.Text,
+                                        'User Name': bPatch.Value})));
+                            
+                            /* Set(
                                 ShowManagerPopUp,
                                 false
-                            );
+                            ); */
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
                         PressedColor: =ColorFade(Self.Color,-20%)
                         PressedFill: =RGBA(255, 255, 255, 1)
