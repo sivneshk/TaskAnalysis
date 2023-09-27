@@ -1245,18 +1245,10 @@
                     Items: |-
                         =If(IsEmpty(Selections), 'Process Taxonomy', Filter('Process Taxonomy', Or(IsBlank(Selections),
                                        IsEmpty(Selections),
-                                       Title = Index(Selections,1).Value, 
-                                       Title = Index(Selections,2).Value,
-                                       Title = Index(Selections,3).Value,
-                                       Title = Index(Selections,4).Value,
-                                       Title = Index(Selections,5).Value, 
-                                       Title = Index(Selections,6).Value,
-                                       Title = Index(Selections,7).Value,
-                                       Title = Index(Selections,8).Value,
-                                       Title = Index(Selections,9).Value, 
-                                       Title = Index(Selections,10).Value)
+                                       Title = Last(FirstN(Selections,1)).Value, 
+                                       Title = Last(FirstN(Selections,2)).Value
                         
-                        ))
+                        )))
                         
                         
                         
