@@ -1243,60 +1243,106 @@
                     DelayItemLoading: =true
                     Height: =Parent.Height*0.75
                     Items: |-
-                        =If(IsEmpty(Selections), 'Process Taxonomy', Filter('Process Taxonomy', Or(IsBlank(Selections),
+                        =/* I do like this to avoid delegation issue, since using In is non-delegable, lmk if there's a better way */
+                        
+                        If(
+                            IsEmpty(Selections),
+                            'Process Taxonomy',
+                            Filter(
+                                'Process Taxonomy',
+                                Or(IsBlank(Selections),
                                        IsEmpty(Selections),
                                        Title = Last(FirstN(Selections,1)).Value, 
-                                       Title = Last(FirstN(Selections,2)).Value
-                        
-                        )))
-                        
-                        
-                        
-                        
-                        /*Filter('Process Taxonomy', And(Or(IsBlank(DropdownUniqueID_1.SelectedItems),
-                                       IsEmpty(DropdownUniqueID_1.SelectedItems),
-                                       Title = Index(DropdownUniqueID_1.SelectedItems,1).Value, 
-                                       Title = Index(DropdownUniqueID_1.SelectedItems,2).Value,
-                                       Title = Index(DropdownUniqueID_1.SelectedItems,3).Value,
-                                       Title = Index(DropdownUniqueID_1.SelectedItems,4).Value,
-                                       Title = Index(DropdownUniqueID_1.SelectedItems,5).Value, 
-                                       Title = Index(DropdownUniqueID_1.SelectedItems,6).Value,
-                                       Title = Index(DropdownUniqueID_1.SelectedItems,7).Value,
-                                       Title = Index(DropdownUniqueID_1.SelectedItems,8).Value,
-                                       Title = Index(DropdownUniqueID_1.SelectedItems,9).Value, 
-                                       Title = Index(DropdownUniqueID_1.SelectedItems,10).Value),
-                        
-                        
-                                       Or(IsBlank(DropdownL1_1.SelectedItems),
-                                       IsEmpty(DropdownL1_1.SelectedItems),
-                                        L1 = Index(DropdownL1_1.SelectedItems,1).Value, 
-                                       L1 = Index(DropdownL1_1.SelectedItems,2).Value,
-                                       L1 = Index(DropdownL1_1.SelectedItems,3).Value,
-                                       L1 = Index(DropdownL1_1.SelectedItems,4).Value,
-                                       L1 = Index(DropdownL1_1.SelectedItems,5).Value, 
-                                       L1 = Index(DropdownL1_1.SelectedItems,6).Value,
-                                       L1 = Index(DropdownL1_1.SelectedItems,7).Value,
-                                       L1 = Index(DropdownL1_1.SelectedItems,8).Value,
-                                       L1 = Index(DropdownL1_1.SelectedItems,9).Value, 
-                                       L1 = Index(DropdownL1_1.SelectedItems,10).Value))
-                        
-                        
-                                       ,
-                        
-                        
-                                       Or(IsBlank(SelectionsL1),
+                                       Title = Last(FirstN(Selections,2)).Value,
+                                       Title = Last(FirstN(Selections,3)).Value, 
+                                       Title = Last(FirstN(Selections,4)).Value,
+                                       Title = Last(FirstN(Selections,5)).Value, 
+                                       Title = Last(FirstN(Selections,6)).Value,
+                                       Title = Last(FirstN(Selections,7)).Value, 
+                                       Title = Last(FirstN(Selections,8)).Value,
+                                       Title = Last(FirstN(Selections,9)).Value, 
+                                       Title = Last(FirstN(Selections,10)).Value
+                                ),
+                                Or(IsBlank(SelectionsL1),
                                        IsEmpty(SelectionsL1),
-                                       L1 = Index(SelectionsL1,1).Value, 
-                                       L1 = Index(SelectionsL1,2).Value,
-                                       L1 = Index(SelectionsL1,3).Value,
-                                       L1 = Index(SelectionsL1,4).Value,
-                                       L1 = Index(SelectionsL1,5).Value, 
-                                       L1 = Index(SelectionsL1,6).Value,
-                                       L1 = Index(SelectionsL1,7).Value,
-                                       L1 = Index(SelectionsL1,8).Value,
-                                       L1 = Index(SelectionsL1,9).Value, 
-                                       L1 = Index(SelectionsL1,10).Value))
-                        )*/
+                                       L1 = Last(FirstN(SelectionsL1,1)).Value, 
+                                       L1 = Last(FirstN(SelectionsL1,2)).Value,
+                                       L1 = Last(FirstN(SelectionsL1,3)).Value, 
+                                       L1 = Last(FirstN(SelectionsL1,4)).Value,
+                                       L1 = Last(FirstN(SelectionsL1,5)).Value, 
+                                       L1 = Last(FirstN(SelectionsL1,6)).Value,
+                                       L1 = Last(FirstN(SelectionsL1,7)).Value, 
+                                       L1 = Last(FirstN(SelectionsL1,8)).Value,
+                                       L1 = Last(FirstN(SelectionsL1,9)).Value, 
+                                       L1 = Last(FirstN(SelectionsL1,10)).Value
+                                ),
+                                  Or(IsBlank(SelectionsL2),
+                                       IsEmpty(SelectionsL2),
+                                       L2 = Last(FirstN(SelectionsL2,1)).Value, 
+                                       L2 = Last(FirstN(SelectionsL2,2)).Value,
+                                       L2 = Last(FirstN(SelectionsL2,3)).Value, 
+                                       L2 = Last(FirstN(SelectionsL2,4)).Value,
+                                       L2 = Last(FirstN(SelectionsL2,5)).Value, 
+                                       L2 = Last(FirstN(SelectionsL2,6)).Value,
+                                       L2 = Last(FirstN(SelectionsL2,7)).Value, 
+                                       L2 = Last(FirstN(SelectionsL2,8)).Value,
+                                       L2 = Last(FirstN(SelectionsL2,9)).Value, 
+                                       L2 = Last(FirstN(SelectionsL2,10)).Value
+                                ),
+                                Or(IsBlank(SelectionsL3),
+                                       IsEmpty(SelectionsL3),
+                                       L3 = Last(FirstN(SelectionsL3,1)).Value, 
+                                       L3 = Last(FirstN(SelectionsL3,2)).Value,
+                                       L3 = Last(FirstN(SelectionsL3,3)).Value, 
+                                       L3 = Last(FirstN(SelectionsL3,4)).Value,
+                                       L3 = Last(FirstN(SelectionsL3,5)).Value, 
+                                       L3 = Last(FirstN(SelectionsL3,6)).Value,
+                                       L3 = Last(FirstN(SelectionsL3,7)).Value, 
+                                       L3 = Last(FirstN(SelectionsL3,8)).Value,
+                                       L3 = Last(FirstN(SelectionsL3,9)).Value, 
+                                       L3 = Last(FirstN(SelectionsL3,10)).Value
+                                ),
+                                Or(IsBlank(SelectionsL4),
+                                       IsEmpty(SelectionsL4),
+                                       L4 = Last(FirstN(SelectionsL4,1)).Value, 
+                                       L4 = Last(FirstN(SelectionsL4,2)).Value,
+                                       L4 = Last(FirstN(SelectionsL4,3)).Value, 
+                                       L4 = Last(FirstN(SelectionsL4,4)).Value,
+                                       L4 = Last(FirstN(SelectionsL4,5)).Value, 
+                                       L4 = Last(FirstN(SelectionsL4,6)).Value,
+                                       L4 = Last(FirstN(SelectionsL4,7)).Value, 
+                                       L4 = Last(FirstN(SelectionsL4,8)).Value,
+                                       L4 = Last(FirstN(SelectionsL4,9)).Value, 
+                                       L4 = Last(FirstN(SelectionsL4,10)).Value
+                                ),
+                                Or(IsBlank(SelectionsL5),
+                                       IsEmpty(SelectionsL5),
+                                       L5 = Last(FirstN(SelectionsL5,1)).Value, 
+                                       L5 = Last(FirstN(SelectionsL5,2)).Value,
+                                       L5 = Last(FirstN(SelectionsL5,3)).Value, 
+                                       L5 = Last(FirstN(SelectionsL5,4)).Value,
+                                       L5 = Last(FirstN(SelectionsL5,5)).Value, 
+                                       L5 = Last(FirstN(SelectionsL5,6)).Value,
+                                       L5 = Last(FirstN(SelectionsL5,7)).Value, 
+                                       L5 = Last(FirstN(SelectionsL5,8)).Value,
+                                       L5 = Last(FirstN(SelectionsL5,9)).Value, 
+                                       L5 = Last(FirstN(SelectionsL5,10)).Value
+                                ),
+                                Or(IsBlank(SelectionsL6),
+                                       IsEmpty(SelectionsL6),
+                                       L6 = Last(FirstN(SelectionsL6,1)).Value, 
+                                       L6 = Last(FirstN(SelectionsL6,2)).Value,
+                                       L6 = Last(FirstN(SelectionsL6,3)).Value, 
+                                       L6 = Last(FirstN(SelectionsL6,4)).Value,
+                                       L6 = Last(FirstN(SelectionsL6,5)).Value, 
+                                       L6 = Last(FirstN(SelectionsL6,6)).Value,
+                                       L6 = Last(FirstN(SelectionsL6,7)).Value, 
+                                       L6 = Last(FirstN(SelectionsL6,8)).Value,
+                                       L6 = Last(FirstN(SelectionsL6,9)).Value, 
+                                       L6 = Last(FirstN(SelectionsL6,10)).Value
+                                )
+                            )
+                        )
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
@@ -1363,7 +1409,7 @@
                         Height: =Parent.TemplateHeight
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
-                        Text: =ThisItem.Global_Process_ID
+                        Text: =ThisItem.L1
                         Width: =HeaderL1.Width
                         X: =HeaderL1.X
                         Y: =(Parent.TemplateHeight-Self.Height)/2
@@ -1381,7 +1427,7 @@
                         Height: =Parent.TemplateHeight
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
-                        Text: =ThisItem.L1
+                        Text: =ThisItem.L2
                         Width: =HeaderL2.Width
                         X: =HeaderL2.X
                         Y: =(Parent.TemplateHeight-Self.Height)/2
@@ -1399,7 +1445,7 @@
                         Height: =Parent.TemplateHeight
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
-                        Text: =ThisItem.L2
+                        Text: =ThisItem.L3
                         Width: =HeaderL3.Width
                         X: =HeaderL3.X
                         Y: =(Parent.TemplateHeight-Self.Height)/2
@@ -1417,7 +1463,7 @@
                         Height: =Parent.TemplateHeight
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
-                        Text: =ThisItem.L3
+                        Text: =ThisItem.L4
                         Width: =HeaderL4.Width
                         X: =HeaderL4.X
                         Y: =(Parent.TemplateHeight-Self.Height)/2
@@ -1435,7 +1481,7 @@
                         Height: =Parent.TemplateHeight
                         OnSelect: =Select(Parent)
                         Size: =HeaderUniqueID_1.Size
-                        Text: =ThisItem.L4
+                        Text: =ThisItem.L5
                         Width: =HeaderL5.Width
                         X: =HeaderL5.X
                         Y: =(Parent.TemplateHeight-Self.Height)/2
@@ -1454,7 +1500,7 @@
                         OnSelect: =Select(Parent)
                         Overflow: =Overflow.Scroll
                         Size: =HeaderUniqueID_1.Size
-                        Text: =ThisItem.L5
+                        Text: =ThisItem.L6
                         Width: =HeaderL5.Width
                         X: =HeaderL6.X
                         Y: =(Parent.TemplateHeight-Self.Height)/2
@@ -2281,7 +2327,7 @@
                         OnSelect: =
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
-                        Text: ="Unique ID"
+                        Text: ="Unique ID (Max. 10 Selections)"
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.1
@@ -2400,7 +2446,7 @@
                             UpdateContext({SelectionsL1: Self.SelectedItems.Value});
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
-                        Text: ="L1 Taxonomy"
+                        Text: ="L1 Taxonomy (Max. 10 Selections)"
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.2
@@ -2524,7 +2570,7 @@
                             UpdateContext({SelectionsL2: Self.SelectedItems.Value});
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
-                        Text: ="L2 Taxonomy"
+                        Text: ="L2 Taxonomy (Max. 10 Selections)"
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.3
@@ -2648,7 +2694,7 @@
                             UpdateContext({SelectionsL3: Self.SelectedItems.Value});
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
-                        Text: ="L3 Taxonomy"
+                        Text: ="L3 Taxonomy (Max. 10 Selections)"
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.4
@@ -2772,7 +2818,7 @@
                             UpdateContext({SelectionsL4: Self.SelectedItems.Value});
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
-                        Text: ="L4 Taxonomy"
+                        Text: ="L4 Taxonomy (Max. 10 Selections)"
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.5
@@ -2896,7 +2942,7 @@
                             UpdateContext({SelectionsL5: Self.SelectedItems.Value});
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
-                        Text: ="L5 Taxonomy"
+                        Text: ="L5 Taxonomy (Max. 10 Selections)"
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.6
@@ -3020,7 +3066,7 @@
                             UpdateContext({SelectionsL6: Self.SelectedItems.Value});
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
-                        Text: ="L6 Taxonomy"
+                        Text: ="L6 Taxonomy (Max. 10 Selections)"
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.7
