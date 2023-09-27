@@ -1243,7 +1243,7 @@
                     DelayItemLoading: =true
                     Height: =Parent.Height*0.75
                     Items: |-
-                        =Filter('Process Taxonomy', And(Or(IsBlank(Selections),
+                        =If(IsEmpty(Selections), 'Process Taxonomy', Filter('Process Taxonomy', Or(IsBlank(Selections),
                                        IsEmpty(Selections),
                                        Title = Index(Selections,1).Value, 
                                        Title = Index(Selections,2).Value,
@@ -1255,7 +1255,8 @@
                                        Title = Index(Selections,8).Value,
                                        Title = Index(Selections,9).Value, 
                                        Title = Index(Selections,10).Value)
-                        )
+                        
+                        ))
                         
                         
                         
