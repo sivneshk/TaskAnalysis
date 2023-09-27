@@ -1767,8 +1767,8 @@
                     DropShadow: =DropShadow.Regular
                     Fill: =RGBA(5, 50, 43, 1)
                     Height: =ProcessTaxoLabelScreen3.Height*0.8
-                    RadiusBottomLeft: =8
-                    RadiusTopLeft: =8
+                    RadiusBottomLeft: =5
+                    RadiusTopLeft: =5
                     Width: =Parent.Width*0.05
                     X: =Parent.Width-Self.Width
                     Y: =(ProcessTaxoLabelScreen3.Height-Self.Height)/2
@@ -1787,10 +1787,10 @@
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
                         OnSelect: =Set(ShowFilter, true);
-                        PaddingBottom: =7
+                        PaddingBottom: =5
                         PaddingLeft: =5
                         PaddingRight: =5
-                        PaddingTop: =7
+                        PaddingTop: =5
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =ColorFade(Self.Color, -50%)
                         PressedFill: =RGBA(0, 0, 0, 0)
@@ -1813,10 +1813,10 @@
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
                         OnSelect: =Set(ShowFilter, false);
-                        PaddingBottom: =7
+                        PaddingBottom: =5
                         PaddingLeft: =5
                         PaddingRight: =5
-                        PaddingTop: =7
+                        PaddingTop: =5
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =ColorFade(Self.Color, -50%)
                         PressedFill: =RGBA(0, 0, 0, 0)
@@ -2296,8 +2296,8 @@
                     DropShadow: =DropShadow.Light
                     Fill: =RGBA(5, 50, 43, 1)
                     Height: =Parent.Height*0.8
-                    RadiusBottomRight: =8
-                    RadiusTopRight: =8
+                    RadiusBottomRight: =5
+                    RadiusTopRight: =5
                     Width: =Parent.Width*0.8
                     Y: =FilterIconBG.Y
                     ZIndex: =8
@@ -3203,7 +3203,7 @@
                         Y: =Parent.Height*0.85
                         ZIndex: =8
 
-                    Icon2 As icon.Erase:
+                    CleardrpDwnUniqueID As icon.Erase:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         Color: =RGBA(255, 255, 255, 1)
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -3216,9 +3216,12 @@
                             =ColorFade(Self.Color, -20%)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.Erase
-                        PaddingBottom: =3
+                        OnSelect: |-
+                            =UpdateContext({Selections: Blank()});
+                            Reset(DropdownUniqueID_1);
+                        PaddingBottom: =4
                         PaddingLeft: =5
-                        PaddingTop: =3
+                        PaddingTop: =4
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: |
                             =ColorFade(Self.Color, -40%)
@@ -3227,4 +3230,172 @@
                         X: =DropdownUniqueID_1.X+DropdownUniqueID_1.Width
                         Y: =DropdownUniqueID_1.Y
                         ZIndex: =9
+
+                    ClearDrpDwnL1 As icon.Erase:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =Parent.Height/15
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: |
+                            =ColorFade(Self.Color, -20%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Erase
+                        OnSelect: |-
+                            =UpdateContext({SelectionsL1: Blank()});
+                            Reset(DropdownL1_1);
+                        PaddingBottom: =4
+                        PaddingLeft: =5
+                        PaddingTop: =4
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: |
+                            =ColorFade(Self.Color, -40%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Self.Height
+                        X: =DropdownL1_1.X+DropdownL1_1.Width
+                        Y: =DropdownL1_1.Y
+                        ZIndex: =10
+
+                    ClearDrpDwnL2 As icon.Erase:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =Parent.Height/15
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: |
+                            =ColorFade(Self.Color, -20%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Erase
+                        OnSelect: |-
+                            =UpdateContext({SelectionsL2: Blank()});
+                            Reset(DropdownL2_1);
+                        PaddingBottom: =4
+                        PaddingLeft: =5
+                        PaddingTop: =4
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: |
+                            =ColorFade(Self.Color, -40%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Self.Height
+                        X: =DropdownL2_1.X+DropdownL2_1.Width
+                        Y: =DropdownL2_1.Y
+                        ZIndex: =11
+
+                    ClearDrpDwnL3 As icon.Erase:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =Parent.Height/15
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: |
+                            =ColorFade(Self.Color, -20%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Erase
+                        OnSelect: |-
+                            =UpdateContext({SelectionsL3: Blank()});
+                            Reset(DropdownL3_1);
+                        PaddingBottom: =4
+                        PaddingLeft: =5
+                        PaddingTop: =4
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: |
+                            =ColorFade(Self.Color, -40%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Self.Height
+                        X: =DropdownL3_1.X+DropdownL3_1.Width
+                        Y: =DropdownL3_1.Y
+                        ZIndex: =12
+
+                    ClearDrpDwnL4 As icon.Erase:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =Parent.Height/15
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: |
+                            =ColorFade(Self.Color, -20%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Erase
+                        OnSelect: |-
+                            =UpdateContext({SelectionsL4: Blank()});
+                            Reset(DropdownL4_1);
+                        PaddingBottom: =4
+                        PaddingLeft: =5
+                        PaddingTop: =4
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: |
+                            =ColorFade(Self.Color, -40%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Self.Height
+                        X: =DropdownL4_1.X+DropdownL4_1.Width
+                        Y: =DropdownL4_1.Y
+                        ZIndex: =13
+
+                    ClearDrpDwnL5 As icon.Erase:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =Parent.Height/15
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: |
+                            =ColorFade(Self.Color, -20%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Erase
+                        OnSelect: |-
+                            =UpdateContext({SelectionsL5: Blank()});
+                            Reset(DropdownL5_1);
+                        PaddingBottom: =4
+                        PaddingLeft: =5
+                        PaddingTop: =4
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: |
+                            =ColorFade(Self.Color, -40%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Self.Height
+                        X: =DropdownL5_1.X+DropdownL5_1.Width
+                        Y: =DropdownL5_1.Y
+                        ZIndex: =14
+
+                    ClearDrpDwnL6 As icon.Erase:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =Parent.Height/15
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: |
+                            =ColorFade(Self.Color, -20%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Erase
+                        OnSelect: |-
+                            =UpdateContext({SelectionsL6: Blank()});
+                            Reset(DropdownL6_1);
+                        PaddingBottom: =4
+                        PaddingLeft: =5
+                        PaddingTop: =4
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: |
+                            =ColorFade(Self.Color, -40%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Self.Height
+                        X: =DropdownL6_1.X+DropdownL6_1.Width
+                        Y: =DropdownL6_1.Y
+                        ZIndex: =15
 
