@@ -1386,7 +1386,6 @@
                         ZIndex: =10
 
                         LabelUniqueID As label:
-                            Align: =Align.Center
                             BorderColor: =RGBA(0, 0, 0, 0)
                             BorderStyle: =BorderStyle.None
                             BorderThickness: =2
@@ -1498,6 +1497,7 @@
                             ZIndex: =7
 
                         LabelL5 As label:
+                            Align: =If(Self.Text="-", Align.Center, Align.Left)
                             BorderColor: =RGBA(0, 0, 0, 0)
                             BorderStyle: =BorderStyle.None
                             BorderThickness: =2
@@ -1520,6 +1520,7 @@
                             ZIndex: =8
 
                         LabelL6 As label:
+                            Align: =If(Self.Text="-", Align.Center, Align.Left)
                             BorderColor: =RGBA(0, 0, 0, 0)
                             BorderStyle: =BorderStyle.None
                             BorderThickness: =2
@@ -1556,7 +1557,6 @@
                     ZIndex: =2
 
                     HeaderUniqueID_1 As label:
-                        Align: =Align.Center
                         BorderColor: =RGBA(99, 139, 44, 1)
                         BorderThickness: =2
                         Color: =RGBA(50, 49, 48, 1)
@@ -1701,7 +1701,7 @@
                         DisabledColor: =RGBA(225, 223, 221, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
                         FocusedBorderThickness: =4
-                        Height: =HeaderUniqueID_1.Size
+                        Height: =HeaderUniqueID_1.Size*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =RGBA(16, 110, 190, 1)
                         HoverFill: =RGBA(0, 0, 0, 0)
@@ -1709,8 +1709,9 @@
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
-                        X: =85
-                        Y: =36
+                        Width: =Self.Height
+                        X: =HeaderL1.X- Self.Width*1.5
+                        Y: =(Parent.Height-Self.Height)/2
                         ZIndex: =9
 
                 FooterButtonContainerScrn3 As groupContainer.manualLayoutContainer:
