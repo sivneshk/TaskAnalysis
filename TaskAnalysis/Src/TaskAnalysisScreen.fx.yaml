@@ -1359,22 +1359,22 @@ TaskAnalysisScreen As screen:
                             =If( !IsBlank(LookUp(
                                             PrepCollection,
                                             Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail
-                                        ).PrepHours),
+                                        ,PrepHours)),
                             
                                         Value(LookUp(
                                             PrepCollection,
                                             Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail
-                                        ).PrepHours)
+                                        ,PrepHours))
                                     ,
                                     !IsBlank(LookUp(
                                             AppCollection,
-                                            Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail
-                                        ).AppHours)
+                                            Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail, AppHours
+                                        ))
                                     ,
                                         Value(LookUp(
                                             AppCollection,
                                             Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail
-                                        ).AppHours)
+                                        ,AppHours))
                                     ,
                                     ""
                                     
