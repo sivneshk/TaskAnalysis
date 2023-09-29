@@ -2442,7 +2442,19 @@
                                     ),
                                     Value
                                 ),
-                                Distinct(ForAll(DropdownUniqueID_1.SelectedItems As aPatch,LookUp('Process Taxonomy', Title = aPatch.Value).L1),Value)
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            DropdownUniqueID_1.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                Title = aPatch.Value
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_1
+                                )
                             )
                         OnChange: |-
                             =If(CountRows(SelectionsL1)=3,UpdateContext({SelectionsL1: Blank()}));
@@ -2568,9 +2580,33 @@
                                 ,
                                 And(!IsEmpty(DropdownUniqueID_1.SelectedItems), IsEmpty(DropdownL1_1.SelectedItems))
                                 ,
-                                Distinct(ForAll(DropdownUniqueID_1.SelectedItems As aPatch,LookUp('Process Taxonomy', Title = aPatch.Value).L2),Value)
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            DropdownUniqueID_1.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                Title = aPatch.Value
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_2
+                                )
                                 ,
-                                Distinct(ForAll(DropdownL1_1.SelectedItems As aPatch,LookUp('Process Taxonomy', L1 = aPatch.Value).L2),Value)
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            DropdownL1_1.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                L1 = aPatch.Value
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_2
+                                )
                             )
                         OnChange: |-
                             =If(CountRows(SelectionsL2)=3,UpdateContext({SelectionsL2: Blank()}));
