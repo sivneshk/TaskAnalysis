@@ -1243,7 +1243,7 @@
                     DelayItemLoading: =true
                     Height: =Parent.Height*0.75
                     Items: |-
-                        =/* I do like this to avoid delegation issue, since using In is non-delegable, lmk if there's a better way */
+                        =/* I do like this to avoid delegation issue, since using 'In' is non-delegable, lmk if there's a better way */
                         
                         If(
                             IsEmpty(Selections),
@@ -1346,7 +1346,7 @@
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
-                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/7)
+                    TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/5)
                     Width: =Parent.Width-Parent.PaddingRight
                     Y: =Container1_1.Y+Container1_1.Height
                     ZIndex: =1
@@ -1522,7 +1522,6 @@
                     HeaderUniqueID_1 As label:
                         Align: =Align.Center
                         BorderColor: =RGBA(99, 139, 44, 1)
-                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         Color: =RGBA(50, 49, 48, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1531,7 +1530,7 @@
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =Parent.Height
-                        Size: =Self.Height*0.3
+                        Size: =Self.Height*0.2
                         Text: ="Unique ID"
                         Width: =(Parent.Width-Checkbox1_1.Width)/11 
                         X: =HeaderL1.X-Self.Width
@@ -1539,8 +1538,7 @@
 
                     HeaderL1 As label:
                         Align: =Align.Center
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
+                        BorderColor: =RGBA(151, 0, 0, 1)
                         BorderThickness: =2
                         Color: =RGBA(50, 49, 48, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1549,7 +1547,7 @@
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =Parent.Height
-                        Size: =Self.Height*0.3
+                        Size: =Self.Height*0.2
                         Text: ="L1"
                         Width: =(Parent.Width-Checkbox1_1.Width)/8
                         X: =HeaderL2.X-Self.Width
@@ -1567,7 +1565,7 @@
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =Parent.Height
-                        Size: =Self.Height*0.3
+                        Size: =Self.Height*0.2
                         Text: ="L2"
                         Width: =(Parent.Width-Checkbox1_1.Width)/9
                         X: =HeaderL3.X-Self.Width
@@ -1585,7 +1583,7 @@
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =Parent.Height
-                        Size: =Self.Height*0.3
+                        Size: =Self.Height*0.2
                         Text: ="L3"
                         Width: =(Parent.Width-LabelCheckbox.Width-HeaderUniqueID_1.Width-HeaderL1.Width-HeaderL2.Width-Parent.PaddingRight)/4
                         X: =HeaderL4.X-Self.Width
@@ -1603,7 +1601,7 @@
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =Parent.Height
-                        Size: =Self.Height*0.3
+                        Size: =Self.Height*0.2
                         Text: ="L4"
                         Width: =(Parent.Width-LabelCheckbox.Width-HeaderUniqueID_1.Width-HeaderL1.Width-HeaderL2.Width-Parent.PaddingRight)/4
                         X: =HeaderL5.X-Self.Width
@@ -1621,7 +1619,7 @@
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =Parent.Height
-                        Size: =Self.Height*0.3
+                        Size: =Self.Height*0.2
                         Text: ="L5"
                         Width: =(Parent.Width-LabelCheckbox.Width-HeaderUniqueID_1.Width-HeaderL1.Width-HeaderL2.Width-Parent.PaddingRight)/4
                         X: =HeaderL6.X-Self.Width
@@ -1639,7 +1637,7 @@
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =Parent.Height
-                        Size: =Self.Height*0.3
+                        Size: =Self.Height*0.2
                         Text: ="L6"
                         Width: =(Parent.Width-LabelCheckbox.Width-HeaderUniqueID_1.Width-HeaderL1.Width-HeaderL2.Width-Parent.PaddingRight)/4
                         X: =Parent.Width-Self.Width
@@ -1659,6 +1657,25 @@
                         Text: ="Text"
                         Width: =Parent.Width*0.04
                         ZIndex: =8
+
+                    Icon2 As icon.FilterFlatFilled:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(208, 208, 208, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =HeaderUniqueID_1.Size
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.FilterFlatFilled
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        X: =85
+                        Y: =36
+                        ZIndex: =9
 
                 FooterButtonContainerScrn3 As groupContainer.manualLayoutContainer:
                     BorderStyle: =BorderStyle.None
