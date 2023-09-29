@@ -2435,7 +2435,7 @@
                                         'Company Code': COCODropdown.SelectedItems
                                         }));
                             
-                            ClearCollect(colNewTaskV3, Ungroup(Ungroup(colNewTaskV2, "User Name"), "Company Code"));
+                            ClearCollect(colNewTaskV3, ShowColumns(Ungroup(Ungroup(colNewTaskV2, "User Name"), "Company Code"),"UniqueID", "Value","Task", "Title", "field_2", "field_3", "field_6", "field_8"));
                             /* Set(
                                 ShowManagerPopUp,
                                 false
