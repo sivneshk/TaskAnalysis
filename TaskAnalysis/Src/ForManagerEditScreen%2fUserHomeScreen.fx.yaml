@@ -2434,7 +2434,7 @@
                         Height: =Parent.Height/15
                         Items: |-
                             =If(
-                                IsEmpty(DropdownUniqueID_1.SelectedItems) && IsBlank(DropdownUniqueID_1.SelectedItems),
+                                IsEmpty(DropdownUniqueID_1.SelectedItems),
                                 Sort(
                                     Distinct(
                                         'Process Taxonomy',
@@ -2574,11 +2574,11 @@
                         FontSize: =HeaderUniqueID_1.Size
                         Height: =Parent.Height/15
                         Items: |-
-                            =If(And(IsEmpty(DropdownUniqueID_1.SelectedItems), IsEmpty(DropdownL1_1.SelectedItems), IsBlank(DropdownUniqueID_1.SelectedItems), IsBlank(DropdownL1_1.SelectedItems))
+                            =If(And(IsEmpty(DropdownUniqueID_1.SelectedItems), IsEmpty(DropdownL1_1.SelectedItems))
                                 ,
                                 Sort(Distinct('Process Taxonomy',L2),Value) 
                                 ,
-                                And(!IsEmpty(DropdownUniqueID_1.SelectedItems), IsEmpty(DropdownL1_1.SelectedItems), !IsBlank(DropdownUniqueID_1.SelectedItems), IsBlank(DropdownL1_1.SelectedItems))
+                                And(!IsEmpty(DropdownUniqueID_1.SelectedItems), IsEmpty(DropdownL1_1.SelectedItems))
                                 ,
                                 Distinct(
                                     Ungroup(
