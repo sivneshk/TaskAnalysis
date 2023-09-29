@@ -1228,6 +1228,7 @@
 
             FirstContainer As groupContainer.manualLayoutContainer:
                 Height: =Parent.Height
+                PaddingLeft: =2
                 PaddingRight: =5
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
@@ -1348,6 +1349,7 @@
                     TemplatePadding: =0
                     TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/5)
                     Width: =Parent.Width-Parent.PaddingRight
+                    X: =Parent.PaddingLeft
                     Y: =Container1_1.Y+Container1_1.Height
                     ZIndex: =1
 
@@ -1545,19 +1547,17 @@
                 Container1_1 As groupContainer.manualLayoutContainer:
                     BorderColor: =RGBA(208, 208, 208, 1)
                     BorderThickness: =1
-                    DropShadow: =DropShadow.Light
                     Height: =Gallery2_1.TemplateHeight*0.5
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
-                    X: =
+                    X: =Parent.PaddingLeft
                     Y: =ProcessTaxoLabelScreen3.Height
                     ZIndex: =2
 
                     HeaderUniqueID_1 As label:
                         BorderColor: =RGBA(99, 139, 44, 1)
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         Color: =RGBA(50, 49, 48, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1566,6 +1566,7 @@
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =Parent.Height
+                        OnSelect: =Set(ShowFilter, true)
                         PaddingLeft: =8
                         Size: =Self.Height*0.2
                         Text: ="Unique ID"
@@ -1576,6 +1577,7 @@
                     HeaderL1 As label:
                         Align: =Align.Center
                         BorderColor: =RGBA(151, 0, 0, 1)
+                        BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         Color: =RGBA(50, 49, 48, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1584,6 +1586,7 @@
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =Parent.Height
+                        OnSelect: =Set(ShowFilter, true)
                         Size: =Self.Height*0.2
                         Text: ="L1"
                         Width: =(Parent.Width-Checkbox1_1.Width)/10
@@ -1602,6 +1605,7 @@
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =Parent.Height
+                        OnSelect: =Set(ShowFilter, true)
                         Size: =Self.Height*0.2
                         Text: ="L2"
                         Width: =(Parent.Width-Checkbox1_1.Width)/9
@@ -1620,6 +1624,7 @@
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =Parent.Height
+                        OnSelect: =Set(ShowFilter, true)
                         Size: =Self.Height*0.2
                         Text: ="L3"
                         Width: =(Parent.Width-LabelCheckbox.Width-HeaderUniqueID_1.Width-HeaderL1.Width-HeaderL2.Width-Parent.PaddingRight)/4
@@ -1638,6 +1643,7 @@
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =Parent.Height
+                        OnSelect: =Set(ShowFilter, true)
                         Size: =Self.Height*0.2
                         Text: ="L4"
                         Width: =(Parent.Width-LabelCheckbox.Width-HeaderUniqueID_1.Width-HeaderL1.Width-HeaderL2.Width-Parent.PaddingRight)/4
@@ -1656,6 +1662,7 @@
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =Parent.Height
+                        OnSelect: =Set(ShowFilter, true)
                         Size: =Self.Height*0.2
                         Text: ="L5"
                         Width: =(Parent.Width-LabelCheckbox.Width-HeaderUniqueID_1.Width-HeaderL1.Width-HeaderL2.Width-Parent.PaddingRight)/4
@@ -1674,6 +1681,7 @@
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =Parent.Height
+                        OnSelect: =Set(ShowFilter, true)
                         Size: =Self.Height*0.2
                         Text: ="L6"
                         Width: =(Parent.Width-LabelCheckbox.Width-HeaderUniqueID_1.Width-HeaderL1.Width-HeaderL2.Width-Parent.PaddingRight)/4
@@ -1701,13 +1709,13 @@
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
                         DisabledColor: =RGBA(225, 223, 221, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
-                        DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Height: =HeaderUniqueID_1.Size*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =RGBA(16, 110, 190, 1)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
+                        OnSelect: =Set(ShowFilter, true)
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
@@ -1723,13 +1731,13 @@
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
                         DisabledColor: =RGBA(225, 223, 221, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
-                        DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Height: =HeaderUniqueID_1.Size*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =RGBA(16, 110, 190, 1)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
+                        OnSelect: =Set(ShowFilter, true)
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
@@ -1745,13 +1753,13 @@
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
                         DisabledColor: =RGBA(225, 223, 221, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
-                        DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Height: =HeaderUniqueID_1.Size*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =RGBA(16, 110, 190, 1)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
+                        OnSelect: =Set(ShowFilter, true)
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
@@ -1767,13 +1775,13 @@
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
                         DisabledColor: =RGBA(225, 223, 221, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
-                        DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Height: =HeaderUniqueID_1.Size*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =RGBA(16, 110, 190, 1)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
+                        OnSelect: =Set(ShowFilter, true)
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
@@ -1789,13 +1797,13 @@
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
                         DisabledColor: =RGBA(225, 223, 221, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
-                        DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Height: =HeaderUniqueID_1.Size*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =RGBA(16, 110, 190, 1)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
+                        OnSelect: =Set(ShowFilter, true)
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
@@ -1811,13 +1819,13 @@
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
                         DisabledColor: =RGBA(225, 223, 221, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
-                        DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Height: =HeaderUniqueID_1.Size*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =RGBA(16, 110, 190, 1)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
+                        OnSelect: =Set(ShowFilter, true)
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
@@ -1833,13 +1841,13 @@
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
                         DisabledColor: =RGBA(225, 223, 221, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
-                        DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Height: =HeaderUniqueID_1.Size*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =RGBA(16, 110, 190, 1)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
+                        OnSelect: =Set(ShowFilter, true)
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
@@ -1896,10 +1904,10 @@
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
-                        RadiusBottomLeft: =5
-                        RadiusBottomRight: =5
-                        RadiusTopLeft: =5
-                        RadiusTopRight: =5
+                        RadiusBottomLeft: =3
+                        RadiusBottomRight: =3
+                        RadiusTopLeft: =3
+                        RadiusTopRight: =3
                         Size: =Self.Height/3
                         Text: ="+ Assign Selected Task"
                         Width: =Parent.Width *0.3
@@ -1967,8 +1975,8 @@
                     DropShadow: =DropShadow.Regular
                     Fill: =RGBA(5, 50, 43, 1)
                     Height: =ProcessTaxoLabelScreen3.Height*0.8
-                    RadiusBottomLeft: =5
-                    RadiusTopLeft: =5
+                    RadiusBottomLeft: =3
+                    RadiusTopLeft: =3
                     Width: =Parent.Width*0.05
                     X: =Parent.Width-Self.Width
                     Y: =(ProcessTaxoLabelScreen3.Height-Self.Height)/2
@@ -2418,14 +2426,16 @@
                         HoverFill: =RGBA(2, 188, 148, 0.1)
                         OnSelect: |
                             =/*colToAddByManager contains rows that has been ADDED ONLY */
-                            
-                            ForAll(Gallery1_1.AllItems As aPatch,
-                                ForAll(aPatch.EmployeeNameDropdown.SelectedItems As bPatch,
+                            Clear(colNewTaskV2);
+                            ForAll(Gallery1_1.AllItems,
                                     Collect(colNewTaskV2, {
-                                        Task: ForProcessName.Text,
-                                        UniqueID: ForUniqueID.Text,
-                                        'User Name': bPatch.Value})));
+                                        Task: Task,
+                                        UniqueID: 'Unique ID',
+                                        'User Name': EmployeeNameDropdown.SelectedItems,
+                                        'Company Code': COCODropdown.SelectedItems
+                                        }));
                             
+                            ClearCollect(colNewTaskV3, Ungroup(colNewTaskV2, "User Name"));
                             /* Set(
                                 ShowManagerPopUp,
                                 false
@@ -2433,14 +2443,14 @@
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
                         PressedColor: =ColorFade(Self.Color,-20%)
                         PressedFill: =RGBA(255, 255, 255, 1)
-                        RadiusBottomLeft: =5
-                        RadiusBottomRight: =5
-                        RadiusTopLeft: =5
-                        RadiusTopRight: =5
+                        RadiusBottomLeft: =3
+                        RadiusBottomRight: =3
+                        RadiusTopLeft: =3
+                        RadiusTopRight: =3
                         Size: =Self.Height/3
                         Text: ="Save"
                         Width: =Parent.Width*0.2
-                        X: =CancelBtn.X+CancelBtn.Width+10
+                        X: =CancelBtn.X+CancelBtn.Width+5
                         Y: =(Parent.Height-Self.Height)/2
                         ZIndex: =1
 
@@ -2465,10 +2475,10 @@
                         PressedBorderColor: =ColorFade(Self.Fill,-20%)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =ColorFade(Self.Fill,-20%)
-                        RadiusBottomLeft: =5
-                        RadiusBottomRight: =5
-                        RadiusTopLeft: =5
-                        RadiusTopRight: =5
+                        RadiusBottomLeft: =3
+                        RadiusBottomRight: =3
+                        RadiusTopLeft: =3
+                        RadiusTopRight: =3
                         Size: =Self.Height/3
                         Text: ="Cancel"
                         Width: =Parent.Width*0.2
@@ -2489,8 +2499,8 @@
                     DropShadow: =DropShadow.Light
                     Fill: =RGBA(5, 50, 43, 1)
                     Height: =Parent.Height*0.8
-                    RadiusBottomRight: =5
-                    RadiusTopRight: =5
+                    RadiusBottomRight: =3
+                    RadiusTopRight: =3
                     Width: =Parent.Width*0.8
                     Y: =FilterIconBG.Y
                     ZIndex: =8
@@ -3547,10 +3557,10 @@
                         PressedBorderColor: =RGBA(208, 208, 208, 1)
                         PressedColor: =RGBA(208, 208, 208, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
-                        RadiusBottomLeft: =5
-                        RadiusBottomRight: =5
-                        RadiusTopLeft: =5
-                        RadiusTopRight: =5
+                        RadiusBottomLeft: =3
+                        RadiusBottomRight: =3
+                        RadiusTopLeft: =3
+                        RadiusTopRight: =3
                         Size: =Self.Height/3
                         Text: ="Clear All Filter"
                         Width: =Parent.Width*0.7
