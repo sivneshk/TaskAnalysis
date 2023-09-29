@@ -1566,6 +1566,7 @@
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =Parent.Height
+                        PaddingLeft: =8
                         Size: =Self.Height*0.2
                         Text: ="Unique ID"
                         Width: =(Parent.Width-Checkbox1_1.Width)/11 
@@ -1694,12 +1695,13 @@
                         Width: =Parent.Width*0.035
                         ZIndex: =8
 
-                    Icon2 As icon.FilterFlatFilled:
+                    FilterIndicatorUniqueID As icon.FilterFlatFilled:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         Color: =RGBA(208, 208, 208, 1)
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
                         DisabledColor: =RGBA(225, 223, 221, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
+                        DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Height: =HeaderUniqueID_1.Size*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -1709,10 +1711,143 @@
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
+                        Visible: =If(!IsEmpty(DropdownUniqueID_1.SelectedItems), true, false)
                         Width: =Self.Height
                         X: =HeaderL1.X- Self.Width*1.5
                         Y: =(Parent.Height-Self.Height)/2
                         ZIndex: =9
+
+                    FilterIndicatorL1 As icon.FilterFlatFilled:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(208, 208, 208, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        DisplayMode: =DisplayMode.View
+                        FocusedBorderThickness: =4
+                        Height: =HeaderUniqueID_1.Size*1.5
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.FilterFlatFilled
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Visible: =If(!IsEmpty(DropdownL1_1.SelectedItems), true, false)
+                        Width: =Self.Height
+                        X: =HeaderL2.X- Self.Width*2
+                        Y: =(Parent.Height-Self.Height)/2
+                        ZIndex: =10
+
+                    FilterIndicatorL2 As icon.FilterFlatFilled:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(208, 208, 208, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        DisplayMode: =DisplayMode.View
+                        FocusedBorderThickness: =4
+                        Height: =HeaderUniqueID_1.Size*1.5
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.FilterFlatFilled
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Visible: =If(!IsEmpty(DropdownL2_1.SelectedItems), true, false)
+                        Width: =Self.Height
+                        X: =HeaderL3.X- Self.Width*2
+                        Y: =(Parent.Height-Self.Height)/2
+                        ZIndex: =11
+
+                    FilterIndicatorL3 As icon.FilterFlatFilled:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(208, 208, 208, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        DisplayMode: =DisplayMode.View
+                        FocusedBorderThickness: =4
+                        Height: =HeaderUniqueID_1.Size*1.5
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.FilterFlatFilled
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Visible: =If(!IsEmpty(DropdownL3_1.SelectedItems), true, false)
+                        Width: =Self.Height
+                        X: =HeaderL4.X- Self.Width*2
+                        Y: =(Parent.Height-Self.Height)/2
+                        ZIndex: =12
+
+                    FilterIndicatorL4 As icon.FilterFlatFilled:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(208, 208, 208, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        DisplayMode: =DisplayMode.View
+                        FocusedBorderThickness: =4
+                        Height: =HeaderUniqueID_1.Size*1.5
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.FilterFlatFilled
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Visible: =If(!IsEmpty(DropdownL4_1.SelectedItems), true, false)
+                        Width: =Self.Height
+                        X: =HeaderL5.X- Self.Width*2
+                        Y: =(Parent.Height-Self.Height)/2
+                        ZIndex: =13
+
+                    FilterIndicatorL5 As icon.FilterFlatFilled:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(208, 208, 208, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        DisplayMode: =DisplayMode.View
+                        FocusedBorderThickness: =4
+                        Height: =HeaderUniqueID_1.Size*1.5
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.FilterFlatFilled
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Visible: =If(!IsEmpty(DropdownL5_1.SelectedItems), true, false)
+                        Width: =Self.Height
+                        X: =HeaderL6.X- Self.Width*2
+                        Y: =(Parent.Height-Self.Height)/2
+                        ZIndex: =14
+
+                    FilterIndicatorL6 As icon.FilterFlatFilled:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(208, 208, 208, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        DisplayMode: =DisplayMode.View
+                        FocusedBorderThickness: =4
+                        Height: =HeaderUniqueID_1.Size*1.5
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.FilterFlatFilled
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Visible: =If(!IsEmpty(DropdownL6_1.SelectedItems), true, false)
+                        Width: =Self.Height
+                        X: =Parent.Width- Self.Width*2
+                        Y: =(Parent.Height-Self.Height)/2
+                        ZIndex: =15
 
                 FooterButtonContainerScrn3 As groupContainer.manualLayoutContainer:
                     BorderStyle: =BorderStyle.None
