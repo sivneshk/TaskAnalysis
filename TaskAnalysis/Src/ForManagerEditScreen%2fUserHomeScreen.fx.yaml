@@ -1686,7 +1686,9 @@
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |-
-                            =ForAll(
+                            =Set(ShowFilter, false);
+                            
+                            ForAll(
                                 Filter(
                                     Gallery2_1.AllItems,
                                     Checkbox1_1.Value = true
