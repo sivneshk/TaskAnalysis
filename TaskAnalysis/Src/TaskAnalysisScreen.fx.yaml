@@ -1371,13 +1371,13 @@ TaskAnalysisScreen As screen:
                                         ).AppHours
                                     )
                                 ),
-                                Or(LookUp(
+                                Or(Value(LookUp(
                                             PrepCollection,
                                             Text(Coco) = Text(ChosenCOCO) && Text(Email) = Office365Users.MyProfile().Mail
-                                        ).PrepHours, LookUp(
+                                        ).PrepHours), Value(LookUp(
                                             AppCollection,
                                             Text(Coco) = Text(ChosenCOCO) && Text(Email) = Office365Users.MyProfile().Mail
-                                        ).AppHours),
+                                        ).AppHours)),
                                 ""
                             )
                             
