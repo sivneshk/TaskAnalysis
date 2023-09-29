@@ -1361,10 +1361,37 @@ TaskAnalysisScreen As screen:
                                 Color.Red
                             )*/
                         Color: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
-                        Default: =""
+                        Default: |-
+                            =Coalesce(
+                                Value(LookUp(
+                                    AppCollection,
+                                    Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail,
+                                    AppHours
+                                )),
+                                Value(LookUp(
+                                    PrepCollection,
+                                    Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail,
+                                    PrepHours
+                                ))
+                            )
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayMode: |-
+                            =If(
+                                And(IsBlank(LookUp(
+                                    AppCollection,
+                                    Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail,
+                                    AppHours
+                                )),
+                                IsBlank(LookUp(
+                                    PrepCollection,
+                                    Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail,
+                                    PrepHours
+                                ))),
+                                DisplayMode.Edit,
+                                DisplayMode.View
+                            )
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
                         Format: =TextFormat.Number
