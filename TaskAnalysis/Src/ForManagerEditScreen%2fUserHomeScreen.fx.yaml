@@ -1690,8 +1690,8 @@
                         Font: =Font.'Segoe UI'
                         Height: =Parent.Height
                         Size: =0
-                        Text: ="Text"
-                        Width: =Parent.Width*0.04
+                        Text: =""
+                        Width: =Parent.Width*0.035
                         ZIndex: =8
 
                     Icon2 As icon.FilterFlatFilled:
