@@ -1361,22 +1361,22 @@ TaskAnalysisScreen As screen:
                                     !IsBlank(
                                         LookUp(
                                             PrepCollection,
-                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = Office365Users.MyProfile().Mail
+                                            Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail
                                         ).PrepHours
                                     ),
                                     !IsBlank(
                                         LookUp(
                                             AppCollection,
-                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = Office365Users.MyProfile().Mail
+                                            Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail
                                         ).AppHours
                                     )
                                 ),
                                 Or(Value(LookUp(
                                             PrepCollection,
-                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = Office365Users.MyProfile().Mail
+                                            Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail
                                         ).PrepHours), Value(LookUp(
                                             AppCollection,
-                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = Office365Users.MyProfile().Mail
+                                            Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail
                                         ).AppHours)),
                                 ""
                             )
@@ -1390,13 +1390,13 @@ TaskAnalysisScreen As screen:
                                     !IsBlank(
                                         LookUp(
                                             PrepCollection,
-                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = Office365Users.MyProfile().Mail
+                                            Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail
                                         ).PrepHours
                                     ),
                                     !IsBlank(
                                         LookUp(
                                             AppCollection,
-                                            Text(Coco) = Text(ChosenCOCO) && Text(Email) = Office365Users.MyProfile().Mail
+                                            Coco = ThisItem.'Company Code' && Text(Email) = Office365Users.MyProfile().Mail
                                         ).AppHours
                                     )
                                 ),
