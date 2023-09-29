@@ -2101,7 +2101,7 @@ TaskAnalysisScreen As screen:
                     HoverBorderColor: =RGBA(2, 188, 148, 1)
                     HoverColor: =RGBA(2, 188, 148, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
-                    OnSelect: |
+                    OnSelect: |+
                         =Set(
                             iterator,
                             (Last(TaxonomyCollect.AllItems).ColourID) + 1
@@ -2140,6 +2140,10 @@ TaskAnalysisScreen As screen:
                             )
                         );
                         
+                        Set(
+                            ShowResult,
+                            true
+                        );
                         
                         Reset(DropdownL1);
                         Reset(DropdownUniqueID);
@@ -2153,10 +2157,7 @@ TaskAnalysisScreen As screen:
                             ShowPopUp,
                             false
                         );
-                        Set(
-                            ShowResult,
-                            true
-                        );
+                        
                     PressedBorderColor: =RGBA(230, 230, 230, 1)
                     PressedColor: =RGBA(2, 188, 148, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
