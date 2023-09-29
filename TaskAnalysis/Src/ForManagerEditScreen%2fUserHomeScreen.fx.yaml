@@ -2732,9 +2732,33 @@
                                 ,
                                 And(!IsEmpty(DropdownUniqueID_1.SelectedItems), IsEmpty(DropdownL1_1.SelectedItems), IsEmpty(DropdownL2_1.SelectedItems))
                                 , 
-                                Distinct(ForAll(DropdownUniqueID_1.SelectedItems As aPatch,LookUp('Process Taxonomy', Title = aPatch.Value).L3),Value)
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            DropdownUniqueID_1.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                Title = aPatch.Value
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_3
+                                )
                                 ,
-                                Distinct(ForAll(DropdownL2_1.SelectedItems As aPatch,LookUp('Process Taxonomy', L2 = aPatch.Value).L3),Value)
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            DropdownL2_1.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                L2 = aPatch.Value
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_3
+                                )
                             )
                         OnChange: |-
                             =If(CountRows(SelectionsL3)=3,UpdateContext({SelectionsL3: Blank()}));
@@ -2860,9 +2884,33 @@
                                 , 
                                 And(!IsEmpty(DropdownUniqueID_1.SelectedItems), IsEmpty(DropdownL1_1.SelectedItems), IsEmpty(DropdownL2_1.SelectedItems), IsEmpty(DropdownL3_1.SelectedItems))
                                 ,
-                                Distinct(ForAll(DropdownUniqueID_1.SelectedItems As aPatch,LookUp('Process Taxonomy', Title = aPatch.Value).L4),Value)
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            DropdownUniqueID_1.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                Title = aPatch.Value
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_4
+                                )
                                 ,
-                                Distinct(ForAll(DropdownL3_1.SelectedItems As aPatch,LookUp('Process Taxonomy', L3 = aPatch.Value).L4),Value)
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            DropdownL3_1.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                L3 = aPatch.Value
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_4
+                                )
                             )
                         OnChange: |-
                             =If(CountRows(SelectionsL4)=3,UpdateContext({SelectionsL4: Blank()}));
