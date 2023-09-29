@@ -2432,8 +2432,18 @@
                         Font: ="Noto Sans"
                         FontSize: =HeaderUniqueID_1.Size
                         Height: =Parent.Height/15
-                        Items: |
-                            =If(DropdownUniqueID_1.Selected.Value = Blank(), Sort(Distinct('Process Taxonomy',L1),Value), Distinct(Filter('Process Taxonomy',Title=DropdownUniqueID_1.Selected.Value),L1))
+                        Items: |-
+                            =If(
+                                IsEmpty(DropdownUniqueID_1.SelectedItems),
+                                Sort(
+                                    Distinct(
+                                        'Process Taxonomy',
+                                        L1
+                                    ),
+                                    Value
+                                ),
+                                Distinct(ForAll(DropdownUniqueID_1.SelectedItems As aPatch,LookUp('Process Taxonomy', Title = aPatch.Value).L1),Value)
+                            )
                         OnChange: |-
                             =If(CountRows(SelectionsL1)=3,UpdateContext({SelectionsL1: Blank()}));
                             If(
@@ -2552,11 +2562,15 @@
                         FontSize: =HeaderUniqueID_1.Size
                         Height: =Parent.Height/15
                         Items: |-
-                            =If(DropdownUniqueID_1.Selected.Value = Blank()
-                                , 
-                                Sort(Distinct(Filter('Process Taxonomy',L1 = DropdownL1_1.Selected.Value),L2),Value)
+                            =If(And(IsEmpty(DropdownUniqueID_1.SelectedItems), IsEmpty(DropdownL1_1.SelectedItems))
                                 ,
-                                Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L2)
+                                Sort(Distinct('Process Taxonomy',L2),Value) 
+                                ,
+                                And(!IsEmpty(DropdownUniqueID_1.SelectedItems), IsEmpty(DropdownL1_1.SelectedItems))
+                                ,
+                                Distinct(ForAll(DropdownUniqueID_1.SelectedItems As aPatch,LookUp('Process Taxonomy', Title = aPatch.Value).L2),Value)
+                                ,
+                                Distinct(ForAll(DropdownL1_1.SelectedItems As aPatch,LookUp('Process Taxonomy', L1 = aPatch.Value).L2),Value)
                             )
                         OnChange: |-
                             =If(CountRows(SelectionsL2)=3,UpdateContext({SelectionsL2: Blank()}));
@@ -2676,11 +2690,15 @@
                         FontSize: =HeaderUniqueID_1.Size
                         Height: =Parent.Height/15
                         Items: |-
-                            =If(DropdownUniqueID_1.Selected.Value = Blank()
+                            =If(And(IsEmpty(DropdownUniqueID_1.SelectedItems), IsEmpty(DropdownL1_1.SelectedItems), IsEmpty(DropdownL2_1.SelectedItems))
                                 , 
-                                Sort(Distinct(Filter('Process Taxonomy',L2 = DropdownL2_1.Selected.Value),L3),Value)
+                                Sort(Distinct('Process Taxonomy',L3),Value)
                                 ,
-                                Distinct(Filter('Process Taxonomy',Title = DropdownUniqueID_1.Selected.Value),L3)
+                                And(!IsEmpty(DropdownUniqueID_1.SelectedItems), IsEmpty(DropdownL1_1.SelectedItems), IsEmpty(DropdownL2_1.SelectedItems))
+                                , 
+                                Distinct(ForAll(DropdownUniqueID_1.SelectedItems As aPatch,LookUp('Process Taxonomy', Title = aPatch.Value).L3),Value)
+                                ,
+                                Distinct(ForAll(DropdownL2_1.SelectedItems As aPatch,LookUp('Process Taxonomy', L2 = aPatch.Value).L3),Value)
                             )
                         OnChange: |-
                             =If(CountRows(SelectionsL3)=3,UpdateContext({SelectionsL3: Blank()}));
