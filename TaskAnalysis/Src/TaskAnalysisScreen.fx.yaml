@@ -1313,7 +1313,7 @@ TaskAnalysisScreen As screen:
                         DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
-                        Height: =1
+                        Height: =Parent.TemplateHeight
                         OnSelect: =Select(Parent)
                         Size: =ChosenTask.Height/8
                         Text: =ThisItem.'Company Code'
