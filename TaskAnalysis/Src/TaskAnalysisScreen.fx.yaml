@@ -1356,17 +1356,27 @@ TaskAnalysisScreen As screen:
                             )*/
                         Color: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
                         Default: |+
-                            =Coalesce(
+                            =If( !IsBlank(LookUp(
+                                            PrepCollection,
+                                            Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail
+                                        ).PrepHours),
+                            
                                         Value(LookUp(
                                             PrepCollection,
                                             Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail
                                         ).PrepHours)
                                     ,
-                                    
+                                    !IsBlank(LookUp(
+                                            AppCollection,
+                                            Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail
+                                        ).AppHours)
+                                    ,
                                         Value(LookUp(
                                             AppCollection,
                                             Coco = ThisItem.'Company Code' && Email = Office365Users.MyProfile().Mail
                                         ).AppHours)
+                                    ,
+                                    ""
                                     
                                 )
                             
