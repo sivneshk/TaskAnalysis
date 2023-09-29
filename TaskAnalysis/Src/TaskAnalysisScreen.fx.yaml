@@ -1285,7 +1285,8 @@ TaskAnalysisScreen As screen:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     BorderColor: =RGBA(245, 245, 245, 1)
                     DelayItemLoading: =true
-                    Height: =RightPanel.Height-ProcessNameLabel.Height-ReviewBtnContainer.Height
+                    FillPortions: =0
+                    Height: =Parent.Height-HeaderTaxonomy.Height-ReviewBtnContainer.Height
                     Items: =colTaxonomyTemp
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
@@ -1300,6 +1301,7 @@ TaskAnalysisScreen As screen:
                     TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/6)
                     Visible: =ShowResult
                     Width: =RightPanel.Width
+                    Y: =HeaderTaxonomy.Height
                     ZIndex: =3
 
                     ChosenCOCO As label:
