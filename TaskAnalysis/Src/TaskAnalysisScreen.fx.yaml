@@ -1366,7 +1366,7 @@ TaskAnalysisScreen As screen:
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
                         Format: =TextFormat.Number
-                        Height: =1
+                        Height: =Parent.TemplateHeight*0.5
                         HintText: ="Hours"
                         HoverBorderColor: =If(Value(SumHoursCheck.Text)>160, ColorFade(Color.Red,-20%), RGBA(148, 148, 148, 1))
                         HoverColor: =If(Value(SumHoursCheck.Text)>160, Color.Red, RGBA(50, 49, 48, 1))
@@ -1395,7 +1395,7 @@ TaskAnalysisScreen As screen:
                         DisabledColor: =RGBA(225, 223, 221, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
                         FocusedBorderThickness: =4
-                        Height: =1
+                        Height: =Self.Width
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(0, 0, 0, 0)
@@ -1424,7 +1424,7 @@ TaskAnalysisScreen As screen:
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Lighter
-                        Height: =1
+                        Height: =Parent.TemplateHeight*0.5
                         OnSelect: =Select(Parent)
                         PaddingBottom: =0
                         PaddingRight: =0
@@ -1448,7 +1448,7 @@ TaskAnalysisScreen As screen:
                         DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
-                        Height: =1
+                        Height: =Parent.TemplateHeight
                         OnSelect: =Select(Parent)
                         Size: =ChosenTask.Height/8
                         Text: =ThisItem.'Business Segment'
@@ -1470,7 +1470,7 @@ TaskAnalysisScreen As screen:
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
-                        Height: =1
+                        Height: =Parent.TemplateHeight*0.3
                         OnSelect: =Select(Parent)
                         PaddingBottom: =0
                         PaddingTop: =0
@@ -1493,7 +1493,7 @@ TaskAnalysisScreen As screen:
                         DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Font: ="Poppins"
-                        Height: =1
+                        Height: =Parent.TemplateHeight
                         OnSelect: =Select(Parent)
                         PaddingBottom: =0
                         PaddingLeft: =0
