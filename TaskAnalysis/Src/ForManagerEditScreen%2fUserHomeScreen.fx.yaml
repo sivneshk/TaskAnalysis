@@ -555,14 +555,13 @@
                         FontWeight: =FontWeight.Semibold
                         Height: =LeftPanelTitleScreen3_1.Height*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(255, 255, 255, 1)
-                        HoverFill: =RGBA(16, 110, 190, 1)
+                        HoverFill: =RGBA(236, 236, 235, 1)
                         OnSelect: =
                         PaddingBottom: =3
                         PaddingLeft: =20+EmployeePhotoScreen3_1.Width
                         PressedBorderColor: =RGBA(0, 69, 120, 1)
-                        PressedColor: =RGBA(255, 255, 255, 1)
-                        PressedFill: =RGBA(16, 110, 190, 1)
+                        PressedColor: =Self.Color
+                        PressedFill: =ColorFade(Self.HoverFill, -20%)
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =
                         RadiusTopLeft: =4
@@ -818,6 +817,7 @@
                             PressedColor: =RGBA(2, 188, 148, 1)
                             PressedFill: =RGBA(0, 0, 0, 0)
                             Tooltip: ="Remove"
+                            Visible: =If(varEdit = DisplayMode.Edit, true, false)
                             Width: =(Parent.Width-InputHoursReview_3.X-InputHoursReview_3.Width)/3
                             X: =FillerScreen3_1.X
                             Y: =(ChosenTask_3.Height-Self.Height)/2
@@ -1051,20 +1051,6 @@
                         HoverFill: =RGBA(2, 188, 148, 0.1)
                         OnSelect: |
                             =/* colToUpdate contains rows that has been UPDATED/CHANGED ONLY */
-                            Clear(colToUpdate);
-                            ForAll(
-                                Filter(
-                                    GroupByNameTaxonomy3.AllItems,
-                                    ToggleDetectChange.Value = true
-                                ),
-                                Collect(
-                                    colToUpdate,
-                                    {
-                                        'Sharepoint ID': Value(ID.Text),
-                                        'Updated Hours': Value(InputHoursReview_3.Text)
-                                    }
-                                )
-                            );
                             
                             Set(
                                 varEdit,
