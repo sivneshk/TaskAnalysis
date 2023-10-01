@@ -550,7 +550,7 @@
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         Fill: =RGBA(255, 255, 255, 1)
-                        FocusedBorderThickness: =2
+                        FocusedBorderThickness: =0
                         Font: ="Poppins"
                         FontWeight: =FontWeight.Semibold
                         Height: =LeftPanelTitleScreen3_1.Height*1.5
@@ -2421,7 +2421,7 @@
                                         'Company Code': COCODropdown.SelectedItems
                                         }));
                             
-                            ClearCollect(colNewTaskV3, ShowColumns(Ungroup(Ungroup(colNewTaskV2, "User Name"), "Company Code"),"UniqueID", "Value","Task", "Title", "field_2", "field_3", "field_6", "field_8"));
+                            ClearCollect(colNewTaskV3, RenameColumns(ShowColumns(Ungroup(Ungroup(colNewTaskV2, "User Name"), "Company Code"),"UniqueID", "Value","Task", "Title", "field_2", "field_3", "field_6", "field_8"), "Value", "User Name", "Title", "Company Code", "field_2", "LE Name", "field_3", "Associated_LE"));
                             /* Set(
                                 ShowManagerPopUp,
                                 false
