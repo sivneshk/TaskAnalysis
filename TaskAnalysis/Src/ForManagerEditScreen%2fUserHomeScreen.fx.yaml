@@ -2421,7 +2421,7 @@
                                         'Company Code': COCODropdown.SelectedItems
                                         }));
                             
-                            ClearCollect(colNewTaskV3, AddColumns(RenameColumns(ShowColumns(Ungroup(Ungroup(colNewTaskV2, "User Name"), "Company Code"),"UniqueID", "Value","Task", "Title", "field_2", "field_3", "field_6", "field_8"), "Value", "User Name", "Title", "Company Code", "field_2", "LE Name", "field_3", "Associated_LE", "field_6", "Business Segment", "field_8", "Region") As aVar, "User Email", LookUp('Task Analysis Taxonomy Collection', 'User Name'= aVar[@'User Name'], 'User Email'), "EmployeeID", LookUp('Task Analysis Taxonomy Collection', 'User Name'= aVar[@'User Name'], EmployeeID), "Country", Blank()));
+                            ClearCollect(colNewTaskV3, AddColumns(RenameColumns(ShowColumns(Ungroup(Ungroup(colNewTaskV2, "User Name"), "Company Code"),"UniqueID", "Value","Task", "Title", "field_2", "field_3", "field_6", "field_8"), "Value", "User Name", "Title", "Company Code", "field_2", "LE Name", "field_3", "Associated_LE", "field_6", "Business Segment", "field_8", "Region") As aVar, "User Email", LookUp('Task Analysis Taxonomy Collection', 'User Name'= aVar[@'User Name'], 'User Email'), "EmployeeID", LookUp('Task Analysis Taxonomy Collection', 'User Name'= aVar[@'User Name'], EmployeeID), "Country", Blank(), "PC", Blank(), "ColourID", Blank(), "rowNumber", Blank(), "Input Hours", Blank() ));
                             
                             
                             If(Task_A_JSONFlowUsertoSP.Run(JSON(colNewTaskV3)).success="true", Notify("Your response has been successfully received." && Refresh('Task Analysis Taxonomy Collection')));
