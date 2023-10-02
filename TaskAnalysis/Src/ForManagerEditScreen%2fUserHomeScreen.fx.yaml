@@ -2,8 +2,7 @@
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |-
         =Refresh('Task Analysis Taxonomy Collection');
-        Refresh('Task Analysis Taxonomy Collection');
-        Refresh('Task Analysis Taxonomy Collection');
+        ClearCollect(colTaskAnalysisSP, ShowColumns('Task Analysis Taxonomy Collection', "Title", "Associated_x0020_LE", "CoCo", "EmployeeID", "LE_x0020_Name", "UserName", "Process_x0020_Name", "ID", "InputHours", "Region", "Unique_x0020_ID"));
 
     HomeContainerScreen3_1 As groupContainer.manualLayoutContainer:
         Height: |
@@ -2500,6 +2499,7 @@
                         HoverFill: =RGBA(16, 110, 190, 1)
                         OnTimerEnd: |-
                             =Refresh('Task Analysis Taxonomy Collection');
+                            ClearCollect(colTaskAnalysisSP, ShowColumns('Task Analysis Taxonomy Collection', "Title", "Associated_x0020_LE", "CoCo", "EmployeeID", "LE_x0020_Name", "UserName", "Process_x0020_Name", "ID", "InputHours", "Region", "Unique_x0020_ID"));
                             
                             Set(
                                 ShowManagerPopUp,
