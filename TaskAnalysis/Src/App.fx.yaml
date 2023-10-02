@@ -4,6 +4,7 @@ App As appinfo:
         =/*Set Global Variable */
         Set(iterator, 0);                  /* this is for Color ID in TaxonomyCollect */               
         Set(varEdit, DisplayMode.View);                 /* so the Manager Review Screen is in View Mode upon OnStart */
+        Set(inProgress, DisplayMode.Edit);
         
         /* Clear all non-permanent Collections OnStart */
         Clear(colTaxonomy);
