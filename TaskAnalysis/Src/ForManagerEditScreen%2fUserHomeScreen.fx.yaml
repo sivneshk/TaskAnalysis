@@ -769,7 +769,7 @@
                             OnChange: |-
                                 =If(
                                     ThisItem.'Input Hours' <> Value(InputHoursReview_3.Text),
-                                    ClearCollect(
+                                    Collect(
                                         colToUpdate,
                                         {
                                             ID: ThisItem.ID,
