@@ -806,7 +806,7 @@
                             HoverFill: =RGBA(0, 0, 0, 0)
                             Icon: =Icon.Cancel
                             OnSelect: |
-                                =ClearCollect(
+                                =Collect(
                                     colToDelete,
                                     {ItemID: ThisItem.ID}
                                 );
@@ -1051,13 +1051,15 @@
                         HoverBorderColor: =ColorFade(Self.BorderColor,-10%)
                         HoverColor: =ColorFade(Self.Color,-10%)
                         HoverFill: =RGBA(2, 188, 148, 0.1)
-                        OnSelect: |
+                        OnSelect: |-
                             =/* colToUpdate contains rows that has been UPDATED/CHANGED ONLY */
                             
                             Set(
                                 varEdit,
                                 DisplayMode.Disabled
                             );
+                            
+                            Task_A_UpdateorAddItems_ManagerScrntoSP.Run(JSON(colToUpdate),JSON(colToDelete));
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
                         PressedColor: =ColorFade(Self.Color,-20%)
                         PressedFill: =RGBA(255, 255, 255, 1)
