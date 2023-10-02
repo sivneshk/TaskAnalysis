@@ -1,6 +1,9 @@
 "'ForManagerEditScreen/UserHomeScreen' As screen":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: =
+    OnVisible: |-
+        =Refresh('Task Analysis Taxonomy Collection');
+        Refresh('Task Analysis Taxonomy Collection');
+        Refresh('Task Analysis Taxonomy Collection');
 
     HomeContainerScreen3_1 As groupContainer.manualLayoutContainer:
         Height: |
