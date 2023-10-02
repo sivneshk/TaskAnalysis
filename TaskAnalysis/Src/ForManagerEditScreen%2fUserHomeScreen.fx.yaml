@@ -2426,11 +2426,7 @@
                             
                             If(Task_A_JSONFlowUsertoSP.Run(JSON(colNewTaskV3)).success="true", Notify("Your response has been successfully received. You will be redirected to the previous screen."));
                             
-                            
-                            Set(
-                                ShowManagerPopUp,
-                                false
-                            );
+                            Set(startTimer, true);
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
                         PressedColor: =ColorFade(Self.Color,-20%)
                         PressedFill: =RGBA(255, 255, 255, 1)
@@ -2476,6 +2472,33 @@
                         X: =(Parent.Width-SaveBtn.Width-Self.Width-10)/2
                         Y: =(Parent.Height-Self.Height)/2
                         ZIndex: =2
+
+                    Timer1 As timer:
+                        BorderColor: =RGBA(0, 120, 212, 1)
+                        BorderStyle: =BorderStyle.None
+                        DisabledBorderColor: =RGBA(242, 242, 241, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        Duration: =000
+                        Fill: =RGBA(0, 120, 212, 1)
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(16, 110, 190, 1)
+                        OnTimerEnd: |-
+                            =Refresh('Task Analysis Taxonomy Collection');
+                            
+                            Set(
+                                ShowManagerPopUp,
+                                false
+                            );
+                        OnTimerStart: =startTimer
+                        PressedBorderColor: =RGBA(16, 110, 190, 1)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(16, 110, 190, 1)
+                        X: =40
+                        Y: =40
+                        ZIndex: =3
 
             FilterPaneOnSelectContainer As groupContainer.manualLayoutContainer:
                 Fill: =RGBA(255, 255, 255, 0.5)
