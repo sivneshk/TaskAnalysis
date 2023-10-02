@@ -2744,36 +2744,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.inProgress"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.inProgress",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "inProgress",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.OnStart"
                 }
               ],
