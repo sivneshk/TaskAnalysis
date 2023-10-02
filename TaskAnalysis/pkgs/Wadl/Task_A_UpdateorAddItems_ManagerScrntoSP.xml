@@ -21,10 +21,10 @@
           </param>
           <representation mediaType="application/json">
             <param style="plain" name="text" path="/text" type="xs:string" required="true">
-              <doc title="Input" />
+              <doc title="colToUpdate" />
             </param>
             <param style="plain" name="text_1" path="/text_1" type="xs:string" required="true">
-              <doc title="Input 1" />
+              <doc title="colToDelete" />
             </param>
           </representation>
         </request>

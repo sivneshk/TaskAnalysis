@@ -10891,7 +10891,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DeleteRowIcon_3",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -41043,7 +41043,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ToggleDetectChange",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

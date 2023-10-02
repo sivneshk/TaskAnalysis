@@ -1087,7 +1087,7 @@
                         HoverBorderColor: =ColorFade(Self.BorderColor,20%)
                         HoverColor: =ColorFade(Self.Color,-20%)
                         HoverFill: =ColorFade(Self.Fill,20%)
-                        OnSelect: |-
+                        OnSelect: |+
                             =/* colToUpdate contains rows that has been UPDATED/CHANGED ONLY */
                             
                             Set(
@@ -1096,6 +1096,10 @@
                             );
                             
                             Task_A_UpdateorAddItems_ManagerScrntoSP.Run(JSON(colToUpdate),JSON(colToDelete));
+                            
+                            //Clear(colToUpdate);
+                            //Clear(colToDelete);
+                            
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
                         PressedColor: =ColorFade(Self.Color,-20%)
                         PressedFill: =ColorFade(Self.Fill,-20%)
