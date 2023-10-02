@@ -773,6 +773,7 @@
                                         colToUpdate,
                                         {
                                             ID: ThisItem.ID,
+                                            UniqueID: ThisItem.Title,
                                             'Updated Hours': Value(InputHoursReview_3.Text)
                                         }
                                     )
@@ -871,6 +872,29 @@
                             Width: =RegionLabelScreen3_1.Width
                             X: =BizSegment_3.X+BizSegment_3.Width
                             ZIndex: =12
+
+                        UniqueID As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: ="Poppins"
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =ChosenTask_3.Height/8
+                            Text: =ThisItem.Title
+                            Visible: =false
+                            Width: =RegionLabelScreen3_1.Width
+                            X: =BizSegment_3.X+BizSegment_3.Width
+                            ZIndex: =13
 
                     HeaderTaxonomyContainer3 As groupContainer.manualLayoutContainer:
                         Height: =RightPanel3.Height/15
@@ -1038,19 +1062,19 @@
                     ZIndex: =7
 
                     SubmitBtnManagerScreen As button:
-                        BorderColor: =RGBA(2, 188, 148, 1)
+                        BorderColor: =RGBA(5, 50, 43, 1)
                         BorderThickness: =1
-                        Color: =RGBA(2, 188, 148, 1)
                         DisabledBorderColor: =RGBA(208, 208, 208, 1)
                         DisabledColor: =RGBA(208, 208, 208, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        Fill: =RGBA(255, 255, 255, 1)
+                        DisplayMode: =If(varEdit = DisplayMode.Edit, DisplayMode.Disabled, DisplayMode.Edit)
+                        Fill: =RGBA(5, 50, 43, 1)
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
                         Height: =AddTaskBtn_1.Height
-                        HoverBorderColor: =ColorFade(Self.BorderColor,-10%)
-                        HoverColor: =ColorFade(Self.Color,-10%)
-                        HoverFill: =RGBA(2, 188, 148, 0.1)
+                        HoverBorderColor: =ColorFade(Self.BorderColor,20%)
+                        HoverColor: =ColorFade(Self.Color,-20%)
+                        HoverFill: =ColorFade(Self.Fill,20%)
                         OnSelect: |-
                             =/* colToUpdate contains rows that has been UPDATED/CHANGED ONLY */
                             
@@ -1062,42 +1086,46 @@
                             Task_A_UpdateorAddItems_ManagerScrntoSP.Run(JSON(colToUpdate),JSON(colToDelete));
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
                         PressedColor: =ColorFade(Self.Color,-20%)
-                        PressedFill: =RGBA(255, 255, 255, 1)
-                        RadiusBottomLeft: =5
-                        RadiusBottomRight: =5
-                        RadiusTopLeft: =5
-                        RadiusTopRight: =5
-                        Size: =Self.Height/3
-                        Text: ="Submit"
-                        Width: =RightPanel3.Width*0.1
-                        X: =(EmployeeNameCardScreen3_1.Width-Self.Width)
-                        Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
-                        ZIndex: =1
-
-                    EditBtn As button:
-                        BorderColor: =RGBA(5, 50, 43, 1)
-                        BorderThickness: =1
-                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
-                        DisabledColor: =RGBA(208, 208, 208, 1)
-                        DisabledFill: =RGBA(242, 242, 241, 0)
-                        Fill: =RGBA(5, 50, 43, 1)
-                        FocusedBorderThickness: =2
-                        Font: ="Poppins"
-                        Height: =AddTaskBtn_1.Height
-                        HoverBorderColor: =ColorFade(Self.Fill,20%)
-                        HoverColor: =RGBA(255, 255, 255, 1)
-                        HoverFill: =ColorFade(Self.Fill,20%)
-                        OnSelect: =Set(varEdit, DisplayMode.Edit)
-                        PressedBorderColor: =ColorFade(Self.Fill,-20%)
-                        PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =ColorFade(Self.Fill,-20%)
                         RadiusBottomLeft: =5
                         RadiusBottomRight: =5
                         RadiusTopLeft: =5
                         RadiusTopRight: =5
                         Size: =Self.Height/3
-                        Text: ="Edit"
-                        Width: =RightPanel3.Width*0.1
+                        Text: ="Submit"
+                        Width: =RightPanel3.Width*0.13
+                        X: =(EmployeeNameCardScreen3_1.Width-Self.Width)
+                        Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
+                        ZIndex: =1
+
+                    EditBtn As button:
+                        BorderColor: =RGBA(2, 188, 148, 1)
+                        BorderThickness: =1
+                        Color: =RGBA(2, 188, 148, 1)
+                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
+                        DisabledColor: =RGBA(208, 208, 208, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FocusedBorderThickness: =2
+                        Font: ="Poppins"
+                        Height: =AddTaskBtn_1.Height
+                        HoverBorderColor: =ColorFade(Self.BorderColor,-10%)
+                        HoverColor: =ColorFade(Self.Color,-20%)
+                        HoverFill: =RGBA(2, 188, 148, 0.15)
+                        OnSelect: =If(varEdit <> DisplayMode.Edit, Set(varEdit, DisplayMode.Edit), Set(varEdit, DisplayMode.Disabled))
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
+                        PressedColor: =ColorFade(Self.Color,-20%)
+                        PressedFill: =ColorFade(Self.Fill,-20%)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =Self.Height/3
+                        Text: |
+                            =If(varEdit <> DisplayMode.Edit, "Edit", "Save changes")
+                        Width: =RightPanel3.Width*0.13
                         X: =SubmitBtnManagerScreen.X-Self.Width-10
                         Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
                         ZIndex: =2
