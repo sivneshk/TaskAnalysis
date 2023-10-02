@@ -769,15 +769,22 @@
                             OnChange: |-
                                 =If(
                                     ThisItem.'Input Hours' <> Value(InputHoursReview_3.Text),
-                                    Collect(
-                                        colToUpdate,
+                                    ClearCollect(
+                                        colToUpdatev1,
                                         {
                                             ID: ThisItem.ID,
                                             UniqueID: ThisItem.Title,
                                             'Updated Hours': Value(InputHoursReview_3.Text)
                                         }
                                     )
-                                )
+                                );
+                                
+                                RemoveIf(
+                                    colToUpdate,
+                                    ID = ThisItem.ID
+                                );
+                                
+                                Collect(colToUpdate, colToUpdatev1)
                             OnSelect: =
                             PressedBorderColor: =RGBA(208, 208, 208, 1)
                             PressedColor: =RGBA(50, 49, 48, 1)
@@ -814,6 +821,11 @@
                                 
                                 RemoveIf(
                                     colTaskAnalysisSP,
+                                    ID = ThisItem.ID
+                                );
+                                
+                                RemoveIf(
+                                    colToUpdate,
                                     ID = ThisItem.ID
                                 );
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
