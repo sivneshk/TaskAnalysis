@@ -2544,6 +2544,10 @@
                             =Refresh('Task Analysis Taxonomy Collection');
                             ClearCollect(colTaskAnalysisSP, ShowColumns('Task Analysis Taxonomy Collection', "Title", "Associated_x0020_LE", "CoCo", "EmployeeID", "LE_x0020_Name", "UserName", "Process_x0020_Name", "ID", "InputHours", "Region", "Unique_x0020_ID"));
                             
+                            Clear(colNewTaskV1);
+                            Clear(colNewTaskV2);
+                            Clear(colNewTaskV3);
+                            
                             Set(
                                 ShowManagerPopUp,
                                 false
