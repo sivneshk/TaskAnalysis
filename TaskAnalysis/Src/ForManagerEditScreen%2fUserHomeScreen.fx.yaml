@@ -586,7 +586,7 @@
                                        IsEmpty(SlicerUniqueIDScreen3.SelectedItems) Or
                                        Title in SlicerUniqueIDScreen3.SelectedItems)),"UserName" , "GroupByName"), 
                         
-                        "ItemsCount", CountRows(GroupByName))
+                        "ItemsCount", CountRows(GroupByName), "sum", Sum(GroupByName, InputHours))
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
