@@ -39991,7 +39991,14 @@
         "DisabledColor",
         "PressedColor",
         "HoverColor",
-        "DisplayMode",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "DisplayMode",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Fill",
         "DisabledFill",
         "PressedFill",
@@ -40016,11 +40023,20 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
+        "OnTimerStart",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "false",
-          "InvariantPropertyName": "OnTimerStart",
+          "InvariantPropertyName": "OnTimerEnd",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "AutoStart",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
@@ -40028,7 +40044,15 @@
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "false",
-          "InvariantPropertyName": "OnTimerEnd",
+          "InvariantPropertyName": "Reset",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
+          "InvariantPropertyName": "Start",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         }
@@ -40054,6 +40078,21 @@
         {
           "Category": "Data",
           "PropertyName": "Duration",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "AutoStart",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Reset",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Start",
           "RuleProviderType": "Unknown"
         },
         {

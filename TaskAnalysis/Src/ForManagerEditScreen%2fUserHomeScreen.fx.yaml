@@ -2410,7 +2410,7 @@
                         HoverBorderColor: =ColorFade(Self.BorderColor,-10%)
                         HoverColor: =ColorFade(Self.Color,-10%)
                         HoverFill: =RGBA(2, 188, 148, 0.1)
-                        OnSelect: |
+                        OnSelect: |+
                             =/*colToAddByManager contains rows that has been ADDED ONLY */
                             Clear(colNewTaskV2);
                             ForAll(Gallery1_1.AllItems,
@@ -2423,10 +2423,11 @@
                             
                             ClearCollect(colNewTaskV3, AddColumns(RenameColumns(ShowColumns(Ungroup(Ungroup(colNewTaskV2, "User Name"), "Company Code"),"UniqueID", "Value","Task", "Title", "field_2", "field_3", "field_6", "field_8"), "Value", "User Name", "Title", "Company Code", "field_2", "LE Name", "field_3", "Associated_LE", "field_6", "Business Segment", "field_8", "Region") As aVar, "User Email", LookUp('Task Analysis Taxonomy Collection', 'User Name'= aVar[@'User Name'], 'User Email'), "EmployeeID", LookUp('Task Analysis Taxonomy Collection', 'User Name'= aVar[@'User Name'], EmployeeID), "Country", Blank(), "PC", Blank(), "ColourID", Blank(), "rowNumber", Blank(), "Input Hours", Blank() ));
                             
+                            UpdateContext({startTimer: true});
                             
-                            If(Task_A_JSONFlowUsertoSP.Run(JSON(colNewTaskV3)).success="true", Notify("Your response has been successfully received. You will be redirected to the previous screen."));
+                            /*If(Task_A_JSONFlowUsertoSP.Run(JSON(colNewTaskV3)).success="true", Notify("Your response has been successfully received. You will be redirected to the previous screen.") & Set(startTimer, true)); */
                             
-                            Set(startTimer, true);
+                            
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
                         PressedColor: =ColorFade(Self.Color,-20%)
                         PressedFill: =RGBA(255, 255, 255, 1)
@@ -2479,7 +2480,8 @@
                         DisabledBorderColor: =RGBA(242, 242, 241, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        Duration: =000
+                        DisplayMode: =DisplayMode.View
+                        Duration: =5000
                         Fill: =RGBA(0, 120, 212, 1)
                         Font: =Font.'Segoe UI'
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -2492,10 +2494,11 @@
                                 ShowManagerPopUp,
                                 false
                             );
-                        OnTimerStart: =startTimer
                         PressedBorderColor: =RGBA(16, 110, 190, 1)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(16, 110, 190, 1)
+                        Reset: =true
+                        Start: =startTimer
                         X: =40
                         Y: =40
                         ZIndex: =3
