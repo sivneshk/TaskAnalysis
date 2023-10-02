@@ -60,58 +60,6 @@
                 Y: =(HeaderContainerScreen3_1.Height-Self.Height)/2
                 ZIndex: =2
 
-            Button2 As button:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                Fill: =RGBA(0, 120, 212, 1)
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =RGBA(16, 110, 190, 1)
-                OnSelect: =ClearCollect(test,AddColumns(GroupedTaxonomyGallery3.AllItems, "sum", Sum(GroupByName, InputHours)))
-                PressedBorderColor: =RGBA(0, 69, 120, 1)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(16, 110, 190, 1)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =15
-                Text: ="Button"
-                X: =40
-                Y: =40
-                ZIndex: =3
-
-            Button4 As button:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                Fill: =RGBA(0, 120, 212, 1)
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =RGBA(16, 110, 190, 1)
-                OnSelect: =ClearCollect(test2, GroupedTaxonomyGallery3.AllItems)
-                PressedBorderColor: =RGBA(0, 69, 120, 1)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(16, 110, 190, 1)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =15
-                Text: ="Button"
-                X: =244
-                Y: =34
-                ZIndex: =4
-
         BodyContainerScreen3_1 As groupContainer.horizontalAutoLayoutContainer:
             Height: =Parent.Height-HeaderContainerScreen3_1.Height-FooterContainerScreen3_1.Height
             LayoutGap: =20
@@ -586,7 +534,7 @@
                                        IsEmpty(SlicerUniqueIDScreen3.SelectedItems) Or
                                        Title in SlicerUniqueIDScreen3.SelectedItems)),"UserName" , "GroupByName"), 
                         
-                        "ItemsCount", CountRows(GroupByName), "sum", Sum(GroupByName, InputHours))
+                        "ItemsCount", CountRows(GroupByName), "sum", Sum(GroupByName, 'Input Hours'))
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -664,7 +612,8 @@
                         ZIndex: =3
 
                     GroupByNameTaxonomy3 As gallery.variableTemplateHeightGallery:
-                        BorderColor: =RGBA(245, 245, 245, 1)
+                        BorderColor: =RGBA(206, 215, 212, 1)
+                        BorderStyle: =BorderStyle.None
                         DelayItemLoading: =true
                         Height: =((RightPanel3.Height-EmployeeNameCardScreen3_1.Height-HeaderTaxonomyContainer3.Height)/6)*(ThisItem.ItemsCount+1)
                         Items: =ThisItem.GroupByName
@@ -828,8 +777,12 @@
                                             UniqueID: ThisItem.Title,
                                             'Updated Hours': Value(InputHoursReview_3.Text)
                                         }
-                                    )
+                                    ) 
                                 );
+                                
+                                If(
+                                    ThisItem.'Input Hours' <> Value(InputHoursReview_3.Text) &&  CountRows(Filter(colTaskAnalysisSP, ID = ThisItem.ID)) <> 0,
+                                    Patch(colTaskAnalysisSP, LookUp(colTaskAnalysisSP, ID = ThisItem.ID), {InputHours : Value(InputHoursReview_3.Text)}));
                                 
                                 RemoveIf(
                                     colToUpdate,
@@ -961,6 +914,8 @@
                             ZIndex: =13
 
                     HeaderTaxonomyContainer3 As groupContainer.manualLayoutContainer:
+                        BorderColor: =RGBA(206, 215, 212, 1)
+                        BorderThickness: =1
                         Height: =RightPanel3.Height/15
                         RadiusBottomLeft: =4
                         RadiusBottomRight: =4
@@ -1108,7 +1063,30 @@
                         Y: =102
                         ZIndex: =7
 
-                    Label3 As label:
+                    SumGroup As label:
+                        Align: =Align.Right
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =If(Value(Self.Text) = 160, RGBA(1,131,116,1), Color.Red)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =EmployeeNameCardScreen3_1.Height*0.5
+                        OnSelect: =Select(Parent)
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Size: =ProcessNameLabelScreen3_1.Size*0.9
+                        Text: =ThisItem.sum
+                        Width: =Parent.Width*0.04
+                        X: =CappedHoursLabel.X-Self.Width
+                        Y: =(EmployeeNameCardScreen3_1.Height-Self.Height)/2
+                        ZIndex: =8
+
+                    TotalHoursLabel As label:
+                        Align: =Align.Right
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -1116,13 +1094,40 @@
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =EmployeeNameCardScreen3_1.Height*0.5
                         OnSelect: =Select(Parent)
-                        Size: =13
-                        Text: =ThisItem.sum
-                        X: =683
-                        Y: =4
-                        ZIndex: =8
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Size: =ProcessNameLabelScreen3_1.Size*0.9
+                        Text: |-
+                            ="Total Hours:"
+                        Width: =Parent.Width*0.1
+                        X: =SumGroup.X-Self.Width
+                        Y: =(EmployeeNameCardScreen3_1.Height-Self.Height)/2
+                        ZIndex: =9
+
+                    CappedHoursLabel As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Poppins"
+                        FontWeight: =FontWeight.Semibold
+                        Height: =EmployeeNameCardScreen3_1.Height*0.5
+                        OnSelect: =Select(Parent)
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        Size: =ProcessNameLabelScreen3_1.Size*0.9
+                        Text: ="/160"
+                        Width: =Parent.Width*0.05
+                        X: =FillerScreen3_1.X-Self.Width
+                        Y: =(EmployeeNameCardScreen3_1.Height-Self.Height)/2
+                        ZIndex: =10
 
                 ReviewBtnContainer_2 As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.Start
@@ -1147,7 +1152,20 @@
                         DisabledBorderColor: =RGBA(208, 208, 208, 1)
                         DisabledColor: =RGBA(208, 208, 208, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =If(varEdit = DisplayMode.Edit, DisplayMode.Disabled, DisplayMode.Edit)
+                        DisplayMode: |-
+                            =If(
+                                Or(
+                                    varEdit = DisplayMode.Edit,
+                                    CountRows(
+                                        Filter(
+                                            GroupedTaxonomyGallery3.AllItems,
+                                            sum <> 160
+                                        )
+                                    ) <> 0
+                                ),
+                                DisplayMode.Disabled,
+                                DisplayMode.Edit
+                            )
                         Fill: =RGBA(5, 50, 43, 1)
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
