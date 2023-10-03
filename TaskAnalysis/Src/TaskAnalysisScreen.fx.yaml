@@ -2085,8 +2085,6 @@ TaskAnalysisScreen As screen:
                 PaddingLeft: =5
                 PaddingRight: =5
                 PaddingTop: =5
-                RadiusTopLeft: =10
-                RadiusTopRight: =10
                 Width: =DialogBox.Width*0.85
                 ZIndex: =5
 
@@ -2301,6 +2299,42 @@ TaskAnalysisScreen As screen:
                         Order: =24
                         ZIndex: =108
 
+                Dropdown_7 As combobox:
+                    BorderColor: =RGBA(189, 189, 189, 1)
+                    BorderThickness: =1
+                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                    ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                    ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                    ChevronFill: =RGBA(117, 117, 117, 1)
+                    ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                    ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                    Color: =RGBA(26, 35, 33, 1)
+                    DefaultSelectedItems: =Blank()
+                    DisabledBorderColor: =Self.BorderColor
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    DisplayFields: =["Title"]
+                    FocusedBorderThickness: =0
+                    Font: ="Noto Sans"
+                    Height: =Dropdown.Height
+                    HoverBorderColor: =RGBA(189, 189, 189, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(236, 236, 235, 1)
+                    InputTextPlaceholder: ="Please Select Active CoCo"
+                    Items: ='Coco Mapping'
+                    NoSelectionText: ="Unique ID"
+                    PressedBorderColor: =RGBA(189, 189, 189, 1)
+                    PressedColor: =RGBA(117, 117, 117, 1)
+                    PressedFill: =RGBA(245, 245, 245, 1)
+                    SearchFields: =["Title"]
+                    SearchItems: =Search('Coco Mapping',Dropdown_7.SearchText,"Title")
+                    SelectionColor: =RGBA(26, 35, 33, 1)
+                    SelectionFill: =RGBA(255, 255, 255, 1)
+                    Size: =Self.Height/3.1
+                    Width: =Parent.Width
+                    Y: =Parent.Height*0.03
+                    ZIndex: =3
+
             BackSubmitButtonContainer As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderStyle: =BorderStyle.None
@@ -2330,7 +2364,7 @@ TaskAnalysisScreen As screen:
                     HoverBorderColor: =RGBA(0, 0, 0, 1)
                     HoverColor: =RGBA(0, 0, 0, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
-                    OnSelect: =Reset(DropdownCOCO)
+                    OnSelect: =Reset(Dropdown_7)
                     PressedBorderColor: =RGBA(0, 0, 0, 1)
                     PressedColor: =RGBA(0, 0, 0, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
@@ -2351,7 +2385,7 @@ TaskAnalysisScreen As screen:
                     DisabledBorderColor: =RGBA(161, 159, 157, 1)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
-                    DisplayMode: =If(IsEmpty(DropdownCOCO.SelectedItems), DisplayMode.Disabled, DisplayMode.Edit)
+                    DisplayMode: =If(Or(IsEmpty(Dropdown_7.SelectedItems), IsBlank(Dropdown_7.SelectedItems)), DisplayMode.Disabled, DisplayMode.Edit)
                     Fill: =RGBA(2, 188, 148, 1)
                     FocusedBorderThickness: =2
                     Font: ="Poppins"
@@ -2365,24 +2399,24 @@ TaskAnalysisScreen As screen:
                             (Last(TaxonomyCollect.AllItems).ColourID) + 1
                         );
                         ForAll(
-                            DropdownCOCO.SelectedItems,
+                            Dropdown_7.SelectedItems,
                             Collect(
                                 colTaxonomyTemp,
                                 {
                                     Task: (If(
                                         And(
-                                            DropdownL6.Selected.Value <> "-",
-                                            DropdownL6.Selected.Value <> Blank()
+                                            Dropdown_6.Selected.Value <> "-",
+                                            Dropdown_6.Selected.Value <> Blank()
                                         ),
-                                        DropdownL6.Selected.Value,
+                                        Dropdown_6.Selected.Value,
                                         And(
-                                            DropdownL5.Selected.Value <> "-",
-                                            DropdownL5.Selected.Value <> Blank()
+                                            Dropdown_5.Selected.Value <> "-",
+                                            Dropdown_5.Selected.Value <> Blank()
                                         ),
-                                        DropdownL5.Selected.Value,
-                                        DropdownL4.Selected.Value
+                                        Dropdown_5.Selected.Value,
+                                        Dropdown_4.Selected.Value
                                     )),
-                                    UniqueID: DropdownUniqueID.Selected.Value,
+                                    UniqueID: Dropdown.Selected.Title,
                                     'Company Code': ThisRecord.COMPANY_CODE,
                                     'LE Name': ThisRecord.'LE Name',
                                     'Business Segment': ThisRecord.'Business Segment',
@@ -2403,14 +2437,14 @@ TaskAnalysisScreen As screen:
                             true
                         );
                         
-                        Reset(DropdownL1);
-                        Reset(DropdownUniqueID);
-                        Reset(DropdownL2);
-                        Reset(DropdownL3);
-                        Reset(DropdownL4);
-                        Reset(DropdownL5);
-                        Reset(DropdownL6);
-                        Reset(DropdownCOCO);
+                        Reset(Dropdown_1);
+                        Reset(Dropdown);
+                        Reset(Dropdown_2);
+                        Reset(Dropdown_3);
+                        Reset(Dropdown_4);
+                        Reset(Dropdown_5);
+                        Reset(Dropdown_6);
+                        Reset(Dropdown_7);
                         Set(
                             ShowPopUp,
                             false
