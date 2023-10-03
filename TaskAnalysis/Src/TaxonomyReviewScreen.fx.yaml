@@ -379,6 +379,7 @@ TaxonomyReviewScreen As screen:
                         OnSelect: |
                             =Set(sendThisToJSON, JSON(FinalTaxonomy));
                             
+                            Task_A_NotifySubmissiontoManager.Run();
                             If(Task_A_JSONFlowUsertoSP.Run(sendThisToJSON).success="true", Notify("Your response has been successfully received."))
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)

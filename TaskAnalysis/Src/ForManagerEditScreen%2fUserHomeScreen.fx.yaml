@@ -1181,7 +1181,7 @@
                                 DisplayMode.Disabled
                             );
                             
-                            Task_A_UpdateorAddItems_ManagerScrntoSP.Run(JSON(colToUpdate),JSON(colToDelete));
+                            Task_A_UpdateandDeleteItems_ManagerScrntoSP.Run(JSON(colToUpdate),JSON(colToDelete));
                             
                             //Clear(colToUpdate);
                             //Clear(colToDelete);
