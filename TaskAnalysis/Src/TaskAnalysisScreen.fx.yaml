@@ -58,43 +58,6 @@ TaskAnalysisScreen As screen:
                 Y: =(HeaderContainer.Height-Self.Height)/2
                 ZIndex: =2
 
-            ComboBox1 As combobox:
-                BorderColor: =RGBA(189, 189, 189, 1)
-                BorderThickness: =1
-                ChevronBackground: =RGBA(245, 245, 245, 1)
-                ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-                ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                ChevronFill: =RGBA(117, 117, 117, 1)
-                ChevronHoverBackground: =RGBA(245, 245, 245, 1)
-                ChevronHoverFill: =RGBA(50, 49, 48, 1)
-                Color: =RGBA(26, 35, 33, 1)
-                Default: ="Unique ID"
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                DisplayFields: =["Title"]
-                Fill: =RGBA(245, 245, 245, 1)
-                FocusedBorderThickness: =0
-                Font: ="Noto Sans"
-                HoverBorderColor: =RGBA(16, 110, 190, 1)
-                HoverColor: =RGBA(50, 49, 48, 1)
-                HoverFill: =RGBA(245, 245, 245, 1)
-                InputTextPlaceholder: ="Unique ID"
-                Items: =Filter('Process Taxonomy', StartsWith(Title, Self.SearchText))
-                NoSelectionText: ="Unique ID"
-                PressedBorderColor: =RGBA(16, 110, 190, 1)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 120, 212, 1)
-                SearchFields: =["Comboname"]
-                SearchItems: =Search(Filter('Process Taxonomy', StartsWith(Title, Self.SearchText)),ComboBox1.SearchText,"Comboname")
-                SelectionColor: =RGBA(26, 35, 33, 1)
-                SelectionFill: =RGBA(208, 208, 208, 1)
-                SelectMultiple: =false
-                Size: =13
-                X: =384
-                Y: =34
-                ZIndex: =3
-
         BodyContainer As groupContainer.horizontalAutoLayoutContainer:
             Height: =Parent.Height-HeaderContainer.Height-FooterContainer.Height
             LayoutGap: =20
@@ -1005,6 +968,345 @@ TaskAnalysisScreen As screen:
                             FieldVariantName: ="textualColumn"
                             Order: =1
                             ZIndex: =84
+
+                    Dropdown As combobox:
+                        BorderColor: =RGBA(189, 189, 189, 1)
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(117, 117, 117, 1)
+                        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: =Blank()
+                        DisabledBorderColor: =Self.BorderColor
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["Title"]
+                        FocusedBorderThickness: =0
+                        Font: ="Noto Sans"
+                        Height: =Parent.Height/11
+                        HoverBorderColor: =RGBA(189, 189, 189, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(236, 236, 235, 1)
+                        InputTextPlaceholder: ="Unique ID"
+                        Items: =Filter('Process Taxonomy', StartsWith(Title, Self.SearchText))
+                        NoSelectionText: ="Unique ID"
+                        PressedBorderColor: =RGBA(189, 189, 189, 1)
+                        PressedColor: =RGBA(117, 117, 117, 1)
+                        PressedFill: =RGBA(245, 245, 245, 1)
+                        SearchFields: =["Comboname"]
+                        SearchItems: =Search(Filter('Process Taxonomy', StartsWith(Title, Self.SearchText)),Dropdown.SearchText,"Comboname")
+                        SelectionColor: =RGBA(26, 35, 33, 1)
+                        SelectionFill: =RGBA(255, 255, 255, 1)
+                        SelectMultiple: =false
+                        Size: =Self.Height/3.1
+                        Width: =Parent.Width*0.85
+                        X: =384
+                        Y: =34
+                        ZIndex: =8
+
+                    Dropdown_1 As combobox:
+                        BorderColor: =RGBA(189, 189, 189, 1)
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(117, 117, 117, 1)
+                        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: =If(Dropdown.Selected.Title = Blank(), Blank(), First(Distinct(Filter('Process Taxonomy',Title = Dropdown.Selected.Title),L1)))
+                        DisabledBorderColor: =Self.BorderColor
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["Value"]
+                        FocusedBorderThickness: =0
+                        Font: ="Noto Sans"
+                        Height: =Parent.Height/11
+                        HoverBorderColor: =RGBA(189, 189, 189, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(236, 236, 235, 1)
+                        InputTextPlaceholder: ="L1 Taxonomy"
+                        Items: |
+                            =If(Dropdown.Selected.Title = Blank(), Sort(Distinct('Process Taxonomy',L1),Value), Distinct(Filter('Process Taxonomy',Title=Dropdown.Selected.Title),L1))
+                        NoSelectionText: ="Unique ID"
+                        PressedBorderColor: =RGBA(189, 189, 189, 1)
+                        PressedColor: =RGBA(117, 117, 117, 1)
+                        PressedFill: =RGBA(245, 245, 245, 1)
+                        SearchFields: =["Value"]
+                        SearchItems: |-
+                            =Search(If(Dropdown.Selected.Title = Blank(), Sort(Distinct('Process Taxonomy',L1),Value), Distinct(Filter('Process Taxonomy',Title=Dropdown.Selected.Title),L1))
+                            ,Dropdown_1.SearchText,"Value")
+                        SelectionColor: =RGBA(26, 35, 33, 1)
+                        SelectionFill: =RGBA(255, 255, 255, 1)
+                        SelectMultiple: =false
+                        Size: =Self.Height/3.1
+                        Width: =Parent.Width*0.85
+                        X: =384
+                        Y: =34
+                        ZIndex: =9
+
+                    Dropdown_2 As combobox:
+                        BorderColor: =RGBA(189, 189, 189, 1)
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(117, 117, 117, 1)
+                        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: |-
+                            =If(Dropdown.Selected.Title = Blank()
+                                ,
+                                Blank()
+                                ,
+                                First(Distinct(Filter('Process Taxonomy',Title = Dropdown.Selected.Title),L2))
+                                
+                            )
+                        DisabledBorderColor: =Self.BorderColor
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["Value"]
+                        FocusedBorderThickness: =0
+                        Font: ="Noto Sans"
+                        Height: =Parent.Height/11
+                        HoverBorderColor: =RGBA(189, 189, 189, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(236, 236, 235, 1)
+                        InputTextPlaceholder: ="L1 Taxonomy"
+                        IsSearchable: =false
+                        Items: |-
+                            =If(Dropdown.Selected.Title = Blank()
+                                , 
+                                Sort(Distinct(Filter('Process Taxonomy',L1 = Dropdown_1.Selected.Value),L2),Value)
+                                ,
+                                Distinct(Filter('Process Taxonomy',Title = Dropdown.Selected.Title),L2)
+                            )
+                        NoSelectionText: ="Unique ID"
+                        PressedBorderColor: =RGBA(189, 189, 189, 1)
+                        PressedColor: =RGBA(117, 117, 117, 1)
+                        PressedFill: =RGBA(245, 245, 245, 1)
+                        SearchFields: =["Value"]
+                        SearchItems: =[]
+                        SelectionColor: =RGBA(26, 35, 33, 1)
+                        SelectionFill: =RGBA(255, 255, 255, 1)
+                        SelectMultiple: =false
+                        Size: =Self.Height/3.1
+                        Width: =Parent.Width*0.85
+                        X: =384
+                        Y: =34
+                        ZIndex: =10
+
+                    Dropdown_3 As combobox:
+                        BorderColor: =RGBA(189, 189, 189, 1)
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(117, 117, 117, 1)
+                        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: |-
+                            =If(Dropdown.Selected.Title = Blank()
+                                ,
+                                Blank()
+                                ,
+                                First(Distinct(Filter('Process Taxonomy',Title = Dropdown.Selected.Title),L3))
+                                
+                            )
+                        DisabledBorderColor: =Self.BorderColor
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["Value"]
+                        FocusedBorderThickness: =0
+                        Font: ="Noto Sans"
+                        Height: =Parent.Height/11
+                        HoverBorderColor: =RGBA(189, 189, 189, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(236, 236, 235, 1)
+                        InputTextPlaceholder: ="L1 Taxonomy"
+                        IsSearchable: =false
+                        Items: |-
+                            =If(Dropdown.Selected.Title = Blank()
+                                , 
+                                Sort(Distinct(Filter('Process Taxonomy',L2 = Dropdown_2.Selected.Value),L3),Value)
+                                ,
+                                Distinct(Filter('Process Taxonomy',Title = Dropdown.Selected.Title),L3)
+                            )
+                        NoSelectionText: ="Unique ID"
+                        PressedBorderColor: =RGBA(189, 189, 189, 1)
+                        PressedColor: =RGBA(117, 117, 117, 1)
+                        PressedFill: =RGBA(245, 245, 245, 1)
+                        SearchFields: =["Value"]
+                        SearchItems: =[]
+                        SelectionColor: =RGBA(26, 35, 33, 1)
+                        SelectionFill: =RGBA(255, 255, 255, 1)
+                        SelectMultiple: =false
+                        Size: =Self.Height/3.1
+                        Width: =Parent.Width*0.85
+                        X: =384
+                        Y: =34
+                        ZIndex: =11
+
+                    Dropdown_4 As combobox:
+                        BorderColor: =RGBA(189, 189, 189, 1)
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(117, 117, 117, 1)
+                        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: |-
+                            =If(Dropdown.Selected.Title = Blank()
+                                ,
+                                Blank()
+                                ,
+                                First(Distinct(Filter('Process Taxonomy',Title = Dropdown.Selected.Title),L4))
+                                
+                            )
+                        DisabledBorderColor: =Self.BorderColor
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["Value"]
+                        FocusedBorderThickness: =0
+                        Font: ="Noto Sans"
+                        Height: =Parent.Height/11
+                        HoverBorderColor: =RGBA(189, 189, 189, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(236, 236, 235, 1)
+                        InputTextPlaceholder: ="L1 Taxonomy"
+                        IsSearchable: =false
+                        Items: |-
+                            =If(Dropdown.Selected.Title = Blank()
+                                , 
+                                Sort(Distinct(Filter('Process Taxonomy',L3 = Dropdown_3.Selected.Value),L4),Value)
+                                ,
+                                Distinct(Filter('Process Taxonomy',Title = Dropdown.Selected.Title),L4)
+                            )
+                        NoSelectionText: ="Unique ID"
+                        PressedBorderColor: =RGBA(189, 189, 189, 1)
+                        PressedColor: =RGBA(117, 117, 117, 1)
+                        PressedFill: =RGBA(245, 245, 245, 1)
+                        SearchFields: =["Value"]
+                        SearchItems: =[]
+                        SelectionColor: =RGBA(26, 35, 33, 1)
+                        SelectionFill: =RGBA(255, 255, 255, 1)
+                        SelectMultiple: =false
+                        Size: =Self.Height/3.1
+                        Width: =Parent.Width*0.85
+                        X: =384
+                        Y: =34
+                        ZIndex: =12
+
+                    Dropdown_5 As combobox:
+                        BorderColor: =RGBA(189, 189, 189, 1)
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(117, 117, 117, 1)
+                        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: |-
+                            =If(Dropdown.Selected.Title = Blank()
+                                ,
+                                Blank()
+                                ,
+                                First(Distinct(Filter('Process Taxonomy',Title = Dropdown.Selected.Title),L5))
+                                
+                            )
+                        DisabledBorderColor: =Self.BorderColor
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["Value"]
+                        FocusedBorderThickness: =0
+                        Font: ="Noto Sans"
+                        Height: =Parent.Height/11
+                        HoverBorderColor: =RGBA(189, 189, 189, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(236, 236, 235, 1)
+                        InputTextPlaceholder: ="L1 Taxonomy"
+                        IsSearchable: =false
+                        Items: |-
+                            =If(Dropdown.Selected.Title = Blank()
+                                , 
+                                Sort(Distinct(Filter('Process Taxonomy',L4 = Dropdown_4.Selected.Value),L5),Value)
+                                ,
+                                Distinct(Filter('Process Taxonomy',Title = Dropdown.Selected.Title),L5)
+                            )
+                        NoSelectionText: ="Unique ID"
+                        PressedBorderColor: =RGBA(189, 189, 189, 1)
+                        PressedColor: =RGBA(117, 117, 117, 1)
+                        PressedFill: =RGBA(245, 245, 245, 1)
+                        SearchFields: =["Value"]
+                        SearchItems: =[]
+                        SelectionColor: =RGBA(26, 35, 33, 1)
+                        SelectionFill: =RGBA(255, 255, 255, 1)
+                        SelectMultiple: =false
+                        Size: =Self.Height/3.1
+                        Width: =Parent.Width*0.85
+                        X: =384
+                        Y: =34
+                        ZIndex: =13
+
+                    Dropdown_6 As combobox:
+                        BorderColor: =RGBA(189, 189, 189, 1)
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(117, 117, 117, 1)
+                        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: |-
+                            =If(Dropdown.Selected.Title = Blank()
+                                ,
+                                Blank()
+                                ,
+                                First(Distinct(Filter('Process Taxonomy',Title = Dropdown.Selected.Title),L6))
+                                
+                            )
+                        DisabledBorderColor: =Self.BorderColor
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["Value"]
+                        FocusedBorderThickness: =0
+                        Font: ="Noto Sans"
+                        Height: =Parent.Height/11
+                        HoverBorderColor: =RGBA(189, 189, 189, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(236, 236, 235, 1)
+                        InputTextPlaceholder: ="L1 Taxonomy"
+                        IsSearchable: =false
+                        Items: |-
+                            =If(Dropdown.Selected.Title = Blank()
+                                , 
+                                Sort(Distinct(Filter('Process Taxonomy',L5 = Dropdown_5.Selected.Value),L6),Value)
+                                ,
+                                Distinct(Filter('Process Taxonomy',Title = Dropdown.Selected.Title),L6)
+                            )
+                        NoSelectionText: ="Unique ID"
+                        PressedBorderColor: =RGBA(189, 189, 189, 1)
+                        PressedColor: =RGBA(117, 117, 117, 1)
+                        PressedFill: =RGBA(245, 245, 245, 1)
+                        SearchFields: =["Value"]
+                        SearchItems: =[]
+                        SelectionColor: =RGBA(26, 35, 33, 1)
+                        SelectionFill: =RGBA(255, 255, 255, 1)
+                        SelectMultiple: =false
+                        Size: =Self.Height/3.1
+                        Width: =Parent.Width*0.85
+                        X: =384
+                        Y: =34
+                        ZIndex: =14
 
                 ButtonGroup As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
