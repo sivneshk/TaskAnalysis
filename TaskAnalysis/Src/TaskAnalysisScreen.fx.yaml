@@ -1362,7 +1362,7 @@ TaskAnalysisScreen As screen:
                         DisabledBorderColor: =RGBA(208, 208, 208, 1)
                         DisabledColor: =RGBA(208, 208, 208, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =If(And(DropdownUniqueID.Selected.Value <> Blank(), DropdownL1.Selected.Value <> Blank(),DropdownL2.Selected.Value <> Blank(),DropdownL3.Selected.Value <> Blank(),DropdownL4.Selected.Value <> Blank()), DisplayMode.Edit, DisplayMode.Disabled)
+                        DisplayMode: =If(And(Dropdown.Selected.Title <> Blank(), Dropdown_1.Selected.Value <> Blank(),Dropdown_2.Selected.Value <> Blank(),Dropdown_3.Selected.Value <> Blank(),Dropdown_4.Selected.Value <> Blank()), DisplayMode.Edit, DisplayMode.Disabled)
                         Fill: =RGBA(2, 188, 148, 1)
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
