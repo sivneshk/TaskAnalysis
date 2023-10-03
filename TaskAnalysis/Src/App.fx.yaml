@@ -14,7 +14,8 @@ App As appinfo:
         Clear(colToUpdate);
         
         ClearCollect(colTaskAnalysisSP, 'Task Analysis Taxonomy Collection');
-        ClearCollect(colProcessTaxonomy, 'Process Taxonomy');
+        Clear(colProcessTaxonomy);
+        Collect(colProcessTaxonomy, 'Process Taxonomy');
         
         ClearCollect(
             PrepCollection,
