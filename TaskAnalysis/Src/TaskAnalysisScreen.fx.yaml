@@ -58,6 +58,43 @@ TaskAnalysisScreen As screen:
                 Y: =(HeaderContainer.Height-Self.Height)/2
                 ZIndex: =2
 
+            ComboBox1 As combobox:
+                BorderColor: =RGBA(189, 189, 189, 1)
+                BorderThickness: =1
+                ChevronBackground: =RGBA(245, 245, 245, 1)
+                ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                ChevronFill: =RGBA(117, 117, 117, 1)
+                ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                Color: =RGBA(26, 35, 33, 1)
+                Default: ="Unique ID"
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                DisabledFill: =RGBA(242, 242, 241, 0)
+                DisplayFields: =["Title"]
+                Fill: =RGBA(245, 245, 245, 1)
+                FocusedBorderThickness: =0
+                Font: ="Noto Sans"
+                HoverBorderColor: =RGBA(16, 110, 190, 1)
+                HoverColor: =RGBA(50, 49, 48, 1)
+                HoverFill: =RGBA(245, 245, 245, 1)
+                InputTextPlaceholder: ="Unique ID"
+                Items: =Filter('Process Taxonomy', StartsWith(Title, Self.SearchText))
+                NoSelectionText: ="Unique ID"
+                PressedBorderColor: =RGBA(16, 110, 190, 1)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 120, 212, 1)
+                SearchFields: =["Comboname"]
+                SearchItems: =Search(Filter('Process Taxonomy', StartsWith(Title, Self.SearchText)),ComboBox1.SearchText,"Comboname")
+                SelectionColor: =RGBA(26, 35, 33, 1)
+                SelectionFill: =RGBA(208, 208, 208, 1)
+                SelectMultiple: =false
+                Size: =13
+                X: =384
+                Y: =34
+                ZIndex: =3
+
         BodyContainer As groupContainer.horizontalAutoLayoutContainer:
             Height: =Parent.Height-HeaderContainer.Height-FooterContainer.Height
             LayoutGap: =20
@@ -238,7 +275,7 @@ TaskAnalysisScreen As screen:
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter.Height/11
-                        Items: =colProcessTaxonomy
+                        Items: ='Process Taxonomy'
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         OnChange: =
@@ -251,7 +288,7 @@ TaskAnalysisScreen As screen:
                         Y: =16
                         ZIndex: =1
 
-                        Title2 As pcfDataField.textualColumn:
+                        Title9 As pcfDataField.textualColumn:
                             FieldDisplayName: ="Title"
                             FieldName: ="Title"
                             FieldType: ="s"
