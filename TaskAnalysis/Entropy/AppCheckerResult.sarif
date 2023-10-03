@@ -134,46 +134,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TaskAnalysisScreen.DialogBoxPopUp.DialogBox.DropdownCOCOContainer.Dropdown_7.SearchItems"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TaskAnalysisScreen.DialogBoxPopUp.DialogBox.DropdownCOCOContainer.Dropdown_7.SearchItems",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 7,
-                  "charOffset": 44,
-                  "snippet": {
-                    "text": "\"Title\""
-                  }
-                }
-              },
-              "properties": {
-                "member": "SearchItems",
-                "module": "TaskAnalysisScreen",
-                "type": "TaskAnalysisScreen.DialogBoxPopUp.DialogBox.DropdownCOCOContainer.Dropdown_7"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Search"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.Dropdown.SearchItems"
                 }
               ],

@@ -218,6 +218,7 @@ TaskAnalysisScreen As screen:
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     LayoutMode: =LayoutMode.Auto
+                    LayoutOverflowY: =LayoutOverflow.Scroll
                     PaddingBottom: =5
                     PaddingLeft: =5
                     PaddingRight: =5
@@ -1335,13 +1336,13 @@ TaskAnalysisScreen As screen:
                         HoverColor: =RGBA(148, 148, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |-
-                            =Reset(DropdownL1);
-                            Reset(DropdownUniqueID);
-                            Reset(DropdownL2);
-                            Reset(DropdownL3);
-                            Reset(DropdownL4);
-                            Reset(DropdownL5);
-                            Reset(DropdownL6);
+                            =Reset(Dropdown_1);
+                            Reset(Dropdown);
+                            Reset(Dropdown_2);
+                            Reset(Dropdown_3);
+                            Reset(Dropdown_4);
+                            Reset(Dropdown_5);
+                            Reset(Dropdown_6);
                         PressedBorderColor: =RGBA(208, 208, 208, 1)
                         PressedColor: =RGBA(208, 208, 208, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
@@ -2320,14 +2321,15 @@ TaskAnalysisScreen As screen:
                     HoverBorderColor: =RGBA(189, 189, 189, 1)
                     HoverColor: =RGBA(50, 49, 48, 1)
                     HoverFill: =RGBA(236, 236, 235, 1)
-                    InputTextPlaceholder: ="Please Select Active CoCo"
-                    Items: ='Coco Mapping'
+                    InputTextPlaceholder: ="Please Select 1 or More Active CoCo"
+                    IsSearchable: =false
+                    Items: =Filter('Coco Mapping', StartsWith(COMPANY_CODE, Self.SearchText))
                     NoSelectionText: ="Unique ID"
                     PressedBorderColor: =RGBA(189, 189, 189, 1)
                     PressedColor: =RGBA(117, 117, 117, 1)
                     PressedFill: =RGBA(245, 245, 245, 1)
                     SearchFields: =["Title"]
-                    SearchItems: =Search('Coco Mapping',Dropdown_7.SearchText,"Title")
+                    SearchItems: =[]
                     SelectionColor: =RGBA(26, 35, 33, 1)
                     SelectionFill: =RGBA(255, 255, 255, 1)
                     Size: =Self.Height/3.1
