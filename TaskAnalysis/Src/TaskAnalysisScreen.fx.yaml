@@ -238,10 +238,10 @@ TaskAnalysisScreen As screen:
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilter.Height/11
-                        Items: =Sort(Distinct(colProcessTaxonomy,Title),Value)
+                        Items: =SortByColumns(colProcessTaxonomy, "Title")
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
-                        OnChange: =Set(uniqueIDVar,DropdownUniqueID.Selected.Value)
+                        OnChange: =
                         OnSelect: =
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
@@ -256,7 +256,7 @@ TaskAnalysisScreen As screen:
                             FieldName: ="Title"
                             FieldType: ="s"
                             FieldVariantName: ="textualColumn"
-                            Order: =2
+                            Order: =1
                             ZIndex: =8
 
                         Global_Process_ID2 As pcfDataField.textualColumn:
@@ -330,14 +330,6 @@ TaskAnalysisScreen As screen:
                             FieldVariantName: ="textualColumn"
                             Order: =11
                             ZIndex: =17
-
-                        Value1 As pcfDataField.textualColumn:
-                            FieldDisplayName: ="Value"
-                            FieldName: ="Value"
-                            FieldType: ="e"
-                            FieldVariantName: ="textualColumn"
-                            Order: =1
-                            ZIndex: =29
 
                     "DropdownL1 As 'Combo box'.pcfdataset":
                         AllowSearching: =true
