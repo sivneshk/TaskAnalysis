@@ -1477,7 +1477,8 @@ TaskAnalysisScreen As screen:
                                     ColourID: iterator,
                                     'User Email': Office365Users.MyProfile().Mail,
                                     'User Name': Office365Users.MyProfile().DisplayName,
-                                    EmployeeID: Office365Users.MyProfile().Id
+                                    EmployeeID: Office365Users.MyProfile().Id,
+                                    Status: "Pending Approval"
                                 }
                             )
                         );
