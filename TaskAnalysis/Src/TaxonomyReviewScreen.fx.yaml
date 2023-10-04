@@ -372,7 +372,7 @@ TaxonomyReviewScreen As screen:
                         Fill: =RGBA(255, 255, 255, 1)
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
-                        Height: =ReviewBtnContainer_1.Height*0.5
+                        Height: =ReviewBtnContainer_1.Height*0.6
                         HoverBorderColor: =ColorFade(RGBA(2, 188, 148, 1),-20%)
                         HoverColor: =ColorFade(RGBA(2, 188, 148, 1),-20%)
                         HoverFill: =ColorFade(RGBA(255, 255, 255, 1),-5%)
@@ -384,10 +384,10 @@ TaxonomyReviewScreen As screen:
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
-                        RadiusBottomLeft: =5
-                        RadiusBottomRight: =5
-                        RadiusTopLeft: =5
-                        RadiusTopRight: =5
+                        RadiusBottomLeft: =2
+                        RadiusBottomRight: =2
+                        RadiusTopLeft: =2
+                        RadiusTopRight: =2
                         Size: =Self.Height/3
                         Text: ="Submit"
                         Width: =ReviewScreenPanel.Width*0.2

@@ -1273,7 +1273,9 @@ TaskAnalysisScreen As screen:
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =RGBA(208, 208, 208, 1)
                     Icon: =Icon.Cancel
-                    OnSelect: =Set(ShowPopUp,false);
+                    OnSelect: |-
+                        =Reset(Dropdown_7);
+                        Set(ShowPopUp,false);
                     PaddingBottom: =5
                     PaddingTop: =5
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
@@ -1401,7 +1403,7 @@ TaskAnalysisScreen As screen:
                 Width: =DialogBox.Width*0.85
                 ZIndex: =6
 
-                CancelButton As button:
+                ClearCOCOButton As button:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderThickness: =1
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1477,8 +1479,7 @@ TaskAnalysisScreen As screen:
                                     ColourID: iterator,
                                     'User Email': Office365Users.MyProfile().Mail,
                                     'User Name': Office365Users.MyProfile().DisplayName,
-                                    EmployeeID: Office365Users.MyProfile().Id,
-                                    Status: "Pending Approval"
+                                    EmployeeID: Office365Users.MyProfile().Id
                                 }
                             )
                         );
