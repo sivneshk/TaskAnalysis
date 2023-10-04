@@ -1198,9 +1198,9 @@
                         OnSelect: |+
                             =/* colToUpdate contains rows that has been UPDATED/CHANGED ONLY */
                             
-                            Set(
-                                varEdit,
-                                DisplayMode.Disabled
+                            UpdateContext({
+                                varEdit:
+                                DisplayMode.Disabled}
                             );
                             
                             Clear(colToUpdateStatus);
@@ -1240,7 +1240,8 @@
                         HoverBorderColor: =ColorFade(Self.BorderColor,-10%)
                         HoverColor: =ColorFade(Self.Color,-20%)
                         HoverFill: =RGBA(2, 188, 148, 0.15)
-                        OnSelect: =If(varEdit <> DisplayMode.Edit, Set(varEdit, DisplayMode.Edit), Set(varEdit, DisplayMode.Disabled))
+                        OnSelect: |-
+                            =If(varEdit <> DisplayMode.Edit, UpdateContext({varEdit: DisplayMode.Edit}), UpdateContext({varEdit: DisplayMode.Disabled}))
                         PaddingLeft: =2
                         PaddingRight: =2
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
@@ -1301,12 +1302,12 @@
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |
-                            =Set(inProgress, DisplayMode.Edit);
+                            =UpdateContext({inProgress: DisplayMode.Edit});
                             Reset(Timer1);
-                            Set(
-                                ShowManagerPopUp,
-                                true
-                            );
+                            UpdateContext(
+                                {ShowManagerPopUp:
+                                true}
+                                );
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
@@ -2031,7 +2032,7 @@
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |-
-                            =Set(ShowFilter, false);
+                            =UpdateContext({ShowFilter: false});
                             
                             ForAll(
                                 Filter(
@@ -2142,7 +2143,8 @@
                         HoverColor: =ColorFade(Self.Color, -20%)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
-                        OnSelect: =Set(ShowFilter, true);
+                        OnSelect: |-
+                            =UpdateContext({ShowFilter: true});
                         PaddingBottom: =5
                         PaddingLeft: =5
                         PaddingRight: =5
@@ -2168,7 +2170,8 @@
                         HoverColor: =ColorFade(Self.Color, -20%)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
-                        OnSelect: =Set(ShowFilter, false);
+                        OnSelect: |-
+                            =UpdateContext({ShowFilter: false});
                         PaddingBottom: =5
                         PaddingLeft: =5
                         PaddingRight: =5
@@ -2588,7 +2591,7 @@
                             
                             If(Task_A_JSONFlowUsertoSP.Run(JSON(colNewTaskV3)).success="true", Notify("Your response has been successfully received. Please wait, you will be redirected to the previous screen."));
                             
-                            Set(inProgress, DisplayMode.Disabled);
+                            UpdateContext({inProgress: DisplayMode.Disabled});
                             UpdateContext({startTimer: false});
                             Reset(Timer1);
                             UpdateContext({startTimer: true});
@@ -2624,9 +2627,9 @@
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(Self.Fill,20%)
                         OnSelect: |
-                            =Set(
-                                ShowManagerPopUp,
-                                false
+                            =UpdateContext(
+                                {ShowManagerPopUp:
+                                false}
                             );
                         PressedBorderColor: =ColorFade(Self.Fill,-20%)
                         PressedColor: =RGBA(255, 255, 255, 1)
@@ -2664,12 +2667,12 @@
                             Clear(colNewTaskV2);
                             Clear(colNewTaskV3);
                             
-                            Set(
-                                ShowManagerPopUp,
-                                false
+                            UpdateContext(
+                                {ShowManagerPopUp:
+                                false}
                             );
                             
-                            Set(inProgress, DisplayMode.Edit);
+                            UpdateContext({inProgress: DisplayMode.Edit});
                         OnTimerStart: =
                         PressedBorderColor: =RGBA(16, 110, 190, 1)
                         PressedColor: =RGBA(255, 255, 255, 1)

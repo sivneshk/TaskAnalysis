@@ -3004,6 +3004,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.varEdit"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varEdit",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varEdit",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.inProgress"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.inProgress",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "inProgress",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.uniqueIDVar"
                 }
               ],
@@ -3045,6 +3105,36 @@
               },
               "properties": {
                 "member": "varL1",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.ShowFilter"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.ShowFilter",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "ShowFilter",
                 "module": "App",
                 "type": "App"
               }
