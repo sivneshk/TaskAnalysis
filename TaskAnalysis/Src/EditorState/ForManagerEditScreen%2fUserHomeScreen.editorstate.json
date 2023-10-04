@@ -255,7 +255,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AddTaskBtn_1",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13553,7 +13553,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "EditBtn",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -36969,7 +36969,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "RefreshTableIcon",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -40184,7 +40184,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "SubmitBtnManagerScreen",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
