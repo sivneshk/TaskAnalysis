@@ -60,6 +60,32 @@
                 Y: =(HeaderContainerScreen3_1.Height-Self.Height)/2
                 ZIndex: =2
 
+            Button1 As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                DisabledFill: =RGBA(242, 242, 241, 0)
+                Fill: =RGBA(0, 120, 212, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(16, 110, 190, 1)
+                OnSelect: =ClearCollect(test ,GroupedTaxonomyGallery3.AllItems)
+                PressedBorderColor: =RGBA(0, 69, 120, 1)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(16, 110, 190, 1)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =15
+                Text: ="Button"
+                X: =40
+                Y: =40
+                ZIndex: =3
+
         BodyContainerScreen3_1 As groupContainer.horizontalAutoLayoutContainer:
             Height: =Parent.Height-HeaderContainerScreen3_1.Height-FooterContainerScreen3_1.Height
             LayoutGap: =20
@@ -521,8 +547,8 @@
                     Items: |-
                         =AddColumns(
                             GroupBy(If(And(IsBlank(SlicerUserMailScreen3.Selected.Value),IsBlank(SlicerUniqueIDScreen3.Selected.Value),IsBlank(SlicerCOCOScreen3.Selected.Value)),
-                                    colTaskAnalysisSP,
-                                    Filter(colTaskAnalysisSP, IsBlank(SlicerUserMailScreen3.SelectedItems.Value) Or
+                                    Filter(colTaskAnalysisSP, 'User Email'<> Office365Users.MyProfile().Mail),
+                                    Filter(Filter(colTaskAnalysisSP, 'User Email'<> Office365Users.MyProfile().Mail), IsBlank                       (SlicerUserMailScreen3.SelectedItems.Value) Or
                                        IsEmpty(SlicerUserMailScreen3.SelectedItems) Or
                                        'User Name' in SlicerUserMailScreen3.SelectedItems, 
                         
@@ -917,10 +943,6 @@
                         BorderColor: =RGBA(206, 215, 212, 1)
                         BorderThickness: =1
                         Height: =RightPanel3.Height/15
-                        RadiusBottomLeft: =4
-                        RadiusBottomRight: =4
-                        RadiusTopLeft: =4
-                        RadiusTopRight: =4
                         Width: =EmployeeNameCardScreen3_1.Width
                         Y: =EmployeeNameCardScreen3_1.Height
                         ZIndex: =6
@@ -1181,10 +1203,14 @@
                                 DisplayMode.Disabled
                             );
                             
-                            Task_A_UpdateandDeleteItems_ManagerScrntoSP.Run(JSON(colToUpdate),JSON(colToDelete));
+                            Clear(colToUpdateStatus);
                             
-                            //Clear(colToUpdate);
-                            //Clear(colToDelete);
+                            ForAll(Ungroup(GroupedTaxonomyGallery3.AllItems, "GroupByName"), Collect(colToUpdateStatus, {ID: ThisRecord.ID, UniqueID: ThisRecord.Title}));
+                            
+                            Task_A_UpdateandDeleteItems_ManagerScrntoSP.Run(JSON(colToUpdate),JSON(colToDelete), JSON(colToUpdateStatus));
+                            
+                            Clear(colToUpdate);
+                            Clear(colToDelete);
                             
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
                         PressedColor: =ColorFade(Self.Color,-20%)

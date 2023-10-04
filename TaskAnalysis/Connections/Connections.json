@@ -67,6 +67,32 @@
     "dependents": [],
     "id": "772eb637-780b-4505-ac82-d4fd749ecd5b"
   },
+  "906a09eb-d5db-413f-aa31-b0c0f2910d4e": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "19b5e644-cb10-42ed-8f11-529c8c1a7d1d"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "19b5e644-cb10-42ed-8f11-529c8c1a7d1d"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Task_A_UpdateandDeleteItems_ManagerScrntoSP"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "906a09eb-d5db-413f-aa31-b0c0f2910d4e"
+  },
   "b33eb572-6d51-43d0-b928-b3a47fd40bf4": {
     "connectionRef": {
       "displayName": "Logic flows",
@@ -92,32 +118,6 @@
     "dependencies": {},
     "dependents": [],
     "id": "b33eb572-6d51-43d0-b928-b3a47fd40bf4"
-  },
-  "b713963c-3229-488d-9f14-40f6880f99fb": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "19b5e644-cb10-42ed-8f11-529c8c1a7d1d"
-        }
-      },
-      "parameterHintsV2": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "19b5e644-cb10-42ed-8f11-529c8c1a7d1d"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "Task_A_UpdateandDeleteItems_ManagerScrntoSP"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "b713963c-3229-488d-9f14-40f6880f99fb"
   },
   "ef316f2c-aea2-432b-9162-9b9aebf425a7": {
     "connectionRef": {

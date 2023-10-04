@@ -4,9 +4,11 @@
     <jsonTypes targetNamespace="https://unitedstates-002.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
       <string name="ManualTriggerInput_text_def" />
       <string name="ManualTriggerInput_text_1_def" />
+      <string name="ManualTriggerInput_text_2_def" />
       <object name="ManualTriggerInput">
         <property name="text" type="string" />
         <property name="text_1" type="string" />
+        <property name="text_2" type="string" />
       </object>
     </jsonTypes>
   </grammars>
@@ -25,6 +27,9 @@
             </param>
             <param style="plain" name="text_1" path="/text_1" type="xs:string" required="true">
               <doc title="colToDelete" />
+            </param>
+            <param style="plain" name="text_2" path="/text_2" type="xs:string" required="true">
+              <doc title="colToUpdateStatus" />
             </param>
           </representation>
         </request>
