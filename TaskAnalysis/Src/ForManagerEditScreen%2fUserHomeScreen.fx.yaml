@@ -72,7 +72,7 @@
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(16, 110, 190, 1)
-                OnSelect: =ClearCollect(test ,GroupedTaxonomyGallery3.AllItems)
+                OnSelect: =ClearCollect(test ,Filter(colTaskAnalysisSP,  'User_x0020_Email'<> Office365Users.MyProfile().Mail))
                 PressedBorderColor: =RGBA(0, 69, 120, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(16, 110, 190, 1)
@@ -547,10 +547,10 @@
                     Items: |-
                         =AddColumns(
                             GroupBy(If(And(IsBlank(SlicerUserMailScreen3.Selected.Value),IsBlank(SlicerUniqueIDScreen3.Selected.Value),IsBlank(SlicerCOCOScreen3.Selected.Value)),
-                                    Filter(colTaskAnalysisSP, 'User Email'<> Office365Users.MyProfile().Mail),
-                                    Filter(Filter(colTaskAnalysisSP, 'User Email'<> Office365Users.MyProfile().Mail), IsBlank                       (SlicerUserMailScreen3.SelectedItems.Value) Or
+                                    Filter(colTaskAnalysisSP, 'User_x0020_Email'<> Office365Users.MyProfile().Mail),
+                                    Filter(Filter(colTaskAnalysisSP, 'User_x0020_Email'<> Office365Users.MyProfile().Mail), IsBlank                       (SlicerUserMailScreen3.SelectedItems.Value) Or
                                        IsEmpty(SlicerUserMailScreen3.SelectedItems) Or
-                                       'User Name' in SlicerUserMailScreen3.SelectedItems, 
+                                       UserName in SlicerUserMailScreen3.SelectedItems, 
                         
                                        IsBlank(SlicerCOCOScreen3.SelectedItems.Value) Or
                                        IsEmpty(SlicerCOCOScreen3.SelectedItems) Or
@@ -560,7 +560,7 @@
                                        IsEmpty(SlicerUniqueIDScreen3.SelectedItems) Or
                                        Title in SlicerUniqueIDScreen3.SelectedItems)),"UserName" , "GroupByName"), 
                         
-                        "ItemsCount", CountRows(GroupByName), "sum", Sum(GroupByName, 'Input Hours'))
+                        "ItemsCount", CountRows(GroupByName), "sum", Sum(GroupByName, InputHours))
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -684,7 +684,7 @@
                             OnSelect: =Select(Parent)
                             PaddingLeft: =10
                             Size: =Self.Height/8
-                            Text: =ThisItem.'Process Name'
+                            Text: =ThisItem.'Process_x0020_Name'
                             Width: =ProcessNameLabelScreen3_1.Width
                             ZIndex: =3
 
@@ -705,7 +705,7 @@
                             PaddingRight: =0
                             PaddingTop: =0
                             Size: =associatedLE_3.Size*0.8
-                            Text: =ThisItem.'LE Name'
+                            Text: =ThisItem.LE_x0020_Name
                             Width: =LegalEntityLabelScreen3_1.Width
                             X: =associatedLE_3.X
                             Y: =associatedLE_3.Y+associatedLE_3.Height
@@ -724,7 +724,7 @@
                             Height: =ChosenTask_3.Height*0.3
                             OnSelect: =Select(Parent)
                             Size: =ChosenTask_3.Height/8
-                            Text: =ThisItem.'Business Segment'
+                            Text: =ThisItem.Unique_x0020_ID
                             Width: =BusinessSegScreen3_1.Width
                             X: =associatedLE_3.X+associatedLE_3.Width
                             Y: =(ChosenTask_3.Height-Self.Height)/2
@@ -746,7 +746,7 @@
                             PaddingBottom: =0
                             PaddingTop: =0
                             Size: =ChosenTask_3.Height/8
-                            Text: =ThisItem.'Associated LE'
+                            Text: =ThisItem.Associated_x0020_LE
                             Width: =LegalEntityLabelScreen3_1.Width
                             X: =ChosenCOCO_3.X+ChosenCOCO_3.Width
                             Y: =(ChosenTask_3.Height-Self.Height-LE_Name_3.Height)/2
@@ -779,7 +779,7 @@
                             Align: =Align.Center
                             BorderColor: =RGBA(208,208,208,1)
                             Color: =RGBA(50, 49, 48, 1)
-                            Default: =ThisItem.'Input Hours'
+                            Default: =ThisItem.InputHours
                             DelayOutput: =true
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
                             DisabledColor: =RGBA(50, 49, 48, 1)
@@ -795,7 +795,7 @@
                             HoverFill: =RGBA(255, 255, 255, 1)
                             OnChange: |-
                                 =If(
-                                    ThisItem.'Input Hours' <> Value(InputHoursReview_3.Text),
+                                    ThisItem.InputHours <> Value(InputHoursReview_3.Text),
                                     ClearCollect(
                                         colToUpdatev1,
                                         {
@@ -807,7 +807,7 @@
                                 );
                                 
                                 If(
-                                    ThisItem.'Input Hours' <> Value(InputHoursReview_3.Text) &&  CountRows(Filter(colTaskAnalysisSP, ID = ThisItem.ID)) <> 0,
+                                    ThisItem.InputHours <> Value(InputHoursReview_3.Text) &&  CountRows(Filter(colTaskAnalysisSP, ID = ThisItem.ID)) <> 0,
                                     Patch(colTaskAnalysisSP, LookUp(colTaskAnalysisSP, ID = ThisItem.ID), {InputHours : Value(InputHoursReview_3.Text)}));
                                 
                                 RemoveIf(
@@ -873,7 +873,7 @@
                             BorderColor: =RGBA(0, 0, 0, 0)
                             BorderStyle: =BorderStyle.None
                             Color: =RGBA(50, 49, 48, 1)
-                            Default: =ThisItem.'Input Hours' <> Value(InputHoursReview_3.Text)
+                            Default: =ThisItem.InputHours <> Value(InputHoursReview_3.Text)
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
                             FalseFill: =RGBA(96, 94, 92, 1)
                             FalseHoverFill: =RGBA(50, 49, 48, 1)
@@ -1272,7 +1272,7 @@
                         Icon: =Icon.Reload
                         OnSelect: |-
                             =Refresh('Task Analysis Taxonomy Collection');
-                            ClearCollect(colTaskAnalysisSP, ShowColumns('Task Analysis Taxonomy Collection', "Title", "Associated_x0020_LE", "CoCo", "EmployeeID", "LE_x0020_Name", "UserName", "Process_x0020_Name", "ID", "InputHours", "Region", "Unique_x0020_ID"));
+                            ClearCollect(colTaskAnalysisSP, ShowColumns('Task Analysis Taxonomy Collection', "Title", "Associated_x0020_LE", "CoCo", "EmployeeID", "LE_x0020_Name", "UserName", "Process_x0020_Name", "ID", "InputHours", "Region", "Unique_x0020_ID", "User_x0020_Email"));
                         PaddingBottom: =4
                         PaddingLeft: =4
                         PaddingRight: =4
