@@ -453,7 +453,7 @@
                 ButtonGroupScreen3_1 As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     FillPortions: =0
-                    Height: =LeftPanelScreen3_1.Height/9
+                    Height: =Parent.Height/9
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     RadiusBottomLeft: =4
@@ -588,7 +588,7 @@
                                 !IsBlank(ThisItem.UserName) && Office365Users.UserPhotoMetadata(
                                     LookUp(
                                         'Task Analysis Taxonomy Collection',
-                                        'User Name' = ThisItem.UserName,
+                                        UserName = ThisItem.UserName,
                                         EmployeeID
                                     )
                                 ).HasPhoto,
@@ -1130,7 +1130,7 @@
                     AlignInContainer: =AlignInContainer.Start
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
-                    Height: =ButtonGroupScreen3_1.Height
+                    Height: =Parent.Height/9
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
                     PaddingBottom: =2
