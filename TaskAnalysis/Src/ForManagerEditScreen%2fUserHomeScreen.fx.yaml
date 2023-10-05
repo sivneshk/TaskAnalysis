@@ -242,7 +242,7 @@
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilterScreen3_1.Height/11
-                        Items: =Sort(Distinct('Task Analysis Taxonomy Collection','User Name'),Value)
+                        Items: =Filter(Sort(Distinct('Task Analysis Taxonomy Collection','User Name'),Value), Value <> Office365Users.MyProfile().DisplayName)
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         OnChange: =Set(uniqueIDVar,SlicerUserMailScreen3.Selected.Value)
@@ -588,9 +588,8 @@
                                 !IsBlank(ThisItem.UserName) && Office365Users.UserPhotoMetadata(
                                     LookUp(
                                         'Task Analysis Taxonomy Collection',
-                                        'User Name' = ThisItem.UserName,
-                                        EmployeeID
-                                    )
+                                        'User Name' = ThisItem.UserName
+                                    ).EmployeeID
                                 ).HasPhoto,
                                 Office365Users.UserPhotoV2(
                                     LookUp(
