@@ -1542,7 +1542,7 @@ TaskAnalysisScreen As screen:
         RadiusTopLeft: =4
         RadiusTopRight: =4
         Visible: |-
-            =/* If(With(
+            =If(With(
                {
                   wComplete:
                   Filter(
@@ -1551,8 +1551,7 @@ TaskAnalysisScreen As screen:
                   )
                },
                CountRows(wComplete)
-            ) > 0, true, false) */
-            true
+            ) > 0, true, false)
         Width: =Parent.Width
         ZIndex: =3
 
