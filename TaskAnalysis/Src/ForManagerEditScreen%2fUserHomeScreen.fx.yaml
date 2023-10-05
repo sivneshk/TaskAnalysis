@@ -4116,9 +4116,7 @@
                                 )
                             ) */
                             
-                            If(And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)))
-                                ,
-                                Sort(Distinct('Process Taxonomy',L2),Value) 
+                            If(Or(!IsEmpty(Dropdown_9.SelectedItems), !IsBlank(Dropdown_9.SelectedItems))
                                 ,
                                 Distinct(
                                     Ungroup(
@@ -4133,6 +4131,8 @@
                                     ),
                                     OData__x004c_2
                                 )
+                                ,
+                                Sort(Distinct('Process Taxonomy',L2),Value) 
                             )
                         NoSelectionText: ="L2 Taxonomy (Max. 10 Selections)"
                         OnChange: |-
