@@ -3958,7 +3958,7 @@
                         ChevronHoverBackground: =RGBA(255, 255, 255, 1)
                         ChevronHoverFill: =RGBA(50, 49, 48, 1)
                         Color: =RGBA(26, 35, 33, 1)
-                        DefaultSelectedItems: =Blank()
+                        DefaultSelectedItems: =If(Not(IsEmpty(Selections)),FirstN(Selections,10),Blank())
                         DisabledBorderColor: =Self.BorderColor
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
@@ -3972,6 +3972,17 @@
                         InputTextPlaceholder: ="Unique ID (Max. 10 Selections)"
                         Items: =Filter('Process Taxonomy', StartsWith(Title, Self.SearchText))
                         NoSelectionText: ="Unique ID (Max. 10 Selections)"
+                        OnChange: |-
+                            =If(
+                               CountRows(Self.SelectedItems) > 10,
+                               Reset(Self);
+                               Notify(
+                                  "Only Up to 10 Selections Allowed",
+                                  NotificationType.Error
+                               )
+                            );
+                            
+                            UpdateContext({Selections: Self.SelectedItems.Title});
                         PressedBorderColor: =RGBA(189, 189, 189, 1)
                         PressedColor: =RGBA(117, 117, 117, 1)
                         PressedFill: =RGBA(245, 245, 245, 1)
