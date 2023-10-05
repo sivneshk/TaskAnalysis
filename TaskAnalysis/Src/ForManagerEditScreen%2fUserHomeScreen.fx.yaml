@@ -522,8 +522,8 @@
                     Items: |-
                         =AddColumns(
                             GroupBy(If(And(IsBlank(SlicerUserMailScreen3.Selected.Value),IsBlank(SlicerUniqueIDScreen3.Selected.Value),IsBlank(SlicerCOCOScreen3.Selected.Value)),
-                                    Filter(colTaskAnalysisSP, 'User_x0020_Email'<> Office365Users.MyProfile().Mail),
-                                    Filter(Filter(colTaskAnalysisSP, 'User_x0020_Email'<> Office365Users.MyProfile().Mail), IsBlank                       (SlicerUserMailScreen3.SelectedItems.Value) Or
+                                    Filter(colTaskAnalysisSP, User_x0020_Email<> Office365Users.MyProfile().Mail),
+                                    Filter(Filter(colTaskAnalysisSP, User_x0020_Email<> Office365Users.MyProfile().Mail), IsBlank                       (SlicerUserMailScreen3.SelectedItems.Value) Or
                                        IsEmpty(SlicerUserMailScreen3.SelectedItems) Or
                                        UserName in SlicerUserMailScreen3.SelectedItems, 
                         
@@ -659,7 +659,7 @@
                             OnSelect: =Select(Parent)
                             PaddingLeft: =10
                             Size: =Self.Height/8
-                            Text: =ThisItem.'Process_x0020_Name'
+                            Text: =ThisItem.Process_x0020_Name
                             Width: =ProcessNameLabelScreen3_1.Width
                             ZIndex: =3
 
@@ -1182,10 +1182,13 @@
                             
                             ForAll(Ungroup(GroupedTaxonomyGallery3.AllItems, "GroupByName"), Collect(colToUpdateStatus, {ID: ThisRecord.ID, UniqueID: ThisRecord.Title}));
                             
-                            Task_A_UpdateandDeleteItems_ManagerScrntoSP.Run(JSON(colToUpdate),JSON(colToDelete), JSON(colToUpdateStatus));
+                            If('Task_A_ManagerUpdate&DeleteItems'.Run(JSON(colToUpdate),JSON(colToDelete), JSON(colToUpdateStatus)).success="true", Notify("Your response has been successfully received."));
+                            
                             
                             Clear(colToUpdate);
                             Clear(colToDelete);
+                            
+                            
                             
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
                         PressedColor: =ColorFade(Self.Color,-20%)

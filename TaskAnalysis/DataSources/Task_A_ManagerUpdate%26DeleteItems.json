@@ -2,7 +2,7 @@
   {
     "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
     "FlowNameId": "19b5e644-cb10-42ed-8f11-529c8c1a7d1d",
-    "Name": "Task_A_UpdateandDeleteItems_ManagerScrntoSP",
+    "Name": "Task_A_ManagerUpdate&DeleteItems",
     "ServiceKind": "ConnectedWadl",
     "Type": "ServiceInfo",
     "WorkflowEntityId": null

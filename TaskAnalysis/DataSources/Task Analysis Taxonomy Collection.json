@@ -39,6 +39,8 @@
       "OData__ColorTag": "Color Tag",
       "Process_x0020_Name": "Process Name",
       "Region": "Region",
+      "Status": "Status",
+      "Status#Id": "Status Id",
       "Title": "Title",
       "Unique_x0020_ID": "Business Segment",
       "User_x0020_Email": "User Email",
