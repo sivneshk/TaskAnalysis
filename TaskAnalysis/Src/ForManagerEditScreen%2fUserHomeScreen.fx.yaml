@@ -588,7 +588,7 @@
                                 !IsBlank(ThisItem.UserName) && Office365Users.UserPhotoMetadata(
                                     LookUp(
                                         'Task Analysis Taxonomy Collection',
-                                        UserName = ThisItem.UserName,
+                                        'User Name' = ThisItem.UserName,
                                         EmployeeID
                                     )
                                 ).HasPhoto,
