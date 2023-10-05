@@ -2708,6 +2708,7 @@
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="Unique ID (Max. 10 Selections)"
+                        Visible: =false
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.1
@@ -2849,6 +2850,7 @@
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L1 Taxonomy (Max. 10 Selections)"
+                        Visible: =false
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.2
@@ -3001,6 +3003,7 @@
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L2 Taxonomy (Max. 10 Selections)"
+                        Visible: =false
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.3
@@ -3153,6 +3156,7 @@
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L3 Taxonomy (Max. 10 Selections)"
+                        Visible: =false
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.4
@@ -3305,6 +3309,7 @@
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L4 Taxonomy (Max. 10 Selections)"
+                        Visible: =false
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.5
@@ -3457,6 +3462,7 @@
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L5 Taxonomy (Max. 10 Selections)"
+                        Visible: =false
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.6
@@ -3609,6 +3615,7 @@
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="L6 Taxonomy (Max. 10 Selections)"
+                        Visible: =false
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.7
@@ -3724,13 +3731,13 @@
                             UpdateContext({SelectionsL5: Blank()});
                             UpdateContext({SelectionsL6: Blank()});
                             
-                            Reset(DropdownUniqueID_1);
-                            Reset(DropdownL1_1);
-                            Reset(DropdownL2_1);
-                            Reset(DropdownL3_1);
-                            Reset(DropdownL4_1);
-                            Reset(DropdownL5_1);
-                            Reset(DropdownL6_1);
+                            Reset(Dropdown_8);
+                            Reset(Dropdown_9);
+                            Reset(Dropdown_10);
+                            Reset(Dropdown_11);
+                            Reset(Dropdown_12);
+                            Reset(Dropdown_13);
+                            Reset(Dropdown_14);
                         PressedBorderColor: =RGBA(208, 208, 208, 1)
                         PressedColor: =RGBA(208, 208, 208, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
@@ -3972,7 +3979,7 @@
                         SearchItems: =Search(Filter('Process Taxonomy', StartsWith(Title, Self.SearchText)),Dropdown_8.SearchText,"Comboname")
                         SelectionColor: =RGBA(26, 35, 33, 1)
                         SelectionFill: =RGBA(255, 255, 255, 1)
-                        Size: =Self.Height/3.1
+                        Size: =Self.Height/3.5
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.1
@@ -4044,7 +4051,7 @@
                         SearchItems: =[]
                         SelectionColor: =RGBA(26, 35, 33, 1)
                         SelectionFill: =RGBA(255, 255, 255, 1)
-                        Size: =Self.Height/3.1
+                        Size: =Self.Height/3.5
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.2
@@ -4127,7 +4134,7 @@
                         SearchItems: =[]
                         SelectionColor: =RGBA(26, 35, 33, 1)
                         SelectionFill: =RGBA(255, 255, 255, 1)
-                        Size: =Self.Height/3.1
+                        Size: =Self.Height/3.5
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.3
@@ -4210,7 +4217,7 @@
                         SearchItems: =[]
                         SelectionColor: =RGBA(26, 35, 33, 1)
                         SelectionFill: =RGBA(255, 255, 255, 1)
-                        Size: =Self.Height/3.1
+                        Size: =Self.Height/3.5
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.4
@@ -4293,7 +4300,7 @@
                         SearchItems: =[]
                         SelectionColor: =RGBA(26, 35, 33, 1)
                         SelectionFill: =RGBA(255, 255, 255, 1)
-                        Size: =Self.Height/3.1
+                        Size: =Self.Height/3.5
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.5
@@ -4375,7 +4382,7 @@
                         SearchItems: =[]
                         SelectionColor: =RGBA(26, 35, 33, 1)
                         SelectionFill: =RGBA(255, 255, 255, 1)
-                        Size: =Self.Height/3.1
+                        Size: =Self.Height/3.5
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.6
@@ -4458,7 +4465,7 @@
                         SearchItems: =[]
                         SelectionColor: =RGBA(26, 35, 33, 1)
                         SelectionFill: =RGBA(255, 255, 255, 1)
-                        Size: =Self.Height/3.1
+                        Size: =Self.Height/3.5
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.7
