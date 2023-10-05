@@ -3760,7 +3760,7 @@
                         Icon: =Icon.Erase
                         OnSelect: |-
                             =UpdateContext({Selections: Blank()});
-                            Reset(DropdownUniqueID_1);
+                            Reset(Dropdown_8);
                         PaddingBottom: =4
                         PaddingLeft: =5
                         PaddingTop: =4
@@ -3788,7 +3788,7 @@
                         Icon: =Icon.Erase
                         OnSelect: |-
                             =UpdateContext({SelectionsL1: Blank()});
-                            Reset(DropdownL1_1);
+                            Reset(Dropdown_9);
                         PaddingBottom: =4
                         PaddingLeft: =5
                         PaddingTop: =4
@@ -3816,7 +3816,7 @@
                         Icon: =Icon.Erase
                         OnSelect: |-
                             =UpdateContext({SelectionsL2: Blank()});
-                            Reset(DropdownL2_1);
+                            Reset(Dropdown_10);
                         PaddingBottom: =4
                         PaddingLeft: =5
                         PaddingTop: =4
@@ -3844,7 +3844,7 @@
                         Icon: =Icon.Erase
                         OnSelect: |-
                             =UpdateContext({SelectionsL3: Blank()});
-                            Reset(DropdownL3_1);
+                            Reset(Dropdown_11);
                         PaddingBottom: =4
                         PaddingLeft: =5
                         PaddingTop: =4
@@ -3872,7 +3872,7 @@
                         Icon: =Icon.Erase
                         OnSelect: |-
                             =UpdateContext({SelectionsL4: Blank()});
-                            Reset(DropdownL4_1);
+                            Reset(Dropdown_12);
                         PaddingBottom: =4
                         PaddingLeft: =5
                         PaddingTop: =4
@@ -3900,7 +3900,7 @@
                         Icon: =Icon.Erase
                         OnSelect: |-
                             =UpdateContext({SelectionsL5: Blank()});
-                            Reset(DropdownL5_1);
+                            Reset(Dropdown_13);
                         PaddingBottom: =4
                         PaddingLeft: =5
                         PaddingTop: =4
@@ -3928,7 +3928,7 @@
                         Icon: =Icon.Erase
                         OnSelect: |-
                             =UpdateContext({SelectionsL6: Blank()});
-                            Reset(DropdownL6_1);
+                            Reset(Dropdown_14);
                         PaddingBottom: =4
                         PaddingLeft: =5
                         PaddingTop: =4
@@ -3972,10 +3972,495 @@
                         SearchItems: =Search(Filter('Process Taxonomy', StartsWith(Title, Self.SearchText)),Dropdown_8.SearchText,"Comboname")
                         SelectionColor: =RGBA(26, 35, 33, 1)
                         SelectionFill: =RGBA(255, 255, 255, 1)
-                        SelectMultiple: =false
                         Size: =Self.Height/3.1
                         Width: =Parent.Width*0.7
                         X: =(Parent.Width-Self.Width)/2
                         Y: =Parent.Height*0.1
                         ZIndex: =16
+
+                    Dropdown_9 As combobox:
+                        BorderColor: =RGBA(189, 189, 189, 1)
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(117, 117, 117, 1)
+                        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: =If(Not(IsEmpty(SelectionsL1)),FirstN(SelectionsL1,10),Blank())
+                        DisabledBorderColor: =Self.BorderColor
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["Value"]
+                        FocusedBorderThickness: =0
+                        Font: ="Noto Sans"
+                        Height: =Parent.Height/15
+                        HoverBorderColor: =RGBA(189, 189, 189, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(236, 236, 235, 1)
+                        InputTextPlaceholder: ="L1 Taxonomy (Max. 10 Selections)"
+                        IsSearchable: =false
+                        Items: |-
+                            =If(
+                                Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)),
+                                Sort(
+                                    Distinct(
+                                        'Process Taxonomy',
+                                        L1
+                                    ),
+                                    Value
+                                ),
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            Dropdown_8.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                Title = aPatch.Title
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_1
+                                )
+                            )
+                        NoSelectionText: ="L1 Taxonomy (Max. 10 Selections)"
+                        OnChange: |-
+                            =If(
+                               CountRows(Self.SelectedItems) > 10,
+                               Reset(Self);
+                               Notify(
+                                  "Only Up to 10 Selections Allowed",
+                                  NotificationType.Error
+                               )
+                            );
+                            
+                            UpdateContext({SelectionsL1: Self.SelectedItems.Value});
+                        PressedBorderColor: =RGBA(189, 189, 189, 1)
+                        PressedColor: =RGBA(117, 117, 117, 1)
+                        PressedFill: =RGBA(245, 245, 245, 1)
+                        SearchFields: =["Value"]
+                        SearchItems: =[]
+                        SelectionColor: =RGBA(26, 35, 33, 1)
+                        SelectionFill: =RGBA(255, 255, 255, 1)
+                        Size: =Self.Height/3.1
+                        Width: =Parent.Width*0.7
+                        X: =(Parent.Width-Self.Width)/2
+                        Y: =Parent.Height*0.2
+                        ZIndex: =17
+
+                    Dropdown_10 As combobox:
+                        BorderColor: =RGBA(189, 189, 189, 1)
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(117, 117, 117, 1)
+                        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: =If(Not(IsEmpty(SelectionsL2)),FirstN(SelectionsL2,10),Blank())
+                        DisabledBorderColor: =Self.BorderColor
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["Value"]
+                        FocusedBorderThickness: =0
+                        Font: ="Noto Sans"
+                        Height: =Parent.Height/15
+                        HoverBorderColor: =RGBA(189, 189, 189, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(236, 236, 235, 1)
+                        InputTextPlaceholder: ="L2 Taxonomy (Max. 10 Selections)"
+                        IsSearchable: =false
+                        Items: |-
+                            =If(And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)))
+                                ,
+                                Sort(Distinct('Process Taxonomy',L2),Value) 
+                                ,
+                                And(Or(!IsEmpty(Dropdown_8.SelectedItems), !IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)))
+                                ,
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            Dropdown_8.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                Title = aPatch.Title
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_2
+                                )
+                                ,
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            Dropdown_9.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                L1 = aPatch.Value
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_2
+                                )
+                            )
+                        NoSelectionText: ="L2 Taxonomy (Max. 10 Selections)"
+                        OnChange: |-
+                            =If(
+                               CountRows(Self.SelectedItems) > 10,
+                               Reset(Self);
+                               Notify(
+                                  "Only Up to 10 Selections Allowed",
+                                  NotificationType.Error
+                               )
+                            );
+                            
+                            UpdateContext({SelectionsL2: Self.SelectedItems.Value});
+                        PressedBorderColor: =RGBA(189, 189, 189, 1)
+                        PressedColor: =RGBA(117, 117, 117, 1)
+                        PressedFill: =RGBA(245, 245, 245, 1)
+                        SearchFields: =["Value"]
+                        SearchItems: =[]
+                        SelectionColor: =RGBA(26, 35, 33, 1)
+                        SelectionFill: =RGBA(255, 255, 255, 1)
+                        Size: =Self.Height/3.1
+                        Width: =Parent.Width*0.7
+                        X: =(Parent.Width-Self.Width)/2
+                        Y: =Parent.Height*0.3
+                        ZIndex: =18
+
+                    Dropdown_11 As combobox:
+                        BorderColor: =RGBA(189, 189, 189, 1)
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(117, 117, 117, 1)
+                        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: =If(Not(IsEmpty(SelectionsL3)),FirstN(SelectionsL3,10),Blank())
+                        DisabledBorderColor: =Self.BorderColor
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["Value"]
+                        FocusedBorderThickness: =0
+                        Font: ="Noto Sans"
+                        Height: =Parent.Height/15
+                        HoverBorderColor: =RGBA(189, 189, 189, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(236, 236, 235, 1)
+                        InputTextPlaceholder: ="L3 Taxonomy (Max. 10 Selections)"
+                        IsSearchable: =false
+                        Items: |-
+                            =If(And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)), Or(IsEmpty(Dropdown_10.SelectedItems), IsBlank(Dropdown_10.SelectedItems)))
+                                ,
+                                Sort(Distinct('Process Taxonomy',L3),Value) 
+                                ,
+                                And(Or(!IsEmpty(Dropdown_8.SelectedItems), !IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)),  Or(IsEmpty(Dropdown_10.SelectedItems), IsBlank(Dropdown_10.SelectedItems)))
+                                ,
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            Dropdown_8.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                Title = aPatch.Title
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_3
+                                )
+                                ,
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            Dropdown_10.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                L2 = aPatch.Value
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_3
+                                )
+                            )
+                        NoSelectionText: ="L3 Taxonomy (Max. 10 Selections)"
+                        OnChange: |-
+                            =If(
+                               CountRows(Self.SelectedItems) > 10,
+                               Reset(Self);
+                               Notify(
+                                  "Only Up to 10 Selections Allowed",
+                                  NotificationType.Error
+                               )
+                            );
+                            
+                            UpdateContext({SelectionsL3: Self.SelectedItems.Value});
+                        PressedBorderColor: =RGBA(189, 189, 189, 1)
+                        PressedColor: =RGBA(117, 117, 117, 1)
+                        PressedFill: =RGBA(245, 245, 245, 1)
+                        SearchFields: =["Value"]
+                        SearchItems: =[]
+                        SelectionColor: =RGBA(26, 35, 33, 1)
+                        SelectionFill: =RGBA(255, 255, 255, 1)
+                        Size: =Self.Height/3.1
+                        Width: =Parent.Width*0.7
+                        X: =(Parent.Width-Self.Width)/2
+                        Y: =Parent.Height*0.4
+                        ZIndex: =19
+
+                    Dropdown_12 As combobox:
+                        BorderColor: =RGBA(189, 189, 189, 1)
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(117, 117, 117, 1)
+                        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: =If(Not(IsEmpty(SelectionsL4)),FirstN(SelectionsL4,10),Blank())
+                        DisabledBorderColor: =Self.BorderColor
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["Value"]
+                        FocusedBorderThickness: =0
+                        Font: ="Noto Sans"
+                        Height: =Parent.Height/15
+                        HoverBorderColor: =RGBA(189, 189, 189, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(236, 236, 235, 1)
+                        InputTextPlaceholder: ="L4 Taxonomy (Max. 10 Selections)"
+                        IsSearchable: =false
+                        Items: |-
+                            =If(And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)), Or(IsEmpty(Dropdown_10.SelectedItems), IsBlank(Dropdown_10.SelectedItems)), Or(IsEmpty(Dropdown_11.SelectedItems), IsBlank(Dropdown_11.SelectedItems)))
+                                ,
+                                Sort(Distinct('Process Taxonomy',L4),Value) 
+                                ,
+                                And(Or(!IsEmpty(Dropdown_8.SelectedItems), !IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)),  Or(IsEmpty(Dropdown_10.SelectedItems), IsBlank(Dropdown_10.SelectedItems)), Or(IsEmpty(Dropdown_11.SelectedItems), IsBlank(Dropdown_11.SelectedItems)))
+                                ,
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            Dropdown_8.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                Title = aPatch.Title
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_4
+                                )
+                                ,
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            Dropdown_11.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                L3 = aPatch.Value
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_4
+                                )
+                            )
+                        NoSelectionText: ="L4 Taxonomy (Max. 10 Selections)"
+                        OnChange: |-
+                            =If(
+                               CountRows(Self.SelectedItems) > 10,
+                               Reset(Self);
+                               Notify(
+                                  "Only Up to 10 Selections Allowed",
+                                  NotificationType.Error
+                               )
+                            );
+                            
+                            UpdateContext({SelectionsL4: Self.SelectedItems.Value});
+                        PressedBorderColor: =RGBA(189, 189, 189, 1)
+                        PressedColor: =RGBA(117, 117, 117, 1)
+                        PressedFill: =RGBA(245, 245, 245, 1)
+                        SearchFields: =["Value"]
+                        SearchItems: =[]
+                        SelectionColor: =RGBA(26, 35, 33, 1)
+                        SelectionFill: =RGBA(255, 255, 255, 1)
+                        Size: =Self.Height/3.1
+                        Width: =Parent.Width*0.7
+                        X: =(Parent.Width-Self.Width)/2
+                        Y: =Parent.Height*0.5
+                        ZIndex: =20
+
+                    Dropdown_13 As combobox:
+                        BorderColor: =RGBA(189, 189, 189, 1)
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(117, 117, 117, 1)
+                        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: =If(Not(IsEmpty(SelectionsL5)),FirstN(SelectionsL5,10),Blank())
+                        DisabledBorderColor: =Self.BorderColor
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["Value"]
+                        FocusedBorderThickness: =0
+                        Font: ="Noto Sans"
+                        Height: =Parent.Height/15
+                        HoverBorderColor: =RGBA(189, 189, 189, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(236, 236, 235, 1)
+                        InputTextPlaceholder: ="L5 Taxonomy (Max. 10 Selections)"
+                        IsSearchable: =false
+                        Items: |-
+                            =If(And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)), Or(IsEmpty(Dropdown_10.SelectedItems), IsBlank(Dropdown_10.SelectedItems)), Or(IsEmpty(Dropdown_11.SelectedItems), IsBlank(Dropdown_11.SelectedItems)), Or(IsEmpty(Dropdown_12.SelectedItems), IsBlank(Dropdown_12.SelectedItems)))
+                                ,
+                                Sort(Distinct('Process Taxonomy',L5),Value) 
+                                ,
+                                And(Or(!IsEmpty(Dropdown_8.SelectedItems), !IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)),  Or(IsEmpty(Dropdown_10.SelectedItems), IsBlank(Dropdown_10.SelectedItems)), Or(IsEmpty(Dropdown_11.SelectedItems), IsBlank(Dropdown_11.SelectedItems)), IsBlank(Dropdown_11.SelectedItems), Or(IsEmpty(Dropdown_12.SelectedItems), IsBlank(Dropdown_12.SelectedItems)))
+                                ,
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            Dropdown_8.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                Title = aPatch.Title
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_5
+                                )
+                                ,
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            Dropdown_12.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                L4 = aPatch.Value
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_5   )
+                            )
+                        NoSelectionText: ="L5 Taxonomy (Max. 10 Selections)"
+                        OnChange: |-
+                            =If(
+                               CountRows(Self.SelectedItems) > 10,
+                               Reset(Self);
+                               Notify(
+                                  "Only Up to 10 Selections Allowed",
+                                  NotificationType.Error
+                               )
+                            );
+                            
+                            UpdateContext({SelectionsL5: Self.SelectedItems.Value});
+                        PressedBorderColor: =RGBA(189, 189, 189, 1)
+                        PressedColor: =RGBA(117, 117, 117, 1)
+                        PressedFill: =RGBA(245, 245, 245, 1)
+                        SearchFields: =["Value"]
+                        SearchItems: =[]
+                        SelectionColor: =RGBA(26, 35, 33, 1)
+                        SelectionFill: =RGBA(255, 255, 255, 1)
+                        Size: =Self.Height/3.1
+                        Width: =Parent.Width*0.7
+                        X: =(Parent.Width-Self.Width)/2
+                        Y: =Parent.Height*0.6
+                        ZIndex: =21
+
+                    Dropdown_14 As combobox:
+                        BorderColor: =RGBA(189, 189, 189, 1)
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(117, 117, 117, 1)
+                        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: =If(Not(IsEmpty(SelectionsL6)),FirstN(SelectionsL6,10),Blank())
+                        DisabledBorderColor: =Self.BorderColor
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["Value"]
+                        FocusedBorderThickness: =0
+                        Font: ="Noto Sans"
+                        Height: =Parent.Height/15
+                        HoverBorderColor: =RGBA(189, 189, 189, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(236, 236, 235, 1)
+                        InputTextPlaceholder: ="L6 Taxonomy (Max. 10 Selections)"
+                        IsSearchable: =false
+                        Items: |-
+                            =If(And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)), Or(IsEmpty(Dropdown_10.SelectedItems), IsBlank(Dropdown_10.SelectedItems)), Or(IsEmpty(Dropdown_11.SelectedItems), IsBlank(Dropdown_11.SelectedItems)), Or(IsEmpty(Dropdown_12.SelectedItems), IsBlank(Dropdown_12.SelectedItems)), Or(IsEmpty(Dropdown_13.SelectedItems), IsBlank(Dropdown_13.SelectedItems)))
+                                ,
+                                Sort(Distinct('Process Taxonomy',L6),Value) 
+                                ,
+                                And(Or(!IsEmpty(Dropdown_8.SelectedItems), !IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)),  Or(IsEmpty(Dropdown_10.SelectedItems), IsBlank(Dropdown_10.SelectedItems)), Or(IsEmpty(Dropdown_11.SelectedItems), IsBlank(Dropdown_11.SelectedItems)), IsBlank(Dropdown_11.SelectedItems), Or(IsEmpty(Dropdown_12.SelectedItems), IsBlank(Dropdown_12.SelectedItems)), Or(IsEmpty(Dropdown_13.SelectedItems), IsBlank(Dropdown_13.SelectedItems)))
+                                ,
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            Dropdown_8.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                Title = aPatch.Title
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_6
+                                )
+                                ,
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            Dropdown_13.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                L5 = aPatch.Value
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_6
+                                    )
+                            )
+                        NoSelectionText: ="L6 Taxonomy (Max. 10 Selections)"
+                        OnChange: |-
+                            =If(
+                               CountRows(Self.SelectedItems) > 10,
+                               Reset(Self);
+                               Notify(
+                                  "Only Up to 10 Selections Allowed",
+                                  NotificationType.Error
+                               )
+                            );
+                            
+                            UpdateContext({SelectionsL6: Self.SelectedItems.Value});
+                        PressedBorderColor: =RGBA(189, 189, 189, 1)
+                        PressedColor: =RGBA(117, 117, 117, 1)
+                        PressedFill: =RGBA(245, 245, 245, 1)
+                        SearchFields: =["Value"]
+                        SearchItems: =[]
+                        SelectionColor: =RGBA(26, 35, 33, 1)
+                        SelectionFill: =RGBA(255, 255, 255, 1)
+                        Size: =Self.Height/3.1
+                        Width: =Parent.Width*0.7
+                        X: =(Parent.Width-Self.Width)/2
+                        Y: =Parent.Height*0.7
+                        ZIndex: =22
 

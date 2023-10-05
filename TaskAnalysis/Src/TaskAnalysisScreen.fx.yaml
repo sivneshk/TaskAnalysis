@@ -1485,9 +1485,9 @@ TaskAnalysisScreen As screen:
                             )
                         );
                         
-                        Set(
-                            ShowResult,
-                            true
+                        UpdateContext({
+                            ShowResult:
+                            true}
                         );
                         
                         Reset(Dropdown_1);
@@ -1498,9 +1498,9 @@ TaskAnalysisScreen As screen:
                         Reset(Dropdown_5);
                         Reset(Dropdown_6);
                         Reset(Dropdown_7);
-                        Set(
-                            ShowPopUp,
-                            false
+                        UpdateContext({
+                            ShowPopUp:
+                            false}
                         );
                         
                     PressedBorderColor: =RGBA(230, 230, 230, 1)
