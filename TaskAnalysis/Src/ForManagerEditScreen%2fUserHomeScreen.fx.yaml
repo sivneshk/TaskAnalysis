@@ -523,7 +523,7 @@
                         =AddColumns(
                             GroupBy(If(And(IsBlank(SlicerUserMailScreen3.Selected.Value),IsBlank(SlicerUniqueIDScreen3.Selected.Value),IsBlank(SlicerCOCOScreen3.Selected.Value)),
                                     Filter(colTaskAnalysisSP, User_x0020_Email<> Office365Users.MyProfile().Mail),
-                                    Filter(Filter(colTaskAnalysisSP, User_x0020_Email<> Office365Users.MyProfile().Mail), IsBlank                       (SlicerUserMailScreen3.SelectedItems.Value) Or
+                                    Filter(Filter(colTaskAnalysisSP, User_x0020_Email<> Office365Users.MyProfile().Mail), IsBlank(SlicerUserMailScreen3.SelectedItems.Value) Or
                                        IsEmpty(SlicerUserMailScreen3.SelectedItems) Or
                                        UserName in SlicerUserMailScreen3.SelectedItems, 
                         
@@ -680,6 +680,7 @@
                             PaddingTop: =0
                             Size: =associatedLE_3.Size*0.8
                             Text: =ThisItem.LE_x0020_Name
+                            VerticalAlign: =VerticalAlign.Top
                             Width: =LegalEntityLabelScreen3_1.Width
                             X: =associatedLE_3.X
                             Y: =associatedLE_3.Y+associatedLE_3.Height
@@ -1484,7 +1485,7 @@
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         CheckboxBorderColor: =RGBA(96, 94, 92, 1)
-                        CheckboxSize: =Self.Height*0.9
+                        CheckboxSize: =Self.Height*0.8
                         CheckmarkFill: =RGBA(5, 50, 43, 1)
                         Color: =RGBA(50, 49, 48, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -3939,4 +3940,42 @@
                         X: =DropdownL6_1.X+DropdownL6_1.Width
                         Y: =DropdownL6_1.Y
                         ZIndex: =15
+
+                    Dropdown_8 As combobox:
+                        BorderColor: =RGBA(189, 189, 189, 1)
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(255, 255, 255, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(117, 117, 117, 1)
+                        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(26, 35, 33, 1)
+                        DefaultSelectedItems: =Blank()
+                        DisabledBorderColor: =Self.BorderColor
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["Title"]
+                        FocusedBorderThickness: =0
+                        Font: ="Noto Sans"
+                        Height: =Parent.Height/15
+                        HoverBorderColor: =RGBA(189, 189, 189, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(236, 236, 235, 1)
+                        InputTextPlaceholder: ="Unique ID (Max. 10 Selections)"
+                        Items: =Filter('Process Taxonomy', StartsWith(Title, Self.SearchText))
+                        NoSelectionText: ="Unique ID (Max. 10 Selections)"
+                        PressedBorderColor: =RGBA(189, 189, 189, 1)
+                        PressedColor: =RGBA(117, 117, 117, 1)
+                        PressedFill: =RGBA(245, 245, 245, 1)
+                        SearchFields: =["Comboname"]
+                        SearchItems: =Search(Filter('Process Taxonomy', StartsWith(Title, Self.SearchText)),Dropdown_8.SearchText,"Comboname")
+                        SelectionColor: =RGBA(26, 35, 33, 1)
+                        SelectionFill: =RGBA(255, 255, 255, 1)
+                        SelectMultiple: =false
+                        Size: =Self.Height/3.1
+                        Width: =Parent.Width*0.7
+                        X: =(Parent.Width-Self.Width)/2
+                        Y: =Parent.Height*0.1
+                        ZIndex: =16
 

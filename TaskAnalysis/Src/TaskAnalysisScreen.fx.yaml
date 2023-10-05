@@ -1383,7 +1383,8 @@ TaskAnalysisScreen As screen:
                     SelectionColor: =RGBA(26, 35, 33, 1)
                     SelectionFill: =RGBA(255, 255, 255, 1)
                     Size: =Self.Height/3.1
-                    Width: =Parent.Width
+                    Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                    X: =(Parent.Width-Self.Width)/2
                     Y: =Parent.Height*0.05
                     ZIndex: =3
 
@@ -1530,5 +1531,177 @@ TaskAnalysisScreen As screen:
                 RadiusTopLeft: =10
                 RadiusTopRight: =10
                 Width: =DialogBox.Width*0.85
+                ZIndex: =7
+
+    PopUpForSubmittedUser As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(34, 48, 45, 0.8)
+        Height: |
+            =Parent.Height
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: |-
+            =/* If(With(
+               {
+                  wComplete:
+                  Filter(
+                     'Task Analysis Taxonomy Collection',
+                     'User Email' = Office365Users.MyProfile().Mail
+                  )
+               },
+               CountRows(wComplete)
+            ) > 0, true, false) */
+            true
+        Width: =Parent.Width
+        ZIndex: =3
+
+        DialogBox_1 As groupContainer.verticalAutoLayoutContainer:
+            BorderColor: =RGBA(148, 148, 148, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Parent.Height*0.6
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Width: =Parent.Width*0.5
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+            EmptyHeaderMargin_1 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox_1.Height/10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox_1.Width*0.85
+                ZIndex: =1
+
+            DialogStartsHere_1 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox_1.Height/10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                Width: =DialogBox_1.Width*0.85
+                ZIndex: =2
+
+                SelectCompanyCode_1 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(5, 50, 43, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: ="Poppins"
+                    FontWeight: =FontWeight.Semibold
+                    Height: =DialogStartsHere_1.Height
+                    Size: =SelectCompanyCode_1.Height/2.5
+                    Text: ="Hi " & Office365Users.MyProfile().DisplayName
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+            PleaseChooseCompanyCode_1 As label:
+                Align: =Align.Justify
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(5, 50, 43, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: ="Poppins"
+                Height: =DialogBox_1.Height*0.5
+                LineHeight: =1.4
+                PaddingTop: =10
+                Size: =PleaseChooseCompanyCode_1.Height*0.07
+                Text: |-
+                    ="We have received your response.
+                    Should there be any changes, please contact the person below for assistance. 
+                    
+                    
+                    Thank you 😊"
+                VerticalAlign: =VerticalAlign.Top
+                Width: =DialogStartsHere_1.Width
+                ZIndex: =3
+
+            BackSubmitButtonContainer_1 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox_1.Height/5
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox_1.Width*0.85
+                ZIndex: =6
+
+                ClearCOCOButton_1 As button:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderThickness: =1
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    Fill: =RGBA(0, 0, 0, 1)
+                    FocusedBorderThickness: =2
+                    Font: ="Poppins"
+                    Height: =BackSubmitButtonContainer_1.Height/2
+                    HoverBorderColor: =RGBA(0, 0, 0, 1)
+                    HoverColor: =RGBA(0, 0, 0, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: =Exit()
+                    PressedBorderColor: =RGBA(0, 0, 0, 1)
+                    PressedColor: =RGBA(0, 0, 0, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Size: =Self.Height/3.5
+                    Text: ="Leave App"
+                    Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                    X: =(Parent.Width-Self.Width)/2
+                    Y: =BackSubmitButtonContainer_1.Height-Self.Height-BackSubmitButtonContainer_1.PaddingBottom
+                    ZIndex: =1
+
+            EmptyFooterMargin_1 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox_1.Height/10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox_1.Width*0.85
                 ZIndex: =7
 

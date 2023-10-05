@@ -294,6 +294,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.ManagerPopUp.DefaultPopUpContainer.FilterPaneOnSelectContainer.Container3.Dropdown_8.SearchItems"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.ManagerPopUp.DefaultPopUpContainer.FilterPaneOnSelectContainer.Container3.Dropdown_8.SearchItems",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 92,
+                  "snippet": {
+                    "text": "\"Comboname\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "SearchItems",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.ManagerPopUp.DefaultPopUpContainer.FilterPaneOnSelectContainer.Container3.Dropdown_8"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Search"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "TaskAnalysisScreen.HomeContainer.BodyContainer.LeftPanel.TaskFilter.Dropdown.AccessibleLabel"
                 }
               ],
@@ -3084,6 +3124,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.ManagerPopUp.DefaultPopUpContainer.FilterPaneOnSelectContainer.Container3.Dropdown_8.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.ManagerPopUp.DefaultPopUpContainer.FilterPaneOnSelectContainer.Container3.Dropdown_8.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.ManagerPopUp.DefaultPopUpContainer.FilterPaneOnSelectContainer.Container3.Dropdown_8"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.ManagerPopUp.DefaultPopUpContainer.FilterPaneOnSelectContainer.Container3.Dropdown_8.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'ForManagerEditScreen/UserHomeScreen'.ManagerPopUp.DefaultPopUpContainer.FilterPaneOnSelectContainer.Container3.Dropdown_8.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "ForManagerEditScreen/UserHomeScreen",
+                "type": "'ForManagerEditScreen/UserHomeScreen'.ManagerPopUp.DefaultPopUpContainer.FilterPaneOnSelectContainer.Container3.Dropdown_8"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.inProgress"
                 }
               ],
@@ -3531,7 +3631,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"ForManagerEditScreen/UserHomeScreen\" is 763, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"ForManagerEditScreen/UserHomeScreen\" is 764, which exceeds the maximum threshold recommended (300)."
               }
             }
           ],
