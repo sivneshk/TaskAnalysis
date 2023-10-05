@@ -1661,7 +1661,7 @@ TaskAnalysisScreen As screen:
                 Width: =DialogBox_1.Width*0.85
                 ZIndex: =6
 
-                ClearCOCOButton_1 As button:
+                LeaveAppButton As button:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderThickness: =1
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
