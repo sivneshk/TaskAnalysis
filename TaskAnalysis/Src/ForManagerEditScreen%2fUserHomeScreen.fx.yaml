@@ -1377,7 +1377,7 @@
                             IsEmpty(Selections),
                             'Process Taxonomy',
                             Filter(
-                                'Process Taxonomy',
+                                'Process Taxonomy', And(
                                 Or(IsBlank(Selections),
                                        IsEmpty(Selections),
                                        Title = Last(FirstN(Selections,1)).Title, 
@@ -1469,7 +1469,7 @@
                                        L6 = Last(FirstN(SelectionsL6,9)).Value, 
                                        L6 = Last(FirstN(SelectionsL6,10)).Value
                                 )
-                            )
+                            ))
                         )
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
