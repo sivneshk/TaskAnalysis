@@ -4081,7 +4081,7 @@
                         InputTextPlaceholder: ="L2 Taxonomy (Max. 10 Selections)"
                         IsSearchable: =false
                         Items: |-
-                            =If(And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)))
+                            =/* If(And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)))
                                 ,
                                 Sort(Distinct('Process Taxonomy',L2),Value) 
                                 ,
@@ -4100,6 +4100,25 @@
                                     ),
                                     OData__x004c_2
                                 )
+                                ,
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            Dropdown_9.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                L1 = aPatch.Value
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_2
+                                )
+                            ) */
+                            
+                            If(And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)))
+                                ,
+                                Sort(Distinct('Process Taxonomy',L2),Value) 
                                 ,
                                 Distinct(
                                     Ungroup(
