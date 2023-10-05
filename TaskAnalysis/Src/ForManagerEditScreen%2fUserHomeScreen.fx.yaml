@@ -4115,8 +4115,7 @@
                                     OData__x004c_2
                                 )
                             ) */
-                            
-                            If(Or(!IsEmpty(Dropdown_9.SelectedItems), !IsBlank(Dropdown_9.SelectedItems))
+                            /* If(Or(!IsEmpty(Dropdown_9.SelectedItems), !IsBlank(Dropdown_9.SelectedItems))
                                 ,
                                 Distinct(
                                     Ungroup(
@@ -4133,6 +4132,26 @@
                                 )
                                 ,
                                 Sort(Distinct('Process Taxonomy',L2),Value) 
+                            ) */
+                            
+                            If(Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems))
+                               ,
+                                Sort(Distinct('Process Taxonomy',L2),Value) 
+                                ,
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            Dropdown_9.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                L1 = aPatch.Value
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_2
+                                )
+                             
                             )
                         NoSelectionText: ="L2 Taxonomy (Max. 10 Selections)"
                         OnChange: |-
