@@ -1218,8 +1218,16 @@
                         HoverBorderColor: =ColorFade(Self.BorderColor,-10%)
                         HoverColor: =ColorFade(Self.Color,-20%)
                         HoverFill: =RGBA(2, 188, 148, 0.15)
-                        OnSelect: |-
-                            =If(varEdit <> DisplayMode.Edit, UpdateContext({varEdit: DisplayMode.Edit}), UpdateContext({varEdit: DisplayMode.Disabled}))
+                        OnSelect: |+
+                            =If(varEdit <> DisplayMode.Edit, UpdateContext({varEdit: DisplayMode.Edit}), UpdateContext({varEdit: DisplayMode.Disabled}));
+                            UpdateContext({
+                                varShowErrorMessage:
+                                false}
+                            );
+                            
+                            
+                            
+                            
                         PaddingLeft: =2
                         PaddingRight: =2
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
@@ -1301,7 +1309,7 @@
                         Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
                         ZIndex: =4
 
-                    SubmitBtnManagerScreen_1 As button:
+                    SubmitBtnForInsufficientHours As button:
                         BorderColor: =RGBA(5, 50, 43, 1)
                         BorderThickness: =1
                         DisabledBorderColor: =RGBA(208, 208, 208, 1)
