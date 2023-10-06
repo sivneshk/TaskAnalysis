@@ -1301,6 +1301,75 @@
                         Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
                         ZIndex: =4
 
+                    SubmitBtnManagerScreen_1 As button:
+                        BorderColor: =RGBA(5, 50, 43, 1)
+                        BorderThickness: =1
+                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
+                        DisabledColor: =RGBA(208, 208, 208, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        Fill: =RGBA(5, 50, 43, 1)
+                        FocusedBorderThickness: =2
+                        Font: ="Poppins"
+                        Height: =AddTaskBtn_1.Height
+                        HoverBorderColor: =ColorFade(Self.BorderColor,20%)
+                        HoverColor: =ColorFade(Self.Color,-20%)
+                        HoverFill: =ColorFade(Self.Fill,20%)
+                        OnSelect: |+
+                            =UpdateContext({
+                                varShowErrorMessage:
+                                true}
+                            );
+                            
+                            
+                            
+                            
+                        PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
+                        PressedColor: =ColorFade(Self.Color,-20%)
+                        PressedFill: =ColorFade(Self.Fill,-20%)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =Self.Height/3
+                        Text: ="Submit"
+                        Visible: |-
+                            =If(
+                                And(
+                                    varEdit <> DisplayMode.Edit,
+                                    CountRows(
+                                        Filter(
+                                            GroupedTaxonomyGallery3.AllItems,
+                                            sum <> 160
+                                        )
+                                    ) <> 0
+                                ),
+                                true,
+                                false
+                            )
+                        Width: =RightPanel3.Width*0.13
+                        X: =(EmployeeNameCardScreen3_1.Width-Self.Width)
+                        Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
+                        ZIndex: =5
+
+                    ExceedHoursErrorMsg_1 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =Color.Red
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Noto Sans"
+                        Height: =Parent.Height
+                        Size: =Self.Height*0.15
+                        Text: |-
+                            ="Error: Please ensure that every direct report employee has total of 160 hours each before submitting."
+                        Visible: =varShowErrorMessage
+                        Width: =RightPanel.Width/3
+                        X: =RefreshTableIcon.X-Self.Width
+                        Y: =(Parent.Height-Self.Height)/2
+                        ZIndex: =6
+
         FooterContainerScreen3_1 As groupContainer.manualLayoutContainer:
             Height: =Parent.Height/25
             RadiusBottomLeft: =4
