@@ -1170,26 +1170,74 @@
                         HoverBorderColor: =ColorFade(Self.BorderColor,20%)
                         HoverColor: =ColorFade(Self.Color,-20%)
                         HoverFill: =ColorFade(Self.Fill,20%)
-                        OnSelect: |+
+                        OnSelect: |
                             =/* colToUpdate contains rows that has been UPDATED/CHANGED ONLY */
-                            
-                            UpdateContext({
-                                varEdit:
-                                DisplayMode.Disabled}
+                            UpdateContext({varEdit: DisplayMode.Disabled});
+                            Clear(colToUpdateStatus);
+                            ForAll(
+                                Ungroup(
+                                    GroupedTaxonomyGallery3.AllItems,
+                                    "GroupByName"
+                                ),
+                                Collect(
+                                    colToUpdateStatus,
+                                    {
+                                        ID: ThisRecord.ID,
+                                        UniqueID: ThisRecord.Title
+                                    }
+                                )
                             );
                             
-                            Clear(colToUpdateStatus);
-                            
-                            ForAll(Ungroup(GroupedTaxonomyGallery3.AllItems, "GroupByName"), Collect(colToUpdateStatus, {ID: ThisRecord.ID, UniqueID: ThisRecord.Title}));
-                            
-                            If('Task_A_ManagerUpdate&DeleteItems'.Run(JSON(colToUpdate),JSON(colToDelete), JSON(colToUpdateStatus)).success="true", And(Notify("Your response has been successfully received."), Task_A_SendCSVtoManager.Run()));
-                            
-                            
+                            If(
+                                And(
+                                    !IsEmpty(colToDelete),
+                                    !IsEmpty(colToUpdate)
+                                ),
+                                If(
+                                    'Task_A_ManagerUpdate&DeleteItems&NotificationofApproval(Instant)'.Run(
+                                        JSON(colToUpdate),
+                                        JSON(colToDelete),
+                                        JSON(colToUpdateStatus)
+                                    ).success = "true",
+                                    And(
+                                        Notify("Your response has been successfully received."),
+                                        Task_A_SendCSVtoManager.Run()
+                                    )
+                                ),
+                                And(
+                                    !IsEmpty(colToDelete),
+                                    IsEmpty(colToUpdate)
+                                ),
+                                If(
+                                    'Task_A_ManagerUpdate&DeleteItems&NotificationofApproval(Instant)'.Run(
+                                        "",
+                                        JSON(colToDelete),
+                                        JSON(colToUpdateStatus)
+                                    ).success = "true",
+                                    And(
+                                        Notify("Your response has been successfully received."),
+                                        Task_A_SendCSVtoManager.Run()
+                                    )
+                                ),
+                                And(
+                                    IsEmpty(colToDelete),
+                                    !IsEmpty(colToUpdate)
+                                ),
+                                If(
+                                    'Task_A_ManagerUpdate&DeleteItems&NotificationofApproval(Instant)'.Run(
+                                        JSON(colToUpdate),
+                                        "",
+                                        JSON(colToUpdateStatus)
+                                    ).success = "true",
+                                    And(
+                                        Notify("Your response has been successfully received."),
+                                        Task_A_SendCSVtoManager.Run()
+                                    )
+                                )
+                                
+                            );
                             Clear(colToUpdate);
                             Clear(colToDelete);
-                            
-                            
-                            
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
                         PressedColor: =ColorFade(Self.Color,-20%)
                         PressedFill: =ColorFade(Self.Fill,-20%)
