@@ -1182,7 +1182,7 @@
                             
                             ForAll(Ungroup(GroupedTaxonomyGallery3.AllItems, "GroupByName"), Collect(colToUpdateStatus, {ID: ThisRecord.ID, UniqueID: ThisRecord.Title}));
                             
-                            If('Task_A_ManagerUpdate&DeleteItems'.Run(JSON(colToUpdate),JSON(colToDelete), JSON(colToUpdateStatus)).success="true", Notify("Your response has been successfully received."));
+                            If('Task_A_ManagerUpdate&DeleteItems'.Run(JSON(colToUpdate),JSON(colToDelete), JSON(colToUpdateStatus)).success="true", And(Notify("Your response has been successfully received."), Task_A_SendCSVtoManager.Run()));
                             
                             
                             Clear(colToUpdate);

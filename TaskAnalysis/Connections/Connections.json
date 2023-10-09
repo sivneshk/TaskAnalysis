@@ -107,6 +107,34 @@
     "dependents": [],
     "id": "772eb637-780b-4505-ac82-d4fd749ecd5b"
   },
+  "86d20784-1fed-4f77-8885-a82396040f7d": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "83f6f28e-a344-439a-a135-07b059e849c4"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "83f6f28e-a344-439a-a135-07b059e849c4"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Task_A_SendCSVtoManager"
+    ],
+    "dependencies": {
+      "shared_office365users_1": "efd6ad77-1458-4159-bb3e-452113a9f680"
+    },
+    "dependents": [],
+    "id": "86d20784-1fed-4f77-8885-a82396040f7d"
+  },
   "b33eb572-6d51-43d0-b928-b3a47fd40bf4": {
     "connectionRef": {
       "displayName": "Logic flows",
@@ -179,7 +207,8 @@
     ],
     "dependencies": {},
     "dependents": [
-      "b40ad7eb-f2ff-4b1a-af0a-b9b43a49e42c"
+      "b40ad7eb-f2ff-4b1a-af0a-b9b43a49e42c",
+      "86d20784-1fed-4f77-8885-a82396040f7d"
     ],
     "id": "efd6ad77-1458-4159-bb3e-452113a9f680"
   },
