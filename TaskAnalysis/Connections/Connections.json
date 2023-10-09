@@ -47,6 +47,32 @@
     ],
     "id": "57fd3f5b-cde9-4b31-9be4-50c5fc35e179"
   },
+  "5ce4e5e9-7802-4c02-87ae-98768984ed5d": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "053c71f0-b0da-4e6a-afe7-17d1f2a4cb69"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "053c71f0-b0da-4e6a-afe7-17d1f2a4cb69"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Task_A_NotifySubmissiontoManager"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "5ce4e5e9-7802-4c02-87ae-98768984ed5d"
+  },
   "772eb637-780b-4505-ac82-d4fd749ecd5b": {
     "connectionRef": {
       "displayName": "SharePoint",
@@ -153,7 +179,6 @@
     ],
     "dependencies": {},
     "dependents": [
-      "ef316f2c-aea2-432b-9162-9b9aebf425a7",
       "b40ad7eb-f2ff-4b1a-af0a-b9b43a49e42c"
     ],
     "id": "efd6ad77-1458-4159-bb3e-452113a9f680"
