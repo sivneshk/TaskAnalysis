@@ -174,119 +174,40 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.HeaderReview.Visible"
+                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.ReviewBtnContainer_1.SubmitBTN.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.HeaderReview.Visible",
+                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.ReviewBtnContainer_1.SubmitBTN.OnSelect",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 10,
-                  "charOffset": 0,
+                  "charLength": 38,
+                  "charOffset": 43,
                   "snippet": {
-                    "text": "ShowResult"
+                    "text": "Task_A_NotifySubmissiontoManager.Run()"
                   }
                 }
               },
               "properties": {
-                "member": "Visible",
+                "member": "OnSelect",
                 "module": "TaxonomyReviewScreen",
-                "type": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.HeaderReview"
+                "type": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.ReviewBtnContainer_1.SubmitBTN"
               }
             }
           ],
           "message": {
             "arguments": [
-              "ShowResult"
+              "Run",
+              "Task_A_NotifySubmissiontoManager"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery.Visible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 10,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ShowResult"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "TaxonomyReviewScreen",
-                "type": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.FinalTaxonomyGallery"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ShowResult"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.ReviewBtnContainer_1.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.ReviewBtnContainer_1.Visible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 10,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ShowResult"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "TaxonomyReviewScreen",
-                "type": "TaxonomyReviewScreen.HomeContainerScreen2.BodyContainerScreen2.ReviewScreenPanel.ReviewBtnContainer_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ShowResult"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
+          "ruleId": "app-ErrUnknownNamespaceFunction",
           "ruleIndex": 2
         },
         {
@@ -3972,17 +3893,14 @@
               }
             },
             {
-              "id": "app-ErrInvalidName",
+              "id": "app-ErrUnknownNamespaceFunction",
               "messageStrings": {
                 "issue": {
-                  "text": "Name isn't valid. '{0}' isn't recognized."
+                  "text": "'{0}' is an unknown or unsupported function in namespace '{1}'."
                 }
               },
               "properties": {
                 "componentType": "app",
-                "howToFix": [
-                  "Remove or correct the reference to the name that isn't valid."
-                ],
                 "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""

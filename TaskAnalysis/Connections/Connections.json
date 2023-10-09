@@ -141,40 +141,6 @@
     "dependents": [],
     "id": "b40ad7eb-f2ff-4b1a-af0a-b9b43a49e42c"
   },
-  "ef316f2c-aea2-432b-9162-9b9aebf425a7": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "efd6ad77-1458-4159-bb3e-452113a9f680": {
-          "value": "shared_office365users"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "1f34a45a-ac2b-4b4f-9be4-73245dfbf6f6"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_office365users": {
-          "value": "efd6ad77-1458-4159-bb3e-452113a9f680"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "1f34a45a-ac2b-4b4f-9be4-73245dfbf6f6"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "Task_A_NotifySubmissiontoManager"
-    ],
-    "dependencies": {
-      "shared_office365users": "efd6ad77-1458-4159-bb3e-452113a9f680"
-    },
-    "dependents": [],
-    "id": "ef316f2c-aea2-432b-9162-9b9aebf425a7"
-  },
   "efd6ad77-1458-4159-bb3e-452113a9f680": {
     "connectionRef": {
       "displayName": "Office 365 Users",

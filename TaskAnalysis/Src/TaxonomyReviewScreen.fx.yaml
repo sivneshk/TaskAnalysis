@@ -72,7 +72,6 @@ TaxonomyReviewScreen As screen:
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Visible: =ShowResult
                     Width: =ReviewScreenPanel.Width
                     ZIndex: =2
 
@@ -197,7 +196,6 @@ TaxonomyReviewScreen As screen:
                         )
                     TemplatePadding: =20
                     TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Self.Height/6)
-                    Visible: =ShowResult
                     Width: =ReviewScreenPanel.Width
                     ZIndex: =3
 
@@ -358,7 +356,6 @@ TaxonomyReviewScreen As screen:
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Visible: =ShowResult
                     Width: =ReviewScreenPanel.Width
                     ZIndex: =4
 
