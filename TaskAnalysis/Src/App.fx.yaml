@@ -40,7 +40,7 @@ App As appinfo:
                 }
             )
         ); 
-    StartScreen: =Switch(Param("ScreenName"), "MainPage", TaskAnalysisScreen, "asManager", If(CountRows(Filter('Task Analysis Taxonomy Collection', "Manager_L1"= Office365Users.MyProfile().Mail)) <= 0, TaskAnalysisScreen, 'ForManagerEditScreen/UserHomeScreen'))
+    StartScreen: =Switch(Param("ScreenName"), "MainPage", TaskAnalysisScreen, "asManager", If(CountRows(Filter('Task Analysis Taxonomy Collection', "Manager_L1"= Office365Users.MyProfile().Mail)) > 0, 'ForManagerEditScreen/UserHomeScreen', TaskAnalysisScreen))
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
