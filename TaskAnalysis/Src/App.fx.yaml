@@ -20,7 +20,7 @@ App As appinfo:
         ClearCollect(
             PrepCollection,
             ForAll(
-                Table(ParseJSON(Task_A_PreparerHours.Run("ahmedelsaidmohamed.baioumy@bakerhughes.com").json).body),
+                Table(ParseJSON(Task_A_PreparerHours.Run(Office365Users.MyProfile().Mail).json).body),
                 {
                     Email: Text(Value.Email),
                     Coco: Text(Value.Coco),
@@ -32,7 +32,7 @@ App As appinfo:
         ClearCollect(
             AppCollection,
             ForAll(
-                Table(ParseJSON(Task_A_ApproverHours.Run("bassem.abdelrahman@bakerhughes.com").json).body),
+                Table(ParseJSON(Task_A_ApproverHours.Run(Office365Users.MyProfile().Mail).json).body),
                 {
                     Email: Text(Value.Email),
                     Coco: Text(Value.Coco),
@@ -40,31 +40,7 @@ App As appinfo:
                 }
             )
         ); 
-        
-        /* ClearCollect(
-            PrepCollection,
-            ForAll(
-                Table(ParseJSON(Task_A_PreparerHours.Run("Office365Users.MyProfile().Mail").json).body),
-                {
-                    Email: Text(Value.Email),
-                    Coco: Text(Value.Coco),
-                    PrepHours: Text(Value.PrepHours)
-                }
-            )
-        );
-        
-        ClearCollect(
-            AppCollection,
-            ForAll(
-                Table(ParseJSON(Task_A_ApproverHours.Run("Office365Users.MyProfile().Mail").json).body),
-                {
-                    Email: Text(Value.Email),
-                    Coco: Text(Value.Coco),
-                    AppHours: Text(Value.AppHours)
-                }
-            )
-        );*/
-    StartScreen: =Switch(Param("ScreenName"), "MainPage", TaskAnalysisScreen, "asManager", 'ForManagerEditScreen/UserHomeScreen')
+    StartScreen: =Switch(Param("ScreenName"), "MainPage", TaskAnalysisScreen, "asManager", If(CountRows(Filter('Task Analysis Taxonomy Collection', "Manager_L1"= Office365Users.MyProfile().Mail)) <= 0, TaskAnalysisScreen, 'ForManagerEditScreen/UserHomeScreen'))
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
