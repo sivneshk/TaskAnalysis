@@ -1638,7 +1638,7 @@ TaskAnalysisScreen As screen:
                 Size: =PleaseChooseCompanyCode_1.Height*0.12
                 Text: |-
                     ="We have received your response.
-                    Should there be any changes, please contact the person below for assistance. Thank you 😊"
+                    Should there be any changes, please reach out for assistance by clicking on the link below. Thank you 😊"
                 VerticalAlign: =VerticalAlign.Top
                 Width: =DialogStartsHere_1.Width
                 ZIndex: =3
