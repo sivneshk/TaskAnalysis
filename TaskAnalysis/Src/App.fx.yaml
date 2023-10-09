@@ -13,7 +13,7 @@ App As appinfo:
         Clear(colToDelete);
         Clear(colToUpdate);
         
-        ClearCollect(colTaskAnalysisSP, ShowColumns(Filter('Task Analysis Taxonomy Collection', User_x0020_Email<> Office365Users.MyProfile().Mail), "Title", "Associated_x0020_LE", "CoCo", "EmployeeID", "LE_x0020_Name", "UserName", "Process_x0020_Name", "ID", "InputHours", "Region", "Unique_x0020_ID", "User_x0020_Email"));
+        ClearCollect(colTaskAnalysisSP, ShowColumns(Filter('Task Analysis Taxonomy Collection', 'User Email'<> Office365Users.MyProfile().Mail), "Title", "Associated_x0020_LE", "CoCo", "EmployeeID", "LE_x0020_Name", "UserName", "Process_x0020_Name", "ID", "InputHours", "Region", "Unique_x0020_ID", "User_x0020_Email"));
         Clear(colProcessTaxonomy);
         Collect(colProcessTaxonomy, 'Process Taxonomy');
         

@@ -34,6 +34,7 @@
       "EmployeeID": "EmployeeID",
       "ID": "ID",
       "InputHours": "Input Hours",
+      "L1_Manager": "L1_Manager",
       "LE_x0020_Name": "LE Name",
       "Modified": "Modified",
       "OData__ColorTag": "Color Tag",

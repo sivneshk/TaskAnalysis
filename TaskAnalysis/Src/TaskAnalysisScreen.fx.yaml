@@ -631,7 +631,8 @@ TaskAnalysisScreen As screen:
                         HoverBorderColor: =RGBA(2, 188, 148, 1)
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: =Set(ShowPopUp,true);
+                        OnSelect: |-
+                            =UpdateContext({ShowPopUp:true})
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
@@ -1275,7 +1276,7 @@ TaskAnalysisScreen As screen:
                     Icon: =Icon.Cancel
                     OnSelect: |-
                         =Reset(Dropdown_7);
-                        Set(ShowPopUp,false);
+                        UpdateContext({ShowPopUp:false});
                     PaddingBottom: =5
                     PaddingTop: =5
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
@@ -1480,6 +1481,7 @@ TaskAnalysisScreen As screen:
                                     ColourID: iterator,
                                     'User Email': Office365Users.MyProfile().Mail,
                                     'User Name': Office365Users.MyProfile().DisplayName,
+                                    'L1 Manager': Office365Users.ManagerV2(Office365Users.MyProfile().Mail).mail,
                                     EmployeeID: Office365Users.MyProfile().Id
                                 }
                             )
