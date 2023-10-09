@@ -522,7 +522,7 @@
                     Items: |-
                         =AddColumns(
                             GroupBy(If(And(IsBlank(SlicerUserMailScreen3.Selected.Value),IsBlank(SlicerUniqueIDScreen3.Selected.Value),IsBlank(SlicerCOCOScreen3.Selected.Value)),
-                                    Filter(colTaskAnalysisSP, User_x0020_Email<> Office365Users.MyProfile().Mail),
+                                    Filter(colTaskAnalysisSP, User_x0020_Email<> User().Email),
                                     Filter(Filter(colTaskAnalysisSP, User_x0020_Email<> Office365Users.MyProfile().Mail), IsBlank(SlicerUserMailScreen3.SelectedItems.Value) Or
                                        IsEmpty(SlicerUserMailScreen3.SelectedItems) Or
                                        UserName in SlicerUserMailScreen3.SelectedItems, 
