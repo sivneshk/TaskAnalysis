@@ -1596,7 +1596,7 @@ TaskAnalysisScreen As screen:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderStyle: =BorderStyle.None
                 FillPortions: =0
-                Height: =DialogBox_1.Height/10
+                Height: =Parent.Height*0.15
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 PaddingBottom: =5
@@ -1617,8 +1617,9 @@ TaskAnalysisScreen As screen:
                     Font: ="Poppins"
                     FontWeight: =FontWeight.Semibold
                     Height: =DialogStartsHere_1.Height
-                    Size: =SelectCompanyCode_1.Height/2.5
+                    Size: =Parent.Height*0.3
                     Text: ="Hi " & Office365Users.MyProfile().DisplayName
+                    VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.Width
                     ZIndex: =2
 
@@ -1681,7 +1682,7 @@ TaskAnalysisScreen As screen:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderStyle: =BorderStyle.None
                 FillPortions: =0
-                Height: =Parent.Height*0.3
+                Height: =Parent.Height*0.25
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 PaddingBottom: =5
@@ -1702,7 +1703,7 @@ TaskAnalysisScreen As screen:
                     Fill: =RGBA(0, 0, 0, 1)
                     FocusedBorderThickness: =2
                     Font: ="Poppins"
-                    Height: =Parent.Height*0.35
+                    Height: =Parent.Height*0.4
                     HoverBorderColor: =RGBA(0, 0, 0, 1)
                     HoverColor: =RGBA(0, 0, 0, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
