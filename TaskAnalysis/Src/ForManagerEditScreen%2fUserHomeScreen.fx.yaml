@@ -1233,6 +1233,21 @@
                                         Notify("Your response has been successfully received."),
                                         Task_A_SendCSVtoManager.Run()
                                     )
+                                ),
+                                And(
+                                    IsEmpty(colToDelete),
+                                    IsEmpty(colToUpdate)
+                                ),
+                                If(
+                                    'Task_A_ManagerUpdate&DeleteItems&NotificationofApproval(Instant)'.Run(
+                                        "",
+                                        "",
+                                        JSON(colToUpdateStatus)
+                                    ).success = "true",
+                                    And(
+                                        Notify("Your response has been successfully received."),
+                                        Task_A_SendCSVtoManager.Run()
+                                    )
                                 )
                                 
                             );
