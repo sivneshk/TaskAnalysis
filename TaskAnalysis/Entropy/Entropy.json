@@ -359,16 +359,16 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "10/09/2023 04:07:29",
+  "HeaderLastSavedDateTimeUTC": "10/09/2023 04:30:41",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
-    "13c8dcd6-f41c-43db-9977-607567033360": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/ecee5a4267904b78a1ca20fb30bd60a5\"",
-    "397907ec-08e3-4029-8cf9-1b341200a0fe": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/19B5E644CB1042ED8F11529C8C1A7D1D-0B29AC70F27706AC\"",
+    "4ce2c4a8-6b61-4aed-bb54-29ff9ae1e1b5": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/19B5E644CB1042ED8F11529C8C1A7D1D-0B29AC70F27706AC\"",
     "772eb637-780b-4505-ac82-d4fd749ecd5b": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/e8d8ce65691140fb9343d1fbe5c35db0\"",
-    "86d20784-1fed-4f77-8885-a82396040f7d": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/83f6f28ea344439aa13507b059e849c4-0b29ac70f27706ac\"",
+    "ae613217-30f7-4de6-aba4-9d804d1708f7": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/ecee5a4267904b78a1ca20fb30bd60a5\"",
     "b33eb572-6d51-43d0-b928-b3a47fd40bf4": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/ca9d73256c9645eeba0c53f6b8188e40-0b29ac70f27706ac\"",
     "b40ad7eb-f2ff-4b1a-af0a-b9b43a49e42c": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/cc60574d83604bc299034d4e456947b4-0b29ac70f27706ac\"",
     "bc8ddef5-3fe8-4518-9263-0394944e0d03": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/053c71f0b0da4e6aafe717d1f2a4cb69-0b29ac70f27706ac\"",
+    "cc177bdd-7866-44e8-976d-79230039818b": "\"/providers/Microsoft.PowerApps/apis/shared_logicflows/connections/83F6F28EA344439AA13507B059E849C4-0B29AC70F27706AC\"",
     "efd6ad77-1458-4159-bb3e-452113a9f680": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/02ce0ca5fb084a4ba3f76fc0589b3f7f\"",
     "f4c820bc-e0d9-4b20-9a9a-89aca6040541": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/e1763c40-e20b-4d4a-8462-03b0cf6bded7\""
   },
@@ -407,10 +407,10 @@
     "Task Analysis Taxonomy Collection": 11,
     "Task_A_ApproverHours": 4,
     "Task_A_JSONFlowUsertoSP": 2,
-    "Task_A_ManagerUpdate&DeleteItems&NotificationofApproval(Instant)": 1,
+    "Task_A_ManagerUpdate&DeleteItems&NotificationofApproval(Instant)": 6,
     "Task_A_NotifySubmissiontoManager": 5,
     "Task_A_PreparerHours": 3,
-    "Task_A_SendCSVtoManager": 6
+    "Task_A_SendCSVtoManager": 1
   },
   "OrderGroupControls": {
     "Group1": {
