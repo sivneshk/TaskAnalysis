@@ -242,7 +242,7 @@
                         Font: ="Noto Sans"
                         FontSize: =Self.Height/3.1
                         Height: =TaskFilterScreen3_1.Height/11
-                        Items: =Filter(Sort(Distinct('Task Analysis Taxonomy Collection','User Name'),Value), Value <> Office365Users.MyProfile().DisplayName)
+                        Items: =Sort(Distinct(Filter('Task Analysis Taxonomy Collection', Manager_L1 = User().Email),'User Name'),Value)
                         LayoutMinHeight: =32
                         LayoutMinWidth: =320
                         OnChange: =Set(uniqueIDVar,SlicerUserMailScreen3.Selected.Value)
@@ -1515,7 +1515,7 @@
                     Height: =Parent.Height*0.75
                     Items: |-
                         =/* I do like this to avoid delegation issue, since using 'In' is non-delegable and allowing user to select more than 10 items seems not practical, lmk if there's a better way */
-                        /*
+                        
                         If(
                             IsEmpty(Selections),
                             'Process Taxonomy',
@@ -1613,100 +1613,7 @@
                                        L6 = Last(FirstN(SelectionsL6,10)).Value
                                 )
                             )
-                        ) */
-                        
-                        If(
-                            Or(IsEmpty(Selections), IsBlank(Selections)),
-                            'Process Taxonomy',
-                            Filter(
-                                'Process Taxonomy',
-                                Or(IsBlank(Selections),
-                                       IsEmpty(Selections),
-                                       Title = Last(FirstN(Selections,1)).Title, 
-                                       Title = Last(FirstN(Selections,2)).Title,
-                                       Title = Last(FirstN(Selections,3)).Title, 
-                                       Title = Last(FirstN(Selections,4)).Title,
-                                       Title = Last(FirstN(Selections,5)).Title, 
-                                       Title = Last(FirstN(Selections,6)).Title,
-                                       Title = Last(FirstN(Selections,7)).Title, 
-                                       Title = Last(FirstN(Selections,8)).Title,
-                                       Title = Last(FirstN(Selections,9)).Title, 
-                                       Title = Last(FirstN(Selections,10)).Title,
-                                       IsBlank(SelectionsL1),
-                                       IsEmpty(SelectionsL1),
-                                       L1 = Last(FirstN(SelectionsL1,1)).Value, 
-                                       L1 = Last(FirstN(SelectionsL1,2)).Value,
-                                       L1 = Last(FirstN(SelectionsL1,3)).Value, 
-                                       L1 = Last(FirstN(SelectionsL1,4)).Value,
-                                       L1 = Last(FirstN(SelectionsL1,5)).Value, 
-                                       L1 = Last(FirstN(SelectionsL1,6)).Value,
-                                       L1 = Last(FirstN(SelectionsL1,7)).Value, 
-                                       L1 = Last(FirstN(SelectionsL1,8)).Value,
-                                       L1 = Last(FirstN(SelectionsL1,9)).Value, 
-                                       L1 = Last(FirstN(SelectionsL1,10)).Value,
-                                       IsBlank(SelectionsL2),
-                                       IsEmpty(SelectionsL2),
-                                       L2 = Last(FirstN(SelectionsL2,1)).Value, 
-                                       L2 = Last(FirstN(SelectionsL2,2)).Value,
-                                       L2 = Last(FirstN(SelectionsL2,3)).Value, 
-                                       L2 = Last(FirstN(SelectionsL2,4)).Value,
-                                       L2 = Last(FirstN(SelectionsL2,5)).Value, 
-                                       L2 = Last(FirstN(SelectionsL2,6)).Value,
-                                       L2 = Last(FirstN(SelectionsL2,7)).Value, 
-                                       L2 = Last(FirstN(SelectionsL2,8)).Value,
-                                       L2 = Last(FirstN(SelectionsL2,9)).Value, 
-                                       L2 = Last(FirstN(SelectionsL2,10)).Value,
-                                       IsBlank(SelectionsL3),
-                                       IsEmpty(SelectionsL3),
-                                       L3 = Last(FirstN(SelectionsL3,1)).Value, 
-                                       L3 = Last(FirstN(SelectionsL3,2)).Value,
-                                       L3 = Last(FirstN(SelectionsL3,3)).Value, 
-                                       L3 = Last(FirstN(SelectionsL3,4)).Value,
-                                       L3 = Last(FirstN(SelectionsL3,5)).Value, 
-                                       L3 = Last(FirstN(SelectionsL3,6)).Value,
-                                       L3 = Last(FirstN(SelectionsL3,7)).Value, 
-                                       L3 = Last(FirstN(SelectionsL3,8)).Value,
-                                       L3 = Last(FirstN(SelectionsL3,9)).Value, 
-                                       L3 = Last(FirstN(SelectionsL3,10)).Value,
-                                       IsBlank(SelectionsL4),
-                                       IsEmpty(SelectionsL4),
-                                       L4 = Last(FirstN(SelectionsL4,1)).Value, 
-                                       L4 = Last(FirstN(SelectionsL4,2)).Value,
-                                       L4 = Last(FirstN(SelectionsL4,3)).Value, 
-                                       L4 = Last(FirstN(SelectionsL4,4)).Value,
-                                       L4 = Last(FirstN(SelectionsL4,5)).Value, 
-                                       L4 = Last(FirstN(SelectionsL4,6)).Value,
-                                       L4 = Last(FirstN(SelectionsL4,7)).Value, 
-                                       L4 = Last(FirstN(SelectionsL4,8)).Value,
-                                       L4 = Last(FirstN(SelectionsL4,9)).Value, 
-                                       L4 = Last(FirstN(SelectionsL4,10)).Value,
-                                       IsBlank(SelectionsL5),
-                                       IsEmpty(SelectionsL5),
-                                       L5 = Last(FirstN(SelectionsL5,1)).Value, 
-                                       L5 = Last(FirstN(SelectionsL5,2)).Value,
-                                       L5 = Last(FirstN(SelectionsL5,3)).Value, 
-                                       L5 = Last(FirstN(SelectionsL5,4)).Value,
-                                       L5 = Last(FirstN(SelectionsL5,5)).Value, 
-                                       L5 = Last(FirstN(SelectionsL5,6)).Value,
-                                       L5 = Last(FirstN(SelectionsL5,7)).Value, 
-                                       L5 = Last(FirstN(SelectionsL5,8)).Value,
-                                       L5 = Last(FirstN(SelectionsL5,9)).Value, 
-                                       L5 = Last(FirstN(SelectionsL5,10)).Value,
-                                       IsBlank(SelectionsL6),
-                                       IsEmpty(SelectionsL6),
-                                       L6 = Last(FirstN(SelectionsL6,1)).Value, 
-                                       L6 = Last(FirstN(SelectionsL6,2)).Value,
-                                       L6 = Last(FirstN(SelectionsL6,3)).Value, 
-                                       L6 = Last(FirstN(SelectionsL6,4)).Value,
-                                       L6 = Last(FirstN(SelectionsL6,5)).Value, 
-                                       L6 = Last(FirstN(SelectionsL6,6)).Value,
-                                       L6 = Last(FirstN(SelectionsL6,7)).Value, 
-                                       L6 = Last(FirstN(SelectionsL6,8)).Value,
-                                       L6 = Last(FirstN(SelectionsL6,9)).Value, 
-                                       L6 = Last(FirstN(SelectionsL6,10)).Value
-                                )
-                            )
-                        )
+                        ) 
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplatePadding: =0
@@ -1721,12 +1628,11 @@
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
                         CheckboxBorderColor: =RGBA(96, 94, 92, 1)
-                        CheckboxSize: =Self.Height*0.8
+                        CheckboxSize: =Self.Height*0.7
                         CheckmarkFill: =RGBA(5, 50, 43, 1)
                         Color: =RGBA(50, 49, 48, 1)
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
                         Font: ="Poppins"
                         Height: =Parent.TemplateHeight/2.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -1751,6 +1657,7 @@
                         ZIndex: =10
 
                         LabelUniqueID As label:
+                            Align: =Align.Center
                             BorderColor: =RGBA(0, 0, 0, 0)
                             BorderStyle: =BorderStyle.None
                             BorderThickness: =2
@@ -1919,6 +1826,7 @@
                     ZIndex: =2
 
                     HeaderUniqueID_1 As label:
+                        Align: =Align.Center
                         BorderColor: =RGBA(99, 139, 44, 1)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -1932,7 +1840,9 @@
                         OnSelect: =Set(ShowFilter, true)
                         PaddingLeft: =8
                         Size: =Self.Height*0.2
-                        Text: ="Unique ID"
+                        Text: |-
+                            ="Unique
+                            ID"
                         Width: =(Parent.Width-Checkbox1_1.Width)/11 
                         X: =HeaderL1.X-Self.Width
                         ZIndex: =1
@@ -1952,7 +1862,7 @@
                         OnSelect: =Set(ShowFilter, true)
                         Size: =Self.Height*0.2
                         Text: ="L1"
-                        Width: =(Parent.Width-Checkbox1_1.Width)/10
+                        Width: =(Parent.Width-Checkbox1_1.Width)/9
                         X: =HeaderL2.X-Self.Width
                         ZIndex: =2
 
@@ -2085,7 +1995,7 @@
                         Visible: =If(!IsEmpty(DropdownUniqueID_1.SelectedItems), true, false)
                         Width: =Self.Height
                         X: =HeaderL1.X- Self.Width*1.5
-                        Y: =(Parent.Height-Self.Height)/2
+                        Y: =(Parent.Height-Self.Height)*3/4
                         ZIndex: =9
 
                     FilterIndicatorL1 As icon.FilterFlatFilled:

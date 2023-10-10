@@ -5216,7 +5216,14 @@
         "OnSelect",
         "ZIndex",
         "BorderThickness",
-        "FocusedBorderThickness",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "4",
+          "InvariantPropertyName": "FocusedBorderThickness",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Size",
         "Italic",
         "Underline",
@@ -12613,7 +12620,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DeleteRowIcon_3",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22090,7 +22097,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "FilterIndicatorL1",
-      "ParentIndex": 9,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22317,7 +22324,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "FilterIndicatorL2",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22544,7 +22551,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "FilterIndicatorL3",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22771,7 +22778,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "FilterIndicatorL4",
-      "ParentIndex": 12,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22998,7 +23005,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "FilterIndicatorL5",
-      "ParentIndex": 13,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -23225,7 +23232,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "FilterIndicatorL6",
-      "ParentIndex": 14,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -23452,7 +23459,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "FilterIndicatorUniqueID",
-      "ParentIndex": 8,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -50313,7 +50320,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ToggleDetectChange",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
