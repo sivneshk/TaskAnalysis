@@ -1514,7 +1514,7 @@
                     DelayItemLoading: =true
                     Height: =Parent.Height*0.75
                     Items: |-
-                        =/* I do like this to avoid delegation issue, since using 'In' is non-delegable and allowing user to select more than 10 items seems not practical, lmk if there's a better way */
+                        =/* I do like this to avoid delegation issue , since using 'In' is non-delegable and allowing user to select more than 10 items seems not practical [Source: Reza Dorrani in Youtube], lmk if there's a better way */
                         
                         If(
                             IsEmpty(Selections),
@@ -1646,7 +1646,6 @@
                         Size: =13
                         Text: =""
                         Width: =LabelCheckbox.Width
-                        Y: =(Parent.TemplateHeight-Self.Height)/2
                         ZIndex: =3
 
                     Group2 As group:
@@ -1670,8 +1669,10 @@
                             OnSelect: =Select(Parent)
                             PaddingLeft: =2
                             PaddingRight: =2
+                            PaddingTop: =10
                             Size: =HeaderUniqueID_1.Size
                             Text: =ThisItem.Title
+                            VerticalAlign: =VerticalAlign.Top
                             Width: =HeaderUniqueID_1.Width
                             X: =HeaderUniqueID_1.X
                             Y: =(Parent.TemplateHeight-Self.Height)/2
@@ -1692,9 +1693,10 @@
                             PaddingBottom: =0
                             PaddingLeft: =2
                             PaddingRight: =2
-                            PaddingTop: =0
+                            PaddingTop: =10
                             Size: =HeaderUniqueID_1.Size
                             Text: =ThisItem.L1
+                            VerticalAlign: =VerticalAlign.Top
                             Width: =HeaderL1.Width
                             X: =HeaderL1.X
                             Y: =(Parent.TemplateHeight-Self.Height)/2
@@ -1715,16 +1717,16 @@
                             PaddingBottom: =0
                             PaddingLeft: =2
                             PaddingRight: =2
-                            PaddingTop: =0
+                            PaddingTop: =10
                             Size: =HeaderUniqueID_1.Size
                             Text: =ThisItem.L2
+                            VerticalAlign: =VerticalAlign.Top
                             Width: =HeaderL2.Width
                             X: =HeaderL2.X
                             Y: =(Parent.TemplateHeight-Self.Height)/2
                             ZIndex: =5
 
                         LabelL3 As label:
-                            Align: =Align.Center
                             BorderColor: =RGBA(0, 0, 0, 0)
                             BorderStyle: =BorderStyle.None
                             BorderThickness: =2
@@ -1738,9 +1740,10 @@
                             PaddingBottom: =0
                             PaddingLeft: =2
                             PaddingRight: =2
-                            PaddingTop: =0
+                            PaddingTop: =10
                             Size: =HeaderUniqueID_1.Size
                             Text: =ThisItem.L3
+                            VerticalAlign: =VerticalAlign.Top
                             Width: =HeaderL3.Width
                             X: =HeaderL3.X
                             Y: =(Parent.TemplateHeight-Self.Height)/2
@@ -1756,13 +1759,15 @@
                             FocusedBorderThickness: =4
                             Font: ="Poppins"
                             Height: =Parent.TemplateHeight
+                            LineHeight: =1
                             OnSelect: =Select(Parent)
                             PaddingBottom: =0
                             PaddingLeft: =2
                             PaddingRight: =2
-                            PaddingTop: =0
+                            PaddingTop: =10
                             Size: =HeaderUniqueID_1.Size
                             Text: =ThisItem.L4
+                            VerticalAlign: =If(Self.Text = "-", VerticalAlign.Middle, VerticalAlign.Top)
                             Width: =HeaderL4.Width
                             X: =HeaderL4.X
                             Y: =(Parent.TemplateHeight-Self.Height)/2
@@ -1779,13 +1784,15 @@
                             FocusedBorderThickness: =4
                             Font: ="Poppins"
                             Height: =Parent.TemplateHeight
+                            LineHeight: =1
                             OnSelect: =Select(Parent)
                             PaddingBottom: =0
                             PaddingLeft: =2
                             PaddingRight: =2
-                            PaddingTop: =0
+                            PaddingTop: =10
                             Size: =HeaderUniqueID_1.Size
                             Text: =ThisItem.L5
+                            VerticalAlign: =VerticalAlign.Top
                             Width: =HeaderL5.Width
                             X: =HeaderL5.X
                             Y: =(Parent.TemplateHeight-Self.Height)/2
@@ -1806,9 +1813,10 @@
                             PaddingBottom: =0
                             PaddingLeft: =2
                             PaddingRight: =2
-                            PaddingTop: =0
+                            PaddingTop: =10
                             Size: =HeaderUniqueID_1.Size
                             Text: =ThisItem.L6
+                            VerticalAlign: =VerticalAlign.Top
                             Width: =HeaderL5.Width
                             X: =HeaderL6.X
                             Y: =(Parent.TemplateHeight-Self.Height)/2
@@ -1985,14 +1993,15 @@
                         FocusedBorderThickness: =4
                         Height: =HeaderUniqueID_1.Size*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =ColorFade(Self.Color, -10%)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
-                        OnSelect: =Set(ShowFilter, true)
+                        OnSelect: |-
+                            =UpdateContext({ShowFilter: true})
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedColor: =ColorFade(Self.Color, -30%)
                         PressedFill: =RGBA(0, 0, 0, 0)
-                        Visible: =If(!IsEmpty(DropdownUniqueID_1.SelectedItems), true, false)
+                        Visible: =If(!IsBlank(Selections), true, false)
                         Width: =Self.Height
                         X: =HeaderL1.X- Self.Width*1.5
                         Y: =(Parent.Height-Self.Height)*3/4
@@ -2007,14 +2016,15 @@
                         FocusedBorderThickness: =4
                         Height: =HeaderUniqueID_1.Size*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =ColorFade(Self.Color, -10%)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
-                        OnSelect: =Set(ShowFilter, true)
+                        OnSelect: |-
+                            =UpdateContext({ShowFilter: true})
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedColor: =ColorFade(Self.Color, -30%)
                         PressedFill: =RGBA(0, 0, 0, 0)
-                        Visible: =If(!IsEmpty(DropdownL1_1.SelectedItems), true, false)
+                        Visible: =If(!IsBlank(SelectionsL1), true, false)
                         Width: =Self.Height
                         X: =HeaderL2.X- Self.Width*2
                         Y: =(Parent.Height-Self.Height)/2
@@ -2029,14 +2039,15 @@
                         FocusedBorderThickness: =4
                         Height: =HeaderUniqueID_1.Size*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =ColorFade(Self.Color, -10%)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
-                        OnSelect: =Set(ShowFilter, true)
+                        OnSelect: |-
+                            =UpdateContext({ShowFilter: true})
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedColor: =ColorFade(Self.Color, -30%)
                         PressedFill: =RGBA(0, 0, 0, 0)
-                        Visible: =If(!IsEmpty(DropdownL2_1.SelectedItems), true, false)
+                        Visible: =If(!IsBlank(SelectionsL2), true, false)
                         Width: =Self.Height
                         X: =HeaderL3.X- Self.Width*2
                         Y: =(Parent.Height-Self.Height)/2
@@ -2051,16 +2062,17 @@
                         FocusedBorderThickness: =4
                         Height: =HeaderUniqueID_1.Size*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =ColorFade(Self.Color, -10%)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
-                        OnSelect: =Set(ShowFilter, true)
+                        OnSelect: |-
+                            =UpdateContext({ShowFilter: true})
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedColor: =ColorFade(Self.Color, -30%)
                         PressedFill: =RGBA(0, 0, 0, 0)
-                        Visible: =If(!IsEmpty(DropdownL3_1.SelectedItems), true, false)
+                        Visible: =If(!IsBlank(SelectionsL3), true, false)
                         Width: =Self.Height
-                        X: =HeaderL4.X- Self.Width*2
+                        X: =HeaderL4.X- Self.Width*4
                         Y: =(Parent.Height-Self.Height)/2
                         ZIndex: =12
 
@@ -2073,16 +2085,17 @@
                         FocusedBorderThickness: =4
                         Height: =HeaderUniqueID_1.Size*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =ColorFade(Self.Color, -10%)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
-                        OnSelect: =Set(ShowFilter, true)
+                        OnSelect: |-
+                            =UpdateContext({ShowFilter: true})
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedColor: =ColorFade(Self.Color, -30%)
                         PressedFill: =RGBA(0, 0, 0, 0)
-                        Visible: =If(!IsEmpty(DropdownL4_1.SelectedItems), true, false)
+                        Visible: =If(!IsBlank(SelectionsL4), true, false)
                         Width: =Self.Height
-                        X: =HeaderL5.X- Self.Width*2
+                        X: =HeaderL5.X- Self.Width*4
                         Y: =(Parent.Height-Self.Height)/2
                         ZIndex: =13
 
@@ -2095,16 +2108,17 @@
                         FocusedBorderThickness: =4
                         Height: =HeaderUniqueID_1.Size*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =ColorFade(Self.Color, -10%)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
-                        OnSelect: =Set(ShowFilter, true)
+                        OnSelect: |-
+                            =UpdateContext({ShowFilter: true})
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedColor: =ColorFade(Self.Color, -30%)
                         PressedFill: =RGBA(0, 0, 0, 0)
-                        Visible: =If(!IsEmpty(DropdownL5_1.SelectedItems), true, false)
+                        Visible: =If(!IsBlank(SelectionsL5), true, false)
                         Width: =Self.Height
-                        X: =HeaderL6.X- Self.Width*2
+                        X: =HeaderL6.X- Self.Width*4
                         Y: =(Parent.Height-Self.Height)/2
                         ZIndex: =14
 
@@ -2117,16 +2131,17 @@
                         FocusedBorderThickness: =4
                         Height: =HeaderUniqueID_1.Size*1.5
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =ColorFade(Self.Color, -10%)
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.FilterFlatFilled
-                        OnSelect: =Set(ShowFilter, true)
+                        OnSelect: |-
+                            =UpdateContext({ShowFilter: true})
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedColor: =ColorFade(Self.Color, -30%)
                         PressedFill: =RGBA(0, 0, 0, 0)
-                        Visible: =If(!IsEmpty(DropdownL6_1.SelectedItems), true, false)
+                        Visible: =If(!IsBlank(SelectionsL5), true, false)
                         Width: =Self.Height
-                        X: =Parent.Width- Self.Width*2
+                        X: =Parent.Width- Self.Width*4
                         Y: =(Parent.Height-Self.Height)/2
                         ZIndex: =15
 
