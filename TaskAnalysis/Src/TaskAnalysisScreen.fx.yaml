@@ -1081,7 +1081,7 @@ TaskAnalysisScreen As screen:
                         DisabledBorderColor: =RGBA(208, 208, 208, 1)
                         DisabledColor: =RGBA(208, 208, 208, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =If(Value(SumHoursCheck.Text)=160, DisplayMode.Edit, DisplayMode.Disabled)
+                        DisplayMode: =If(Value(SumHoursCheck.Text)<=160, DisplayMode.Edit, DisplayMode.Disabled)
                         Fill: =RGBA(255, 255, 255, 1)
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
@@ -1090,7 +1090,8 @@ TaskAnalysisScreen As screen:
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
                         OnSelect: |-
-                            =ClearCollect(colTaxonomy,ForAll(Sequence(CountRows(colTaxonomyTemp)), Patch(Last(FirstN(colTaxonomyTemp,Value)), {rowNumber: Value})));
+                            =UpdateContext({ ShowInsufficientErrorMsg: false});
+                            ClearCollect(colTaxonomy,ForAll(Sequence(CountRows(colTaxonomyTemp)), Patch(Last(FirstN(colTaxonomyTemp,Value)), {rowNumber: Value})));
                             
                             
                             Clear(colHoursWithNoRowID);
@@ -1158,6 +1159,56 @@ TaskAnalysisScreen As screen:
                         Visible: =If(Value(SumHoursCheck.Text)>160, true, false)
                         Width: =RightPanel.Width/3
                         ZIndex: =4
+
+                    InsufficientErrorMsg_2 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =Color.Red
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: ="Noto Sans"
+                        Height: =ReviewBtnContainer.Height/3
+                        Size: =LabelHours.Size
+                        Text: ="*Sum of input hours must be equal and cannot be less than 160 hours"
+                        VerticalAlign: =VerticalAlign.Bottom
+                        Visible: =ShowInsufficientErrorMsg
+                        Width: =RightPanel.Width/3
+                        Y: =ExceedHoursErrorMsg.Height
+                        ZIndex: =5
+
+                    NextBtn_1 As button:
+                        BorderColor: =RGBA(2, 188, 148, 1)
+                        BorderThickness: =1
+                        Color: =RGBA(2, 188, 148, 1)
+                        DisabledBorderColor: =RGBA(208, 208, 208, 1)
+                        DisabledColor: =RGBA(208, 208, 208, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FocusedBorderThickness: =2
+                        Font: ="Poppins"
+                        Height: =AddTaskBtn.Height
+                        HoverBorderColor: =RGBA(2, 188, 148, 1)
+                        HoverColor: =RGBA(2, 188, 148, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnSelect: |-
+                            =UpdateContext({ ShowInsufficientErrorMsg: true})
+                        PressedBorderColor: =RGBA(230, 230, 230, 1)
+                        PressedColor: =RGBA(2, 188, 148, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =5
+                        RadiusBottomRight: =5
+                        RadiusTopLeft: =5
+                        RadiusTopRight: =5
+                        Size: =Self.Height/3
+                        Text: ="Next"
+                        Visible: =If(Value(SumHoursCheck.Text) < 160, true, Value(SumHoursCheck.Text) >= 160, false)
+                        Width: =RightPanel.Width*0.2
+                        X: =(ReviewBtnContainer.Width-Self.Width)/2
+                        Y: =(ReviewBtnContainer.Height-Self.Height)/2
+                        ZIndex: =6
 
         FooterContainer As groupContainer.manualLayoutContainer:
             Height: =Parent.Height/25
