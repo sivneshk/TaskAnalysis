@@ -820,7 +820,7 @@
                             HoverFill: =RGBA(0, 0, 0, 0)
                             Icon: =Icon.Cancel
                             OnSelect: |-
-                                =Collect(
+                                =/* Collect(
                                     colToDelete,
                                     {ItemID: ThisItem.ID}
                                 );
@@ -833,7 +833,8 @@
                                 RemoveIf(
                                     colToUpdate,
                                     ID = ThisItem.ID
-                                );
+                                ); */
+                                UpdateContext({varDeleteID: ThisItem.ID});
                                 
                                 UpdateContext({varConfirmDelete: true});
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
@@ -4777,10 +4778,10 @@
             LayoutAlignItems: =LayoutAlignItems.Center
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =10
-            RadiusBottomRight: =10
-            RadiusTopLeft: =10
-            RadiusTopRight: =10
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
             Width: =Parent.Width*0.4
             X: =(Parent.Width-Self.Width)/2
             Y: =(Parent.Height-Self.Height)/2
@@ -4806,7 +4807,7 @@
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderStyle: =BorderStyle.None
                 FillPortions: =0
-                Height: =Parent.Height*0.15
+                Height: =Parent.Height*0.2
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 PaddingBottom: =5
@@ -4842,20 +4843,38 @@
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 FocusedBorderThickness: =4
                 Font: ="Poppins"
-                Height: =DialogBox_2.Height*0.3
-                LineHeight: =1.4
+                Height: =DialogBox_2.Height*0.15
                 PaddingTop: =10
-                Size: =PleaseChooseCompanyCode_2.Height*0.12
-                Text: ="Permanently delete record? This action cannot be undone."
-                VerticalAlign: =VerticalAlign.Top
+                Size: =Self.Height*0.4
+                Text: ="Delete this employee record?"
+                VerticalAlign: =VerticalAlign.Bottom
                 Width: =DialogStartsHere_2.Width
                 ZIndex: =3
+
+            PleaseChooseCompanyCode_3 As label:
+                Align: =Align.Justify
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(1, 131, 116, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: ="Poppins"
+                Height: =DialogBox_2.Height*0.15
+                LineHeight: =1
+                PaddingTop: =10
+                Size: =Self.Height*0.23
+                Text: ="[This action can be undone by clicking the Refresh Icon under the table later]"
+                VerticalAlign: =VerticalAlign.Top
+                Width: =DialogStartsHere_2.Width
+                ZIndex: =4
 
             BackSubmitButtonContainer_2 As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderStyle: =BorderStyle.None
                 FillPortions: =0
-                Height: =Parent.Height*0.25
+                Height: =Parent.Height*0.3
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 PaddingBottom: =5
@@ -4867,7 +4886,7 @@
                 Width: =DialogBox_2.Width*0.85
                 ZIndex: =5
 
-                LeaveAppButton_1 As button:
+                ConfirmDelete As button:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderThickness: =1
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -4876,11 +4895,28 @@
                     Fill: =RGBA(0, 0, 0, 1)
                     FocusedBorderThickness: =2
                     Font: ="Poppins"
-                    Height: =Parent.Height*0.4
+                    Height: =Parent.Height*0.45
                     HoverBorderColor: =RGBA(0, 0, 0, 1)
                     HoverColor: =RGBA(0, 0, 0, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
-                    OnSelect: =Exit()
+                    OnSelect: |-
+                        =Collect(
+                            colToDelete,
+                            {ItemID: varDeleteID}
+                        );
+                        
+                        RemoveIf(
+                            colTaskAnalysisSP,
+                            ID = varDeleteID
+                        );
+                        
+                        RemoveIf(
+                            colToUpdate,
+                            ID = varDeleteID
+                        ); 
+                        
+                        UpdateContext({varDeleteID: Blank()});
+                        UpdateContext({varConfirmDelete: false});
                     PressedBorderColor: =RGBA(0, 0, 0, 1)
                     PressedColor: =RGBA(0, 0, 0, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
@@ -4889,11 +4925,41 @@
                     RadiusTopLeft: =5
                     RadiusTopRight: =5
                     Size: =Self.Height*0.3
-                    Text: ="Leave App"
-                    Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
-                    X: =(Parent.Width-Self.Width)/2
+                    Text: ="Delete"
+                    Width: =Parent.Width*0.48
+                    X: =(Parent.Width-Parent.PaddingRight-Self.Width)
                     Y: =BackSubmitButtonContainer_2.Height-Self.Height-BackSubmitButtonContainer_2.PaddingBottom
                     ZIndex: =1
+
+                CancelDelete As button:
+                    BorderColor: =RGBA(2, 188, 148, 1)
+                    BorderThickness: =1
+                    Color: =RGBA(2, 188, 148, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FocusedBorderThickness: =2
+                    Font: ="Poppins"
+                    Height: =Parent.Height*0.45
+                    HoverBorderColor: =ColorFade(Self.BorderColor,-20%)
+                    HoverColor: =ColorFade(Self.Color,-20%)
+                    HoverFill: =ColorFade(Self.Fill,-10%)
+                    OnSelect: |-
+                        =UpdateContext({varConfirmDelete: false})
+                    PressedBorderColor: =ColorFade(Self.BorderColor,-40%)
+                    PressedColor: =ColorFade(Self.Color,-40%)
+                    PressedFill: =ColorFade(Self.Fill,-20%)
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Size: =Self.Height*0.3
+                    Text: ="Cancel"
+                    Width: =Parent.Width*0.48
+                    X: =Parent.PaddingLeft
+                    Y: =BackSubmitButtonContainer_2.Height-Self.Height-BackSubmitButtonContainer_2.PaddingBottom
+                    ZIndex: =2
 
             EmptyFooterMargin_2 As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer

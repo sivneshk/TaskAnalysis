@@ -59,40 +59,6 @@
     "dependents": [],
     "id": "5beebe44-4003-4e74-9169-b45d2baee189"
   },
-  "65286a4e-9bee-4b81-b6d3-e569baa3ee20": {
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "efd6ad77-1458-4159-bb3e-452113a9f680": {
-          "value": "shared_office365users_1"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "83f6f28e-a344-439a-a135-07b059e849c4"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_office365users_1": {
-          "value": "efd6ad77-1458-4159-bb3e-452113a9f680"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "83f6f28e-a344-439a-a135-07b059e849c4"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "Task_A_SendCSVtoManager"
-    ],
-    "dependencies": {
-      "shared_office365users_1": "efd6ad77-1458-4159-bb3e-452113a9f680"
-    },
-    "dependents": [],
-    "id": "65286a4e-9bee-4b81-b6d3-e569baa3ee20"
-  },
   "67f4a1e9-54dc-463a-af9d-b03afd75ae30": {
     "connectionRef": {
       "displayName": "Logic flows",
@@ -187,6 +153,34 @@
     "dependents": [],
     "id": "8f05baec-cc1b-4120-90f7-b43f1f73bf1c"
   },
+  "a9284ce5-4676-4cf4-ad3f-fb51ba4a032e": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "83f6f28e-a344-439a-a135-07b059e849c4"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "83f6f28e-a344-439a-a135-07b059e849c4"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Task_A_SendCSVtoManager"
+    ],
+    "dependencies": {
+      "shared_office365users_1": "efd6ad77-1458-4159-bb3e-452113a9f680"
+    },
+    "dependents": [],
+    "id": "a9284ce5-4676-4cf4-ad3f-fb51ba4a032e"
+  },
   "bf0095b6-61f7-4e05-923a-899b268582dd": {
     "connectionRef": {
       "displayName": "Office 365 Outlook",
@@ -240,7 +234,7 @@
     "dependencies": {},
     "dependents": [
       "52299e7e-f793-43f3-a359-50fe5cde06ed",
-      "65286a4e-9bee-4b81-b6d3-e569baa3ee20"
+      "a9284ce5-4676-4cf4-ad3f-fb51ba4a032e"
     ],
     "id": "efd6ad77-1458-4159-bb3e-452113a9f680"
   }
