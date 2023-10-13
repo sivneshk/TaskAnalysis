@@ -1174,88 +1174,7 @@
                         HoverColor: =ColorFade(Self.Color,-20%)
                         HoverFill: =ColorFade(Self.Fill,20%)
                         OnSelect: |
-                            =/* colToUpdate contains rows that has been UPDATED/CHANGED ONLY */
-                            UpdateContext({varEdit: DisplayMode.Disabled});
-                            Clear(colToUpdateStatus);
-                            ForAll(
-                                Ungroup(
-                                    GroupedTaxonomyGallery3.AllItems,
-                                    "GroupByName"
-                                ),
-                                Collect(
-                                    colToUpdateStatus,
-                                    {
-                                        ID: ThisRecord.ID,
-                                        UniqueID: ThisRecord.Title
-                                    }
-                                )
-                            );
-                            
-                            If(
-                                And(
-                                    !IsEmpty(colToDelete),
-                                    !IsEmpty(colToUpdate)
-                                ),
-                                If(
-                                    'Task_A_ManagerUpdate&DeleteItems&NotificationofApproval(Instant)'.Run(
-                                        JSON(colToUpdate),
-                                        JSON(colToDelete),
-                                        JSON(colToUpdateStatus)
-                                    ).success = "true",
-                                    And(
-                                        Notify("Your response has been successfully received."),
-                                        Task_A_SendCSVtoManager.Run()
-                                    )
-                                ),
-                                And(
-                                    !IsEmpty(colToDelete),
-                                    IsEmpty(colToUpdate)
-                                ),
-                                If(
-                                    'Task_A_ManagerUpdate&DeleteItems&NotificationofApproval(Instant)'.Run(
-                                        "",
-                                        JSON(colToDelete),
-                                        JSON(colToUpdateStatus)
-                                    ).success = "true",
-                                    And(
-                                        Notify("Your response has been successfully received."),
-                                        Task_A_SendCSVtoManager.Run()
-                                    )
-                                ),
-                                And(
-                                    IsEmpty(colToDelete),
-                                    !IsEmpty(colToUpdate)
-                                ),
-                                If(
-                                    'Task_A_ManagerUpdate&DeleteItems&NotificationofApproval(Instant)'.Run(
-                                        JSON(colToUpdate),
-                                        "",
-                                        JSON(colToUpdateStatus)
-                                    ).success = "true",
-                                    And(
-                                        Notify("Your response has been successfully received."),
-                                        Task_A_SendCSVtoManager.Run()
-                                    )
-                                ),
-                                And(
-                                    IsEmpty(colToDelete),
-                                    IsEmpty(colToUpdate)
-                                ),
-                                If(
-                                    'Task_A_ManagerUpdate&DeleteItems&NotificationofApproval(Instant)'.Run(
-                                        "",
-                                        "",
-                                        JSON(colToUpdateStatus)
-                                    ).success = "true",
-                                    And(
-                                        Notify("Your response has been successfully received."),
-                                        Task_A_SendCSVtoManager.Run()
-                                    )
-                                )
-                                
-                            );
-                            Clear(colToUpdate);
-                            Clear(colToDelete);
+                            =UpdateContext({varConfirmSubmit: true});
                         PressedBorderColor: =ColorFade(Self.BorderColor,-20%)
                         PressedColor: =ColorFade(Self.Color,-20%)
                         PressedFill: =ColorFade(Self.Fill,-20%)
@@ -4753,7 +4672,7 @@
                     Font: ="Poppins"
                     FontWeight: =FontWeight.Semibold
                     Height: =DialogStartsHere_2.Height
-                    Size: =Parent.Height*0.3
+                    Size: =Parent.Height*0.4
                     Text: ="❗ Confirm Deletion" 
                     Width: =Parent.Width
                     ZIndex: =2
@@ -4788,8 +4707,8 @@
                 Font: ="Poppins"
                 Height: =DialogBox_2.Height*0.15
                 LineHeight: =1
-                PaddingTop: =10
-                Size: =Self.Height*0.23
+                PaddingTop: =0
+                Size: =Self.Height*0.25
                 Text: ="[This action can be undone by clicking the Refresh Icon under the table later]"
                 VerticalAlign: =VerticalAlign.Top
                 Width: =DialogStartsHere_2.Width
@@ -4900,5 +4819,469 @@
                 RadiusTopLeft: =10
                 RadiusTopRight: =10
                 Width: =DialogBox_2.Width*0.85
+                ZIndex: =6
+
+    ConfirmSubmissionPopUp As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(34, 48, 45, 0.8)
+        Height: |
+            =Parent.Height
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =varConfirmSubmit
+        Width: =Parent.Width
+        ZIndex: =4
+
+        DialogBox_3 As groupContainer.verticalAutoLayoutContainer:
+            BorderColor: =RGBA(148, 148, 148, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Parent.Height*0.4
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Width: =Parent.Width*0.4
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+            EmptyHeaderMargin_3 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox_3.Height/10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox_3.Width*0.85
+                ZIndex: =1
+
+            DialogStartsHere_3 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =Parent.Height*0.2
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                Width: =DialogBox_3.Width*0.85
+                ZIndex: =2
+
+                ConfirmSubmissionTitle As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(5, 50, 43, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: ="Poppins"
+                    FontWeight: =FontWeight.Semibold
+                    Height: =DialogStartsHere_3.Height
+                    Size: =Parent.Height*0.4
+                    Text: ="Confirm Submission" 
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+            AreYouSureMessage As label:
+                Align: =Align.Justify
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(5, 50, 43, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: ="Poppins"
+                Height: =DialogBox_3.Height*0.15
+                PaddingTop: =10
+                Size: =Self.Height*0.4
+                Text: ="Are you sure?"
+                VerticalAlign: =VerticalAlign.Bottom
+                Width: =DialogStartsHere_3.Width
+                ZIndex: =3
+
+            ThisActionCannotBeUndoneMessage As label:
+                Align: =Align.Justify
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(1, 131, 116, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: ="Poppins"
+                Height: =DialogBox_3.Height*0.15
+                PaddingTop: =0
+                Size: =Self.Height*0.25
+                Text: ="[This action cannot be undone, deleted items will be permanently removed]"
+                VerticalAlign: =VerticalAlign.Top
+                Width: =DialogStartsHere_3.Width
+                ZIndex: =4
+
+            BackSubmitButtonContainer_3 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =Parent.Height*0.3
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox_3.Width*0.85
+                ZIndex: =5
+
+                ConfirmSubmit As button:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderThickness: =1
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    Fill: =RGBA(5, 50, 43, 1)
+                    FocusedBorderThickness: =2
+                    Font: ="Poppins"
+                    Height: =Parent.Height*0.45
+                    HoverBorderColor: =RGBA(0, 0, 0, 1)
+                    HoverColor: =RGBA(0, 0, 0, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: |
+                        =/* colToUpdate contains rows that has been UPDATED/CHANGED ONLY */
+                        UpdateContext({varEdit: DisplayMode.Disabled});
+                        Clear(colToUpdateStatus);
+                        ForAll(
+                            Ungroup(
+                                GroupedTaxonomyGallery3.AllItems,
+                                "GroupByName"
+                            ),
+                            Collect(
+                                colToUpdateStatus,
+                                {
+                                    ID: ThisRecord.ID,
+                                    UniqueID: ThisRecord.Title
+                                }
+                            )
+                        );
+                        
+                        If(
+                            And(
+                                !IsEmpty(colToDelete),
+                                !IsEmpty(colToUpdate)
+                            ),
+                            If(
+                                'Task_A_ManagerUpdate&DeleteItems&NotificationofApproval(Instant)'.Run(
+                                    JSON(colToUpdate),
+                                    JSON(colToDelete),
+                                    JSON(colToUpdateStatus)
+                                ).success = "true",
+                                And(
+                                    Notify("Your response has been successfully received."),
+                                    Task_A_SendCSVtoManager.Run()
+                                )
+                            ),
+                            And(
+                                !IsEmpty(colToDelete),
+                                IsEmpty(colToUpdate)
+                            ),
+                            If(
+                                'Task_A_ManagerUpdate&DeleteItems&NotificationofApproval(Instant)'.Run(
+                                    "",
+                                    JSON(colToDelete),
+                                    JSON(colToUpdateStatus)
+                                ).success = "true",
+                                And(
+                                    Notify("Your response has been successfully received."),
+                                    Task_A_SendCSVtoManager.Run()
+                                )
+                            ),
+                            And(
+                                IsEmpty(colToDelete),
+                                !IsEmpty(colToUpdate)
+                            ),
+                            If(
+                                'Task_A_ManagerUpdate&DeleteItems&NotificationofApproval(Instant)'.Run(
+                                    JSON(colToUpdate),
+                                    "",
+                                    JSON(colToUpdateStatus)
+                                ).success = "true",
+                                And(
+                                    Notify("Your response has been successfully received."),
+                                    Task_A_SendCSVtoManager.Run()
+                                )
+                            ),
+                            And(
+                                IsEmpty(colToDelete),
+                                IsEmpty(colToUpdate)
+                            ),
+                            If(
+                                'Task_A_ManagerUpdate&DeleteItems&NotificationofApproval(Instant)'.Run(
+                                    "",
+                                    "",
+                                    JSON(colToUpdateStatus)
+                                ).success = "true",
+                                And(
+                                    Notify("Your response has been successfully received."),
+                                    Task_A_SendCSVtoManager.Run()
+                                )
+                            )
+                            
+                        );
+                        Clear(colToUpdate);
+                        Clear(colToDelete);
+                        
+                        UpdateContext({varSuccessSubmit: true});
+                    PressedBorderColor: =RGBA(0, 0, 0, 1)
+                    PressedColor: =RGBA(0, 0, 0, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Size: =Self.Height*0.3
+                    Text: ="Confirm"
+                    Width: =Parent.Width*0.48
+                    X: =(Parent.Width-Parent.PaddingRight-Self.Width)
+                    Y: =BackSubmitButtonContainer_3.Height-Self.Height-BackSubmitButtonContainer_3.PaddingBottom
+                    ZIndex: =1
+
+                CancelSubmit As button:
+                    BorderColor: =RGBA(2, 188, 148, 1)
+                    BorderThickness: =1
+                    Color: =RGBA(2, 188, 148, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FocusedBorderThickness: =2
+                    Font: ="Poppins"
+                    Height: =Parent.Height*0.45
+                    HoverBorderColor: =ColorFade(Self.BorderColor,-20%)
+                    HoverColor: =ColorFade(Self.Color,-20%)
+                    HoverFill: =ColorFade(Self.Fill,-10%)
+                    OnSelect: |-
+                        =UpdateContext({varConfirmSubmit: false})
+                    PressedBorderColor: =ColorFade(Self.BorderColor,-40%)
+                    PressedColor: =ColorFade(Self.Color,-40%)
+                    PressedFill: =ColorFade(Self.Fill,-20%)
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Size: =Self.Height*0.3
+                    Text: ="Cancel"
+                    Width: =Parent.Width*0.48
+                    X: =Parent.PaddingLeft
+                    Y: =BackSubmitButtonContainer_3.Height-Self.Height-BackSubmitButtonContainer_3.PaddingBottom
+                    ZIndex: =2
+
+            EmptyFooterMargin_3 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox_3.Height/10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox_3.Width*0.85
+                ZIndex: =6
+
+    SubmissionSuccessfulPopUp As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(34, 48, 45, 0.8)
+        Height: |
+            =Parent.Height
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =varSuccessSubmit
+        Width: =Parent.Width
+        ZIndex: =5
+
+        DialogBox_4 As groupContainer.verticalAutoLayoutContainer:
+            BorderColor: =RGBA(148, 148, 148, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
+            DropShadow: =DropShadow.Regular
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Parent.Height*0.4
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Width: =Parent.Width*0.4
+            X: =(Parent.Width-Self.Width)/2
+            Y: =(Parent.Height-Self.Height)/2
+            ZIndex: =1
+
+            EmptyHeaderMargin_4 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox_4.Height/10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox_4.Width*0.85
+                ZIndex: =1
+
+            DialogStartsHere_4 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =Parent.Height*0.3
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                Width: =DialogBox_4.Width*0.85
+                ZIndex: =2
+
+                ConfirmSubmissionTitle_1 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(5, 50, 43, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: ="Poppins"
+                    FontWeight: =FontWeight.Semibold
+                    Height: =DialogStartsHere_4.Height
+                    Size: =Parent.Height*0.3
+                    Text: =""
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                Icon2 As icon.CheckBadge:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Color: =RGBA(1, 131, 116, 1)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Height: =Parent.Height*0.6
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.CheckBadge
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Width: =Self.Height
+                    X: =(Parent.Width-Self.Width)/2
+                    Y: =(Parent.Height-Self.Height)*2/3
+                    ZIndex: =3
+
+            ThisActionCannotBeUndoneMessage_1 As label:
+                Align: =Align.Justify
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(5, 50, 43, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: ="Poppins"
+                Height: =Parent.Height*0.35
+                Size: =Self.Height*0.13
+                Text: ="Your submission is successfully received. Your team Task Analysis report will be sent to your email shortly."
+                VerticalAlign: =VerticalAlign.Top
+                Width: =DialogStartsHere_4.Width
+                ZIndex: =4
+
+            BackSubmitButtonContainer_4 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =Parent.Height*0.15
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox_4.Width*0.85
+                ZIndex: =5
+
+                ConfirmSubmit_1 As button:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderThickness: =1
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    Fill: =RGBA(5, 50, 43, 1)
+                    FocusedBorderThickness: =2
+                    Font: ="Poppins"
+                    Height: =Parent.Height*0.95
+                    HoverBorderColor: =RGBA(0, 0, 0, 1)
+                    HoverColor: =RGBA(0, 0, 0, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: |-
+                        =UpdateContext({varSuccessSubmit: false});
+                        UpdateContext({varConfirmSubmit: false});
+                    PressedBorderColor: =RGBA(0, 0, 0, 1)
+                    PressedColor: =RGBA(0, 0, 0, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =5
+                    RadiusBottomRight: =5
+                    RadiusTopLeft: =5
+                    RadiusTopRight: =5
+                    Size: =Self.Height*0.3
+                    Text: ="Back to Review Page"
+                    Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                    X: =(Parent.Width-Self.Width)/2
+                    Y: =(Parent.Height-Self.Height)/2
+                    ZIndex: =1
+
+            EmptyFooterMargin_4 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =DialogBox_4.Height/10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                RadiusTopLeft: =10
+                RadiusTopRight: =10
+                Width: =DialogBox_4.Width*0.85
                 ZIndex: =6
 
