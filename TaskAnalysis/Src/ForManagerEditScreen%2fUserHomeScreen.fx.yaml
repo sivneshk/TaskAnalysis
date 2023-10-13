@@ -275,13 +275,8 @@
                         Items: |-
                             =If(
                                 IsBlank(SlicerUserMailScreen3.SelectedItems) || IsEmpty(SlicerUserMailScreen3.SelectedItems),
-                                Sort(
-                                    Distinct(
-                                        'Task Analysis Taxonomy Collection',
-                                        CoCo
-                                    ),
-                                    Value
-                                ),
+                                Sort(Distinct(Filter('Task Analysis Taxonomy Collection', Manager_L1 = User().Email), CoCo),Value)
+                               ,
                                 Distinct(
                                     Filter(
                                         'Task Analysis Taxonomy Collection',
@@ -326,13 +321,7 @@
                                     IsEmpty(SlicerCOCOScreen3.SelectedItems),
                                     IsBlank(SlicerCOCOScreen3.SelectedItems)
                                 ),
-                                Sort(
-                                    Distinct(
-                                        'Task Analysis Taxonomy Collection',
-                                        Title
-                                    ),
-                                    Value
-                                ),
+                                Sort(Distinct(Filter('Task Analysis Taxonomy Collection', Manager_L1 = User().Email),Title),Value),
                                 IsBlank(SlicerUserMailScreen3.SelectedItems) || IsEmpty(SlicerUserMailScreen3.SelectedItems),
                                 Sort(
                                     Distinct(
