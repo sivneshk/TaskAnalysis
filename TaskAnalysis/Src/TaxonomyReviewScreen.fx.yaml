@@ -431,7 +431,7 @@ TaxonomyReviewScreen As screen:
                     RadiusTopRight: =2
                     Size: =SubmitBTN.Size
                     Text: ="Back"
-                    Width: =ReviewScreenPanel.Width*0.06
+                    Width: =ReviewScreenPanel.Width*0.07
                     X: =ReviewScreenPanel.X
                     ZIndex: =2
 
@@ -483,7 +483,7 @@ TaxonomyReviewScreen As screen:
                     RadiusTopRight: =2
                     Size: =Self.Height/3
                     Text: =""
-                    Width: =ReviewScreenPanel.Width*0.06
+                    Width: =ReviewScreenPanel.Width*0.07
                     X: =ReviewScreenPanel.X
                     ZIndex: =4
 
