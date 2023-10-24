@@ -1,6 +1,6 @@
 TaskAnalysisScreen As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: =
+    OnVisible: =Refresh('Task Analysis Taxonomy Collection');
 
     HomeContainer As groupContainer.manualLayoutContainer:
         Height: |
