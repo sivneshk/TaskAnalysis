@@ -2344,7 +2344,7 @@
                         Font: ="Noto Sans"
                         FontSize: =HeaderUniqueID_1.Size
                         Height: =Parent.TemplateHeight/7
-                        Items: =Sort(Distinct('Task Analysis Taxonomy Collection','User Name'),Value)
+                        Items: =Sort(Distinct(Filter('Task Analysis Taxonomy Collection', Manager_L1 = User().Email),'User Name'),Value)
                         OnChange: =Set(uniqueIDVar,EmployeeNameDropdown.Selected.Value)
                         OnSelect: =
                         PaddingStart: =0
@@ -2643,6 +2643,8 @@
                             Reset(Timer1);
                             UpdateContext({startTimer: true});
                             
+                            Clear(colNewTaskV1);
+                            
                             
                             
                             
@@ -2674,7 +2676,9 @@
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(Self.Fill,20%)
                         OnSelect: |
-                            =UpdateContext(
+                            =Clear(colNewTaskV1);
+                            
+                            UpdateContext(
                                 {ShowManagerPopUp:
                                 false}
                             );
