@@ -1724,8 +1724,8 @@ TaskAnalysisScreen As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Size: =Self.Height*0.35
-                Text: ="Task Analysis Support"
-                Underline: =true
+                Text: ="✉ " & "Task Analysis Support"
+                Underline: =If(Self.Text = "Task Analysis Support", true, false)
                 Width: =DialogStartsHere_1.Width
                 ZIndex: =4
 
