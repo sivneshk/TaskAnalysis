@@ -1174,7 +1174,7 @@
                         Size: =Self.Height/3
                         Text: ="Submit"
                         Width: =RightPanel3.Width*0.13
-                        X: =(EmployeeNameCardScreen3_1.Width-Self.Width)
+                        X: =(Parent.Width*0.97-Self.Width)
                         Y: =(ReviewBtnContainer_2.Height-Self.Height)/2
                         ZIndex: =1
 
@@ -2643,14 +2643,17 @@
                             
                             ClearCollect(colNewTaskV3, AddColumns(AddColumns(RenameColumns(ShowColumns(Ungroup(Ungroup(colNewTaskV2, "User Name"), "Company Code"),"UniqueID", "Value","Task", "Title", "field_2", "field_3", "field_6", "field_8"), "Value", "User Name", "Title", "Company Code", "field_2", "LE Name", "field_3", "Associated_LE", "field_6", "Business Segment", "field_8", "Region") As aVar, "User Email", LookUp('Task Analysis Taxonomy Collection', 'User Name'= aVar[@'User Name'], 'User Email'), "EmployeeID", LookUp('Task Analysis Taxonomy Collection', 'User Name'= aVar[@'User Name'], EmployeeID),"Country", Blank(), "PC", Blank(), "ColourID", Blank(), "rowNumber", Blank(), "Input Hours", Blank() ) As bVar, "L1 Manager", Office365Users.ManagerV2(bVar[@'User Email']).mail));
                             
-                            If(Task_A_JSONFlowUsertoSP.Run(JSON(colNewTaskV3)).success="true", Notify("Your response has been successfully received. Please wait, you will be redirected to the previous screen."));
+                            If(Task_A_JSONFlowUsertoSP.Run(JSON(colNewTaskV3)).success="true", Notify("Please wait, you will be redirected to the previous screen."));
+                            
+                            Refresh('Task Analysis Taxonomy Collection');
+                            ClearCollect(colTaskAnalysisSP, ShowColumns('Task Analysis Taxonomy Collection', "Title", "Associated_x0020_LE", "CoCo", "EmployeeID", "LE_x0020_Name", "UserName", "Process_x0020_Name", "ID", "InputHours", "Region", "Unique_x0020_ID"));
                             
                             UpdateContext({inProgress: DisplayMode.Disabled});
                             UpdateContext({startTimer: false});
                             Reset(Timer1);
                             UpdateContext({startTimer: true});
                             
-                            Clear(colNewTaskV1);
+                            
                             
                             
                             
@@ -2718,10 +2721,7 @@
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =RGBA(16, 110, 190, 1)
                         OnTimerEnd: |-
-                            =Refresh('Task Analysis Taxonomy Collection');
-                            ClearCollect(colTaskAnalysisSP, ShowColumns('Task Analysis Taxonomy Collection', "Title", "Associated_x0020_LE", "CoCo", "EmployeeID", "LE_x0020_Name", "UserName", "Process_x0020_Name", "ID", "InputHours", "Region", "Unique_x0020_ID"));
-                            
-                            Clear(colNewTaskV1);
+                            =Clear(colNewTaskV1);
                             Clear(colNewTaskV2);
                             Clear(colNewTaskV3);
                             
