@@ -2649,11 +2649,6 @@
                             Refresh('Task Analysis Taxonomy Collection');
                             ClearCollect(colTaskAnalysisSP, ShowColumns(Filter('Task Analysis Taxonomy Collection', 'User Email'<> User().Email, Manager_L1 = User().Email), "Title", "Associated_x0020_LE", "CoCo", "EmployeeID", "LE_x0020_Name", "UserName", "Process_x0020_Name", "ID", "InputHours", "Region", "Unique_x0020_ID", "User_x0020_Email", "Manager_L1"));
                             
-                            UpdateContext(
-                                {ShowManagerPopUp:
-                                false}
-                            );
-                            
                             UpdateContext({startTimer: false});
                             Reset(Timer1);
                             UpdateContext({startTimer: true});
