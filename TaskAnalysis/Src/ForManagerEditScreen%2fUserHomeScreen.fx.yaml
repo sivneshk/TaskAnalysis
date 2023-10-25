@@ -1261,13 +1261,14 @@
                         HoverBorderColor: =RGBA(2, 188, 148, 1)
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: |
+                        OnSelect: |-
                             =UpdateContext({inProgress: DisplayMode.Edit});
                             Reset(Timer1);
                             UpdateContext(
                                 {ShowManagerPopUp:
                                 true}
                                 );
+                            UpdateContext({IsPressed: false});
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
@@ -2616,10 +2617,29 @@
                         DisabledColor: =RGBA(208, 208, 208, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         DisplayMode: |-
-                            =If(
-                               And( CountRows(Filter(Gallery1_1.AllItems, Or(IsBlank(COCODropdown.SelectedItems), IsEmpty(COCODropdown.SelectedItems))))=0,
-                               CountRows(Filter(Gallery1_1.AllItems, Or(IsBlank(EmployeeNameDropdown.SelectedItems), IsEmpty(EmployeeNameDropdown.SelectedItems))))=0,
-                               !IsEmpty(colNewTaskV1)),
+                            =If(Or(
+                                And(
+                                    CountRows(
+                                        Filter(
+                                            Gallery1_1.AllItems,
+                                            Or(
+                                                IsBlank(COCODropdown.SelectedItems),
+                                                IsEmpty(COCODropdown.SelectedItems)
+                                            )
+                                        )
+                                    ) = 0,
+                                    CountRows(
+                                        Filter(
+                                            Gallery1_1.AllItems,
+                                            Or(
+                                                IsBlank(EmployeeNameDropdown.SelectedItems),
+                                                IsEmpty(EmployeeNameDropdown.SelectedItems)
+                                            )
+                                        )
+                                    ) = 0,
+                                    !IsEmpty(colNewTaskV1)
+                                ),
+                                !IsPressed),
                                 DisplayMode.Edit,
                                 DisplayMode.Disabled
                             )
@@ -2631,8 +2651,11 @@
                         HoverColor: =ColorFade(Self.Color,-10%)
                         HoverFill: =RGBA(2, 188, 148, 0.1)
                         OnSelect: |+
-                            =/*colToAddByManager contains rows that has been ADDED ONLY */
+                            =/*colNewTaskV3 contains rows that has been ADDED ONLY */
+                            
                             UpdateContext({inProgress: DisplayMode.Disabled});
+                            UpdateContext({IsPressed: true});
+                            
                             Clear(colNewTaskV2);
                             ForAll(Gallery1_1.AllItems,
                                     Collect(colNewTaskV2, {
@@ -2735,12 +2758,14 @@
                             );
                             
                             UpdateContext({inProgress: DisplayMode.Edit});
+                            UpdateContext({IsPressed: false});
                         OnTimerStart: =
                         PressedBorderColor: =RGBA(16, 110, 190, 1)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(16, 110, 190, 1)
                         Reset: =true
                         Start: =startTimer
+                        Visible: =false
                         Width: =128
                         X: =27
                         Y: =18

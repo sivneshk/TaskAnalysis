@@ -464,7 +464,7 @@
                 },
                 "region": {
                   "charLength": 12,
-                  "charOffset": 1426,
+                  "charOffset": 1457,
                   "snippet": {
                     "text": "'User Email'"
                   }
@@ -504,7 +504,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1438,
+                  "charOffset": 1469,
                   "snippet": {
                     "text": "<>"
                   }
