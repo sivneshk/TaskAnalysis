@@ -2617,8 +2617,9 @@
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         DisplayMode: |-
                             =If(
-                               Or( CountRows(Filter(Gallery1_1.AllItems, Or(IsBlank(COCODropdown.SelectedItems), IsEmpty(COCODropdown.SelectedItems))))=0,
-                               CountRows(Filter(Gallery1_1.AllItems, Or(IsBlank(EmployeeNameDropdown.SelectedItems), IsEmpty(EmployeeNameDropdown.SelectedItems))))=0),
+                               And( CountRows(Filter(Gallery1_1.AllItems, Or(IsBlank(COCODropdown.SelectedItems), IsEmpty(COCODropdown.SelectedItems))))=0,
+                               CountRows(Filter(Gallery1_1.AllItems, Or(IsBlank(EmployeeNameDropdown.SelectedItems), IsEmpty(EmployeeNameDropdown.SelectedItems))))=0,
+                               !IsEmpty(colNewTaskV1)),
                                 DisplayMode.Edit,
                                 DisplayMode.Disabled
                             )
