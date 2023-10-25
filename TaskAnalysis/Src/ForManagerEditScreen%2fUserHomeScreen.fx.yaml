@@ -2632,6 +2632,7 @@
                         HoverFill: =RGBA(2, 188, 148, 0.1)
                         OnSelect: |+
                             =/*colToAddByManager contains rows that has been ADDED ONLY */
+                            UpdateContext({inProgress: DisplayMode.Disabled});
                             Clear(colNewTaskV2);
                             ForAll(Gallery1_1.AllItems,
                                     Collect(colNewTaskV2, {
@@ -2646,9 +2647,13 @@
                             If(Task_A_JSONFlowUsertoSP.Run(JSON(colNewTaskV3)).success="true", Notify("Please wait, you will be redirected to the previous screen."));
                             
                             Refresh('Task Analysis Taxonomy Collection');
-                            ClearCollect(colTaskAnalysisSP, ShowColumns('Task Analysis Taxonomy Collection', "Title", "Associated_x0020_LE", "CoCo", "EmployeeID", "LE_x0020_Name", "UserName", "Process_x0020_Name", "ID", "InputHours", "Region", "Unique_x0020_ID"));
+                            ClearCollect(colTaskAnalysisSP, ShowColumns(Filter('Task Analysis Taxonomy Collection', 'User Email'<> User().Email, Manager_L1 = User().Email), "Title", "Associated_x0020_LE", "CoCo", "EmployeeID", "LE_x0020_Name", "UserName", "Process_x0020_Name", "ID", "InputHours", "Region", "Unique_x0020_ID", "User_x0020_Email", "Manager_L1"));
                             
-                            UpdateContext({inProgress: DisplayMode.Disabled});
+                            UpdateContext(
+                                {ShowManagerPopUp:
+                                false}
+                            );
+                            
                             UpdateContext({startTimer: false});
                             Reset(Timer1);
                             UpdateContext({startTimer: true});
@@ -2678,6 +2683,7 @@
                         DisabledBorderColor: =RGBA(208, 208, 208, 1)
                         DisabledColor: =RGBA(208, 208, 208, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayMode: =inProgress
                         Fill: =RGBA(5, 50, 43, 1)
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
@@ -2713,7 +2719,7 @@
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         DisplayMode: =DisplayMode.View
-                        Duration: =5000
+                        Duration: =4000
                         Fill: =RGBA(0, 120, 212, 1)
                         Font: =Font.'Segoe UI'
                         Height: =37
@@ -2721,7 +2727,10 @@
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =RGBA(16, 110, 190, 1)
                         OnTimerEnd: |-
-                            =Clear(colNewTaskV1);
+                            =Refresh('Task Analysis Taxonomy Collection');
+                            ClearCollect(colTaskAnalysisSP, ShowColumns(Filter('Task Analysis Taxonomy Collection', 'User Email'<> User().Email, Manager_L1 = User().Email), "Title", "Associated_x0020_LE", "CoCo", "EmployeeID", "LE_x0020_Name", "UserName", "Process_x0020_Name", "ID", "InputHours", "Region", "Unique_x0020_ID", "User_x0020_Email", "Manager_L1"));
+                            
+                            Clear(colNewTaskV1);
                             Clear(colNewTaskV2);
                             Clear(colNewTaskV3);
                             
