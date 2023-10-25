@@ -2710,10 +2710,10 @@
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         DisplayMode: =DisplayMode.View
-                        Duration: =8000
+                        Duration: =5000
                         Fill: =RGBA(0, 120, 212, 1)
                         Font: =Font.'Segoe UI'
-                        Height: =34
+                        Height: =37
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =RGBA(16, 110, 190, 1)
@@ -2737,10 +2737,9 @@
                         PressedFill: =RGBA(16, 110, 190, 1)
                         Reset: =true
                         Start: =startTimer
-                        Visible: =false
-                        Width: =58
-                        X: =132
-                        Y: =77
+                        Width: =128
+                        X: =27
+                        Y: =18
                         ZIndex: =3
 
             FilterPaneOnSelectContainer As groupContainer.manualLayoutContainer:
