@@ -1179,19 +1179,20 @@
                         ZIndex: =1
 
                     EditBtn As button:
-                        BorderColor: =RGBA(2, 188, 148, 1)
+                        BorderColor: |
+                            =If(Self.Text= "Edit", RGBA(2, 188, 148, 1), Self.Text= "Save changes", RGBA(255, 255, 255, 1))
                         BorderThickness: =1
-                        Color: =RGBA(2, 188, 148, 1)
+                        Color: =If(Self.Text= "Edit", RGBA(2, 188, 148, 1), Self.Text= "Save changes", RGBA(255, 255, 255, 1))
                         DisabledBorderColor: =RGBA(208, 208, 208, 1)
                         DisabledColor: =RGBA(208, 208, 208, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        Fill: =RGBA(255, 255, 255, 1)
+                        Fill: =If(Self.Text= "Edit", RGBA(255, 255, 255, 1), Self.Text= "Save changes", RGBA(1,131,116,1))
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
                         Height: =AddTaskBtn_1.Height
                         HoverBorderColor: =ColorFade(Self.BorderColor,-10%)
                         HoverColor: =ColorFade(Self.Color,-20%)
-                        HoverFill: =RGBA(2, 188, 148, 0.15)
+                        HoverFill: =If(Self.Text= "Edit", RGBA(2, 188, 148, 0.15), Self.Text= "Save changes", ColorFade(Self.Fill, 10%))
                         OnSelect: |+
                             =If(varEdit <> DisplayMode.Edit, UpdateContext({varEdit: DisplayMode.Edit}), UpdateContext({varEdit: DisplayMode.Disabled}));
                             UpdateContext({
