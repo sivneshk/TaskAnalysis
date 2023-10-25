@@ -2617,7 +2617,7 @@
                         DisabledColor: =RGBA(208, 208, 208, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         DisplayMode: |-
-                            =If(Or(
+                            =If(
                                 And(
                                     CountRows(
                                         Filter(
@@ -2637,9 +2637,9 @@
                                             )
                                         )
                                     ) = 0,
-                                    !IsEmpty(colNewTaskV1)
+                                    !IsEmpty(colNewTaskV1),
+                                    !IsPressed
                                 ),
-                                !IsPressed),
                                 DisplayMode.Edit,
                                 DisplayMode.Disabled
                             )
