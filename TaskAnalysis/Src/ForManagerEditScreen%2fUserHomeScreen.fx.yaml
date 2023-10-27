@@ -2076,7 +2076,7 @@
                         Fill: =RGBA(2, 188, 148, 1)
                         FocusedBorderThickness: =2
                         Font: ="Poppins"
-                        Height: =Parent.Height*0.4
+                        Height: =Parent.Height*0.45
                         HoverBorderColor: =RGBA(2, 188, 148, 1)
                         HoverColor: =RGBA(2, 188, 148, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
@@ -2342,7 +2342,7 @@
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: =Blank()
-                        DisplayMode: =DisplayMode.Edit
+                        DisplayMode: =inProgress
                         Font: ="Noto Sans"
                         FontSize: =HeaderUniqueID_1.Size
                         Height: =Parent.TemplateHeight/7
@@ -2370,7 +2370,7 @@
                         AllowSearching: =true
                         Color: =RGBA(26, 35, 33, 1)
                         DefaultSelectedItems: =Blank()
-                        DisplayMode: =DisplayMode.Edit
+                        DisplayMode: =inProgress
                         Font: ="Noto Sans"
                         FontSize: =HeaderUniqueID_1.Size
                         Height: =Parent.TemplateHeight/7
@@ -2582,6 +2582,7 @@
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
                         DisabledColor: =RGBA(225, 223, 221, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
+                        DisplayMode: =inProgress
                         FocusedBorderThickness: =4
                         Height: =ForUniqueID.Height
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -4201,12 +4202,7 @@
                         InputTextPlaceholder: ="L2 Taxonomy (Max. 10 Selections)"
                         IsSearchable: =false
                         Items: |-
-                            =/* If(And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)))
-                                ,
-                                Sort(Distinct('Process Taxonomy',L2),Value) 
-                                ,
-                                And(Or(!IsEmpty(Dropdown_8.SelectedItems), !IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)))
-                                ,
+                            =If(!IsBlank(Dropdown_8.SelectedItems),
                                 Distinct(
                                     Ungroup(
                                         ForAll(
@@ -4219,42 +4215,8 @@
                                         "Value"
                                     ),
                                     OData__x004c_2
-                                )
-                                ,
-                                Distinct(
-                                    Ungroup(
-                                        ForAll(
-                                            Dropdown_9.SelectedItems As aPatch,
-                                            Filter(
-                                                'Process Taxonomy',
-                                                L1 = aPatch.Value
-                                            )
-                                        ),
-                                        "Value"
-                                    ),
-                                    OData__x004c_2
-                                )
-                            ) */
-                            /* If(Or(!IsEmpty(Dropdown_9.SelectedItems), !IsBlank(Dropdown_9.SelectedItems))
-                                ,
-                                Distinct(
-                                    Ungroup(
-                                        ForAll(
-                                            Dropdown_9.SelectedItems As aPatch,
-                                            Filter(
-                                                'Process Taxonomy',
-                                                L1 = aPatch.Value
-                                            )
-                                        ),
-                                        "Value"
-                                    ),
-                                    OData__x004c_2
-                                )
-                                ,
-                                Sort(Distinct('Process Taxonomy',L2),Value) 
-                            ) */
-                            
-                            If(Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems))
+                                ),
+                                Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems))
                                ,
                                 Sort(Distinct('Process Taxonomy',L2),Value) 
                                 ,
@@ -4322,7 +4284,21 @@
                         InputTextPlaceholder: ="L3 Taxonomy (Max. 10 Selections)"
                         IsSearchable: =false
                         Items: |-
-                            =If(And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)), Or(IsEmpty(Dropdown_10.SelectedItems), IsBlank(Dropdown_10.SelectedItems)))
+                            =If(IsBlank(Dropdown_8.SelectedItems),
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            Dropdown_8.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                Title = aPatch.Title
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_3
+                                ),
+                                And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)), Or(IsEmpty(Dropdown_10.SelectedItems), IsBlank(Dropdown_10.SelectedItems)))
                                 ,
                                 Sort(Distinct('Process Taxonomy',L3),Value) 
                                 ,
@@ -4405,7 +4381,21 @@
                         InputTextPlaceholder: ="L4 Taxonomy (Max. 10 Selections)"
                         IsSearchable: =false
                         Items: |-
-                            =If(And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)), Or(IsEmpty(Dropdown_10.SelectedItems), IsBlank(Dropdown_10.SelectedItems)), Or(IsEmpty(Dropdown_11.SelectedItems), IsBlank(Dropdown_11.SelectedItems)))
+                            =If(IsBlank(Dropdown_8.SelectedItems),
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            Dropdown_8.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                Title = aPatch.Title
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_4
+                                ),
+                                And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)), Or(IsEmpty(Dropdown_10.SelectedItems), IsBlank(Dropdown_10.SelectedItems)), Or(IsEmpty(Dropdown_11.SelectedItems), IsBlank(Dropdown_11.SelectedItems)))
                                 ,
                                 Sort(Distinct('Process Taxonomy',L4),Value) 
                                 ,
@@ -4488,7 +4478,21 @@
                         InputTextPlaceholder: ="L5 Taxonomy (Max. 10 Selections)"
                         IsSearchable: =false
                         Items: |-
-                            =If(And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)), Or(IsEmpty(Dropdown_10.SelectedItems), IsBlank(Dropdown_10.SelectedItems)), Or(IsEmpty(Dropdown_11.SelectedItems), IsBlank(Dropdown_11.SelectedItems)), Or(IsEmpty(Dropdown_12.SelectedItems), IsBlank(Dropdown_12.SelectedItems)))
+                            =If(IsBlank(Dropdown_8.SelectedItems),
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            Dropdown_8.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                Title = aPatch.Title
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_5
+                                ),
+                                And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)), Or(IsEmpty(Dropdown_10.SelectedItems), IsBlank(Dropdown_10.SelectedItems)), Or(IsEmpty(Dropdown_11.SelectedItems), IsBlank(Dropdown_11.SelectedItems)), Or(IsEmpty(Dropdown_12.SelectedItems), IsBlank(Dropdown_12.SelectedItems)))
                                 ,
                                 Sort(Distinct('Process Taxonomy',L5),Value) 
                                 ,
@@ -4570,7 +4574,21 @@
                         InputTextPlaceholder: ="L6 Taxonomy (Max. 10 Selections)"
                         IsSearchable: =false
                         Items: |-
-                            =If(And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)), Or(IsEmpty(Dropdown_10.SelectedItems), IsBlank(Dropdown_10.SelectedItems)), Or(IsEmpty(Dropdown_11.SelectedItems), IsBlank(Dropdown_11.SelectedItems)), Or(IsEmpty(Dropdown_12.SelectedItems), IsBlank(Dropdown_12.SelectedItems)), Or(IsEmpty(Dropdown_13.SelectedItems), IsBlank(Dropdown_13.SelectedItems)))
+                            =If(IsBlank(Dropdown_8.SelectedItems),
+                                Distinct(
+                                    Ungroup(
+                                        ForAll(
+                                            Dropdown_8.SelectedItems As aPatch,
+                                            Filter(
+                                                'Process Taxonomy',
+                                                Title = aPatch.Title
+                                            )
+                                        ),
+                                        "Value"
+                                    ),
+                                    OData__x004c_6
+                                ),
+                                And(Or(IsEmpty(Dropdown_8.SelectedItems), IsBlank(Dropdown_8.SelectedItems)), Or(IsEmpty(Dropdown_9.SelectedItems), IsBlank(Dropdown_9.SelectedItems)), Or(IsEmpty(Dropdown_10.SelectedItems), IsBlank(Dropdown_10.SelectedItems)), Or(IsEmpty(Dropdown_11.SelectedItems), IsBlank(Dropdown_11.SelectedItems)), Or(IsEmpty(Dropdown_12.SelectedItems), IsBlank(Dropdown_12.SelectedItems)), Or(IsEmpty(Dropdown_13.SelectedItems), IsBlank(Dropdown_13.SelectedItems)))
                                 ,
                                 Sort(Distinct('Process Taxonomy',L6),Value) 
                                 ,
