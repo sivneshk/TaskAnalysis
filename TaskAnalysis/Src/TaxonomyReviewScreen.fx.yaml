@@ -35,12 +35,14 @@ TaxonomyReviewScreen As screen:
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =Parent.Width*0.1
-                X: =Parent.Width-Self.Width
+                X: =Parent.Width-Self.Width-BodyContainerScreen2.PaddingRight
                 Y: =(HeaderContainerScreen2.Height-Self.Height)/2
                 ZIndex: =2
 
         BodyContainerScreen2 As groupContainer.manualLayoutContainer:
             Height: =Parent.Height-HeaderContainerScreen2.Height-FooterContainerScreen2.Height
+            PaddingLeft: =20
+            PaddingRight: =20
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
@@ -382,7 +384,7 @@ TaxonomyReviewScreen As screen:
                             
                             Refresh('Task Analysis Taxonomy Collection');
                             
-                            Navigate(TaskAnalysisScreen);
+                            Navigate(TaskAnalysisScreen, ScreenTransition.Fade);
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
@@ -419,9 +421,9 @@ TaxonomyReviewScreen As screen:
                     HoverBorderColor: =RGBA(2, 188, 148, 1)
                     HoverColor: =RGBA(2, 188, 148, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
-                    OnSelect: =
+                    OnSelect: =Navigate(TaskAnalysisScreen, ScreenTransition.Fade)
                     PaddingLeft: =25
-                    PaddingRight: =20
+                    PaddingRight: =15
                     PressedBorderColor: =RGBA(230, 230, 230, 1)
                     PressedColor: =RGBA(2, 188, 148, 1)
                     PressedFill: =RGBA(255, 255, 255, 1)
@@ -429,7 +431,7 @@ TaxonomyReviewScreen As screen:
                     RadiusBottomRight: =2
                     RadiusTopLeft: =2
                     RadiusTopRight: =2
-                    Size: =SubmitBTN.Size
+                    Size: =Self.Height/2
                     Text: ="Back"
                     Width: =ReviewScreenPanel.Width*0.07
                     X: =ReviewScreenPanel.X
@@ -447,6 +449,7 @@ TaxonomyReviewScreen As screen:
                     HoverColor: =RGBA(16, 110, 190, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.ArrowLeft
+                    OnSelect: =Navigate(TaskAnalysisScreen, ScreenTransition.Fade)
                     PaddingLeft: =5
                     PaddingRight: =5
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
@@ -471,7 +474,7 @@ TaxonomyReviewScreen As screen:
                     HoverBorderColor: =Color.Transparent
                     HoverColor: =Color.Transparent
                     HoverFill: =RGBA(255,255,255,0.2)
-                    OnSelect: =Navigate(TaskAnalysisScreen)
+                    OnSelect: =Navigate(TaskAnalysisScreen, ScreenTransition.Fade)
                     PaddingLeft: =20
                     PaddingRight: =20
                     PressedBorderColor: =Color.Transparent

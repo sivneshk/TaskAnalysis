@@ -57,7 +57,7 @@
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =Parent.Width*0.1
-                X: =Parent.Width-Self.Width
+                X: =Parent.Width-Self.Width-BodyContainerScreen3_1.PaddingRight
                 Y: =(HeaderContainerScreen3_1.Height-Self.Height)/2
                 ZIndex: =2
 

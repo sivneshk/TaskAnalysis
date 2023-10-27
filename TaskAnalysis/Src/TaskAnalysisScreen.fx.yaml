@@ -54,7 +54,7 @@ TaskAnalysisScreen As screen:
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =Parent.Width*0.1
-                X: =Parent.Width-Self.Width
+                X: =Parent.Width-Self.Width-BodyContainer.PaddingRight
                 Y: =(HeaderContainer.Height-Self.Height)/2
                 ZIndex: =2
 
@@ -1108,7 +1108,7 @@ TaskAnalysisScreen As screen:
                                            )
                             );
                             
-                            Navigate(TaxonomyReviewScreen)
+                            Navigate(TaxonomyReviewScreen, ScreenTransition.Fade)
                         PressedBorderColor: =RGBA(230, 230, 230, 1)
                         PressedColor: =RGBA(2, 188, 148, 1)
                         PressedFill: =RGBA(255, 255, 255, 1)
