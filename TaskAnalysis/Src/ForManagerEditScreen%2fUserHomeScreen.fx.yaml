@@ -2744,7 +2744,7 @@
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         DisplayMode: =DisplayMode.View
-                        Duration: =4000
+                        Duration: =3000
                         Fill: =RGBA(0, 120, 212, 1)
                         Font: =Font.'Segoe UI'
                         Height: =37
