@@ -1657,7 +1657,7 @@ TaskAnalysisScreen As screen:
                 Width: =DialogBox_1.Width*0.85
                 ZIndex: =2
 
-                SelectCompanyCode_1 As label:
+                Hello_User As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -1674,7 +1674,7 @@ TaskAnalysisScreen As screen:
                     Width: =Parent.Width
                     ZIndex: =2
 
-            PleaseChooseCompanyCode_1 As label:
+            WeHaveReceivedYourResponse As label:
                 Align: =Align.Justify
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -1687,7 +1687,7 @@ TaskAnalysisScreen As screen:
                 Height: =DialogBox_1.Height*0.3
                 LineHeight: =1.4
                 PaddingTop: =10
-                Size: =PleaseChooseCompanyCode_1.Height*0.12
+                Size: =WeHaveReceivedYourResponse.Height*0.12
                 Text: |-
                     ="We have received your response.
                     Should there be any changes, please reach out for assistance by clicking on the link below. Thank you 😊"
@@ -1695,7 +1695,7 @@ TaskAnalysisScreen As screen:
                 Width: =DialogStartsHere_1.Width
                 ZIndex: =3
 
-            Button1 As button:
+            LinkToLaunchEmail As button:
                 Align: =Align.Left
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -1729,7 +1729,7 @@ TaskAnalysisScreen As screen:
                 Width: =DialogStartsHere_1.Width
                 ZIndex: =4
 
-            BackSubmitButtonContainer_1 As groupContainer.manualLayoutContainer:
+            ExitAppContainer As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderStyle: =BorderStyle.None
                 FillPortions: =0
@@ -1767,10 +1767,10 @@ TaskAnalysisScreen As screen:
                     RadiusTopLeft: =5
                     RadiusTopRight: =5
                     Size: =Self.Height*0.3
-                    Text: ="Leave App"
+                    Text: ="Exit App"
                     Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                     X: =(Parent.Width-Self.Width)/2
-                    Y: =BackSubmitButtonContainer_1.Height-Self.Height-BackSubmitButtonContainer_1.PaddingBottom
+                    Y: =ExitAppContainer.Height-Self.Height-ExitAppContainer.PaddingBottom
                     ZIndex: =1
 
             EmptyFooterMargin_1 As groupContainer.manualLayoutContainer:

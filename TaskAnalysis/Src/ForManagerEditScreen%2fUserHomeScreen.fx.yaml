@@ -2357,8 +2357,8 @@
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="Employee Name"
-                        Width: =Parent.Width*0.9
-                        X: =(Parent.Width-Self.Width)/2
+                        Width: =Parent.Width*0.83
+                        X: =ForAssignTo.X
                         Y: =ForAssignTo.Y+ForAssignTo.Height
                         ZIndex: =8
 
@@ -2384,8 +2384,8 @@
                         PaddingStart: =0
                         PCFTeamsTheme: ="default"
                         Text: ="Select Company Code"
-                        Width: =Parent.Width*0.9
-                        X: =(Parent.Width-Self.Width)/2
+                        Width: =Parent.Width*0.83
+                        X: =ForCOCO.X
                         Y: =ForCOCO.Y+ForCOCO.Height
                         ZIndex: =9
 
@@ -2581,7 +2581,7 @@
                             Order: =24
                             ZIndex: =108
 
-                    Icon1 As icon.Trash:
+                    DeleteItemIcon As icon.Trash:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         Color: =RGBA(255, 0, 0, 1)
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -2604,6 +2604,56 @@
                         Width: =Self.Height
                         X: =ForUniqueID.Width+ForUniqueID.X-Self.Width
                         ZIndex: =10
+
+                    ClearEmployeeName As icon.Erase:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(2, 188, 148, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =EmployeeNameDropdown.Height
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =ColorFade(Self.Color, -20%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Erase
+                        OnSelect: =Reset(EmployeeNameDropdown)
+                        PaddingBottom: =5
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =5
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =ColorFade(Self.Color, -40%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Self.Height
+                        X: =EmployeeNameDropdown.X+EmployeeNameDropdown.Width
+                        Y: =EmployeeNameDropdown.Y
+                        ZIndex: =11
+
+                    ClearCocoDropdown As icon.Erase:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(2, 188, 148, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =EmployeeNameDropdown.Height
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =ColorFade(Self.Color, -20%)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Erase
+                        OnSelect: =Reset(COCODropdown)
+                        PaddingBottom: =5
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =5
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =ColorFade(Self.Color, -40%)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Self.Height
+                        X: =COCODropdown.X+COCODropdown.Width
+                        Y: =COCODropdown.Y
+                        ZIndex: =12
 
                 FooterButtonContainer_2 As groupContainer.manualLayoutContainer:
                     BorderStyle: =BorderStyle.None
@@ -4703,7 +4753,7 @@
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderStyle: =BorderStyle.None
                 FillPortions: =0
-                Height: =Parent.Height*0.2
+                Height: =Parent.Height*0.25
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 PaddingBottom: =5
@@ -4713,21 +4763,23 @@
                 Width: =DialogBox_2.Width*0.85
                 ZIndex: =2
 
-                SelectCompanyCode_2 As label:
+                Image3 As image:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
-                    Color: =RGBA(5, 50, 43, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    DisplayMode: =DisplayMode.View
                     FocusedBorderThickness: =4
-                    Font: ="Poppins"
-                    FontWeight: =FontWeight.Semibold
-                    Height: =DialogStartsHere_2.Height
-                    Size: =Parent.Height*0.4
-                    Text: ="❗ Confirm Deletion" 
-                    Width: =Parent.Width
-                    ZIndex: =2
+                    Height: =Parent.Height
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Image: ='wired-outline-1140-error'
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Width: =Self.Height
+                    X: =(Parent.Width-Self.Width)/2
+                    ZIndex: =3
 
             PleaseChooseCompanyCode_2 As label:
                 Align: =Align.Justify
@@ -4770,7 +4822,7 @@
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderStyle: =BorderStyle.None
                 FillPortions: =0
-                Height: =Parent.Height*0.3
+                Height: =Parent.Height*0.25
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 PaddingBottom: =5
@@ -4791,7 +4843,7 @@
                     Fill: =RGBA(0, 0, 0, 1)
                     FocusedBorderThickness: =2
                     Font: ="Poppins"
-                    Height: =Parent.Height*0.45
+                    Height: =Parent.Height*0.5
                     HoverBorderColor: =RGBA(0, 0, 0, 1)
                     HoverColor: =RGBA(0, 0, 0, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
@@ -4837,7 +4889,7 @@
                     Fill: =RGBA(255, 255, 255, 1)
                     FocusedBorderThickness: =2
                     Font: ="Poppins"
-                    Height: =Parent.Height*0.45
+                    Height: =Parent.Height*0.5
                     HoverBorderColor: =ColorFade(Self.BorderColor,-20%)
                     HoverColor: =ColorFade(Self.Color,-20%)
                     HoverFill: =ColorFade(Self.Fill,-10%)
@@ -4861,7 +4913,7 @@
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderStyle: =BorderStyle.None
                 FillPortions: =0
-                Height: =DialogBox_2.Height/10
+                Height: =Parent.Height-EmptyHeaderMargin_2.Height-DialogStartsHere_2.Height-PleaseChooseCompanyCode_2.Height-PleaseChooseCompanyCode_3.Height-BackSubmitButtonContainer_2.Height
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 PaddingBottom: =5
@@ -5237,26 +5289,24 @@
                     Width: =Parent.Width
                     ZIndex: =2
 
-                Icon2 As icon.CheckBadge:
+                Image2 As image:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    Color: =RGBA(1, 131, 116, 1)
-                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
-                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledFill: =RGBA(0, 0, 0, 0)
                     DisplayMode: =DisplayMode.View
                     FocusedBorderThickness: =4
-                    Height: =Parent.Height*0.6
+                    Height: =Parent.Height*0.8
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =RGBA(16, 110, 190, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
-                    Icon: =Icon.CheckBadge
+                    Image: ='wired-outline-1103-confetti'
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
-                    PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Width: =Self.Height
                     X: =(Parent.Width-Self.Width)/2
                     Y: =(Parent.Height-Self.Height)*2/3
-                    ZIndex: =3
+                    ZIndex: =4
 
             ThisActionCannotBeUndoneMessage_1 As label:
                 Align: =Align.Justify
