@@ -255,7 +255,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AddTaskBtn_1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1528,7 +1528,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "associatedLE_3",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3830,7 +3830,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BizSegment_3",
-      "ParentIndex": 9,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5169,7 +5169,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CancelBtn",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7120,7 +7120,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ChosenCOCO_3",
-      "ParentIndex": 8,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7458,7 +7458,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ChosenTask_3",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15844,7 +15844,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DeleteRowIcon_3",
-      "ParentIndex": 6,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -23732,7 +23732,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "EditBtn",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27110,7 +27110,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ExceedHoursErrorMsg_1",
-      "ParentIndex": 0,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -33117,7 +33117,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "galleryTemplate6_1",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -34038,7 +34038,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "GroupByNameTaxonomy3",
-      "ParentIndex": 8,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -36786,7 +36786,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HeaderTaxonomyContainer3",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -38435,7 +38435,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ID",
-      "ParentIndex": 2,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -38892,7 +38892,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "InputHoursReview_3",
-      "ParentIndex": 5,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -43066,7 +43066,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label2",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -46604,7 +46604,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LE_Name_3",
-      "ParentIndex": 11,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -50680,7 +50680,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "RefreshTableIcon",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -50989,7 +50989,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Region_3",
-      "ParentIndex": 10,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -52547,7 +52547,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "SaveBtn",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -54414,7 +54414,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "SubmitBtnForInsufficientHours",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -54874,7 +54874,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "SubmitBtnManagerScreen",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -56622,7 +56622,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Timer1",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -57536,7 +57536,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ToggleDetectChange",
-      "ParentIndex": 7,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -58262,7 +58262,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "UniqueID",
-      "ParentIndex": 3,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
